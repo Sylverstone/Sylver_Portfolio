@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&family=Urbanist:ital,wght@1,100;1,200&display=swap');
+
+body{
+    margin: 0;
+    padding: 0 2%;
+    font-family: 'Kalam';
+    font-size: 20px;
+}
+
+p{
+    font-family: "Urbanist";
+}
+
+.tête_menu_compresser{
+    display: none;
+}
+
+.sub_menu{
+    display: none;
+    position: absolute;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    background-color: white;
+    top:0;
+    z-index: 99;
+}
+
+img{
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    border: none;
+}
+
+nav a{
+    color:black;
+    text-decoration: none;
+    border-color: white;
+    border-bottom: 1px solid white;
+    transition: all 1s ease;
+}
+nav a:hover{
+    cursor: pointer;
+    border-color: black;
+    
+}
+
+
+nav div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav ul li{
+    padding-left: 20px;
+}
+
+nav img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+nav div p{
+    font-family: 'Urbanist';
+    font-weight: 200;
+    margin:0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.content{
+    padding: 0 5%;
+}
+
+.content div{
+    max-width: 80%;
+}
+
+.content p{
+    font-size: 4.4vh;
+}
+
+h1{
+    font-size: 7vh;
+    padding-top: 0;
+    margin-top: 2%;
+}
+.mini_titre{
+    color: rgb(170, 49, 49);
+    text-decoration: overline;
+
+}
+.projet_apercu{
+    display: flex;
+    flex-wrap:wrap-reverse;
+}
+
+.projet_apercu p{
+    padding:0;
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 3vh;
+    
+}
+
+.italique{
+    font-style: italic;
+}
+
+button:not([class]){
+    border-radius: 50%;
+    text-align: right;
+    background-color: cornsilk;
+    border-style: double;
+}
+.projet_apercu p:not([class]){
+    padding-top: 2%;
+}
+
+.barrer{
+    text-decoration: line-through;
+}
+
+.mini_exp li{
+    font-family: 'Urbanist';
+    margin-top: 2%;
+    font-size: 3vh;
+}
+
+.projet_apercu div{
+    max-width: 30%;
+    border-right: 1px dashed;
+    /* Seul manière de centrer car div prend toute la largeur*/
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.fin_apercu{
+    color: rgb(170, 49, 49);
+    font-size: 2.5vh;
+}
+.retour{
+    display: none;
+    position : fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 10px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-around;
+}
+
+footer div{
+    text-align: center;
+    padding: 20px;
+}
+
+footer div p{
+    margin: 0;
+    font-size: 2.5vh;
+    color : grey;
+}
+
+footer div a{
+    color: white;
+    font-size: 2.5vh;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    transition: all 1s ease;
+}
+
+footer div a:hover{
+    color : white;
+    text-decoration: none;
+}
+
+footer div h3{
+    color :wheat;
+    margin:0;
+}
+
+footer div{
+    margin:5px;
+    max-width: 30%;
+}
+
+.retour{
+    padding: 10px 5px 10px 5px;
+    border: 2px dashed;
+    border-radius: 45%;
+    background-color: rgb(77, 131, 225);
+    font-family:'Times New Roman', Times, serif
+}
+.home{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 10px;
+    width: 70px;
+    height: 65px;
+}
+
+@media screen and (max-width: 600px) {
+   .content div{
+        max-width: 100%;
+   }
+   .projet_apercu p{
+    font-size: 2.5vh;
+   }
+   .content h1{
+        margin: 0;
+   }
+   .content p{
+    font-size: 2.5vh;
+    }
+
+    h1{
+        font-size: 7vw;
+    }
+   nav{
+    justify-content: space-around;
+    display: block;
+   }
+
+   nav ul li{
+    display: none;
+   }
+
+   nav ul{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    transition : justify-content 1s ease;
+   }
+   
+   nav div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .tête_menu_compresser{
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   }
+
+   .tête_menu_compresser a{
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+   }
+   
+   .tête_menu_compresser li{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: initial;
+    text-decoration: underline;
+   }
+
+   .img_ligne{
+    transition: all 1s ease !;
+    transform: translateX(1px);
+   }
+
+   .sub_menu{
+        padding : 0;
+        margin: 0;
+        font-size: 4.5vw;
+        position: static;
+        justify-content: space-around;
+   }
+   .image_cv{
+    width: 40;
+    height: 40;
+   }
+   .sub_menu a{
+    padding-left: 5px;
+    transition: none;
+   }
+
+   
+   .sub_menu li{
+    padding : 0;
+    transition: background-color 500ms ease;
+    
+   }
+   .projet_apercu{
+    flex-direction: column;
+   }
+   .projet_apercu div{
+    max-width: 100%;
+    margin-bottom: 20px;
+   }
+   .projet_apercu div{
+    border-right: none;
+   }
+   
+   footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 100%;
+   }
+   footer div{
+        text-align: center;
+        max-width: 100%;
+        border-bottom: 1px dashed white;
+   }
+   footer div p{
+        max-width: 100%;
+   }
+   footer div p a{
+    color: grey;
+    cursor: pointer;
+    text-decoration: overline;
+   }
+   footer div a:hover{
+        color: white;
+   }
+}
