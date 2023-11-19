@@ -118,8 +118,19 @@ function copyText(){
         let text = ref_copy.innerText;
         navigator.clipboard.writeText(text)
         .then(function(){
-            alert("Texte copié")
+           console.log("copied text");
         })
         .catch(function(){alert("fail")})
-}
+    }
+    let copied = document.querySelector(".copied");
+    if (copied instanceof HTMLDivElement){
+        copied.style.opacity = "0.87";
+    }
+    setTimeout(function(){
+        let copied = document.querySelector(".copied");
+        if (copied instanceof HTMLDivElement){
+            copied.style.opacity = "0";
+        }
+    }, 1500);
+
 }
