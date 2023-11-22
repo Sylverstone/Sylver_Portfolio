@@ -10,13 +10,19 @@ paragrah.style.transition = "all 1s ease";
 //j'utilise typescript car j'ai voulu regarder ce que c'etait, je l'utilise donc comme js
 
 /*pour retirer toute les barres inutiles des elements*/
-let section = document.querySelector(".projet_apercu") as HTMLUnknownElement;
-let Div_a_changer = section.querySelectorAll('div')[2] as HTMLDivElement;
-Div_a_changer.style.border = "none";
-let footer = document.querySelector("footer") as HTMLUnknownElement;
-Div_a_changer = footer.querySelectorAll("div")[2];
-Div_a_changer.style.border = "none";
 
+let section = document.querySelector(".projet_apercu");
+if (section instanceof HTMLElement) {
+    let Div_a_changer = section.querySelectorAll('div')[2];
+    Div_a_changer.style.border = "none";
+    let footer = document.querySelector("footer");
+    if (footer instanceof HTMLElement){
+        Div_a_changer = footer.querySelectorAll("div")[2];
+        Div_a_changer.style.border = "none";
+    }
+}
+
+let theme_mod_ligh = false;
 let all = [] as Array<HTMLElement>; /*tableau qui servira a contenir quasiment tout les elements de la page*/
 try{
     let body  = document.querySelector("body");
@@ -124,7 +130,7 @@ function copyText(){
     }
     let copied = document.querySelector(".copied");
     if (copied instanceof HTMLDivElement){
-        copied.style.opacity = "0.87";
+        copied.style.opacity = "1";
     }
     setTimeout(function(){
         let copied = document.querySelector(".copied");
@@ -134,3 +140,29 @@ function copyText(){
     }, 1500);
 
 }
+
+let switch_btn = document.querySelector(".switch_theme") as HTMLImageElement;
+
+
+function click_on_theme(){
+    theme_mod_ligh = !theme_mod_ligh;
+    console.log(theme_mod_ligh);
+    let couleur_fond = "";
+    let text_couleur = "";7
+    let text_src = "";
+    if (theme_mod_ligh === false){
+         text_src = "../images/icon_fond_ligh.png";
+         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
+         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
+
+    } else{
+         text_src = "../images/icon_fond_dark.png";
+         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
+         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");
+    }
+    document.documentElement.style.setProperty("--couleur_fond", couleur_fond);
+    document.documentElement.style.setProperty("--couleur_text", text_couleur)
+    switch_btn.src = text_src;
+}
+
+switch_btn.addEventListener("click", click_on_theme);

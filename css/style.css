@@ -1,18 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&family=Urbanist:ital,wght@1,100;1,200&display=swap');
 
+:root{
+    --couleur_fond_dark: #242424;
+    --couleur_fond_light: #f5f5f5;
+    --couleur_text_dark: white;
+    --couleur_text_light: black;    
+    --couleur_fond: var(--couleur_fond_dark);
+    --couleur_text: var(--couleur_text_dark);
+}
+
 body{
     margin: 0;
     padding: 0 2%;
     font-family: 'Kalam';
     font-size: 20px;
+    background-color: var(--couleur_fond);
+
+}
+
+.switch_theme{
+    width: 50px;
+    height: 60px;
+    will-change: filter;
+    transition: filter 500ms ease !important;
+    box-shadow: 1px 1px 5px grey;
+    
+}
+.switch_theme:hover{
+    filter: drop-shadow(0 0 1em #646cffaa);
 }
 .copied{
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     display: flex;
     position: absolute;
     background-color: gray;
     width: 50px;
     height: 15px ;
-    border-radius: 40%;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -25,6 +49,15 @@ body{
 
 }
 
+.home{
+    will-change: filter;
+    transition: filter 500ms ease;
+}
+.home:hover{
+    filter: drop-shadow(0 0 1em black);
+    cursor: pointer;
+}
+
 .copied p{
     font-size: 17px;
     opacity: 1 !important;
@@ -32,8 +65,11 @@ body{
 }
 p{
     font-family: "Urbanist";
+    color: var(--couleur_text)
 }
-
+li{
+    color: var(--couleur_text);
+}
 .tête_menu_compresser{
     display: none;
 }
@@ -49,7 +85,8 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
-    background-color: white;
+    background-color: var(--couleur_fond);
+
     top:0;
     z-index: 99;
 }
@@ -66,11 +103,11 @@ nav ul{
 }
 
 nav a{
-    color:black;
+    color: var(--couleur_text);
     text-decoration: none;
-    border-color: white;
-    border-bottom: 1px solid white;
-    transition: all 1s ease;
+    border-color: var(--couleur_text);
+    border-bottom: 1px solid var(--couleur_text);
+    transition: border-color 200ms ease !important;
 }
 nav a:hover{
     cursor: pointer;
@@ -84,8 +121,13 @@ nav div{
     flex-wrap: wrap;
     align-items: center;
 }
+.change_theme_mobile{
+    display: none;
+}
 
 nav ul li{
+    display: flex;
+    align-items: center;
     padding-left: 20px;
 }
 
@@ -211,7 +253,7 @@ footer div a{
 }
 
 footer div a:hover{
-    color : white;
+    color : var(--couleur_text);
     text-decoration: none;
 }
 
@@ -239,11 +281,19 @@ footer div{
     top: 10px;
     width: 70px;
     height: 65px;
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
    .content div{
         max-width: 100%;
+   }
+   .change_theme_mobile{
+    display: block;
+ 
+   }
+   .home{
+    display: none !important;
    }
    .projet_apercu p{
     font-size: 2.5vh;
@@ -275,6 +325,13 @@ footer div{
    }
    
    nav div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+   }
+   nav div div{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -353,7 +410,7 @@ footer div{
    footer div{
         text-align: center;
         max-width: 100%;
-        border-bottom: 1px dashed white;
+        border-bottom: 1px dashed var(--couleur_text);
    }
    footer div p{
         max-width: 100%;
@@ -364,6 +421,6 @@ footer div{
     text-decoration: overline;
    }
    footer div a:hover{
-        color: white;
+        color: var(--couleur_text);
    }
 }

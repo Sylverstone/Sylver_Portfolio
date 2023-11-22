@@ -1,19 +1,22 @@
 document.write(`
 <nav>
     <div>
-        <img class="image_cv" src = "../images/Sylvio_pelage_maxime.jpg" alt="Photo de Moi durant mes vacances en France"  onclick="affiche.call(this)">
-        <p>Sylvio PELAGE--MAXIME</p>
+        <div>
+            <img class="image_cv" src = "../images/Sylvio_pelage_maxime.jpg" alt="Photo de Moi durant mes vacances en France"  onclick="affiche.call(this)">
+            <p>Sylvio PELAGE--MAXIME</p>
+        </div>
+        <li class="change_theme_mobile"><img class="switch_theme" src = "../images/icon_fond_ligh.png" alt = "image pour changer le fond" > </li>
     </div>
     <ul>
         <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=KikJdK", target="_blank" >Curriculum Vitae</a></li>
-        <li><a href="projet.html">projets</a></li>
+        <li class="Can_change_li"><a href="projet.html">projets</a></li>
         <li><a href = "#">Recommandations</a></li>
-        
+        <li><img class="switch_theme" src = "../images/icon_fond_ligh.png" alt = "image pour changer le fond" > </li>
         <li class = "tête_menu_compresser"> 
             <a href="#"><img class= "img_ligne" src="../images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()"></a>
             <ul class="sub_menu">
                 <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=KikJdK", target="_blank">Curriculum Vitae</a></li>
-                <li><a href="#">projets</a></li>
+                <li class="Can_change_li"><a href="projet.html" >projets</a></li>
                 <li><a href="#">Recommandations</a></li>
             </ul>
         </li>
@@ -22,9 +25,12 @@ document.write(`
 </nav>
 `
 );
+
+
 const isMobile : boolean = window.matchMedia("only screen and (max-width:600px)").matches;
 let w : number = isMobile ? 70 : 50;
 let img_cv = document.querySelector(".image_cv");
+console.log("wesh);");
 if (img_cv instanceof HTMLImageElement){
     img_cv.onload = function() {
         if (img_cv instanceof HTMLImageElement){
@@ -49,13 +55,17 @@ if (nav instanceof HTMLElement){
     div.style.alignItems = "center";
 }
 
-function cache_home(){
+let page = document.location.pathname;
+console.log("yo",page);
+if (page === "/src/projet.html"){
+    let a = document.querySelectorAll(".Can_change_li");
+    for (let i = 0; i < a.length; i++){
+        a[i].innerHTML = `<a href="main.html">Accueil</a>`;
+    }
     let home = document.querySelector(".home");
     if (home instanceof HTMLImageElement){
-        home.style.transition = "all 0s ease"
-        home.style.opacity = "0";
+        home.style.transition = "all 1s ease"
+        home.style.display = "block";
     }
 }
-
-
 
