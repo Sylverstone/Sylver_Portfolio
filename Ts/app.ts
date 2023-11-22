@@ -11,7 +11,7 @@ paragrah.style.transition = "all 1s ease";
 
 /*pour retirer toute les barres inutiles des elements*/
 
-let section = document.querySelector(".projet_apercu");
+let section =  document.querySelector(".projet_apercu");
 if (section instanceof HTMLElement) {
     let Div_a_changer = section.querySelectorAll('div')[2];
     Div_a_changer.style.border = "none";
@@ -22,7 +22,7 @@ if (section instanceof HTMLElement) {
     }
 }
 
-let theme_mod_ligh = false;
+let theme_mod_ligh = false; //variable global pour le theme
 let all = [] as Array<HTMLElement>; /*tableau qui servira a contenir quasiment tout les elements de la page*/
 try{
     let body  = document.querySelector("body");
@@ -141,14 +141,13 @@ function copyText(){
 
 }
 
-let switch_btn = document.querySelector(".switch_theme") as HTMLImageElement;
-
-
-function click_on_theme(){
+function click_on_theme(this : HTMLImageElement){
+    console.log("click")
+    
     theme_mod_ligh = !theme_mod_ligh;
     console.log(theme_mod_ligh);
     let couleur_fond = "";
-    let text_couleur = "";7
+    let text_couleur = "";
     let text_src = "";
     if (theme_mod_ligh === false){
          text_src = "../images/icon_fond_ligh.png";
@@ -162,7 +161,5 @@ function click_on_theme(){
     }
     document.documentElement.style.setProperty("--couleur_fond", couleur_fond);
     document.documentElement.style.setProperty("--couleur_text", text_couleur)
-    switch_btn.src = text_src;
+    this.src = text_src;
 }
-
-switch_btn.addEventListener("click", click_on_theme);

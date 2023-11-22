@@ -19,7 +19,7 @@ if (section instanceof HTMLElement) {
         Div_a_changer.style.border = "none";
     }
 }
-let theme_mod_ligh = false;
+let theme_mod_ligh = false; //variable global pour le theme
 let all = []; /*tableau qui servira a contenir quasiment tout les elements de la page*/
 try {
     let body = document.querySelector("body");
@@ -128,13 +128,12 @@ function copyText() {
         }
     }, 1500);
 }
-let switch_btn = document.querySelector(".switch_theme");
 function click_on_theme() {
+    console.log("click");
     theme_mod_ligh = !theme_mod_ligh;
     console.log(theme_mod_ligh);
     let couleur_fond = "";
     let text_couleur = "";
-    7;
     let text_src = "";
     if (theme_mod_ligh === false) {
         text_src = "../images/icon_fond_ligh.png";
@@ -148,6 +147,5 @@ function click_on_theme() {
     }
     document.documentElement.style.setProperty("--couleur_fond", couleur_fond);
     document.documentElement.style.setProperty("--couleur_text", text_couleur);
-    switch_btn.src = text_src;
+    this.src = text_src;
 }
-switch_btn.addEventListener("click", click_on_theme);
