@@ -27,8 +27,9 @@ body{
     
 }
 .switch_theme:hover{
-    filter: drop-shadow(0 0 1em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .copied{
 
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
@@ -87,7 +88,7 @@ nav{
     flex-wrap: wrap;
     position: sticky;
     background-color: var(--couleur_fond);
-
+    opacity: 1 !important;
     top:0;
     z-index: 99;
 }
@@ -101,9 +102,13 @@ nav ul{
     list-style-type: none;
     flex-wrap: wrap;
     border: none;
+    opacity: 1 !important;
+
 }
 
 nav a{
+    opacity: 1 !important;
+
     color: var(--couleur_text);
     text-decoration: none;
     border-color: var(--couleur_text);
@@ -119,6 +124,8 @@ nav a:hover{
 
 nav div{
     display: flex;
+    opacity: 1 !important;
+
     flex-wrap: wrap;
     align-items: center;
 }
@@ -127,17 +134,23 @@ nav div{
 }
 
 nav ul li{
+    opacity: 1 !important;
+
     display: flex;
     align-items: center;
     padding-left: 20px;
 }
 
 nav img{
+    opacity: 1 !important;
+
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 nav div p{
+    opacity: 1 !important;
+
     font-family: 'Urbanist';
     font-weight: 200;
     margin:0;
@@ -162,14 +175,17 @@ h1{
     padding-top: 0;
     margin-top: 2%;
 }
-.mini_titre{
-    color: rgb(170, 49, 49);
-    text-decoration: overline;
 
-}
+
 .projet_apercu{
     display: flex;
-    flex-wrap:wrap-reverse;
+    flex-wrap: nowrap;
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    flex-direction: row;
+    overflow: hidden;
+    border: 3px dashed;
 }
 
 .projet_apercu p{
@@ -181,8 +197,26 @@ h1{
     
 }
 
-.italique{
-    font-style: italic;
+.projet_apercu div{
+    display: flex;
+    border-right: 1px dashed;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 100%;
+    min-height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projet_apercu p:not([class]){
+    padding-top: 2%;
+}
+
+.mini_titre{
+    color: rgb(170, 49, 49);
+    padding-bottom: 2px;
+    text-decoration: overline;
+
 }
 
 button:not([class]){
@@ -191,9 +225,7 @@ button:not([class]){
     background-color: cornsilk;
     border-style: double;
 }
-.projet_apercu p:not([class]){
-    padding-top: 2%;
-}
+
 
 .barrer{
     text-decoration: line-through;
@@ -205,14 +237,7 @@ button:not([class]){
     font-size: 3vh;
 }
 
-.projet_apercu div{
-    max-width: 30%;
-    border-right: 1px dashed;
-    /* Seul manière de centrer car div prend toute la largeur*/
-    margin-right: auto;
-    margin-left: auto;
 
-}
 
 .fin_apercu{
     color: rgb(170, 49, 49);
@@ -391,11 +416,14 @@ footer div{
     
    }
    .projet_apercu{
-    flex-direction: column;
+    width: 40vh;
+    height: 40vh;
+    overflow-x: scroll !important;
+    flex-direction: row;
    }
    .projet_apercu div{
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
    }
    .projet_apercu div{
     border-right: none;

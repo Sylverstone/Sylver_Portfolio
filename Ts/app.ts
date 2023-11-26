@@ -46,6 +46,84 @@ try{
     console.log(err);
 }
 
+const slider = document.querySelector('.projet_apercu') as HTMLElement;
+let scrool_amount : number = 0;
+const width_slider = slider.offsetWidth;
+slider.style.transition = "all 1s ease";
+let souris_down = false;
+let startX : number = 0;
+let scrool_actu : number = 0;
+let scroll_time :number = 0;
+const count_child : number = slider.querySelectorAll('div').length;
+let was_max : boolean = false;
+const max_scrool = count_child;
+
+const event_scrool = (e : MouseEvent | TouchEvent) => {
+    console.log(e)
+    e.preventDefault();    
+    if (souris_down) return;
+        // Calcul de la largeur de défilement
+    console.log(scroll_time)
+    if (scroll_time >= max_scrool - 1 || was_max){
+        was_max = true;
+        scroll_time -= 1;
+        if (scroll_time <= 0){
+            scroll_time = 0;
+            was_max = false;
+        }            
+        scrool_amount -= width_slider;
+        slider.scrollTo({
+            top: 0,
+            left: scrool_amount,
+            behavior: 'smooth' // Ajoute une transition de défilement})
+        })
+    } else {
+        scroll_time += 1;
+        console.log(slider.offsetWidth)
+        //slider.scrollLeft += slider.offsetWidth + 1; // Défilement en avant d'une largeur d'élément
+        //slider.style.scrollPaddingLeft = slider.offsetWidth.toString()+ 'px';
+        scrool_amount += width_slider;
+        console.log(scrool_amount)
+        slider.scrollTo({
+            top: 0,
+            left: scrool_amount,
+            behavior: 'smooth' // Ajoute une transition de défilement})
+        })
+        //slider.scrollLeft += slider.offsetWidth; // Dé
+        console.log("Défilement en avant");
+    }
+}
+
+slider.addEventListener("mousedown", event_scrool);
+slider.addEventListener("touchstart", event_scrool);
+
+/*fonction pour mettre a jour la position de la barre horizontale*/
+document.addEventListener('mousedown', (e : MouseEvent) =>{
+    souris_down = true;
+    startX = e.pageX - (slider.offsetLeft); //position relative au slider
+    scrool_actu = slider.scrollLeft ;
+});
+
+
+
+document.addEventListener('mouseup', function(){
+    souris_down = false;
+});
+
+slider.addEventListener('mouseleave', function(){
+    souris_down = false;
+});
+
+document.addEventListener('mousemove', function(e : MouseEvent){
+    if (!souris_down) return;
+    e.preventDefault();
+    const x : number = e.pageX - slider.offsetLeft;
+    const deplace : number = (x- startX) * 5;
+    slider.scrollLeft = scrool_actu - deplace
+});
+
+
+
 function have_scroll(): void{
     let element = document.documentElement;
     let max_scrool = element.scrollHeight - element.clientHeight; //scroolheight : taille total de la page; clientheight : taille visible de la page
