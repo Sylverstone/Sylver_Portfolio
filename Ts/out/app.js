@@ -1,14 +1,4 @@
 "use strict";
-/*
-section = document.querySelector(".projet_apercu");
-section.style.opacity = "0";
-section.style.transition = "all 1s ease-in";
-paragrah = document.querySelector(".fin_apercu");
-paragrah.style.opacity = "0";
-paragrah.style.transition = "all 1s ease";
-*/
-//j'utilise typescript car j'ai voulu regarder ce que c'etait, je l'utilise donc comme js
-/*pour retirer toute les barres inutiles des elements*/
 let section = document.querySelector(".projet_apercu");
 if (section instanceof HTMLElement) {
     let Div_a_changer = section.querySelectorAll('div')[2];
@@ -54,13 +44,21 @@ let scroll_time = 0;
 const count_child = slider.querySelectorAll('div').length;
 let was_max = false;
 const max_scrool = count_child;
+slider.onmouseover = () => {
+    let h1_section = document.querySelector('.h1_apercu');
+    h1_section.innerHTML = `Appuyer pour défiler ou Saississez`;
+    h1_section.style.textDecoration = "underline";
+};
+slider.onmouseout = () => {
+    let h1_section = document.querySelector('.h1_apercu');
+    h1_section.style.textDecoration = "None";
+    h1_section.innerHTML = `Aperçu de mes projets`;
+};
 const event_scrool = (e) => {
-    console.log(e);
     e.preventDefault();
     if (souris_down)
         return;
-    // Calcul de la largeur de défilement
-    console.log(scroll_time);
+    // Calcul de la largeur de défilement    
     if (scroll_time >= max_scrool - 1 || was_max) {
         was_max = true;
         scroll_time -= 1;
@@ -76,23 +74,20 @@ const event_scrool = (e) => {
         });
     }
     else {
-        scroll_time += 1;
-        console.log(slider.offsetWidth);
         //slider.scrollLeft += slider.offsetWidth + 1; // Défilement en avant d'une largeur d'élément
         //slider.style.scrollPaddingLeft = slider.offsetWidth.toString()+ 'px';
         scrool_amount += width_slider;
-        console.log(scrool_amount);
         slider.scrollTo({
             top: 0,
             left: scrool_amount,
             behavior: 'smooth' // Ajoute une transition de défilement})
         });
+        scroll_time += 1;
         //slider.scrollLeft += slider.offsetWidth; // Dé
-        console.log("Défilement en avant");
     }
+    console.log(scrool_amount);
+    console.log(scroll_time);
 };
-slider.addEventListener("mousedown", event_scrool);
-slider.addEventListener("touchstart", event_scrool);
 /*fonction pour mettre a jour la position de la barre horizontale*/
 document.addEventListener('mousedown', (e) => {
     souris_down = true;
@@ -106,13 +101,27 @@ slider.addEventListener('mouseleave', function () {
     souris_down = false;
 });
 document.addEventListener('mousemove', function (e) {
-    if (!souris_down)
+    if (!souris_down || isMobile)
         return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
     const deplace = (x - startX) * 5;
     slider.scrollLeft = scrool_actu - deplace;
+    let m = Math.floor(slider.scrollLeft / (width_slider - 10));
+    scroll_time = m;
+    if (scroll_time >= max_scrool - 1 || was_max) {
+        was_max = true;
+        if (scroll_time <= 0) {
+            scroll_time = 0;
+            was_max = false;
+        }
+    }
+    scrool_amount = width_slider * (scroll_time);
+    console.log(scrool_amount);
+    console.log(scroll_time);
 });
+slider.addEventListener("mousedown", event_scrool);
+slider.addEventListener("touchstart", event_scrool);
 function have_scroll() {
     let element = document.documentElement;
     let max_scrool = element.scrollHeight - element.clientHeight; //scroolheight : taille total de la page; clientheight : taille visible de la page
@@ -202,20 +211,25 @@ function click_on_theme() {
     console.log("click");
     theme_mod_ligh = !theme_mod_ligh;
     console.log(theme_mod_ligh);
-    let couleur_fond = "";
-    let text_couleur = "";
-    let text_src = "";
+    let couleur_fond;
+    let text_couleur;
+    let text_src;
+    let titre;
+    let color_switch;
     if (theme_mod_ligh === false) {
         text_src = "../images/icon_fond_ligh.png";
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
+        titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_dark");
     }
     else {
         text_src = "../images/icon_fond_dark.png";
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");
+        titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_light");
     }
     document.documentElement.style.setProperty("--couleur_fond", couleur_fond);
     document.documentElement.style.setProperty("--couleur_text", text_couleur);
+    document.documentElement.style.setProperty("--couleur_titre", titre);
     this.src = text_src;
 }
