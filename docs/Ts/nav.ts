@@ -58,7 +58,7 @@ if (nav instanceof HTMLElement){
 
 let page = document.location.pathname;
 console.log("yo",page);
-if (page.includes("projet.hmtl")){
+if (page.includes("projet.html")){
     let a = document.querySelectorAll(".Can_change_li");
     for (let i = 0; i < a.length; i++){
         a[i].innerHTML = `<a href="index.html">Accueil</a>`;
