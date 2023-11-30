@@ -8,7 +8,7 @@ document.write(`
         </div>
         <li class="change_theme_mobile"><img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick="click_on_theme.call(this)"></li>
     </div>
-    <a class="lien_home" href = "main.html" ><img  class="home" src="images/image_home.jpeg",alt = "image home"></a>
+    <a class="lien_home" href = "index.html" ><img  class="home" src="images/image_home.jpeg",alt = "image home"></a>
     <ul>
         <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank" >Curriculum Vitae</a></li>
         <li class="Can_change_li"><a href="projet.html">projets</a></li>
@@ -53,7 +53,6 @@ if (nav instanceof HTMLElement) {
     div.style.alignItems = "center";
 }
 let page = document.location.pathname;
-console.log("yo", page);
 if (page.includes("projet.html")) {
     let a = document.querySelectorAll(".Can_change_li");
     for (let i = 0; i < a.length; i++) {
