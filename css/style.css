@@ -117,6 +117,7 @@ img{
 }
 
 nav ul{
+    all: unset;
     display: flex;
     list-style-type: none;
     flex-wrap: wrap-reverse;
@@ -165,7 +166,7 @@ nav ul li{
 
 nav img{
     opacity: 1 !important;
-
+    
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -402,6 +403,8 @@ footer div{
    }
 
    .img_ligne{
+    position: relative;
+    left: 50%;
     transition: all 1s ease !;
     transform: translateX(1px);
    }

@@ -38,22 +38,13 @@ let scrool_amount = 0;
 const width_slider = slider.offsetWidth;
 slider.style.transition = "all 1s ease";
 let souris_down = false;
+let first_time = false;
 let startX = 0;
 let scrool_actu = 0;
 let scroll_time = 0;
-const count_child = slider.querySelectorAll('div').length;
+let count_child = slider.querySelectorAll('div').length;
 let was_max = false;
-const max_scrool = count_child;
-slider.onmouseover = () => {
-    let h1_section = document.querySelector('.h1_apercu');
-    h1_section.innerHTML = `Appuyer pour défiler ou Saississez`;
-    h1_section.style.textDecoration = "underline";
-};
-slider.onmouseout = () => {
-    let h1_section = document.querySelector('.h1_apercu');
-    h1_section.style.textDecoration = "None";
-    h1_section.innerHTML = `Aperçu de mes projets`;
-};
+let max_scrool = count_child;
 const event_scrool = (e) => {
     e.preventDefault();
     if (souris_down)
@@ -62,8 +53,8 @@ const event_scrool = (e) => {
     if (scroll_time >= max_scrool - 1 || was_max) {
         was_max = true;
         scroll_time -= 1;
-        if (scroll_time <= 0) {
-            scroll_time = 0;
+        if (scroll_time <= 1) {
+            scroll_time = 1;
             was_max = false;
         }
         scrool_amount -= width_slider;
@@ -163,22 +154,16 @@ function click_sub_menu() {
         if (element.style.display != "none") {
             element.style.display = "none";
             contener_ul.style.border = "none";
-            let add = -img_x + width_ul / 2 - img_width / 2;
-            img.style.transform = "translateX(" + add.toString() + "px)";
+            img.style.transform = 'translateX(-50%)';
         }
         else {
             element.style.display = "flex";
             element.style.border = "1px solid";
-            img.style.transform = "none";
-            img.style.transform = "rotate(180deg)";
-            contener_ul.style.justifyContent = "left";
+            img.style.transform = `translateX(${-contener_ul.offsetWidth / 2}px)`;
         }
     }
 }
 /*Si je fais pas ça la première animations ne se lance pas au premier click*/
-for (let i = 0; i < 2; i++) {
-    click_sub_menu();
-}
 function affiche() {
     window.open(this.src, '_blank');
 }

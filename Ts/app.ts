@@ -40,34 +40,26 @@ let scrool_amount : number = 0;
 const width_slider = slider.offsetWidth;
 slider.style.transition = "all 1s ease";
 let souris_down = false;
+let first_time : boolean = false;
 let startX : number = 0;
 let scrool_actu : number = 0;
 let scroll_time :number = 0;
-const count_child : number = slider.querySelectorAll('div').length;
+let count_child : number = slider.querySelectorAll('div').length;
 let was_max : boolean = false;
-const max_scrool = count_child;
+let max_scrool = count_child;
 
-slider.onmouseover = () => {
-    let h1_section = document.querySelector('.h1_apercu') as HTMLElement;
-    h1_section.innerHTML = `Appuyer pour défiler ou Saississez`;
-    h1_section.style.textDecoration = "underline";
-}
-
-slider.onmouseout = () => {
-    let h1_section = document.querySelector('.h1_apercu') as HTMLElement;
-    h1_section.style.textDecoration = "None";
-    h1_section.innerHTML = `Aperçu de mes projets`;
-}
 
 const event_scrool = (e : MouseEvent | TouchEvent) => {
     e.preventDefault();    
     if (souris_down) return;
         // Calcul de la largeur de défilement    
+    
+    
     if (scroll_time >= max_scrool - 1 || was_max){
         was_max = true;
         scroll_time -= 1;
-        if (scroll_time <= 0){
-            scroll_time = 0;
+        if (scroll_time <= 1){
+            scroll_time = 1;
             was_max = false;
         }            
         scrool_amount -= width_slider;
@@ -88,6 +80,7 @@ const event_scrool = (e : MouseEvent | TouchEvent) => {
         scroll_time += 1;
         //slider.scrollLeft += slider.offsetWidth; // Dé
     }
+    
     console.log(scrool_amount)
     console.log(scroll_time)
 }
@@ -166,6 +159,7 @@ function have_scroll(): void{
 have_scroll(); //simuler un scroll pour charger la page blanche
 window.addEventListener('scroll',have_scroll)
 
+
 function click_sub_menu() :void{
     console.log("js")
     let element = document.querySelector(".sub_menu"); 
@@ -173,32 +167,25 @@ function click_sub_menu() :void{
         console.log("in\n", element.className)
         let img = document.querySelector(".img_ligne") as HTMLImageElement;
         img.style.transition = "transform 0.5s ease";
-
         let img_width = img.offsetWidth;
         let img_x = img.offsetLeft;
         let contener = document.querySelector("nav") as HTMLUnknownElement;
         let contener_ul = contener.querySelector("ul") as HTMLUListElement;
         let width_ul = contener_ul.offsetWidth;
-        element.style.display = element.style.display === "" ? "none" : element.style.display;
+        element.style.display = element.style.display === "" ? "none" : element.style.display;        
         if (element.style.display != "none"){
             element.style.display = "none";
-            contener_ul.style.border = "none";
-            let add = -img_x + width_ul/2 - img_width/2;
-            img.style.transform = "translateX("  + add.toString() +"px)";
+            contener_ul.style.border = "none";     
+            img.style.transform = 'translateX(-50%)';
         }else{
             element.style.display = "flex";
             element.style.border = "1px solid";
-            img.style.transform = "none";
-            img.style.transform = "rotate(180deg)";
-            contener_ul.style.justifyContent = "left";
+            img.style.transform = `translateX(${-contener_ul.offsetWidth/2}px)`;
         }    
-           
     } 
 }
 /*Si je fais pas ça la première animations ne se lance pas au premier click*/
-for (let i =0; i < 2; i++){
-    click_sub_menu()
-}
+
 
 function affiche(this : HTMLImageElement) : void{
     window.open(this.src,'_blank');
