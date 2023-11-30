@@ -33,9 +33,8 @@ try {
 catch (err) {
     console.log(err);
 }
-const slider = document.querySelector('.projet_apercu');
 let scrool_amount = 0;
-const width_slider = slider.offsetWidth;
+const slider = document.querySelector(".projet_apercu");
 slider.style.transition = "all 1s ease";
 let souris_down = false;
 let first_time = false;
@@ -50,6 +49,8 @@ const event_scrool = (e) => {
     if (souris_down)
         return;
     // Calcul de la largeur de défilement    
+    const slider = document.querySelector('.projet_apercu');
+    const width_slider = slider.offsetWidth;
     if (scroll_time >= max_scrool - 1 || was_max) {
         was_max = true;
         scroll_time -= 1;
@@ -95,6 +96,8 @@ document.addEventListener('mousemove', function (e) {
     if (!souris_down || isMobile)
         return;
     e.preventDefault();
+    const slider = document.querySelector('.projet_apercu');
+    const width_slider = slider.offsetWidth;
     const x = e.pageX - slider.offsetLeft;
     const deplace = (x - startX) * 5;
     slider.scrollLeft = scrool_actu - deplace;

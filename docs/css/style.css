@@ -314,6 +314,7 @@ footer div{
     padding: 10px 5px 10px 5px;
     border: 2px dashed;
     border-radius: 45%;
+    color: black;
     background-color: rgb(77, 131, 225);
     font-family:'Times New Roman', Times, serif;
     display: none;
@@ -434,7 +435,7 @@ footer div{
    .projet_apercu{
     width: 40vh;
     height: 40vh;
-    overflow-x: scroll !important;
+    overflow-x: hidden !important;
     flex-direction: row;
    }
    .projet_apercu div{
