@@ -2,15 +2,16 @@
   "name": "prepa_portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "docs/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.10.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
@@ -19,6 +20,5 @@
     "express": "^4.18.2",
     "nodemailer": "^6.9.7",
     "nodemon": "^3.0.1"
-  },
-  
+  }
 }

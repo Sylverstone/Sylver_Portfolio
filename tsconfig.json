@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "out",
+    "outDir": "docs/Ts/out",
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
@@ -107,5 +107,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "files": ["app.ts","nav.ts"]
+  "files": ["docs/Ts/app.ts","docs/Ts/nav.ts"]
 }

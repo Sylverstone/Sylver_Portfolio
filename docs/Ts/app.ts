@@ -1,5 +1,4 @@
 
-
 let section =  document.querySelector(".projet_apercu");
 if (section instanceof HTMLElement) {
     let Div_a_changer = section.querySelectorAll('div')[2];

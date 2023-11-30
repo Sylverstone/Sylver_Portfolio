@@ -19,9 +19,9 @@ try {
         all = all.filter(function (element) {
             if (element) {
                 let parentElement_ = element.parentElement;
-                let grandParentElement = parentElement_ === null || parentElement_ === void 0 ? void 0 : parentElement_.parentElement;
+                let grandParentElement = parentElement_?.parentElement;
                 /*retirer les elements du footer*/
-                return element.tagName !== 'FOOTER' && element.tagName !== "BUTTON" && (parentElement_ === null || parentElement_ === void 0 ? void 0 : parentElement_.tagName) !== 'FOOTER' && (grandParentElement === null || grandParentElement === void 0 ? void 0 : grandParentElement.tagName) !== 'FOOTER' && element.className !== "home";
+                return element.tagName !== 'FOOTER' && element.tagName !== "BUTTON" && parentElement_?.tagName !== 'FOOTER' && grandParentElement?.tagName !== 'FOOTER' && element.className !== "home";
             }
         });
         for (let elt of all) { /* va mettre a tout les elements de all une transition en opacité*/
