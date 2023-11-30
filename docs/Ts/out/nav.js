@@ -54,10 +54,10 @@ if (nav instanceof HTMLElement) {
 }
 let page = document.location.pathname;
 console.log("yo", page);
-if (page === "/src/projet.html") {
+if (page === "/docs/projet.html") {
     let a = document.querySelectorAll(".Can_change_li");
     for (let i = 0; i < a.length; i++) {
-        a[i].innerHTML = `<a href="main.html">Accueil</a>`;
+        a[i].innerHTML = `<a href="index.html">Accueil</a>`;
     }
     let home = document.querySelector(".home");
     if (home instanceof HTMLImageElement) {
