@@ -3,19 +3,19 @@ document.write(`
 <nav>
     <div>
         <div>
-            <img class="image_cv" src = "../images/Sylvio_pelage_maxime.jpg" alt="Photo de Moi durant mes vacances en France"  onclick="affiche.call(this)">
+            <img class="image_cv" src = "images/Sylvio_pelage_maxime.jpg" alt="Photo de Moi durant mes vacances en France"  onclick="affiche.call(this)">
             <p>Sylvio PELAGE--MAXIME</p>
         </div>
-        <li class="change_theme_mobile"><img class="switch_theme" src = "../images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick="click_on_theme.call(this)"></li>
+        <li class="change_theme_mobile"><img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick="click_on_theme.call(this)"></li>
     </div>
-    <a class="lien_home" href = "main.html" ><img  class="home" src="../images/image_home.jpeg",alt = "image home"></a>
+    <a class="lien_home" href = "main.html" ><img  class="home" src="images/image_home.jpeg",alt = "image home"></a>
     <ul>
         <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank" >Curriculum Vitae</a></li>
         <li class="Can_change_li"><a href="projet.html">projets</a></li>
         <li><a href = "#">Recommandation</a></li>
-        <li><img class="switch_theme" src = "../images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)"></li>
+        <li><img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)"></li>
         <li class = "tête_menu_compresser"> 
-            <img class= "img_ligne" src="../images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
+            <img class= "img_ligne" src="images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
             <ul class="sub_menu">
                 <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank">Curriculum Vitae</a></li>
                 <li class="Can_change_li"><a href="projet.html" >projets</a></li>

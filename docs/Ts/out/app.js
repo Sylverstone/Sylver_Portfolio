@@ -202,13 +202,13 @@ function click_on_theme() {
     let titre;
     let color_switch;
     if (theme_mod_ligh === false) {
-        text_src = "../images/icon_fond_ligh.png";
+        text_src = "images/icon_fond_ligh.png";
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
         titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_dark");
     }
     else {
-        text_src = "../images/icon_fond_dark.png";
+        text_src = "images/icon_fond_dark.png";
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");
         titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_light");
