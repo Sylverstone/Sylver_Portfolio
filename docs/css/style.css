@@ -409,14 +409,14 @@ footer div{
 
    .img_ligne{
     left: 50%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     transition: all 1s ease !important;
    }
 
    .sub_menu{
         display: flex;
-        flex-direction: column;
-
+        flex-direction: row;
+        
         align-items: center;
         padding : 0;
         margin: 0 0 2% 0;
@@ -443,9 +443,11 @@ footer div{
     transition: background-color 500ms ease;
     background-color: #1394bf;
     border: solid 2px black;
-    margin: 2%;
+    margin: 1%;
     padding: 0 5px 0 5px;
     border-radius: 20px;
+    min-width: 150px;
+    justify-content: center;
     
    }
    .projet_apercu{

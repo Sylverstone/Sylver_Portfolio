@@ -43,7 +43,7 @@ let scrool_actu = 0;
 let scroll_time = 0;
 let count_child = slider.querySelectorAll('div').length;
 let was_max = false;
-let max_scrool = count_child;
+let max_scrool = count_child - 1;
 const event_scrool = (e) => {
     e.preventDefault();
     if (souris_down)
@@ -51,13 +51,17 @@ const event_scrool = (e) => {
     // Calcul de la largeur de défilement    
     const slider = document.querySelector('.projet_apercu');
     const width_slider = slider.offsetWidth;
-    if (scroll_time >= max_scrool - 1 || was_max) {
-        was_max = true;
+    let mouseXrel = 0;
+    if (e instanceof TouchEvent) {
+        let touch = e.touches[0];
+        mouseXrel = touch.clientX - slider.offsetLeft;
+    }
+    else {
+        mouseXrel = e.pageX - slider.offsetLeft;
+    }
+    console.log(scroll_time);
+    if (mouseXrel <= width_slider / 2 && scroll_time > 1) {
         scroll_time -= 1;
-        if (scroll_time <= 1) {
-            scroll_time = 1;
-            was_max = false;
-        }
         scrool_amount -= width_slider;
         slider.scrollTo({
             top: 0,
@@ -65,7 +69,7 @@ const event_scrool = (e) => {
             behavior: 'smooth' // Ajoute une transition de défilement})
         });
     }
-    else {
+    if (!(mouseXrel <= width_slider / 2) && scroll_time <= max_scrool - 1) {
         //slider.scrollLeft += slider.offsetWidth + 1; // Défilement en avant d'une largeur d'élément
         //slider.style.scrollPaddingLeft = slider.offsetWidth.toString()+ 'px';
         scrool_amount += width_slider;
@@ -91,28 +95,6 @@ document.addEventListener('mouseup', function () {
 });
 slider.addEventListener('mouseleave', function () {
     souris_down = false;
-});
-document.addEventListener('mousemove', function (e) {
-    if (!souris_down || isMobile)
-        return;
-    e.preventDefault();
-    const slider = document.querySelector('.projet_apercu');
-    const width_slider = slider.offsetWidth;
-    const x = e.pageX - slider.offsetLeft;
-    const deplace = (x - startX) * 5;
-    slider.scrollLeft = scrool_actu - deplace;
-    let m = Math.floor(slider.scrollLeft / (width_slider - 10));
-    scroll_time = m;
-    if (scroll_time >= max_scrool - 1 || was_max) {
-        was_max = true;
-        if (scroll_time <= 0) {
-            scroll_time = 0;
-            was_max = false;
-        }
-    }
-    scrool_amount = width_slider * (scroll_time);
-    console.log(scrool_amount);
-    console.log(scroll_time);
 });
 slider.addEventListener("mousedown", event_scrool);
 slider.addEventListener("touchstart", event_scrool);
