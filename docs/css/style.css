@@ -410,7 +410,7 @@ footer div{
    .img_ligne{
     left: 50%;
     margin-bottom: 5%;
-    transition: all 1s ease !;
+    transition: all 1s ease !important;
    }
 
    .sub_menu{
