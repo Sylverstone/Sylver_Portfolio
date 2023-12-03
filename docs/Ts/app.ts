@@ -166,6 +166,7 @@ window.addEventListener('scroll',have_scroll)
 function click_sub_menu() :void{
     console.log("js")
     let element = document.querySelector(".sub_menu"); 
+    
     if (element instanceof HTMLUListElement){
         console.log("in\n", element.className)
         let img = document.querySelector(".img_ligne") as HTMLImageElement;
@@ -179,11 +180,16 @@ function click_sub_menu() :void{
         if (element.style.display != "none"){
             element.style.display = "none";
             contener_ul.style.border = "none";     
-            img.style.transform = 'translateX(-50%)';
+            element.style.opacity = "0";
+            img.style.transform = 'rotate(-360deg)';
+
         }else{
+            
             element.style.display = "flex";
             element.style.border = "1px solid";
-            img.style.transform = `translateX(${-contener_ul.offsetWidth/2}px)`;
+            element.style.opacity = "1";
+            img.style.transform = `rotate(180deg)`;
+
         }    
     } 
 }

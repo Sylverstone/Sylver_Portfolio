@@ -34,7 +34,7 @@ body{
     transition: filter 500ms ease !important;
     box-shadow: 1px 1px 5px grey;
     background-color: var(--couleur_switch);
-    
+    opacity: 1!important;
 }
 .switch_theme:hover{
     filter: drop-shadow(0 0 2em #646cffaa);
@@ -77,6 +77,7 @@ body{
 
 .lien_home{
     border: none !important;
+    
 }
 
 .copied p{
@@ -258,6 +259,7 @@ button:not([class]){
     font-family: 'Urbanist';
     margin-top: 2%;
     font-size: 3vh;
+    margin: 0 0 10% 0;
 }
 
 
@@ -330,6 +332,7 @@ footer div{
    }
    .change_theme_mobile{
     display: block;
+    opacity: 1!important;
  
    }
    .home{
@@ -382,12 +385,13 @@ footer div{
    }
 
    .tête_menu_compresser{
-    
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
    }
 
    .tête_menu_compresser a{
@@ -404,18 +408,25 @@ footer div{
    }
 
    .img_ligne{
-    position: relative;
     left: 50%;
+    margin-bottom: 5%;
     transition: all 1s ease !;
-    transform: translateX(1px);
    }
 
    .sub_menu{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
         padding : 0;
-        margin: 0;
-        font-size: 4.5vw;
+        margin: 0 0 2% 0;
+        font-size: 5vw;
+        min-width: 100%;
         position: static;
-        justify-content: space-around;
+        opacity: 0;
+        transition: opacity 1s ease !important;
+        display: none ;
+
    }
    .image_cv{
     width: 40;
@@ -430,6 +441,11 @@ footer div{
    .sub_menu li{
     padding : 0;
     transition: background-color 500ms ease;
+    background-color: #1394bf;
+    border: solid 2px black;
+    margin: 2%;
+    padding: 0 5px 0 5px;
+    border-radius: 20px;
     
    }
    .projet_apercu{

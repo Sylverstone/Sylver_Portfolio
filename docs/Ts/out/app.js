@@ -19,9 +19,9 @@ try {
         all = all.filter(function (element) {
             if (element) {
                 let parentElement_ = element.parentElement;
-                let grandParentElement = parentElement_?.parentElement;
+                let grandParentElement = parentElement_ === null || parentElement_ === void 0 ? void 0 : parentElement_.parentElement;
                 /*retirer les elements du footer*/
-                return element.tagName !== 'FOOTER' && element.tagName !== "BUTTON" && parentElement_?.tagName !== 'FOOTER' && grandParentElement?.tagName !== 'FOOTER' && element.className !== "home";
+                return element.tagName !== 'FOOTER' && element.tagName !== "BUTTON" && (parentElement_ === null || parentElement_ === void 0 ? void 0 : parentElement_.tagName) !== 'FOOTER' && (grandParentElement === null || grandParentElement === void 0 ? void 0 : grandParentElement.tagName) !== 'FOOTER' && element.className !== "home";
             }
         });
         for (let elt of all) { /* va mettre a tout les elements de all une transition en opacité*/
@@ -157,12 +157,14 @@ function click_sub_menu() {
         if (element.style.display != "none") {
             element.style.display = "none";
             contener_ul.style.border = "none";
-            img.style.transform = 'translateX(-50%)';
+            element.style.opacity = "0";
+            img.style.transform = 'rotate(-360deg)';
         }
         else {
             element.style.display = "flex";
             element.style.border = "1px solid";
-            img.style.transform = `translateX(${-contener_ul.offsetWidth / 2}px)`;
+            element.style.opacity = "1";
+            img.style.transform = `rotate(180deg)`;
         }
     }
 }

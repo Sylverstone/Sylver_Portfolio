@@ -15,6 +15,7 @@ document.write(`
         <li><img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)"></li>
         <li class = "tête_menu_compresser"> 
             <img class= "img_ligne" src="images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
+
             <ul class="sub_menu">
                 <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank">Curriculum Vitae</a></li>
                 <li class="Can_change_li"><a href="projet.html" >projets</a></li>
