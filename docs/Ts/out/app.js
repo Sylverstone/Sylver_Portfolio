@@ -35,15 +35,28 @@ catch (err) {
 }
 let scrool_amount = 0;
 const slider = document.querySelector(".projet_apercu");
-slider.style.transition = "all 1s ease";
-let souris_down = false;
-let first_time = false;
-let startX = 0;
-let scrool_actu = 0;
-let scroll_time = 0;
-let count_child = slider.querySelectorAll('div').length;
-let was_max = false;
-let max_scrool = count_child - 1;
+let souris_down;
+let first_time;
+let startX;
+let scrool_actu;
+let scroll_time;
+let count_child;
+let was_max;
+let max_scrool;
+if (slider instanceof HTMLElement) {
+    slider.style.transition = "all 1s ease";
+    souris_down = false;
+    first_time = false;
+    startX = 0;
+    scrool_actu = 0;
+    scroll_time = 0;
+    count_child = slider.querySelectorAll('div').length;
+    was_max = false;
+    max_scrool = count_child - 1;
+}
+const event_scrool_m = (e) => {
+    let p = 2;
+};
 const event_scrool = (e) => {
     e.preventDefault();
     if (souris_down)
@@ -87,17 +100,22 @@ const event_scrool = (e) => {
 /*fonction pour mettre a jour la position de la barre horizontale*/
 document.addEventListener('mousedown', (e) => {
     souris_down = true;
-    startX = e.pageX - (slider.offsetLeft); //position relative au slider
-    scrool_actu = slider.scrollLeft;
+    if (slider instanceof HTMLElement) {
+        startX = e.pageX - (slider.offsetLeft); //position relative au slider
+        scrool_actu = slider.scrollLeft;
+    }
 });
 document.addEventListener('mouseup', function () {
     souris_down = false;
 });
-slider.addEventListener('mouseleave', function () {
+slider && slider.addEventListener('mouseleave', function () {
     souris_down = false;
 });
-slider.addEventListener("mousedown", event_scrool);
-slider.addEventListener("touchstart", event_scrool);
+// un if rapide if slider => addeventlister...
+if (slider instanceof HTMLElement) {
+    slider.addEventListener("mousedown", event_scrool);
+    slider.addEventListener("touchstart", event_scrool);
+}
 function have_scroll() {
     let element = document.documentElement;
     let max_scrool = element.scrollHeight - element.clientHeight; //scroolheight : taille total de la page; clientheight : taille visible de la page

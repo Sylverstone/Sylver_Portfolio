@@ -24,7 +24,12 @@ body{
     font-family: 'Kalam';
     font-size: 20px;
     background-color: var(--couleur_fond);
+    transition: opacity 500ms ease !important;
+    
+}
 
+.bodyonchange{
+    opacity: 0;
 }
 
 .switch_theme{
@@ -131,19 +136,40 @@ nav ul{
 
 nav a{
     opacity: 1 !important;
-
     color: var(--couleur_text);
     text-decoration: none;
+    position: relative;
+    /*
     border-color: var(--couleur_text);
     border-bottom: 1px solid var(--couleur_text);
     transition: border-color 200ms ease !important;
-}
-nav a:hover{
-    cursor: pointer;
-    border-color: var(--couleur_fond);
-    
+    */
 }
 
+nav a::after{
+    position: absolute;
+    content: " ";
+    width: 0%;
+    background-color: "yellow";
+    border: 1px solid transparent;
+    left: 0;
+    bottom: 0;
+    transition: width 300ms ease, border-color 500ms ease !important;
+
+}
+nav a:not([class]):hover::after{
+    border: 1px solid var(--couleur_text);
+    cursor: pointer;
+    width: 100%;
+}
+
+nav a:not([class]):not(:hover)::after{
+    border: 1px solid transparent;
+    cursor: pointer;
+    left: unset;
+    right: 0;
+    width: 0%;
+}
 
 nav div{
     display: flex;
@@ -430,6 +456,7 @@ footer div{
    }
    .image_cv{
     width: 40;
+    transition: none !important;
     height: 40;
    }
    .sub_menu a{

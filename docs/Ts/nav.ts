@@ -1,3 +1,5 @@
+
+
 document.write(`
 <nav>
     <div>
@@ -31,7 +33,8 @@ document.write(`
 
 const isMobile : boolean = window.matchMedia("only screen and (max-width:600px)").matches;
 let w : number = isMobile ? 70 : 50;
-let img_cv = document.querySelector(".image_cv");
+let img_cv = document.querySelector(".image_cv") as HTMLImageElement;
+img_cv.style.display = "none";
 console.log("wesh);");
 if (img_cv instanceof HTMLImageElement){
     img_cv.onload = function() {
@@ -47,6 +50,7 @@ if (img_cv instanceof HTMLImageElement){
             img_cv.style.width = w.toString() + 'px';
             console.log(img_cv.style.height,img_cv.style.width,"f");
             console.log("finish resize");
+            img_cv.style.display = "block";
         }
    } 
 }
@@ -68,4 +72,39 @@ if (page.includes("projet.html")){
         home.style.transition = "all 1s ease"
         home.style.display = "block";
     }
+}
+
+/*
+function handle_mouse_leave(e : Event) {
+    let target  = e.target as HTMLElement
+    console.log(e.target)
+    setTimeout(() => {
+       if (target){
+         console.log(target);
+         target.style.border = "1px solid black"
+       }
+    },300)
+}
+*/
+
+const handle_click = (e : Event) => {
+    e.preventDefault();
+    const body =  document.querySelector("body");
+    if (body instanceof HTMLBodyElement){
+        body.classList.add("bodyonchange");
+        setTimeout(()=>{
+            body.classList.remove("bodyonchange");
+            if (e.target instanceof HTMLElement){
+                document.location.href = `${e.target.getAttribute("href")}`
+            }
+        }, 600)
+    }
+    
+   
+}
+if (nav instanceof HTMLElement){
+    let a  = nav.querySelectorAll("a");
+    a.forEach( lien => {
+        lien.addEventListener("click", handle_click)
+    })
 }

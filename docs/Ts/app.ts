@@ -36,18 +36,30 @@ try{
 
 
 let scrool_amount : number = 0;
-const slider = document.querySelector(".projet_apercu") as HTMLElement;
-slider.style.transition = "all 1s ease";
-let souris_down = false;
-let first_time : boolean = false;
-let startX : number = 0;
-let scrool_actu : number = 0;
-let scroll_time :number = 0;
-let count_child : number = slider.querySelectorAll('div').length;
-let was_max : boolean = false;
-let max_scrool = count_child - 1;
+const slider = document.querySelector(".projet_apercu")
+ let souris_down : boolean;
+ let first_time;
+ let startX;
+ let scrool_actu;
+ let scroll_time : number;
+ let count_child
+ let was_max;
+ let max_scrool : number;
+if (slider instanceof HTMLElement){
+    slider.style.transition = "all 1s ease";
+    souris_down = false;
+    first_time = false;
+    startX  = 0;
+    scrool_actu  = 0;
+    scroll_time  = 0;
+    count_child  = slider.querySelectorAll('div').length;
+    was_max  = false;
+    max_scrool = count_child - 1;
+}
 
-
+const event_scrool_m = (e : MouseEvent) =>{
+    let p = 2
+}
 const event_scrool = (e : MouseEvent | TouchEvent) => {
     e.preventDefault();    
     
@@ -95,8 +107,10 @@ const event_scrool = (e : MouseEvent | TouchEvent) => {
 /*fonction pour mettre a jour la position de la barre horizontale*/
 document.addEventListener('mousedown', (e : MouseEvent) =>{
     souris_down = true;
-    startX = e.pageX - (slider.offsetLeft); //position relative au slider
-    scrool_actu = slider.scrollLeft ;
+    if (slider instanceof HTMLElement){
+        startX = e.pageX - (slider.offsetLeft); //position relative au slider
+        scrool_actu = slider.scrollLeft ;
+    }
 });
 
 
@@ -104,14 +118,15 @@ document.addEventListener('mousedown', (e : MouseEvent) =>{
 document.addEventListener('mouseup', function(){
     souris_down = false;
 });
-
-slider.addEventListener('mouseleave', function(){
+slider && slider.addEventListener('mouseleave', function(){
     souris_down = false;
 });
 
-
-slider.addEventListener("mousedown", event_scrool);
-slider.addEventListener("touchstart", event_scrool);
+// un if rapide if slider => addeventlister...
+if (slider instanceof HTMLElement){
+    slider.addEventListener("mousedown", event_scrool);
+    slider.addEventListener("touchstart", event_scrool);
+}
 
 function have_scroll(): void{
     let element = document.documentElement;
