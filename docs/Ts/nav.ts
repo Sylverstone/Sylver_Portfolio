@@ -97,11 +97,10 @@ const handle_click = (e : Event) => {
             if (e.target instanceof HTMLElement){
                 document.location.href = `${e.target.getAttribute("href")}`
             }
-        }, 600)
+        }, 500)
     }
-    
-   
 }
+
 if (nav instanceof HTMLElement){
     let a  = nav.querySelectorAll("a");
     a.forEach( lien => {
