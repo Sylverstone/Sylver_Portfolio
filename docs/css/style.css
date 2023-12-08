@@ -75,6 +75,14 @@ body{
     filter: drop-shadow(0 0 1em black);
     cursor: pointer;
 }
+
+.repo-github{
+    margin-left: 2%;
+    color: rgb(10, 101, 166);
+    margin-top: 10% !important;
+    font-family: 'Urbanist';
+}
+
 .home{
     
     width: 70px;
@@ -136,7 +144,7 @@ nav ul{
 
 
 
-nav a{
+ a{
     opacity: 1 !important;
     color: var(--couleur_text);
     text-decoration: none;
@@ -148,7 +156,7 @@ nav a{
     */
 }
 
-nav a::after{
+a::after{
     position: absolute;
     content: " ";
     width: 0%;
@@ -159,13 +167,13 @@ nav a::after{
     transition: width 300ms ease, border-color 500ms ease !important;
 
 }
-nav a:not([class]):hover::after{
+a:not(.lien_home):hover::after{
     border: 1px solid var(--couleur_text);
     cursor: pointer;
     width: 100%;
 }
 
-nav a:not([class]):not(:hover)::after{
+a:not(.lien_home):not(:hover)::after{
     border: 1px solid transparent;
     cursor: pointer;
     left: unset;
