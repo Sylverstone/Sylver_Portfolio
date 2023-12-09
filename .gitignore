@@ -1,5 +1,6 @@
 package/
 nodejs/
+node_modules/
 nodejs.zip
 main.js
 navjssauvegarde.js
