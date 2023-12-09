@@ -16,14 +16,6 @@ try {
     if (body instanceof HTMLBodyElement) {
         let al = body.querySelectorAll("*"); /*selectionne tout les elements*/
         all = Array.from(al);
-        all = all.filter(function (element) {
-            if (element) {
-                let parentElement_ = element.parentElement;
-                let grandParentElement = parentElement_ === null || parentElement_ === void 0 ? void 0 : parentElement_.parentElement;
-                /*retirer les elements du footer*/
-                return element.tagName !== 'FOOTER' && element.tagName !== "BUTTON" && (parentElement_ === null || parentElement_ === void 0 ? void 0 : parentElement_.tagName) !== 'FOOTER' && (grandParentElement === null || grandParentElement === void 0 ? void 0 : grandParentElement.tagName) !== 'FOOTER' && element.className !== "home";
-            }
-        });
         for (let elt of all) { /* va mettre a tout les elements de all une transition en opacité*/
             elt.style.transition = "opacity 1s ease";
             elt.style.opacity = "0";
@@ -33,6 +25,7 @@ try {
 catch (err) {
     console.log(err);
 }
+//----------------------------------------------------------------Gère Le slider
 let scrool_amount = 0;
 const slider = document.querySelector(".projet_apercu");
 let souris_down;
@@ -116,6 +109,36 @@ if (slider instanceof HTMLElement) {
     slider.addEventListener("mousedown", event_scrool);
     slider.addEventListener("touchstart", event_scrool);
 }
+//----------------------------------------------------------------Gère les click de li dans le nav de projet pour scroll
+const liste_list = document.querySelectorAll(".li_projet");
+liste_list.forEach((li, index) => {
+    li.addEventListener("click", (e) => {
+        click_on_nav_projet(e, index);
+    });
+});
+const list_of_element_projet = document.querySelectorAll(".div-container-projet");
+/**
+ *
+ * @param e {Event} : L'evenement de click
+ * @param id {Number} : l'id de L'element où l'on doit scroll
+ */
+function click_on_nav_projet(e, id) {
+    console.log(id);
+    const element = list_of_element_projet[id];
+    console.log(element);
+    //element.scrollIntoView({ behavior: 'smooth' , block : "start"});
+    const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+}
+//----------------------------------------------------------------Gère le sticky du nav
+const navProjet = document.querySelector('.nav_projet');
+if (navProjet instanceof HTMLElement) {
+    const rect = navProjet.getBoundingClientRect(); // Récupère les coordonnées de l'élément par rapport à la fenêtre
+    console.log("yo");
+    navProjet.style.position = 'sticky';
+    navProjet.style.top = `${rect.top}px`; // Utilise la position initiale pour le 'top'
+}
+//----------------------------------------------------------------Gère le scroll pour l'apparition des elements
 function have_scroll() {
     let element = document.documentElement;
     let max_scrool = element.scrollHeight - element.clientHeight; //scroolheight : taille total de la page; clientheight : taille visible de la page
@@ -168,7 +191,6 @@ function click_sub_menu() {
         }
     }
 }
-/*Si je fais pas ça la première animations ne se lance pas au premier click*/
 function affiche() {
     window.open(this.src, '_blank');
 }

@@ -17,14 +17,6 @@ try{
     if (body instanceof HTMLBodyElement){
         let al : NodeListOf<HTMLElement>  = body.querySelectorAll("*"); /*selectionne tout les elements*/
         all = Array.from(al);
-        all = all.filter(function(element : HTMLElement) { /*fonction assez bizarre qui filtre selon le return, toute la liste al est parcouru */
-            if (element){
-                let parentElement_ = element.parentElement;
-                let grandParentElement = parentElement_?.parentElement;
-                /*retirer les elements du footer*/
-                return element.tagName !== 'FOOTER' && element.tagName !== "BUTTON" && parentElement_?.tagName !== 'FOOTER' && grandParentElement?.tagName !== 'FOOTER' && element.className !== "home";
-            }
-        });
         for (let elt of all){ /* va mettre a tout les elements de all une transition en opacité*/
             elt.style.transition = "opacity 1s ease";
             elt.style.opacity = "0";
@@ -35,16 +27,17 @@ try{
 }
 
 
+//----------------------------------------------------------------Gère Le slider
 let scrool_amount : number = 0;
 const slider = document.querySelector(".projet_apercu")
- let souris_down : boolean;
- let first_time;
- let startX;
- let scrool_actu;
- let scroll_time : number;
- let count_child
- let was_max;
- let max_scrool : number;
+let souris_down : boolean;
+let first_time;
+let startX;
+let scrool_actu;
+let scroll_time : number;
+let count_child
+let was_max;
+let max_scrool : number;
 if (slider instanceof HTMLElement){
     slider.style.transition = "all 1s ease";
     souris_down = false;
@@ -113,8 +106,6 @@ document.addEventListener('mousedown', (e : MouseEvent) =>{
     }
 });
 
-
-
 document.addEventListener('mouseup', function(){
     souris_down = false;
 });
@@ -128,6 +119,42 @@ if (slider instanceof HTMLElement){
     slider.addEventListener("touchstart", event_scrool);
 }
 
+//----------------------------------------------------------------Gère les click de li dans le nav de projet pour scroll
+const liste_list : NodeListOf<HTMLLIElement>= document.querySelectorAll(".li_projet");
+
+liste_list.forEach((li,index) => {
+    li.addEventListener("click", (e) => {
+        click_on_nav_projet(e,index)
+    });
+})
+const list_of_element_projet : NodeListOf<HTMLElement>= document.querySelectorAll(".div-container-projet")
+
+/**
+ * 
+ * @param e {Event} : L'evenement de click
+ * @param id {Number} : l'id de L'element où l'on doit scroll
+ */
+function click_on_nav_projet(e : Event,id : number){
+    console.log(id)
+    const element = list_of_element_projet[id];
+    console.log(element)
+    //element.scrollIntoView({ behavior: 'smooth' , block : "start"});
+    const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80
+
+    window.scrollTo({ top: offsetTop, behavior: 'smooth'});
+    
+}
+
+//----------------------------------------------------------------Gère le sticky du nav
+const navProjet = document.querySelector('.nav_projet');
+if (navProjet instanceof HTMLElement){
+    const rect = navProjet.getBoundingClientRect(); // Récupère les coordonnées de l'élément par rapport à la fenêtre
+    console.log("yo")
+    navProjet.style.position = 'sticky';
+    navProjet.style.top = `${rect.top}px`; // Utilise la position initiale pour le 'top'
+}
+
+//----------------------------------------------------------------Gère le scroll pour l'apparition des elements
 function have_scroll(): void{
     let element = document.documentElement;
     let max_scrool = element.scrollHeight - element.clientHeight; //scroolheight : taille total de la page; clientheight : taille visible de la page
@@ -156,7 +183,6 @@ function have_scroll(): void{
 
 have_scroll(); //simuler un scroll pour charger la page blanche
 window.addEventListener('scroll',have_scroll)
-
 
 function click_sub_menu() :void{
     console.log("js")
@@ -188,8 +214,6 @@ function click_sub_menu() :void{
         }    
     } 
 }
-/*Si je fais pas ça la première animations ne se lance pas au premier click*/
-
 
 function affiche(this : HTMLImageElement) : void{
     window.open(this.src,'_blank');

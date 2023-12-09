@@ -89,7 +89,7 @@ const handle_click = (e) => {
             if (e.target instanceof HTMLElement) {
                 document.location.href = `${e.target.getAttribute("href")}`;
             }
-        }, 600);
+        }, 500);
     }
 };
 if (nav instanceof HTMLElement) {

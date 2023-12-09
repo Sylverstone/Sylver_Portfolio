@@ -67,24 +67,17 @@ body{
 
 
 }
-.home{
-    will-change: filter;
-    transition: filter 500ms ease;
-}
+
 .home:hover{
     filter: drop-shadow(0 0 1em black);
     cursor: pointer;
 }
 
-.repo-github{
-    margin-left: 2%;
-    color: rgb(10, 101, 166);
-    margin-top: 10% !important;
-    font-family: 'Urbanist';
-}
+
 
 .home{
-    
+    will-change: filter;
+    transition: filter 500ms ease;
     width: 70px;
     height: 65px;
     display: none;
@@ -92,7 +85,7 @@ body{
 
 .lien_home{
     border: none !important;
-    
+    transition: filter 500ms ease;
 }
 
 .copied p{
@@ -162,7 +155,7 @@ a::after{
     width: 0%;
     background-color: "yellow";
     border: 1px solid transparent;
-    left: 0;
+    left: 7.5%;
     bottom: 0;
     transition: width 300ms ease, border-color 500ms ease !important;
 
@@ -170,7 +163,7 @@ a::after{
 a:not(.lien_home):hover::after{
     border: 1px solid var(--couleur_text);
     cursor: pointer;
-    width: 100%;
+    width: 85%;
 }
 
 a:not(.lien_home):not(:hover)::after{
@@ -311,6 +304,8 @@ footer{
     flex-wrap: wrap;
     background-color: black;
     justify-content: space-around;
+    transition: none !important;
+    opacity: 1!important;
 }
 
 footer div{
@@ -365,14 +360,79 @@ footer div{
 /* special partie 2 */
 
 
+
 .Titre_projet{
+
     margin: 2% 0 0 0;
     color: rgb(219, 86, 86);
     font-family: 'Nunito Sans'
 }
+
+.container-projet{
+    display: flex;
+    margin-top: 2%;
+    align-items: start;
+}
+
+.nav_projet {
+    margin: 1% 0 1% 0;
+    color: var(--couleur_text);
+    margin-right: 2%;
+    padding: 2%;
+    min-width: 20%;
+    text-align: center;
+    border: 1px solid var(--couleur_text);
+    background-color: rgba(255, 255, 255, 0.2); /* Fond transparent */
+    z-index: 100;
+}
+.nav_projet a:hover .li_projet{
+    margin: 20px;
+}
+
+.nav_projet a{
+    
+    width: 100%;
+    height: 100%;
+}
+
+.nav_projet li{
+    transition: all 500ms ease !important;
+    margin: 2%;
+}
+.nav_projet li:hover{
+    filter: drop-shadow(0 0 2em #646cffaa);
+    padding: 5% 0 5% 0;
+    background: rgb(255, 255,255,0.1);
+    border-radius: 2em
+}
+
+
+.nav_projet p{
+    z-index: 9999;
+}
+
+.div-container-projet{
+    /*Les divs qui contiennent les projets*/
+    margin: 2% 0 2% 0;
+    padding: 0 1% 1% 1%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--couleur_text);
+    border-radius: 1em
+}
 .desc-projet{
     padding-left: 2%;
     text-align: left;
+}
+
+.repo-github{
+    align-self: left;
+    margin-left: 2%;
+    color: rgb(10, 101, 166);
+    margin-top: 1% !important;
+    font-family: 'Urbanist';    
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 @media screen and (max-width: 600px) {
@@ -515,12 +575,14 @@ footer div{
    }
    
    footer{
+    opacity: 1!important;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     max-width: 100%;
+    transition: none !important;
    }
    footer div{
         text-align: center;
