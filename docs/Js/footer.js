@@ -16,8 +16,6 @@ document.write(`
         <div>
             <h3>Contactez-moi</h3>
             <a class="lien_email" href="mailto:sylvio0801@gmail.com" target="_blank" rel="noopener">sylvio0801@gmail.com</a>  
-            <button onclick="copyText()">Copier</button>
-            <div class="copied"><p>Copié !</p></div>
         </div>
 </footer>
 <button class="retour" onclick="retour_en_haut()">RETOUR EN HAUT</button>

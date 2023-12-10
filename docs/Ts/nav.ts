@@ -34,6 +34,8 @@ document.write(`
 
 let nav_ = document.querySelector('nav') as HTMLElement;
 let nav_rect = nav_.getBoundingClientRect();
+let nav_mobile = document.querySelector('.tête_menu_compresser') as HTMLLIElement | null;
+let nav_mobile_rect = nav_mobile?.getBoundingClientRect() as DOMRect;
 let isMobile : boolean = window.matchMedia("only screen and (max-width:600px)").matches;
 let navHavechange : boolean = window.matchMedia("only screen and (max-width: 1040px").matches;
 window.addEventListener("resize", (e : Event) =>{

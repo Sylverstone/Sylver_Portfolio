@@ -1,4 +1,5 @@
 "use strict";
+let nav_is_out = false;
 let section = document.querySelector(".projet_apercu");
 if (section instanceof HTMLElement) {
     let Div_a_changer = section.querySelectorAll('div')[2];
@@ -176,11 +177,15 @@ window.addEventListener('scroll', () => {
         const vu_client = document.documentElement.scrollTop;
         const rect = navProjet.getBoundingClientRect(); // Récupère les coordonnées de l'élément par rapport à la fenêtre
         navProjet.style.position = 'sticky';
+        let ajout = 0;
+        if (nav_is_out) {
+            ajout = nav_rect.top;
+        }
         if (rect.top + window.scrollY >= vu_client) {
-            navProjet.style.top = `${rect.top}px`; // Utilise la position initiale pour le 'top'
+            navProjet.style.top = `${rect.top + ajout}px`; // Utilise la position initiale pour le 'top'
         }
         else {
-            navProjet.style.top = `${rect.top + window.scrollY}px`;
+            navProjet.style.top = `${rect.top + window.scrollY + ajout}px`;
         }
     }
 });
@@ -212,9 +217,10 @@ have_scroll(); //simuler un scroll pour charger la page blanche
 window.addEventListener('scroll', have_scroll);
 function click_sub_menu() {
     console.log("js");
+    nav_is_out = !nav_is_out;
+    const navProjet = document.querySelector('.nav_projet');
     let element = document.querySelector(".sub_menu");
     if (element instanceof HTMLUListElement) {
-        console.log("in\n", element.className);
         let img = document.querySelector(".img_ligne");
         img.style.transition = "transform 0.5s ease";
         let img_width = img.offsetWidth;
@@ -228,8 +234,20 @@ function click_sub_menu() {
             contener_ul.style.border = "none";
             element.style.opacity = "0";
             img.style.transform = 'rotate(-360deg)';
+            if (navProjet) {
+                let ajout = parseInt(navProjet.style.top) - nav_mobile_rect.height - 40;
+                console.log(navProjet.style.top);
+                console.log(ajout);
+                navProjet.style.top = `${ajout}px`;
+            }
         }
         else {
+            if (navProjet) {
+                let ajout = parseInt(navProjet.style.top) + nav_mobile_rect.height + 40;
+                console.log(navProjet.style.top);
+                console.log(ajout);
+                navProjet.style.top = `${ajout}px`;
+            }
             element.style.display = "flex";
             element.style.border = "1px solid";
             element.style.opacity = "1";

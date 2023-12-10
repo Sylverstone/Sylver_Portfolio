@@ -31,6 +31,8 @@ document.write(`
 `);
 let nav_ = document.querySelector('nav');
 let nav_rect = nav_.getBoundingClientRect();
+let nav_mobile = document.querySelector('.tête_menu_compresser');
+let nav_mobile_rect = nav_mobile === null || nav_mobile === void 0 ? void 0 : nav_mobile.getBoundingClientRect();
 let isMobile = window.matchMedia("only screen and (max-width:600px)").matches;
 let navHavechange = window.matchMedia("only screen and (max-width: 1040px").matches;
 window.addEventListener("resize", (e) => {
