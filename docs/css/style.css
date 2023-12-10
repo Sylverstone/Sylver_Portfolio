@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&family=Urbanist:ital,wght@1,100;1,200&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,600;0,6..12,800;1,6..12,1000&display=swap');
 
 :root{
@@ -19,6 +17,10 @@
     --couleur_titre_light: var(--couleur_text_light);
     --couleur_titre_dark: #1394bf;
     --couleur_titre: var(--couleur_titre_dark);
+
+    --couleur_fond_nav_projet_dark: rgb(60, 59, 59);
+    --couleur_fond_nav_projet_light: rgb(125, 102, 102);
+    --couleur_fond_nav_projet: var(--couleur_fond_nav_projet_dark)
 }
 
 body{
@@ -44,29 +46,31 @@ body{
     background-color: var(--couleur_switch);
     opacity: 1!important;
 }
+
 .switch_theme:hover{
     filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .copied{
-
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: absolute;
     background-color: gray;
     width: 50px;
-    height: 15px ;    
+    height: 15px;    
     opacity: 0;
     transition: all 1s ease;
     margin: auto;
     padding: auto;
     top:20%;
-    left: 40%
-
-
+    left: 40%;
+    font-family: 'Urbanist';
+    text-align: center;
+    justify-content: center;
 }
+
 
 .home:hover{
     filter: drop-shadow(0 0 1em black);
@@ -77,7 +81,7 @@ body{
 
 .home{
     will-change: filter;
-    transition: filter 500ms ease;
+    transition: filter 500ms ease !important;
     width: 70px;
     height: 65px;
     display: none;
@@ -142,6 +146,7 @@ nav ul{
     color: var(--couleur_text);
     text-decoration: none;
     position: relative;
+    display: flex;
     /*
     border-color: var(--couleur_text);
     border-bottom: 1px solid var(--couleur_text);
@@ -153,23 +158,25 @@ a::after{
     position: absolute;
     content: " ";
     width: 0%;
-    background-color: "yellow";
-    border: 1px solid transparent;
-    left: 7.5%;
+    left: 0;
     bottom: 0;
     transition: width 300ms ease, border-color 500ms ease !important;
 
 }
-a:not(.lien_home):hover::after{
+a:not(.lien_home):not(.lien_email):hover::after{
     border: 1px solid var(--couleur_text);
+    background-color: var(--couleur_text);
+    border-radius: 2em;
     cursor: pointer;
-    width: 85%;
+    height: 2px;
+    width: 100%;
 }
 
-a:not(.lien_home):not(:hover)::after{
+a:not(.lien_home):not(.lien_email):not(:hover)::after{
     border: 1px solid transparent;
     cursor: pointer;
     left: unset;
+    border-radius: 0;
     right: 0;
     width: 0%;
 }
@@ -317,7 +324,8 @@ footer div{
 footer div p{
     margin: 0;
     font-size: 2.5vh;
-    color : grey;
+    color : grey !important;
+    opacity: 1!important;
 }
 
 footer div a{
@@ -341,6 +349,10 @@ footer div h3{
 footer div{
     margin:5px;
     max-width: 30%;
+}
+
+footer button{
+    opacity: 1!important;
 }
 
 .retour{
@@ -372,9 +384,15 @@ footer div{
     display: flex;
     margin-top: 2%;
     align-items: start;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 
+.big_container_projet{
+    max-width: 70%;
+}
 .nav_projet {
+    align-self: flex-start;
     margin: 1% 0 1% 0;
     color: var(--couleur_text);
     margin-right: 2%;
@@ -390,9 +408,7 @@ footer div{
 }
 
 .nav_projet a{
-    
-    width: 100%;
-    height: 100%;
+    display: inline-block;
 }
 
 .nav_projet li{
@@ -411,8 +427,12 @@ footer div{
     z-index: 9999;
 }
 
+.projet_div2{
+    display: none;
+}
 .div-container-projet{
     /*Les divs qui contiennent les projets*/
+
     margin: 2% 0 2% 0;
     padding: 0 1% 1% 1%;
     display: flex;
@@ -433,6 +453,48 @@ footer div{
     font-family: 'Urbanist';    
     width: -moz-fit-content;
     width: fit-content;
+}
+a{
+    cursor: pointer;
+}
+@media screen and (max-width: 1040px){
+
+    .big_container_projet{
+        max-width: 100%;
+    }
+    .nav_projet{
+        margin-top: 0;
+        min-width: 100%;
+        padding: 0;
+        background-color: var(--couleur_fond_nav_projet);
+    }
+
+    .projet_div2{
+        display: block;    
+    }
+    .nav_projet ul{
+        flex-shrink: 1;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        justify-content: center;
+    }
+    .nav_projet li{
+        font-size: 1em;
+        margin: 1% 20px 1% 0;
+        
+    }
+    .nav_projet li:hover{
+        filter: drop-shadow(0 0 2em #646cffaa);
+        padding: 0;
+        background: rgba(142, 127, 127, 0.1);
+        border-radius: 2em
+    }
+    .projet_div1{
+        display: none;
+    }
+
+
 }
 
 @media screen and (max-width: 600px) {
