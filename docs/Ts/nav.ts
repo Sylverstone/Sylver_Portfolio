@@ -14,7 +14,11 @@ document.write(`
         <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank" >Curriculum Vitae</a></li>
         <li class="Can_change_li"><a href="projet.html">projets</a></li>
         <li><a href = "#">Recommandation</a></li>
-        <li><img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)"></li>
+        <li>
+            <img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
+            <img class="switch_theme" style="display : none" src = "images/icon_fond_dark.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
+
+        </li>
         <li class = "tête_menu_compresser"> 
             <img class= "img_ligne" src="images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
 
@@ -30,8 +34,14 @@ document.write(`
 `
 );
 
-
-const isMobile : boolean = window.matchMedia("only screen and (max-width:600px)").matches;
+let nav_ = document.querySelector('nav') as HTMLElement;
+const nav_rect = nav_.getBoundingClientRect();
+let isMobile : boolean = window.matchMedia("only screen and (max-width:600px)").matches;
+let navHavechange : boolean = window.matchMedia("only screen and (max-width: 1040px").matches;
+window.addEventListener("resize", (e : Event) =>{
+    navHavechange = window.matchMedia("only screen and (max-width: 1040px").matches;
+    isMobile = window.matchMedia("only screen and (max-width:600px)").matches;
+})
 let w : number = isMobile ? 70 : 50;
 let img_cv = document.querySelector(".image_cv") as HTMLImageElement;
 img_cv.style.display = "none";

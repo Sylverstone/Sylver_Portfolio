@@ -9,7 +9,7 @@ if (section instanceof HTMLElement) {
         Div_a_changer.style.border = "none";
     }
 }
-
+console.log("ldd")
 let theme_mod_ligh = false; //variable global pour le theme
 let all = [] as Array<HTMLElement>; /*tableau qui servira a contenir quasiment tout les elements de la page*/
 try{
@@ -50,9 +50,7 @@ if (slider instanceof HTMLElement){
     max_scrool = count_child - 1;
 }
 
-const event_scrool_m = (e : MouseEvent) =>{
-    let p = 2
-}
+
 const event_scrool = (e : MouseEvent | TouchEvent) => {
     e.preventDefault();    
     
@@ -68,7 +66,9 @@ const event_scrool = (e : MouseEvent | TouchEvent) => {
         mouseXrel  = e.pageX - slider.offsetLeft;
     }
     console.log(scroll_time)
+    
     if (mouseXrel <= width_slider/2 && scroll_time > 1){
+        
         scroll_time -= 1;
         
         scrool_amount -= width_slider;
@@ -106,6 +106,19 @@ document.addEventListener('mousedown', (e : MouseEvent) =>{
     }
 });
 
+if (slider instanceof HTMLElement){
+    slider.onmousemove = (e : MouseEvent) => {
+        const mouseXrel  = e.pageX - slider.offsetLeft;
+        const width_slider = slider.offsetWidth;
+        if (mouseXrel <= width_slider/2){
+            console.log("ins")
+            slider.style.cursor = "url('images/icon_cursor_droit.png'), auto";
+        }else{
+            slider.style.cursor = "url('images/icon_cursor_droit.png')";
+            console.log("here")
+        }
+    }
+}
 document.addEventListener('mouseup', function(){
     souris_down = false;
 });
@@ -121,12 +134,27 @@ if (slider instanceof HTMLElement){
 
 //----------------------------------------------------------------Gère les click de li dans le nav de projet pour scroll
 const liste_list : NodeListOf<HTMLLIElement>= document.querySelectorAll(".li_projet");
+const projet_div1 = document.querySelector(".projet_div1");
+let amount_of_li : number = 0;
+console.log(projet_div1)
+if (projet_div1 instanceof HTMLElement){
+    amount_of_li = projet_div1.querySelectorAll(".li_projet").length;
+}
 
+let nav_changed : boolean = false;
 liste_list.forEach((li,index) => {
     li.addEventListener("click", (e) => {
-        click_on_nav_projet(e,index)
+        console.log(index,amount_of_li, index % amount_of_li)
+        if (index >= amount_of_li){
+            index = index % amount_of_li;
+            nav_changed = true;
+        } else{
+            nav_changed = false
+        }
+        click_on_nav_projet(e,index,nav_changed)
     });
 })
+
 const list_of_element_projet : NodeListOf<HTMLElement>= document.querySelectorAll(".div-container-projet")
 
 /**
@@ -134,25 +162,31 @@ const list_of_element_projet : NodeListOf<HTMLElement>= document.querySelectorAl
  * @param e {Event} : L'evenement de click
  * @param id {Number} : l'id de L'element où l'on doit scroll
  */
-function click_on_nav_projet(e : Event,id : number){
+function click_on_nav_projet(e : Event,id : number,nav_changed : boolean){
     console.log(id)
+    const marge_de_depassement = navHavechange || nav_changed ? nav_rect.height + 80 : nav_rect.height + 10; 
     const element = list_of_element_projet[id];
     console.log(element)
-    //element.scrollIntoView({ behavior: 'smooth' , block : "start"});
-    const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80
-
+    const offsetTop = element.getBoundingClientRect().top + window.scrollY - marge_de_depassement
+    //window.scrollY donne l'etat actuel du scroll donc on l'ajoute au rect.top car rect.top est relatif
     window.scrollTo({ top: offsetTop, behavior: 'smooth'});
     
 }
 
 //----------------------------------------------------------------Gère le sticky du nav
-const navProjet = document.querySelector('.nav_projet');
-if (navProjet instanceof HTMLElement){
-    const rect = navProjet.getBoundingClientRect(); // Récupère les coordonnées de l'élément par rapport à la fenêtre
-    console.log("yo")
-    navProjet.style.position = 'sticky';
-    navProjet.style.top = `${rect.top}px`; // Utilise la position initiale pour le 'top'
-}
+window.addEventListener('scroll', () =>{
+    const navProjet = document.querySelector('.nav_projet');
+    if (navProjet instanceof HTMLElement){
+        const vu_client = document.documentElement.scrollTop;
+        const rect = navProjet.getBoundingClientRect(); // Récupère les coordonnées de l'élément par rapport à la fenêtre
+        navProjet.style.position = 'sticky';        
+        if (rect.top + window.scrollY >= vu_client){
+            navProjet.style.top = `${rect.top}px`; // Utilise la position initiale pour le 'top'
+        }else{
+            navProjet.style.top = `${rect.top + window.scrollY}px`       
+        }
+    }
+})
 
 //----------------------------------------------------------------Gère le scroll pour l'apparition des elements
 function have_scroll(): void{
@@ -229,13 +263,14 @@ function copyText(){
     if (ref_copy instanceof HTMLAnchorElement){
         let text = ref_copy.innerText;
         navigator.clipboard.writeText(text)
-        .then(function(){
+        .then(() => {
            console.log("copied text");
         })
-        .catch(function(){alert("fail")})
+        .catch(() => {alert("La copie a échoué")})
     }
     let copied = document.querySelector(".copied");
     if (copied instanceof HTMLDivElement){
+        copied.style.display =" flex";
         copied.style.opacity = "1";
     }
     setTimeout(function(){
@@ -257,21 +292,24 @@ function click_on_theme(this : HTMLImageElement){
     let text_src : string;
     let titre : string;
     let color_switch : string;
+    let couleur_fond_nav_projet:string;
     if (theme_mod_ligh === false){
+        
          text_src = "images/icon_fond_ligh.png";
          couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
          text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
          titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_dark");
-
+         couleur_fond_nav_projet = getComputedStyle(document.documentElement).getPropertyValue("--couleur_fond_nav_projet_dark")
     } else{
          text_src = "images/icon_fond_dark.png";
          couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
          text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");
          titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_light");
+         couleur_fond_nav_projet = getComputedStyle(document.documentElement).getPropertyValue("--couleur_fond_nav_projet_light")
     }
     document.documentElement.style.setProperty("--couleur_fond", couleur_fond);
     document.documentElement.style.setProperty("--couleur_text", text_couleur)
     document.documentElement.style.setProperty("--couleur_titre", titre);
-
+    document.documentElement.style.setProperty("--couleur_fond_nav_projet",couleur_fond_nav_projet)
     this.src = text_src;
 }
