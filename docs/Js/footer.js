@@ -20,5 +20,5 @@ document.write(`
             <div class="copied"><p>Copié !</p></div>
         </div>
 </footer>
+<button class="retour" onclick="retour_en_haut()">RETOUR EN HAUT</button>
 `);
-console.log("ll");
