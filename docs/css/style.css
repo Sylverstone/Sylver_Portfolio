@@ -604,11 +604,26 @@ a{
     transition: none !important;
     height: 40;
    }
+
    .sub_menu a{
     padding-left: 5px;
     transition: none;
    }
 
+   .nav_projet ul{
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0;
+        justify-content: space-between;
+   }
+
+   .nav_projet li{
+    border: 1px solid;
+    border-radius: 1em;
+    font-size: 15px;
+    padding: 0 2px 0 2px;
+    margin: 5px;
+   }
    
    .sub_menu li{
     padding : 0;
@@ -621,6 +636,9 @@ a{
     min-width: 150px;
     justify-content: center;
     
+   }
+   a::after{
+    content: none;
    }
    .projet_apercu{
     width: 40vh;

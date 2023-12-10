@@ -26,6 +26,17 @@ try {
 catch (err) {
     console.log(err);
 }
+//----------------------------------------------------------------witdh du aside
+let aside = document.querySelector("aside");
+let rect_aside;
+if (aside) {
+    rect_aside = aside.getBoundingClientRect();
+}
+window.addEventListener("resize", () => {
+    if (aside) {
+        rect_aside = aside.getBoundingClientRect();
+    }
+});
 //----------------------------------------------------------------Gère Le slider
 let scrool_amount = 0;
 const slider = document.querySelector(".projet_apercu");
@@ -151,7 +162,7 @@ const list_of_element_projet = document.querySelectorAll(".div-container-projet"
  */
 function click_on_nav_projet(e, id, nav_changed) {
     console.log(id);
-    const marge_de_depassement = navHavechange || nav_changed ? nav_rect.height + 80 : nav_rect.height + 10;
+    const marge_de_depassement = navHavechange || nav_changed ? nav_rect.height + rect_aside.height + 20 : nav_rect.height + 10;
     const element = list_of_element_projet[id];
     console.log(element);
     const offsetTop = element.getBoundingClientRect().top + window.scrollY - marge_de_depassement;

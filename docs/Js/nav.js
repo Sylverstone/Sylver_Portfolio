@@ -30,12 +30,13 @@ document.write(`
 </nav>
 `);
 let nav_ = document.querySelector('nav');
-const nav_rect = nav_.getBoundingClientRect();
+let nav_rect = nav_.getBoundingClientRect();
 let isMobile = window.matchMedia("only screen and (max-width:600px)").matches;
 let navHavechange = window.matchMedia("only screen and (max-width: 1040px").matches;
 window.addEventListener("resize", (e) => {
     navHavechange = window.matchMedia("only screen and (max-width: 1040px").matches;
     isMobile = window.matchMedia("only screen and (max-width:600px)").matches;
+    nav_rect = nav_.getBoundingClientRect();
 });
 let w = isMobile ? 70 : 50;
 let img_cv = document.querySelector(".image_cv");

@@ -26,6 +26,18 @@ try{
     console.log(err);
 }
 
+//----------------------------------------------------------------witdh du aside
+
+let aside = document.querySelector("aside") as HTMLElement | null;
+let rect_aside : DOMRect;
+if (aside){
+    rect_aside = aside.getBoundingClientRect();
+}
+window.addEventListener("resize", () =>{
+    if (aside){
+        rect_aside = aside.getBoundingClientRect();
+    }
+});
 
 //----------------------------------------------------------------Gère Le slider
 let scrool_amount : number = 0;
@@ -164,7 +176,7 @@ const list_of_element_projet : NodeListOf<HTMLElement>= document.querySelectorAl
  */
 function click_on_nav_projet(e : Event,id : number,nav_changed : boolean){
     console.log(id)
-    const marge_de_depassement = navHavechange || nav_changed ? nav_rect.height + 80 : nav_rect.height + 10; 
+    const marge_de_depassement = navHavechange || nav_changed ? nav_rect.height + rect_aside.height + 20 : nav_rect.height + 10; 
     const element = list_of_element_projet[id];
     console.log(element)
     const offsetTop = element.getBoundingClientRect().top + window.scrollY - marge_de_depassement
