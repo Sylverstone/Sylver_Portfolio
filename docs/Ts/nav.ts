@@ -17,11 +17,9 @@ document.write(`
         <li>
             <img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
             <img class="switch_theme" style="display : none" src = "images/icon_fond_dark.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
-
         </li>
         <li class = "tête_menu_compresser"> 
             <img class= "img_ligne" src="images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
-
             <ul class="sub_menu">
                 <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank">Curriculum Vitae</a></li>
                 <li class="Can_change_li"><a href="projet.html" >projets</a></li>
@@ -104,9 +102,18 @@ const handle_click = (e : Event) => {
         body.classList.add("bodyonchange");
         setTimeout(()=>{
             body.classList.remove("bodyonchange");
-            if (e.target instanceof HTMLElement){
-                document.location.href = `${e.target.getAttribute("href")}`
+            let targetElement = e.target as HTMLElement | null;
+            // Trouver l'élément parent de type 'a'
+            while (targetElement && targetElement.tagName !== 'A') {
+                targetElement = targetElement.parentNode as HTMLElement | null;
             }
+            if (targetElement instanceof HTMLAnchorElement){
+                console.log(targetElement);
+                const href = targetElement.getAttribute("href");
+                if (href) {
+                    document.location.href = href;
+                }
+            } 
         }, 500)
     }
 }
