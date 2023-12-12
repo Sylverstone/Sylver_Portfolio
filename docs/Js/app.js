@@ -295,6 +295,7 @@ function click_on_theme() {
     let color_switch;
     let couleur_fond_nav_projet;
     if (theme_mod_ligh === false) {
+        localStorage.setItem("theme", "light");
         text_src = "images/icon_fond_ligh.png";
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
@@ -302,6 +303,7 @@ function click_on_theme() {
         couleur_fond_nav_projet = getComputedStyle(document.documentElement).getPropertyValue("--couleur_fond_nav_projet_dark");
     }
     else {
+        localStorage.setItem("theme", "dark");
         text_src = "images/icon_fond_dark.png";
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");

@@ -163,7 +163,7 @@ a::after{
     transition: width 300ms ease, border-color 500ms ease !important;
 
 }
-a:not(.lien_home):not(.lien_email):hover::after{
+li:hover a::after{
     border: 1px solid var(--couleur_text);
     background-color: var(--couleur_text);
     border-radius: 2em;
@@ -172,7 +172,7 @@ a:not(.lien_home):not(.lien_email):hover::after{
     width: 100%;
 }
 
-a:not(.lien_home):not(.lien_email):not(:hover)::after{
+li:not(:hover) a::after{
     border: 1px solid transparent;
     cursor: pointer;
     left: unset;
@@ -391,6 +391,7 @@ footer button{
 .big_container_projet{
     max-width: 70%;
 }
+
 .nav_projet {
     align-self: flex-start;
     margin: 1% 0 1% 0;
@@ -440,6 +441,12 @@ footer button{
     border: 1px solid var(--couleur_text);
     border-radius: 1em
 }
+
+.div-container-projet ul{
+    all: unset;
+    list-style:none;
+}
+
 .desc-projet{
     padding-left: 2%;
     text-align: left;
