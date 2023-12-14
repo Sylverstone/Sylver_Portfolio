@@ -439,12 +439,8 @@ footer button{
     display: flex;
     flex-direction: column;
     border: 1px solid var(--couleur_text);
-    border-radius: 1em
-}
-
-.div-container-projet ul{
-    all: unset;
-    list-style:none;
+    border-radius: 1em;
+    align-items:start;
 }
 
 .desc-projet{
@@ -453,16 +449,25 @@ footer button{
 }
 
 .repo-github{
-    align-self: left;
     margin-left: 2%;
     color: rgb(10, 101, 166);
     margin-top: 1% !important;
     font-family: 'Urbanist';    
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
+}
+.no_style_li{
+    all: unset;
+    list-style: none;
 }
 a{
     cursor: pointer;
+}
+.ul_projet{
+    list-style-type: disc !important;
+    margin-left: 10%;
+    margin-top: 0;
+    font-family: 'Urbanist';
+    margin-bottom: 0;
 }
 @media screen and (max-width: 1040px){
 
@@ -484,18 +489,27 @@ a{
         display: flex;
         list-style: none;
         margin: 0;
+        flex-wrap: wrap;
+        
+
         justify-content: center;
     }
     .nav_projet li{
+
+        border: 1px solid var(--couleur_text);
+        border-radius: 1em;
         font-size: 1em;
         margin: 1% 20px 1% 0;
+        padding: 0 2px 0 2px;
+        transition: border 300ms ease;
         
     }
     .nav_projet li:hover{
         filter: drop-shadow(0 0 2em #646cffaa);
         padding: 0;
         background: rgba(142, 127, 127, 0.1);
-        border-radius: 2em
+        border-radius: 2em;
+        border: 1px solid transparent;
     }
     .projet_div1{
         display: none;
