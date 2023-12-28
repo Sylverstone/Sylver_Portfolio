@@ -121,6 +121,7 @@ if (nav instanceof HTMLElement) {
 }
 document.addEventListener("DOMContentLoaded", () => {
     const saved_theme = localStorage.getItem("theme");
+    console.log(saved_theme);
     if (saved_theme) {
         let couleur_fond;
         let text_couleur;

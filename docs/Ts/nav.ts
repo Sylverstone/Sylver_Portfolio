@@ -130,6 +130,7 @@ if (nav instanceof HTMLElement){
 
 document.addEventListener("DOMContentLoaded",() =>{
     const saved_theme = localStorage.getItem("theme");
+    console.log(saved_theme)
     if (saved_theme) {
         let couleur_fond : string;
         let text_couleur : string;
@@ -157,7 +158,9 @@ document.addEventListener("DOMContentLoaded",() =>{
         document.documentElement.style.setProperty("--couleur_text", text_couleur)
         document.documentElement.style.setProperty("--couleur_titre", titre);
         document.documentElement.style.setProperty("--couleur_fond_nav_projet",couleur_fond_nav_projet)
-        if (swicth_theme_img instanceof HTMLImageElement){
-        swicth_theme_img.src = text_src;}
+        if (swicth_theme_img instanceof HTMLImageElement)
+        {
+            swicth_theme_img.src = text_src;
+        }
     }
 });

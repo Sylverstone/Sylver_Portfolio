@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&family=Urbanist:ital,wght@1,100;1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,600;0,6..12,800;1,6..12,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Nunito:wght@500&display=swap');
 
 :root{
     --couleur_fond_dark: #242424;
@@ -26,7 +27,7 @@
 body{
     margin: 0;
     padding: 0 2%;
-    font-family: 'Kalam';
+    font-family: 'Nunito';
     font-size: 20px;
     background-color: var(--couleur_fond);
     transition: opacity 500ms ease !important;
@@ -87,6 +88,44 @@ body{
     display: none;
 }
 
+main{
+    
+    padding-left: 10%;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+main h2{
+    color: #a95555fa;
+    padding: 0.5em;
+    background-color: rgba(142, 127, 127, 0.1);
+    border-radius: 1em;
+    width: auto;
+    word-wrap: break-word;
+    
+}
+
+main div{
+    max-width: 350px!important;
+    min-width: 350px;
+    margin-right: 2%;
+
+}
+
+main ul{
+    list-style: none;
+    margin: 0;
+    padding-top: 0;
+    
+}
+main ul li{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .lien_home{
     border: none !important;
     transition: filter 500ms ease;
@@ -97,7 +136,7 @@ body{
     opacity: 1 !important;
     color: black;
 }
-p{
+p,h2{
     font-family: "Urbanist";
     color: var(--couleur_text)
 }
@@ -517,7 +556,16 @@ a{
 
 
 }
-
+/*
+@media screen and (max-width: 630px) {
+    main{
+        flex-direction: column;
+    }
+    main div{
+        max-width: 100% !important;
+    }
+}
+*/
 @media screen and (max-width: 600px) {
    .content div{
         max-width: 100%;

@@ -1,14 +1,5 @@
 let nav_is_out = false;
-let section =  document.querySelector(".projet_apercu");
-if (section instanceof HTMLElement) {
-    let Div_a_changer = section.querySelectorAll('div')[2];
-    Div_a_changer.style.border = "none";
-    let footer = document.querySelector("footer");
-    if (footer instanceof HTMLElement){
-        Div_a_changer = footer.querySelectorAll("div")[2];
-        Div_a_changer.style.border = "none";
-    }
-}
+
 console.log("ldd")
 let theme_mod_ligh = false; //variable global pour le theme
 let all = [] as Array<HTMLElement>; /*tableau qui servira a contenir quasiment tout les elements de la page*/

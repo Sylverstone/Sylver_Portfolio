@@ -1,12 +1,6 @@
 document.write(`
 <footer>
         <div>
-            <h3>Mes qualités</h3>
-            <p>Investi</p>
-            <p>Aime le code</p>
-            <p>Aime apprendre</p>
-        </div>
-        <div>
             <h3>Mon établissement</h3>
             <p>Lycée Faustin Fléret</p>
             <p>Guadeloupe, Morne-à-l'Eau</p>
