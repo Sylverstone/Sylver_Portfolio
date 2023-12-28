@@ -99,7 +99,7 @@ main{
     justify-content: center;
 }
 
-main h2{
+main h2, li h2{
     color: #a95555fa;
     padding: 0.5em;
     background-color: rgba(142, 127, 127, 0.1);
@@ -325,7 +325,15 @@ button:not([class]){
     border-style: double;
 }
 
-
+.decouvrir{
+    padding: 0;
+    margin: 0;
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+.text_cacher{
+    display: none;
+}
 .barrer{
     text-decoration: line-through;
 }
@@ -334,7 +342,9 @@ button:not([class]){
     font-family: 'Urbanist';
     margin-top: 2%;
     font-size: 3vh;
-    margin: 0 0 10% 0;
+    margin: 0 0 2% 0;
+    list-style-position: inside;
+    list-style-type: disclosure-closed;
 }
 
 
@@ -556,16 +566,7 @@ a{
 
 
 }
-/*
-@media screen and (max-width: 630px) {
-    main{
-        flex-direction: column;
-    }
-    main div{
-        max-width: 100% !important;
-    }
-}
-*/
+
 @media screen and (max-width: 600px) {
    .content div{
         max-width: 100%;
