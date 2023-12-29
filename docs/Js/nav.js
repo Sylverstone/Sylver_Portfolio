@@ -1,4 +1,12 @@
 "use strict";
+const saved_src = localStorage.getItem("src");
+console.log("src :", saved_src);
+if (saved_src) {
+    var src = saved_src;
+}
+else {
+    var src = "images/icon_fond_ligh.png";
+}
 document.write(`
 <nav>
     <div>
@@ -10,17 +18,16 @@ document.write(`
     </div>
     <a class="lien_home" href = "index.html" ><img  class="home" src="images/image_home.jpeg",alt = "image home"></a>
     <ul>
-        <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank" >Curriculum Vitae</a></li>
+        <li><a rel = "noopener" href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG" target="_blank" download>Curriculum Vitae</a></li>
         <li class="Can_change_li"><a href="projet.html">projets</a></li>
         <li><a href = "#">Recommandation</a></li>
         <li>
-            <img class="switch_theme" src = "images/icon_fond_ligh.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
-            <img class="switch_theme" style="display : none" src = "images/icon_fond_dark.png" alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
+            <img class="switch_theme" src = ${src} alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
         </li>
         <li class = "tête_menu_compresser"> 
             <img class= "img_ligne" src="images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
             <ul class="sub_menu">
-                <li><a rel = "noopener"href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG", target="_blank">Curriculum Vitae</a></li>
+                <li><a rel = "noopener" href="https://1drv.ms/w/s!AhjW9V5CcBPW6WMUBLCR_gPiLAsJ?e=esfaCG" target="_blank" download>Curriculum Vitae</a></li>
                 <li class="Can_change_li"><a href="projet.html" >projets</a></li>
                 <li><a href="#">Recommandation</a></li>
             </ul>
@@ -29,6 +36,7 @@ document.write(`
     </ul>
 </nav>
 `);
+console.log(document.querySelector(".switch_theme"));
 let nav_ = document.querySelector('nav');
 let nav_rect = nav_.getBoundingClientRect();
 let nav_mobile = document.querySelector('.tête_menu_compresser');
@@ -79,38 +87,31 @@ if (page.includes("projet.html")) {
         home.style.display = "block";
     }
 }
-/*
-function handle_mouse_leave(e : Event) {
-    let target  = e.target as HTMLElement
-    console.log(e.target)
-    setTimeout(() => {
-       if (target){
-         console.log(target);
-         target.style.border = "1px solid black"
-       }
-    },300)
-}
-*/
 const handle_click = (e) => {
-    e.preventDefault();
-    const body = document.querySelector("body");
-    if (body instanceof HTMLBodyElement) {
-        body.classList.add("bodyonchange");
-        setTimeout(() => {
-            body.classList.remove("bodyonchange");
-            let targetElement = e.target;
-            // Trouver l'élément parent de type 'a'
-            while (targetElement && targetElement.tagName !== 'A') {
-                targetElement = targetElement.parentNode;
+    let targetElement = e.target;
+    if (targetElement) {
+        let rel = targetElement.getAttribute("rel");
+        if (rel === null) {
+            e.preventDefault();
+            const body = document.querySelector("body");
+            if (body instanceof HTMLBodyElement) {
+                body.classList.add("bodyonchange");
+                setTimeout(() => {
+                    body.classList.remove("bodyonchange");
+                    // Trouver l'élément parent de type 'a'
+                    while (targetElement && targetElement.tagName !== 'A') {
+                        targetElement = targetElement.parentNode;
+                    }
+                    if (targetElement instanceof HTMLAnchorElement) {
+                        console.log(targetElement);
+                        const href = targetElement.getAttribute("href");
+                        if (href) {
+                            window.open(href);
+                        }
+                    }
+                }, 500);
             }
-            if (targetElement instanceof HTMLAnchorElement) {
-                console.log(targetElement);
-                const href = targetElement.getAttribute("href");
-                if (href) {
-                    document.location.href = href;
-                }
-            }
-        }, 500);
+        }
     }
 };
 if (nav instanceof HTMLElement) {
@@ -119,39 +120,3 @@ if (nav instanceof HTMLElement) {
         lien.addEventListener("click", handle_click);
     });
 }
-document.addEventListener("DOMContentLoaded", () => {
-    const saved_theme = localStorage.getItem("theme");
-    console.log(saved_theme);
-    if (saved_theme) {
-        let couleur_fond;
-        let text_couleur;
-        let text_src;
-        let titre;
-        let color_switch;
-        let swicth_theme_img = document.querySelector("switch_theme");
-        let couleur_fond_nav_projet;
-        if (saved_theme === "dark") {
-            theme_mod_ligh = true;
-            text_src = "images/icon_fond_dark.png";
-            couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
-            text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");
-            titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_light");
-            couleur_fond_nav_projet = getComputedStyle(document.documentElement).getPropertyValue("--couleur_fond_nav_projet_light");
-        }
-        else {
-            theme_mod_ligh = false;
-            text_src = "images/icon_fond_ligh.png";
-            couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
-            text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
-            titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_dark");
-            couleur_fond_nav_projet = getComputedStyle(document.documentElement).getPropertyValue("--couleur_fond_nav_projet_dark");
-        }
-        document.documentElement.style.setProperty("--couleur_fond", couleur_fond);
-        document.documentElement.style.setProperty("--couleur_text", text_couleur);
-        document.documentElement.style.setProperty("--couleur_titre", titre);
-        document.documentElement.style.setProperty("--couleur_fond_nav_projet", couleur_fond_nav_projet);
-        if (swicth_theme_img instanceof HTMLImageElement) {
-            swicth_theme_img.src = text_src;
-        }
-    }
-});

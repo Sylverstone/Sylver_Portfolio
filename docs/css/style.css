@@ -89,6 +89,12 @@ body{
 }
 
 main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+main section{
     
     padding-left: 10%;
     display: flex;
@@ -99,7 +105,7 @@ main{
     justify-content: center;
 }
 
-main h2, li h2{
+main section h2, div h2{
     color: #a95555fa;
     padding: 0.5em;
     background-color: rgba(142, 127, 127, 0.1);
@@ -109,23 +115,26 @@ main h2, li h2{
     
 }
 
-main div{
+main section div{
     max-width: 350px!important;
     min-width: 350px;
     margin-right: 2%;
 
 }
 
-main ul{
+main section ul{
     list-style: none;
     margin: 0;
     padding-top: 0;
     
 }
-main ul li{
+main section ul li{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main > div p{
+    padding-left: 10%;
+}
 .lien_home{
     border: none !important;
     transition: filter 500ms ease;
@@ -180,44 +189,27 @@ nav ul{
 
 
 
- a{
+a{
     opacity: 1 !important;
     color: var(--couleur_text);
     text-decoration: none;
     position: relative;
-    display: flex;
-    /*
-    border-color: var(--couleur_text);
-    border-bottom: 1px solid var(--couleur_text);
-    transition: border-color 200ms ease !important;
-    */
 }
 
 a::after{
     position: absolute;
     content: " ";
     width: 0%;
-    left: 0;
+    right:0;
     bottom: 0;
+    height: 2px;
+    background-color: white;
     transition: width 300ms ease, border-color 500ms ease !important;
 
 }
 li:hover a::after{
-    border: 1px solid var(--couleur_text);
-    background-color: var(--couleur_text);
-    border-radius: 2em;
-    cursor: pointer;
-    height: 2px;
+    left: 0;
     width: 100%;
-}
-
-li:not(:hover) a::after{
-    border: 1px solid transparent;
-    cursor: pointer;
-    left: unset;
-    border-radius: 0;
-    right: 0;
-    width: 0%;
 }
 
 nav div{
@@ -325,31 +317,56 @@ button:not([class]){
     border-style: double;
 }
 
-.decouvrir{
-    padding: 0;
-    margin: 0;
-    text-decoration: underline dotted;
-    cursor: pointer;
+.decouvrir {
+
+    position: relative;
 }
+
+
+.decouvrir::after {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    right: 0;
+    width: 0%; 
+    height: 2px; 
+    background-color: white;
+    transition: width 100ms ease;
+}
+
+.decouvrir:hover::after {
+    left: 0;
+    width: 100%; 
+}
+
+
 .text_cacher{
     display: none;
+    padding-left: 10%;
 }
+
 .barrer{
     text-decoration: line-through;
 }
 
-.mini_exp li{
-    font-family: 'Urbanist';
-    margin-top: 2%;
-    font-size: 3vh;
-    margin: 0 0 2% 0;
-    list-style-position: inside;
-    list-style-type: disclosure-closed;
+.mini_exp div{
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+}
+.mini_exp div h2{
+    width: 98%;
+}
+.mini_exp div p{
+    margin: 0;
 }
 
 
 
 .fin_apercu{
+    padding-top: 2%;
     color: rgb(170, 49, 49);
     font-size: 2.5vh;
 }

@@ -1,7 +1,15 @@
 "use strict";
 let nav_is_out = false;
 console.log("ldd");
-let theme_mod_ligh = false; //variable global pour le theme
+const save_theme = localStorage.getItem("theme");
+if (save_theme) {
+    if (save_theme === "dark") {
+        var theme_mod_ligh = false;
+    }
+    else {
+        var theme_mod_ligh = true;
+    }
+}
 let all = []; /*tableau qui servira a contenir quasiment tout les elements de la page*/
 try {
     let body = document.querySelector("body");
@@ -277,7 +285,7 @@ function copyText() {
 function click_on_theme() {
     console.log("click");
     theme_mod_ligh = !theme_mod_ligh;
-    console.log(theme_mod_ligh);
+    console.log("click_on_theme, theme mod ligh : ", theme_mod_ligh);
     let couleur_fond;
     let text_couleur;
     let text_src;
@@ -285,16 +293,18 @@ function click_on_theme() {
     let color_switch;
     let couleur_fond_nav_projet;
     if (theme_mod_ligh === false) {
-        localStorage.setItem("theme", "light");
+        localStorage.setItem("theme", "dark");
         text_src = "images/icon_fond_ligh.png";
+        localStorage.setItem("src", text_src);
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_dark');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_dark");
         titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_dark");
         couleur_fond_nav_projet = getComputedStyle(document.documentElement).getPropertyValue("--couleur_fond_nav_projet_dark");
     }
     else {
-        localStorage.setItem("theme", "dark");
+        localStorage.setItem("theme", "light");
         text_src = "images/icon_fond_dark.png";
+        localStorage.setItem("src", text_src);
         couleur_fond = getComputedStyle(document.documentElement).getPropertyValue('--couleur_fond_light');
         text_couleur = getComputedStyle(document.documentElement).getPropertyValue("--couleur_text_light");
         titre = getComputedStyle(document.documentElement).getPropertyValue("--couleur_titre_light");
@@ -305,4 +315,5 @@ function click_on_theme() {
     document.documentElement.style.setProperty("--couleur_titre", titre);
     document.documentElement.style.setProperty("--couleur_fond_nav_projet", couleur_fond_nav_projet);
     this.src = text_src;
+    console.log(this);
 }
