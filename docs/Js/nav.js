@@ -106,7 +106,7 @@ const handle_click = (e) => {
                         console.log(targetElement);
                         const href = targetElement.getAttribute("href");
                         if (href) {
-                            window.open(href);
+                            window.location.href = href;
                         }
                     }
                 }, 500);

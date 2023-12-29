@@ -112,7 +112,7 @@ const handle_click = (e : Event) => {
                         const href = targetElement.getAttribute("href");
                         
                         if (href) {
-                            window.open(href);
+                            window.location.href = href;
                         }
                     } 
                 }, 500)
