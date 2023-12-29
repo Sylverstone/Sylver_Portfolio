@@ -12,5 +12,5 @@ document.write(`
             <a class="lien_email" href="mailto:sylvio0801@gmail.com" target="_blank" rel="noopener">sylvio0801@gmail.com</a>  
         </div>
 </footer>
-<button class="retour" onclick="retour_en_haut()">RETOUR EN HAUT</button>
+<button class="retour" onclick="retour_en_haut()">⬆️</button>
 `);
