@@ -107,5 +107,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "files": ["docs/Ts/app.ts","docs/Ts/nav.ts","docs/Ts/footer.ts","docs/Ts/decouvrir.ts","docs/Ts/Theme.ts"]
+  "files": ["docs/Ts/app.ts","docs/Ts/nav.ts","docs/Ts/footer.ts","docs/Ts/decouvrir.ts","docs/Ts/Theme.ts","docs/Ts/cursor.ts"]
 }

@@ -128,7 +128,7 @@ main section ul{
     padding-top: 0;
     
 }
-main section ul li{
+main section ul li,main > div p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -203,7 +203,7 @@ a::after{
     right:0;
     bottom: 0;
     height: 2px;
-    background-color: white;
+    background-color: var(--couleur_text);
     transition: width 300ms ease, border-color 500ms ease !important;
 
 }
@@ -278,8 +278,12 @@ h1{
     flex-direction: row;
     overflow: hidden;
     border: 3px dashed;
+    
 }
 
+.projet_apercu div{
+    cursor : pointer
+}
 .projet_apercu p{
     padding:0;
     margin: 0;
@@ -318,7 +322,6 @@ button:not([class]){
 }
 
 .decouvrir {
-
     position: relative;
 }
 
@@ -329,8 +332,8 @@ button:not([class]){
     bottom: 0; 
     right: 0;
     width: 0%; 
-    height: 2px; 
-    background-color: white;
+    height: 1px !important; 
+    background-color: var(--couleur_text);
     transition: width 100ms ease;
 }
 
