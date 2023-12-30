@@ -253,9 +253,13 @@ function click_sub_menu() {
         }
     }
 }
-function affiche() {
-    window.open(this.src, '_blank');
-}
+document.querySelectorAll("img")
+    .forEach(img => {
+    img.onclick = () => {
+        window.open(img.src, "_blank");
+    };
+    img.style.cursor = "url(cursor/cursor_batman.cur), auto";
+});
 function retour_en_haut() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
