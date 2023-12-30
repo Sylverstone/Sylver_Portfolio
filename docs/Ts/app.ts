@@ -279,8 +279,8 @@ function click_sub_menu() :void{
 
 document.querySelectorAll("img")
     .forEach(img => {
-        img.onclick = () => {
-            if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "lien_home"){
+        if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "home"){
+            img.onclick = () => {
                 window.open(img.src,"_blank");
             }
         }

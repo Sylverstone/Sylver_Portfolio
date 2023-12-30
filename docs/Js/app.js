@@ -255,11 +255,11 @@ function click_sub_menu() {
 }
 document.querySelectorAll("img")
     .forEach(img => {
-    img.onclick = () => {
-        if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "lien_home") {
+    if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "home") {
+        img.onclick = () => {
             window.open(img.src, "_blank");
-        }
-    };
+        };
+    }
     img.style.cursor = "url(cursor/cursor_batman.cur), auto";
 });
 function retour_en_haut() {
