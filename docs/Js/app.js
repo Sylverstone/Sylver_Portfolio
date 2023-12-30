@@ -256,7 +256,9 @@ function click_sub_menu() {
 document.querySelectorAll("img")
     .forEach(img => {
     img.onclick = () => {
-        window.open(img.src, "_blank");
+        if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "lien_home") {
+            window.open(img.src, "_blank");
+        }
     };
     img.style.cursor = "url(cursor/cursor_batman.cur), auto";
 });
