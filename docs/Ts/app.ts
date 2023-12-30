@@ -133,11 +133,12 @@ if (slider instanceof HTMLElement){
 document.addEventListener('mouseup', function(){
     souris_down = false;
 });
+
 slider && slider.addEventListener('mouseleave', function(){
     souris_down = false;
 });
 
-// un if rapide if slider => addeventlister...
+
 if (slider instanceof HTMLElement){
     slider.addEventListener("mousedown", event_scrool);
     slider.addEventListener("touchstart", event_scrool);
@@ -276,7 +277,7 @@ function click_sub_menu() :void{
     } 
 }
 
-
+//-----Toute les images (sauf exception) sont clickable ------------------------------------------------------------------
 document.querySelectorAll("img")
     .forEach(img => {
         if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "home"){
