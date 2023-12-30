@@ -358,7 +358,7 @@ button:not([class]){
 
 }
 .mini_exp div h2{
-    width: 98%;
+    width: 90%;
 }
 .mini_exp div p{
     margin: 0;
@@ -762,6 +762,7 @@ a{
     border-right: none;
    }
    
+   /*
    footer{
     opacity: 1!important;
     justify-content: center;
@@ -772,10 +773,10 @@ a{
     max-width: 100%;
     transition: none !important;
    }
+   */
    footer div{
         text-align: center;
         max-width: 100%;
-        border-bottom: 1px dashed var(--couleur_text);
    }
    footer div p{
         max-width: 100%;
@@ -785,7 +786,5 @@ a{
     cursor: pointer;
     text-decoration: overline;
    }
-   footer div a:hover{
-        color: var(--couleur_text);
-   }
+   
 }

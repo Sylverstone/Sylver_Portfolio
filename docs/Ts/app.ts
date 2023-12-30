@@ -280,7 +280,7 @@ function click_sub_menu() :void{
 //-----Toute les images (sauf exception) sont clickable ------------------------------------------------------------------
 document.querySelectorAll("img")
     .forEach(img => {
-        if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "home"){
+        if (img.className !== "change_theme_mobile" && img.className !== "switch_theme" && img.className !== "home" && img.className !== "img_ligne"){
             console.log(img.className)
             img.onclick = () => {
                 window.open(img.src,"_blank");
