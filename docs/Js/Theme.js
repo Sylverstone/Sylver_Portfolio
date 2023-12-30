@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let titre;
         let color_switch;
         let swicth_theme_img = document.querySelector(".switch_theme");
+        let swicth_theme_img_mobile = document.querySelector(".change_theme_mobile");
         let couleur_fond_nav_projet;
         let theme_mod_ligh;
         if (saved_theme === "dark") {
@@ -31,9 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty("--couleur_text", text_couleur);
         document.documentElement.style.setProperty("--couleur_titre", titre);
         document.documentElement.style.setProperty("--couleur_fond_nav_projet", couleur_fond_nav_projet);
-        console.log("opjoi");
-        console.log(swicth_theme_img);
         swicth_theme_img.src = text_src;
-        console.log(swicth_theme_img);
+        swicth_theme_img_mobile.src = text_src;
     }
 });
