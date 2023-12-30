@@ -786,5 +786,8 @@ a{
     cursor: pointer;
     text-decoration: overline;
    }
+   footer div p a:hover{
+    color: grey !important;
+   }
    
 }
