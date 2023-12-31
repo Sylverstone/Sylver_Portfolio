@@ -563,7 +563,7 @@ a{
     }
     .nav_projet{
         margin-top: 0;
-        min-width: 100%;
+        min-width: 90%;
         padding: 0;
         background-color: var(--couleur_fond_nav_projet);
     }
@@ -607,7 +607,7 @@ a{
 
 @media screen and (max-width: 600px) {
    .content div{
-        max-width: 100%;
+        max-width: 90%;
    }
    .change_theme_mobile{
     display: block;
@@ -664,7 +664,7 @@ a{
    }
 
    .tête_menu_compresser{
-    width: 100%;
+    width: 90%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -700,7 +700,7 @@ a{
         padding : 0;
         margin: 0 0 2% 0;
         font-size: 5vw;
-        min-width: 100%;
+        min-width: 90%;
         position: static;
         opacity: 0;
         transition: opacity 1s ease !important;
@@ -755,7 +755,7 @@ a{
     flex-direction: row;
    }
    .projet_apercu div{
-    max-width: 100%;
+    max-width: 90%;
     margin-bottom: 2%;
    }
    .projet_apercu div{
