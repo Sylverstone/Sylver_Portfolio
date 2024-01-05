@@ -404,7 +404,7 @@ footer div a{
 }
 
 footer div a:hover{
-    color : var(--couleur_text);
+    color : #0e25b7;
     text-decoration: none;
 }
 
