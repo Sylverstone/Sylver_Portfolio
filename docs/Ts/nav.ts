@@ -18,7 +18,7 @@ document.write(`
     </div>
     <a class="lien_home" href = "index.html" ><img  class="home" src="images/image_home.jpeg",alt = "image home"></a>
     <ul>
-        <li><a rel = "noopener" href="Curriculum Vitae Sylvio.docx" download>Curriculum Vitae</a></li>
+        <li><a rel = "noopener" href="Curriculum_Vitae_PELAGE_MAXIME_Sylvio.docx" download>Curriculum Vitae</a></li>
         <li class="Can_change_li"><a href="projet.html">projets</a></li> 
         <li><a href = "#">Recommandation</a></li>
         <li>
@@ -27,7 +27,7 @@ document.write(`
         <li class = "tête_menu_compresser"> 
             <img class= "img_ligne" src="images/icon_menu3.jpeg" alt="Menu" onclick="click_sub_menu()">
             <ul class="sub_menu">
-                <li><a rel = "noopener" href="Curriculum Vitae Sylvio.docx" download>Curriculum Vitae</a></li>
+                <li><a rel = "noopener" href="CCurriculum_Vitae_PELAGE_MAXIME_Sylvio.docx" download>Curriculum Vitae</a></li>
                 <li class="Can_change_li"><a href="projet.html" >projets</a></li>
                 <li><a href="#">Recommandation</a></li>
             </ul>
