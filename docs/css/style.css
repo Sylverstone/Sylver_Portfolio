@@ -321,6 +321,7 @@ button:not([class]){
 
 .decouvrir {
     position: relative;
+    cursor: pointer;
 }
 
 
