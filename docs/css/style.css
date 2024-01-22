@@ -96,9 +96,10 @@ main{
 }
 main section{
     
-    padding-left: 10%;
+    padding-left: 5%;
     display: flex;
     flex-wrap: wrap;
+    min-width: 100%;
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
@@ -324,7 +325,19 @@ button:not([class]){
     cursor: pointer;
 }
 
+div ul{
+    list-style: circle !important;
+}
 
+.separateur{
+    list-style:none;
+}
+.horizontal_display{
+    display: flex;
+    list-style: circle;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .decouvrir::after {
     content: "";
     position: absolute;
