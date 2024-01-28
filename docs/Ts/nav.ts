@@ -20,7 +20,7 @@ document.write(`
     <ul>
         <li><a rel = "noopener" href="Cv/Curriculum_Vitae_PELAGE_MAXIME_Sylvio.pdf" download>Curriculum Vitae</a></li>
         <li class="Can_change_li"><a href="projet.html">projets</a></li> 
-        <li><a href = "#">Recommandation</a></li>
+        <li><a href = "#"onclick = "no_recommendation()">Recommandation</a></li>
         <li>
             <img class="switch_theme" src = ${src} alt = "image pour changer le fond" onclick = "click_on_theme.call(this)">
         </li>
@@ -29,7 +29,7 @@ document.write(`
             <ul class="sub_menu">
                 <li><a rel = "noopener" href="Cv/CCurriculum_Vitae_PELAGE_MAXIME_Sylvio.pdf" download>Curriculum Vitae</a></li>
                 <li class="Can_change_li"><a href="projet.html" >projets</a></li>
-                <li><a href="#">Recommandation</a></li>
+                <li><a href="#" onclick = "no_recommendation()">Recommandation</a></li>
             </ul>
         </li>
         
@@ -130,3 +130,6 @@ if (nav instanceof HTMLElement){
     })
 }
 
+function no_recommendation(){
+    alert("En attente de la lettre :(\nMais elle sera bientot là")
+}
