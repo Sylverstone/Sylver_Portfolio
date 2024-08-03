@@ -269,7 +269,6 @@ main button{
     border-radius: 1vw;
     padding: 1% 2% 1% 2%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
     margin-left: 1%;
 }
 
@@ -432,5 +431,44 @@ main button{
     transform: translateY(-150%);
     opacity: 1;
     z-index: 0;
+}
+
+.afficheurImageCache{
+    display: none;
+}
+
+.afficheurImageVisible{
+    width: 80%;
+    position: fixed;
+    height: 80%;
+    top: 2%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+    background-color: rgba(48, 44, 44, 0.99);
+    border-radius: 5vw;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+
+.afficheurImageVisible img{
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    max-width: 80%;
+    align-self: center;
+}
+
+.buttonFermerImage{
+    margin-top: 2%;
+    align-self: flex-start;
+    margin-left: 2%;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 5vw;
+    position: absolute;
+    top: 0;
 }
 
