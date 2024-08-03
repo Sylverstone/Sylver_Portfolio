@@ -1,2 +1,2 @@
 # Portfolio 
-Ce portfolio comporte mes projets ainsi que mes réseaux.
+Bienvenue sur mon portfolio !
