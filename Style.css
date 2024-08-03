@@ -97,11 +97,20 @@ header .espaceDefilement p{
     }
 }
 
-nav{
+.navi{
     display: flex;
     justify-content: space-between;
     background-color: var(--fond);
     
+}
+
+.naviFlottant{
+    top : 2%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: var(--fond);
+    border-radius: 2vw;
+    position: fixed;
 }
 
 nav ul{
@@ -129,7 +138,7 @@ nav ul li a{
 nav ul li{
     font-size: 2vw !important;
     background-color: rgba(48, 44, 44, 0.612);
-    border-radius: .5vw;
+    border-radius: 3vw;
     padding: 1%;
     color: whitesmoke;
     transition: all .5s ease;
@@ -409,6 +418,7 @@ main button{
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 500ms ease;
     align-self: center;
+    font-size: 1.5vw;
 
 }
 
