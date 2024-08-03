@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Style.css" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SylverPortfolio</title>        
+    </head>
+    <body>
+        <header>
+            <img class="photo_profil" src="Image/photo_cv.jpg" alt="Ma photo" />
+            <div>
+                <p class="nom">Sylvio PELAGE MAXIME</p>
+                <div class="espaceDefilement">
+                    <p id="texteProfil">En recherche d'une alternance</p>
+                </div>
+            </div>          
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a onclick='go_to("A_propos");'>A propos</a></li>
+                <li><a onclick = 'go_to("Mes_projets");'>Mes projets</a></li>
+                <!--<li><a onclick='go_to("Mes_experiences");'>Mes experiences</a></li>-->
+                <li><a onclick='go_to("Lien_utiles");'>Liens utiles</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="A_propos">
+                <section>
+                    <h1>A propos de Moi</h1>
+                    <p>
+                        Je suis Pelage Maxime Sylvio, élève de Terminale, admis au Cnam Enjmin à Angoulême (16000) pour effectuer une licence informatique, parcours jeux vidéo.<br> 
+                        Cette licence s'effectue en alternance, c'est pourquoi je recherche activement une alternance afin de m'investir pleinement au sein d'une entreprise.<br>
+                        Depuis petit, le monde des jeux vidéo est une passion pour moi ; je saurai donc m'impliquer corps et âme dans mes missions pour le bien de mon entreprise ainsi que pour mon épanouissement personnel.<br>
+                        J'ai déjà commencé à apprendre à utiliser le moteur de jeux vidéo Unity afin de pouvoir m'immerger dans la création de jeux vidéo.<br> Au Cnam Enjmin, je serai initié aux méthodes de production des industries culturelles et créatives, aux moteurs de jeux vidéo professionnels, et à la programmation graphique, l'animation, le son, le réseau, l'intelligence artificielle, la physique, ainsi qu'à la gestion des ressources et de la configuration.
+                    </p>
+                </section>
+            </div>
+            <div id="Mes_projets">
+                <h1 class="nom_categorie">Mes projets</h1>
+                <h3 class="nom_projet" onclick="web(this);">Sylver Service</h3>
+                <section class="CadreProjet">
+                    <div class="cadre">
+                        <aside>
+                            <div class="competence_utilise">
+                                <img src="/Image/SylverService/github.svg" alt="image projet"/>
+                                <img src="/Image/SylverService/python.svg" alt="image projet"/>
+                                <img src="/Image/SylverService/sql.svg" alt="image projet"/>
+                            </div>                          
+                            
+                            <div class="content">
+                                <h3>Presentation</h3>
+                                <p>
+                                    Sylver Service est une application faite en Python, basée sur le module Pygame. L'application utilise une base de données hébergée en ligne afin de stocker des données.<br>
+                                    Le but de l'application est simple : permettre aux individus (étudiants visés) de retrouver ou de mettre en ligne des tutos/documents qui pourraient leur être utiles dans leur scolarité.<br> 
+                                    Le projet a été mené en équipe de trois. Dans cette équipe, j'occupais le rôle de programmeur principal en collaboration avec un designer ainsi qu'un second programmeur. Le projet a été présenté au Trophée NSI 2024 et a été récompensé en Guadeloupe
+                                </p>
+                                <h3>Technique</h3>
+                                <p>
+                                    Dans ce projet, j'ai utilisé la programmation orientée objet et me suis familiarisé avec la gestion de bases de données.<br>
+                                    J'ai pu concevoir des algorithmes intéressants. Ce projet m'a permis de me focaliser pleinement sur le développement d'une application.<br> 
+                                    J'ai également utilisé GitHub et Git fréquemment durant le développement.
+                                </p>
+                                <h3>Fonctionnalitées</h3>
+                                <p>
+                                    L'utilisateur de l'application peut poster des documents ou écrire ce qu'il souhaite via l'application, puis les publier.<br> 
+                                    Pour poster des tutos, il doit créer un compte. L'utilisateur peut choisir la photo de profil de son compte et sélectionner une catégorie pour celui-ci. Grâce à cette catégorie, il aura accès à des recherches par défaut dans l'espace menu.<br> 
+                                    La recherche peut se faire de différentes manières : par nom d'auteur, par nom de tuto, ou par catégorie.<br> L'utilisateur peut signaler des tutos ainsi que supprimer ou modifier les siens.
+                                </p>
+                                <p class="date">2024</p>
+                            </div>
+                        </aside>
+                        <h3 class="h3_imageProjet">Quelques images du projet</h3>
+                        <div class="imageProjet">
+                            <!--   image implementer en js -->
+                        </div>                        
+                        <a rel = "noopener" href="https://github.com/Sylverstone/Sylver_Service/releases/tag/1.8.5" target="_blank" class="lienProjet">Lien GitHub de l'application</a>
+                        <div class="container_button">
+                            <img alt="flèche directionnel gauche" src = "Image/fleche-gauche.png" onclick = "DefileProjet(false);">   
+                            <img alt="flèche directionnel droite" src = "Image/fleche-droite.png" onclick = "DefileProjet(true);">      
+                        </div>
+                    </div>
+                    
+                    <div class="cadre">
+                        <aside>
+                            <div class="competence_utilise">
+                                <img src="/Image/Unity/c-sharp.png" alt="image projet"/>
+                                <img src="/Image/Unity/unity.png" alt="image projet"/>
+                            </div>                          
+                            <div class="content">
+                                <h3>Presentation</h3>
+                                <p>
+                                    SylverRPG est un projet d'apprentissage où j'apprends à utiliser le moteur Unity. Pour ce faire, j'essaie de développer un RPG. J'ai choisi ce type de jeu parce qu'il est assez complet et me permet d'y implémenter de nombreux systèmes.<br>
+                                </p>  
+                                <h3>Technique</h3>
+                                <p>
+                                    J'y expérimente les nombreuses fonctionnalités du moteur Unity. Je renforce mes compétences en C#, ainsi qu'en C# pour Unity. C'est mon premier projet sur ce moteur, donc j'y apprends beaucoup de choses.<br> 
+                                    J'apprends également à utiliser Unity Version Control pour le suivi du projet.<br>
+                                </p>
+                                <p class="date">2024</p>
+                            </div>    
+                                                       
+                        </aside>
+                        <div class="imageProjet">
+                            <!--   image implementer en js -->
+                        </div> 
+                        <div class="container_button">
+                            <img alt="flèche directionnel gauche" src = "Image/fleche-gauche.png" onclick = "DefileProjet(false);">   
+                            <img alt="flèche directionnel droite" src = "Image/fleche-droite.png" onclick = "DefileProjet(true);">      
+                        </div>
+                    </div>   
+                    <div class="cadre">
+                        <aside>
+                            <div class="competence_utilise">
+                                <img src="/Image/SylverService/python.svg" alt="image projet"/>
+                            </div>                           
+                            <div class="content">
+                                <h3>Presentation</h3>
+                                <p>
+                                    SylverDonjon est un projet Python réalisé en équipe de trois personnes, présenté au Trophée NSI 2023.<br> 
+                                    Nous étions deux programmeurs accompagnés d'un designer pour ce projet.<br> 
+                                    Le but du jeu est simple : le joueur choisit entre trois classes, puis doit terminer un donjon dans lequel il rencontrera différents ennemis. Le système de combat est au tour par tour. Avant un combat, le joueur doit choisir une potion qui lui attribuera un bonus.<br>
+                                </p>
+                                <h3>Technique</h3>
+                                <p>
+                                    Dans ce projet, nous avons implémenté un système de sauvegarde et de chargement. Malheureusement, nous avions l'interdiction d'utiliser la programmation orientée objet, donc nous avons dû utiliser des dictionnaires à la place. Le projet m'a permis d'en apprendre davantage sur l'utilisation du module Pygame et de développer des algorithmes complets.
+                                </p>
+                                <p class="date">2023</p>
+                            </div>
+                            
+                        </aside>
+                        <h3 class="h3_imageProjet">Quelques images du projet</h3>
+                        <div class="imageProjet">
+                            <!--   image implementer en js -->
+                        </div>                        
+                        <a rel = "noopener" href="https://github.com/Sylverstone/Sylver-Donjon" target="_blank" class="lienProjet">Lien GitHub du projet</a>
+                        <div class="container_button">
+                            <img alt="flèche directionnel gauche" src = "Image/fleche-gauche.png" onclick = "DefileProjet(false);">   
+                            <img alt="flèche directionnel droite" src = "Image/fleche-droite.png" onclick = "DefileProjet(true);">      
+                        </div>
+                    </div>
+
+                    <div class="cadre">
+                        <aside>
+                            <div class="competence_utilise">
+                                <img src="/Image/SylverService/python.svg" alt="image projet"/>
+                            </div>                           
+                            <div class="content">
+                                <h3>Presentation & Technique</h3>
+                                <p>
+                                    C'est un projet réalisé en Terminale en groupe de deux. Nous devions coder le jeu de cartes de la Bataille et implémenter une interface graphique si possible. C'est un projet très intéressant pour comprendre les bases de la programmation orientée objet. Durant le projet, nous étions deux programmeurs, et j'avais le rôle d'initiateur pour le second.
+                                </p>
+                                <p class="date">2024</p>
+                            </div>
+                            
+                        </aside>
+                        <h3 class="h3_imageProjet">Image du projet</h3>
+                        <div class="imageProjet">
+                            <!--   image implementer en js -->
+                        </div>                        
+                        <a rel = "noopener" href="https://onedrive.live.com/?authkey=%21AJxnW5lrnjCK4oQ&id=D61370425EF5D618%2114894&cid=D61370425EF5D618" target="_blank" class="lienProjet">Lien OneDrive du projet</a>
+                        <div class="container_button">
+                            <img alt="flèche directionnel gauche" src = "Image/fleche-gauche.png" onclick = "DefileProjet(false);">   
+                            <img alt="flèche directionnel droite" src = "Image/fleche-droite.png" onclick = "DefileProjet(true);">      
+                        </div>
+                    </div>
+
+                    <div class="cadre">
+                        <aside>
+                            <div class="competence_utilise">
+                                <img src="/Image/Mon_Portfolio/icons_css.svg" alt="image projet"/>
+                                <img src="/Image/Mon_Portfolio/icons_js.svg" alt="image projet"/>
+                                <img src="/Image/Mon_Portfolio/icons_html.svg" alt="image projet"/>
+                            </div>                           
+                            <div class="content">
+                                <h3>Presentation</h3>
+                                <p>
+                                    Ce projet est tout simplement le site web sur lequel vous êtes actuellement. J'ai commencé le développement web au lycée, et j'aime également ce domaine.
+
+                                </p>
+                                <p class="date">2024</p>
+                            </div>
+                            
+                        </aside>                       
+                        
+                        <div class="container_button">
+                            <img alt="flèche directionnel gauche" src = "Image/fleche-gauche.png" onclick = "DefileProjet(false);">   
+                            <img alt="flèche directionnel droite" src = "Image/fleche-droite.png" onclick = "DefileProjet(true);">      
+                        </div>
+                    </div>
+                </section>                  
+            </div>
+            <div id="Lien_utiles">
+                <h1>Lien utiles</h1>
+                <div class="liens">
+                    <div>
+                        <a href="www.linkedin.com/in/sylviopelagemaxime" class="lienContact">Mon LinkedIn</a>
+                        <img src="/Image/Icon_linkedin.png" alt="LinkedIn" class = "icon_contact">
+                    </div>
+                    <div>
+                        <a href="https://github.com/Sylverstone/" class="lienContact">Mon Github</a>
+                        <img src="/Image/SylverService/github.svg" alt="icon_github" class = "icon_contact">
+                    </div>
+                    <div>
+                        <a href="mailto:sylvio0801@gmail.com" class="lienContact">Mon Email</a>
+                        <img src="/Image/icon_email.png" alt="icon_github" class = "icon_contact">
+                    </div>
+                    <div>
+                        <a href="https://1drv.ms/b/s!AhjW9V5CcBPWhbsobg_AoIngBjC1eA?e=Gy7063" class="lienContact">Mon CV</a>
+                        <img src="/Image/icon_cv.png" alt="icon_github" class = "icon_contact">
+                    </div>
+                </div>                
+            </div>
+        </main>
+
+    </body>
+    <script type="text/javascript" src="Js/projetsScript.js"></script>
+    <script type="text/javascript" src="/Js/updateText.js"></script>
+    <script type="text/javascript" src="/Js/navScript.js"></script>
+    <script type="text/javascript" src="/Js/afficheImageProjet.js"></script>
+</html>
+                 
