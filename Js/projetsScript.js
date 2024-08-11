@@ -17,7 +17,7 @@ const makeScroll = (scroolValue,element) => {
 
 const dict_Projets = {
     "Sylver Service" : "https://github.com/Sylverstone/Sylver_Service/releases/tag/1.8.5",
-    "SylverRPG - En cours" : "norel",
+    "SylverRPG - En cours" : "https://github.com/Sylverstone/SylverRPG",
     "SylverDonjon" : "https://github.com/Sylverstone/Sylver-Donjon",
     "Jeux de Bataille" : "https://onedrive.live.com/?authkey=%21AJxnW5lrnjCK4oQ&id=D61370425EF5D618%2114894&cid=D61370425EF5D618",
     "Mon Portfolio" : "#"
