@@ -1,7 +1,6 @@
 const texteProfils = [
-    "Elève en Licence Informatique",
-    "Au Cnam Enjmin (16000)",
-    "En recherche d'une alternance",
+    "Elève en BUT Informatique",
+    "Au Puy-en-velay (43000)",
 ]
 
 let text = document.getElementById("texteProfil");
