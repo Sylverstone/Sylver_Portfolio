@@ -1,0 +1,25 @@
+
+
+
+.Project
+{
+    width: 200px;
+    height: 100px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.sectionUser
+{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.ImageProfil
+{
+    margin : 3%;
+    width: 30%;
+    height: auto;
+    border-radius: 100%;
+}

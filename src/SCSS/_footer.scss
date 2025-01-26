@@ -1,0 +1,48 @@
+@use "./variables" as *;
+
+footer
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    font-family: "Ubuntu";
+    width: 100%;
+    height: $footerHeight;
+    align-items: center;
+    background-color: $hearderBackgroundColor;
+    img 
+    {
+        width: 2em;
+        height: auto;
+    }
+    
+    div 
+    {
+		padding: 0 5%;
+        position: relative;
+        @include flexColum();
+        align-items: center;
+        a
+        {
+			height: 100%;
+			position: relative;
+			img 
+			{
+				width: 70%;
+				top: 0;
+				right: 15%;
+				position: absolute;
+				transition: transform 500ms ease-out, opacity 500ms ease-in;
+				opacity: 0;
+			}
+
+			&:hover img
+			{
+				opacity: 1;
+				transform: translateY(-90%);
+			}
+        }
+        
+    }
+}
