@@ -1,5 +1,5 @@
 
-
+@use "./variables" as *;
 
 .Project
 {
@@ -19,7 +19,71 @@
 .ImageProfil
 {
     margin : 3%;
-    width: 30%;
-    height: auto;
+    height: calc($headerHeight / 4);
+    width: auto;
     border-radius: 100%;
+}
+
+.aPropos
+{
+    margin-left: 5%;
+    margin-right: 5%;
+
+    height: 100vh;
+    white-space: pre-wrap;
+    font-size: 1em;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    padding: 5%;
+    border-radius: 1rem;
+    margin-bottom: 4%;
+
+    h1 
+    {
+        margin: 0;
+    
+    }
+
+    h2 
+    {
+        color: $colorSubTible;
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+
+    p 
+    {
+        margin-top: 0;
+        line-height: 125%;
+    }
+}
+
+.Transition
+{
+    background: linear-gradient(to bottom, transparent 0%, $hearderBackgroundColor 50%, transparent 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 
+    {
+        background-color: rgba(#FAFCFF, 0.1);
+        padding: 5% 10%;
+        border-radius: 1rem;
+    }
+}
+
+.projet 
+{
+    h2 
+    {
+        text-align: center;
+        font-size: 2em;
+        color: $colorSubTible;
+    }
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 100vh;
+    margin-bottom: 5%;
 }

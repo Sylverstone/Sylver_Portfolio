@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yuji+Mai&display=swap");
 .Project {
   width: 200px;
   height: 100px;
@@ -13,9 +14,59 @@
 
 .ImageProfil {
   margin: 3%;
-  width: 30%;
-  height: auto;
+  height: 25vh;
+  width: auto;
   border-radius: 100%;
+}
+
+.aPropos {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100vh;
+  white-space: pre-wrap;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5%;
+  border-radius: 1rem;
+  margin-bottom: 4%;
+}
+.aPropos h1 {
+  margin: 0;
+}
+.aPropos h2 {
+  color: #39488b;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+.aPropos p {
+  margin-top: 0;
+  line-height: 125%;
+}
+
+.Transition {
+  background: linear-gradient(to bottom, transparent 0%, #000000 50%, transparent 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Transition h1 {
+  background-color: rgba(250, 252, 255, 0.1);
+  padding: 5% 10%;
+  border-radius: 1rem;
+}
+
+.projet {
+  margin-left: 5%;
+  margin-right: 5%;
+  min-height: 100vh;
+  margin-bottom: 5%;
+}
+.projet h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #39488b;
 }
 
 /*# sourceMappingURL=styles.module.css.map */

@@ -5,13 +5,23 @@
 html,body
 {
     min-height: 100%;
-    height: 12px;
 }
 
 a
 {
     color : unset;
     text-decoration: none;
+}
+
+li 
+{
+    list-style: none;
+}
+
+ul
+{
+    margin-top: 0;
+    padding-left: 5vw;
 }
 
 body
@@ -26,19 +36,27 @@ body
 header
 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 5%;
-    height: $headerHeight;
-    background-color: $hearderBackgroundColor;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom,$hearderBackgroundColor 70%, transparent 100%);
+
     p 
     {
+        align-self:flex-start;
+        width: 80%;
         font-family: kanit;
         text-align: center;
-        font-size: .8em;
+        font-size: 1.3em;
         background-color: rgba(#FFFFFF,0.1);
-        padding: .2rem;
-        border-radius: 10px;
+        padding-left: 10%;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        margin-right: 5%;
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 }
 
@@ -47,6 +65,8 @@ main
     //height: calc(100% - $footerHeight - $headerHeight);
     align-self: center;
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    flex-direction: column;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
 }

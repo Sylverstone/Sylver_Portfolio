@@ -4,8 +4,8 @@
 $backgroundColor: #151515;
 $baseTextColor: #FFFFFF;
 $hearderBackgroundColor: #000000;
-$footerHeight: 8%;
-$headerHeight : 15%;
+$headerHeight : 100vh;
+$colorSubTible : #39488b;
 
 @mixin flexColum()
 {
@@ -13,3 +13,4 @@ $headerHeight : 15%;
     flex-direction: column;
     @content;
 }
+
