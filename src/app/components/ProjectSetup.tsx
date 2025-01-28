@@ -4,19 +4,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/style/styles.module.css"
 import { fileURLToPath } from 'url';
-import { project_t } from '../page'
 import * as path from 'path'
 import getFiles from "@/Scripts/getFiles"
 import * as fs from 'fs'
+import { project_t } from '../Scripts/projects';
+import { Texts_t } from '../Scripts/en';
 
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
-const ProjectSetup = ({project} : {project : project_t}) => {
+const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) => {
 
-    console.log(process.version)
-    console.log("dir : ",__dirname)
     const basePath = path.join(__dirname,"..","..","..","public");
     if(!fs.existsSync(basePath)) return <><h2>Something went very bad !</h2></>
     const pathFileProjectIMG = path.join(basePath,project.title,"Project");
@@ -24,7 +23,6 @@ const ProjectSetup = ({project} : {project : project_t}) => {
     let filesProjectImg = getFiles(pathFileProjectIMG);
     let filesProjectTechUse = getFiles(pathFileProjectTechImg);
 
-    
     if(filesProjectImg != undefined)
     {
         filesProjectImg = filesProjectImg.map(file => {
@@ -41,17 +39,30 @@ const ProjectSetup = ({project} : {project : project_t}) => {
         }).map(file => {return `/Technologies/${file}`});
     }
 
-
-    console.log(filesProjectTechUse)
-
     return (
-    <section key={project.key} className={styles.projet}>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+    <section key={project.key} className={styles.projet} id={project.title}>
+            <article className={styles.PresentationProg}>
+                <h2>{project.title}</h2>
+                <h3>Presentation</h3>
+                <p>{project.presentation}</p>
+                {project.technique && 
+                    <>
+                        <h3>Techniques</h3>
+                        <p>{project.technique}</p>
+                    </>
+                }
 
+                {project.fonctionnalitees && 
+                    <>
+                        <h3>Fonctionnalitées</h3>
+                        <p>{project.fonctionnalitees}</p>
+                    </>
+                }
+            </article>
+           
             {filesProjectImg && 
             <article className={styles.ImgProject}>
-                <h3>Aperçu du projet</h3>
+                <h3>{Texts.home.apercu}</h3>
                 <ul>
                     {filesProjectImg.map(file => (
                         <li key={file}>
@@ -68,9 +79,8 @@ const ProjectSetup = ({project} : {project : project_t}) => {
                 </ul>
             </article>
             }
-            
             <article className={styles.techUseProject}>
-                <h3>Technologies utilisées</h3>
+                <h3>{Texts.home.techUse}</h3>
                 <ul>
                     {filesProjectTechUse && filesProjectTechUse.map(file => (
                         <li key={file}>
@@ -87,17 +97,16 @@ const ProjectSetup = ({project} : {project : project_t}) => {
             {(project.lien || project.siteweb) && 
 
             <article className={styles.liensProject}>
-                <h4>Lien.s</h4>
+                <h4>{Texts.home.lien}</h4>
                 <ul>
                     <li>
                         {project.lien && <Link href={project.lien} target='_blanks'>→ GitHub</Link>}
                     </li>
                     <li>
-                        {project.siteweb && <Link href={project.siteweb} target='_blanks'>→ Site Web</Link>}
+                        {project.siteweb && <Link href={project.siteweb} target='_blanks'>→ {Texts.home.siteWeb}</Link>}
                     </li>
                 </ul>
             </article>
-            
             }
             <p className={styles.date}>date : {project.date}</p>
             
@@ -106,3 +115,4 @@ const ProjectSetup = ({project} : {project : project_t}) => {
 }
 
 export default ProjectSetup;
+

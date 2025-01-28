@@ -1,8 +1,18 @@
-const Texts = 
+import { Texts_t } from "./en";
+
+const Texts : Texts_t = 
 {
 	home :
 	{
-		
+		rights : "Tous droits réservés",
+		meSuivre : "Me Suivre",
+		lien : "Lien.s",
+		siteWeb : "Site Web",
+		apercu : "Aperçu du projet",
+		techUse : "Technologies utilisées",
+		mesProjets : "MES PROJETS",
+		etude : "Etudiant en BUT Informatique graphique",
+		bienvenue : "BIENVENUE DANS MON PORTFOLIO",
 		titre : "Sylvio Pelage Maxime",
 		subTitre : "Etudiant en BUT Informatique graphique eu Puy-en-Velay",
 		mainContent : 
@@ -16,6 +26,6 @@ Etant curieux de nature j'ai pu experimenté des languages comme C++ python C# J
 
 }
 
+export default Texts;
 
 
-export default Texts; 

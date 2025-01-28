@@ -1,0 +1,18 @@
+@use "./variables" as *;
+
+nav 
+{
+    z-index: 69;
+    position:sticky;
+    top : 2rem ;
+    width: 90%;
+    align-self: center;
+    border-radius: 2rem;
+    background-color: rgba(#000000, .7);
+    ul 
+    {
+        margin: clamp(1em,5%,1.6em) 0;
+        display: flex;
+        justify-content: space-around;
+    }
+}

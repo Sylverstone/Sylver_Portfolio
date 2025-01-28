@@ -1,0 +1,113 @@
+@use "./variables" as *;
+
+.projet 
+{
+    
+    img 
+    {
+        filter: drop-shadow(.2em .2em .2em black);
+    }
+    h2 
+    {
+        font-size : clamp(1.6rem,5.7vw,6rem);
+        text-align: center;
+        color: $colorSubTible;
+    }
+    
+    h3 
+    {
+        font-size: clamp(1.4rem,3vw,3rem);
+        position: relative;
+        color: $colorSubTible;
+        margin-bottom: 10%;
+        &::after
+        {
+            @include sousBarre();          
+        }
+       
+    }
+
+    h4
+    {
+        font-size: clamp(1.4rem,2.5vw,3rem);
+        color: $colorSubTible;
+        position: relative;
+        &::after
+        {
+            @include sousBarre();          
+        }
+    }
+
+
+    .liensProject 
+    {
+        ul 
+        {
+
+            @include flexColum();
+            
+            li 
+            {
+                display: flex;
+                font-size: clamp(1.1rem,2vw,2.8rem);
+               
+            }
+        }
+    }
+    
+    .ImgProject
+    {
+
+        ul 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        
+            li 
+            {
+                margin-bottom: 10%;
+                img
+                {
+                    width: clamp(5rem, 32vw,15rem);
+                    height: auto;
+                    border-radius: .5rem;
+                    margin-right: 6%;
+                }
+            }
+        }
+
+    }
+
+    .techUseProject
+    {
+        ul 
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            li 
+            {
+                margin-right: 5%;
+                img 
+                {
+
+                    width: clamp(5rem, 32vw,15rem);
+                    height: auto;
+                   
+                }
+
+                
+            }
+        }
+    }
+    
+
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 100vh;
+    margin-bottom: 5%;
+
+}
