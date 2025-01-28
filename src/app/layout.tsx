@@ -47,6 +47,7 @@ const pro =
 
 const categories = 
 [
+	/*
 	{
 		nom : "Pro",
 		liste : <ul>
@@ -57,6 +58,7 @@ const categories =
 					))}
 				</ul>
 	},
+	*/
 	{
 		nom : "Contact",
         liste : <ul>
@@ -90,16 +92,11 @@ const categories =
 export default async function RootLayout(
 {
   children,
-  params
-
 }: Readonly<{
   children: React.ReactNode,
-  params : Promise<{locale : string}>
 
 }>) 
 {
-	const { locale } = await params;
-
 	return (
 		<html lang="fr">
 			<body>

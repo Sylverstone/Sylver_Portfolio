@@ -37,10 +37,14 @@
     border-radius: 1rem;
     margin-bottom: 4%;
 
+    @include flexColum();
+    align-items: center;
+    justify-content: center;
+
     h1 
     {
         margin: 0;
-    
+        font-size: 170%;
     }
 
     h2 
@@ -48,10 +52,12 @@
         color: $colorSubTible;
         margin-bottom: 0;
         font-size: 1em;
+        font-size: 130%;
     }
 
     p 
     {
+        font-size: 110%;
         margin-top: 0;
         line-height: 125%;
     }
@@ -76,14 +82,110 @@
 
 .projet 
 {
+    
     h2 
     {
         text-align: center;
         font-size: 2em;
         color: $colorSubTible;
     }
+    
+    h3 
+    {
+        position: relative;
+        color: $colorSubTible;
+        margin-bottom: 10%;
+        &::after
+        {
+            @include sousBarre();          
+        }
+       
+    }
+
+    h4
+    {
+        color: $colorSubTible;
+        position: relative;
+        &::after
+        {
+            @include sousBarre();          
+        }
+    }
+
+    .liensProject 
+    {
+        ul 
+        {
+
+            @include flexColum();
+            
+            li 
+            {
+                display: flex;
+
+               
+            }
+        }
+    }
+    
+    .ImgProject
+    {
+
+        ul 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        
+            li 
+            {
+                margin-bottom: 10%;
+                img
+                {
+                    width: 40vw;
+                    height: auto;
+                    border-radius: .5rem;
+                }
+            }
+        }
+
+    }
+
+    .techUseProject
+    {
+        ul 
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            li 
+            {
+                margin-right: 5%;
+                img 
+                {
+
+                    width: 30vw;
+                    height: auto;
+                   
+                }
+
+                
+            }
+        }
+    }
+    
+
     margin-left: 5%;
     margin-right: 5%;
     min-height: 100vh;
     margin-bottom: 5%;
+
+}
+
+.date
+{
+    font-size: .8em;
+    text-align: right;
 }

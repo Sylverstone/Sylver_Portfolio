@@ -29,16 +29,23 @@
   padding: 5%;
   border-radius: 1rem;
   margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .aPropos h1 {
   margin: 0;
+  font-size: 170%;
 }
 .aPropos h2 {
   color: #39488b;
   margin-bottom: 0;
   font-size: 1em;
+  font-size: 130%;
 }
 .aPropos p {
+  font-size: 110%;
   margin-top: 0;
   line-height: 125%;
 }
@@ -67,6 +74,71 @@
   text-align: center;
   font-size: 2em;
   color: #39488b;
+}
+.projet h3 {
+  position: relative;
+  color: #39488b;
+  margin-bottom: 10%;
+}
+.projet h3::after {
+  position: absolute;
+  content: "";
+  border-bottom: 0.1rem dotted rgb(235, 233, 233);
+  border-radius: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -0.2rem;
+}
+.projet h4 {
+  color: #39488b;
+  position: relative;
+}
+.projet h4::after {
+  position: absolute;
+  content: "";
+  border-bottom: 0.1rem dotted rgb(235, 233, 233);
+  border-radius: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -0.2rem;
+}
+.projet .liensProject ul {
+  display: flex;
+  flex-direction: column;
+}
+.projet .liensProject ul li {
+  display: flex;
+}
+.projet .ImgProject ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.projet .ImgProject ul li {
+  margin-bottom: 10%;
+}
+.projet .ImgProject ul li img {
+  width: 40vw;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.projet .techUseProject ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.projet .techUseProject ul li {
+  margin-right: 5%;
+}
+.projet .techUseProject ul li img {
+  width: 30vw;
+  height: auto;
+}
+
+.date {
+  font-size: 0.8em;
+  text-align: right;
 }
 
 /*# sourceMappingURL=styles.module.css.map */

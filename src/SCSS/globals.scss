@@ -28,9 +28,18 @@ body
 {
     @include flexColum();
     margin : 0;
-    background-color: $backgroundColor;
+    //background-color: $backgroundColor;
+    background: linear-gradient(to right,$backgroundColor,#151520);
+    background-size: 200% 200%;
+    animation: moveBG 10s infinite;
     color: $baseTextColor;
     font-family: "Barlow",
+}
+
+@keyframes moveBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 header
@@ -42,8 +51,38 @@ header
     height: 100vh;
     background: linear-gradient(to bottom,$hearderBackgroundColor 70%, transparent 100%);
 
+    .defilementText
+    {
+        position: absolute;
+        top: 0;
+        width: 90vw;
+        overflow-x: hidden;
+    }
+
+    div 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+   
     p 
     {
+        position: relative;
+        animation: defileText 8s linear infinite;
+    }
+
+    @keyframes defileText {
+        0% {left: -100%;}
+        100% {left: 100%;}
+
+    }
+
+    .bienvenue
+    {
+        position: unset;
         align-self:flex-start;
         width: 80%;
         font-family: kanit;

@@ -14,3 +14,14 @@ $colorSubTible : #39488b;
     @content;
 }
 
+@mixin sousBarre()
+{
+    position: absolute;
+    content: "";
+    border-bottom: .1rem dotted rgb(235, 233, 233);
+    border-radius: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -.2rem;            
+    
+}
