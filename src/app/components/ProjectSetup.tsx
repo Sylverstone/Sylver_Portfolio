@@ -16,8 +16,10 @@ const __dirname = path.dirname(__filename);
 
 const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) => {
 
+    console.log(__dirname);
     const basePath = path.join(__dirname,"..","..","..","public");
-    if(!fs.existsSync(basePath)) return <><h2>Something went very bad !</h2></>
+    console.log(basePath);
+    //if(!fs.existsSync(basePath)) return <><h2>Something went very bad !</h2></>
     const pathFileProjectIMG = path.join(basePath,project.title,"Project");
     const pathFileProjectTechImg = path.join(basePath,"Technologies");
     let filesProjectImg = getFiles(pathFileProjectIMG);
