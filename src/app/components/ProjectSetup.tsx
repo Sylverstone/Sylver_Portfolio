@@ -22,7 +22,7 @@ const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) 
     const pathFileProjectTechImg = path.join("Technologies");
     const publicPath = path.join(__dirname,'..','..','..','public');
     console.log(publicPath);
-    if(!(fs.existsSync(publicPath))) return <h2>SHIT</h2>
+    if(!(fs.existsSync(publicPath))) return <h2>{publicPath}</h2>
     let filesProjectImg = fs.readdirSync(path.join(publicPath,pathFileProjectIMG));
     let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,pathFileProjectTechImg));
 
