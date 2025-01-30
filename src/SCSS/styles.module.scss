@@ -1,0 +1,89 @@
+@use "./variables" as *;
+@use "./projet" as *;
+
+.Project
+{
+    width: 200px;
+    height: 100px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.sectionUser
+{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.ImageProfil
+{
+    margin : 3%;
+    height: calc($headerHeight / 4);
+    width: auto;
+    border-radius: 100%;
+}
+
+.aPropos
+{
+    margin-left: 5%;
+    margin-right: 5%;
+
+    min-height: 100vh;
+    white-space: pre-wrap;
+    font-size: 1em;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    padding: 5%;
+    border-radius: 1rem;
+    margin-bottom: 4%;
+
+    @include flexColum();
+    align-items: center;
+    justify-content: center;
+
+    h1 
+    {
+        margin: 0;
+        
+        
+        font-size: clamp(1.4em,7vw,4em);
+    }
+
+    h2 
+    {
+        color: $colorSubTible;
+        margin-bottom: 0;
+        font-size: clamp(1.1em,4.5vw,2.4em);
+    }
+
+    p 
+    {
+        font-size: clamp(1em,2.6vw,2em);
+        margin-top: 0;
+        line-height: 125%;
+    }
+}
+
+.Transition
+{
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 
+    {
+        font-size : clamp(1.6em,3vw,6em);
+        background: linear-gradient(to right, $hearderBackgroundColor, $colorSubTible);
+        background-size: 200% 200%;
+        animation: moveBG 10s linear infinite;
+        padding: 5% 10%;
+        border-radius: 1rem;
+    }
+}
+
+@include moveBG();
+
+

@@ -1,0 +1,33 @@
+
+$backgroundColor: #151515;
+$baseTextColor: #FFFFFF;
+$hearderBackgroundColor: #090909;
+$headerHeight : 100vh;
+$colorSubTible : #39488b;
+
+@mixin flexColum()
+{
+    display: flex;
+    flex-direction: column;
+    @content;
+}
+
+@mixin sousBarre()
+{
+    position: absolute;
+    content: "";
+    border-bottom: .3rem dotted rgb(235, 233, 233);
+    width: 100%;
+    left: 0;
+    bottom: -.5rem;            
+    
+}
+
+@mixin moveBG{
+
+    @keyframes moveBG {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+}

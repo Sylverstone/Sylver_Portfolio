@@ -1,0 +1,156 @@
+@use "./variables" as *;
+
+.projet 
+{
+    
+    img 
+    {
+        filter: drop-shadow(.2em .2em .2em black);
+    }
+    h2 
+    {
+        font-size : clamp(1.6rem,5.7vw,6rem);
+        text-align: center;
+        color: $colorSubTible;
+    }
+    
+    h3 
+    {
+        font-size: clamp(1.4rem,3vw,3rem);
+        position: relative;
+        color: $colorSubTible;
+        margin-bottom: 10%;
+        &::after
+        {
+            @include sousBarre();          
+        }
+       
+    }
+
+    h4
+    {
+        font-size: clamp(1.4rem,2.5vw,3rem);
+        color: $colorSubTible;
+        position: relative;
+        &::after
+        {
+            @include sousBarre();          
+        }
+    }
+
+
+    .liensProject 
+    {
+        ul 
+        {
+
+            @include flexColum();
+            
+            li 
+            {
+                display: flex;
+                font-size: clamp(1.1rem,2vw,2.8rem);
+               
+            }
+        }
+    }
+    
+    .ImgProject
+    {
+
+        ul 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        
+            li 
+            {
+                margin-bottom: 10%;
+                img
+                {
+                    width: clamp(5rem, 20vw,15rem);
+                    height: auto;
+                    border-radius: .5rem;
+                    margin-right: 6%;
+                }
+            }
+        }
+
+    }
+
+    .techUseProject
+    {
+        ul 
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            li 
+            {
+                margin-right: 5%;
+                img 
+                {
+                    width: clamp(5rem, 20vw,15rem);
+                    height: auto;   
+                }     
+            }
+        }
+    }
+    
+    .date
+    {
+        font-size: clamp(.8rem,1.7vw,2.4rem);
+        text-align: right;
+    }
+
+    .PresentationProg
+    {
+        cursor: crosshair;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        background-color: rgba($color: #000000, $alpha: .3);
+        border-radius: 2rem;
+
+        h3 
+        {
+            font-size: clamp(1.4rem,3vw,3rem);
+            align-self: center;
+            &::after
+            {
+                content: none; // retirer le after
+            }
+            padding: 4% 6%;
+            border-radius: 2rem;
+            width: fit-content;
+            background-color: rgba($color: #000000, $alpha: .4);
+
+        }
+
+        p 
+        {
+            font-size: clamp(.9rem,2.2vw,5rem);
+        }
+
+        ul li
+        {
+            list-style-type: disc !important;
+        }
+
+        ol li 
+        {
+            list-style-type: decimal;
+            margin-left: 2%;
+            padding-left : 2%;
+        }
+    }
+
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 100vh;
+    margin-bottom: 5%;
+
+}

@@ -1,2 +1,3 @@
 # Portfolio 
-Ce portfolio n'est plus a jour, je le refais actuellement
+
+Bienvenue sur mon Portfolio ! (que je refais actuellement)
