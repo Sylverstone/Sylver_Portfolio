@@ -1,11 +1,9 @@
-
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/style/styles.module.css"
 import { fileURLToPath } from 'url';
 import * as path from 'path'
-import getFiles from "@/Scripts/getFiles"
 import * as fs from 'fs'
 import { project_t } from '../Scripts/projects';
 import { Texts_t } from '../Scripts/en';
@@ -14,17 +12,14 @@ const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
-const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) => {
-
-
-    const basePath = "/public";
-    const pathFileProjectIMG = path.join(project.title,"Project");
-    const pathFileProjectTechImg = path.join("Technologies");
+const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
+    
     const publicPath = path.join(__dirname,'..','..','..','public');
     console.log(publicPath);
+    
     if(!(fs.existsSync(publicPath))) return <h2>{publicPath}</h2>
-    let filesProjectImg = fs.readdirSync(path.join(publicPath,pathFileProjectIMG));
-    let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,pathFileProjectTechImg));
+    let filesProjectImg = fs.readdirSync(path.join(publicPath,project.title,"Project"));
+    let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,"Technologies"));
 
     filesProjectImg = filesProjectImg.map(file => {
         return `/${project.title}/Project/${file}`;
@@ -59,7 +54,7 @@ const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) 
                 }
             </article>
            
-            {filesProjectImg && 
+            {filesProjectImg.length >= 1 && 
             <article className={styles.ImgProject}>
                 <h3>{Texts.home.apercu}</h3>
                 <ul>

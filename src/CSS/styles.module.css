@@ -165,6 +165,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: linear-gradient(to bottom, transparent 0%, #090909 40%, #090909 60%, transparent 100%);
 }
 .Transition h1 {
   font-size: clamp(1.6em, 3vw, 6em);

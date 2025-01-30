@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -14,14 +14,15 @@ const Nav = () => {
         "/valid.svg",
         
     ];
+
     
     const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target : string) => 
     {
-        const AProposELT = document.querySelector(target);
+        const elementCible = document.querySelector(target);
         const evTarget = ev.currentTarget;
-        if(!AProposELT) return;
+        if(!elementCible) return;
         const rectevTargetRect = evTarget.getBoundingClientRect();
-        const rect = AProposELT.getBoundingClientRect();
+        const rect = elementCible.getBoundingClientRect();
         const bas = rectevTargetRect.top + rectevTargetRect.height;
         window.scrollTo({
             top : rect.top - (bas * 1.5) + window.scrollY  ,
@@ -32,8 +33,6 @@ const Nav = () => {
 
     const handleClickDeleter = (ev : React.MouseEvent<HTMLImageElement, MouseEvent>) => {
         const nav = document.querySelector("nav");
-        
-        
         const croix = ev.currentTarget;
         if(!nav) return;
 
