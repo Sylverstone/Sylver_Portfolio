@@ -14,17 +14,17 @@ export const reseaux : reseaux_t[] =
 	{
 		nom : "GitHub",
 		url : "https://github.com/Sylverstone/",
-		icon : "/Technologies/github.png",
+		icon : "/Technologies/github.svg",
 	},
 	{
 		nom : "LinkedIn",
         url : "https://linkedin.com/in/sylviopelagemaxime",
-        icon : "/reseaux/linkedin.png"
+        icon : "/reseaux/linkedin.svg"
 	},
 	{
 		nom : "Fiverr",
 		url : "https://www.fiverr.com/s/ak9gX4W",
-		icon : "/reseaux/fiverr.png"
+		icon : "/reseaux/fiverr.svg"
 
 	}
 ];
@@ -38,7 +38,6 @@ export const contacts =
 ];
 
 const suivreTXT = "Me Suivre";
-const contactTXT = "Contact";
 
 export let categories = 
 [

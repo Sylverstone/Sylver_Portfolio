@@ -1,7 +1,7 @@
 
 import * as fs from 'fs'
 
-export default (paths : string) : string[] | undefined => {
+const getFile = (paths : string) : string[] | undefined => {
     
     let files : string[] = [];
     if(paths != undefined && fs.existsSync(paths))
@@ -11,3 +11,5 @@ export default (paths : string) : string[] | undefined => {
     
     return files.length === 0 ? undefined : files;
 }
+
+export default getFile;

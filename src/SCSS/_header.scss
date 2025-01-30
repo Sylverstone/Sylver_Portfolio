@@ -29,6 +29,7 @@ header
    
     p 
     {
+        font-size: clamp(1em,1.6vw,2em);
         position: relative;
         animation: defileText 8s linear infinite;
     }
@@ -46,8 +47,10 @@ header
         width: 80%;
         font-family: kanit;
         text-align: center;
-        font-size: 1.3em;
-        background-color: rgba(#FFFFFF,0.1);
+        font-size: clamp(1.3em,2vw,4em);
+        background: linear-gradient(to right, $hearderBackgroundColor, $colorSubTible);
+        background-size: 200% 200%;
+        animation: moveBG 10s linear infinite;
         padding-left: 10%;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
@@ -56,4 +59,7 @@ header
         padding-top: 2%;
         padding-bottom: 2%;
     }
+
 }
+
+@include moveBG();

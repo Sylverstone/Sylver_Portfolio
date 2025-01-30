@@ -11,8 +11,8 @@ import { projects } from "./Scripts/projects";
 import Nav from "./components/Nav";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio of Sylvio",
+  title: "Sylvio PELAGE MAXIME",
+  description: "Mon Portfolio qui regroupe mes projets",
 };
 
 

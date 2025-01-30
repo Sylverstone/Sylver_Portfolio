@@ -1,12 +1,10 @@
 import "@/style/globals.css"
-import Image from "next/image";
 import FooterDiv from "./components/FooterDiv";
 import { headers } from "next/headers";
 import TextEn from "@/Scripts/en";
 import TextFr from "@/Scripts/fr";
 import { setCategorie } from "./Scripts/footerCategorie";
 import React from "react";
-import { LayoutRouter } from "next/dist/server/app-render/entry-base";
 
 
 

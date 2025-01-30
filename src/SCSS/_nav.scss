@@ -3,16 +3,47 @@
 nav 
 {
     z-index: 69;
+    display: flex;
+    flex-direction: row;
     position:sticky;
+    justify-content: center;
     top : 2rem ;
     width: 90%;
-    align-self: center;
+    align-items: center;
+    min-height: clamp(1em,8vh,4em);
+    left: 5%;
     border-radius: 2rem;
-    background-color: rgba(#000000, .7);
+    background-color: rgba(#000000, .5);
+    transition: width 500ms ease-in,background-color 500ms ease-in;
+    
+    .ImgDelete 
+    {
+        cursor:pointer;
+        position: absolute;
+        width: auto;
+        height: 60%;
+        top: 20%;
+        left : 4%;
+        
+        transition: left 500ms ease-in,width 500ms ease-in, height 500ms ease-in;
+    }
+
     ul 
     {
+        li 
+        {
+            transition: opacity 700ms ease;
+            height: 50%;
+            font-size: clamp(1em,1.5vw,3em);
+            width: auto;
+        }
+
+        width: 100%;
         margin: clamp(1em,5%,1.6em) 0;
         display: flex;
         justify-content: space-around;
+        
+        overflow: hidden;
     }
 }
+

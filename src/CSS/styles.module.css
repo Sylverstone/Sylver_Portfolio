@@ -21,11 +21,10 @@
 .projet h3::after {
   position: absolute;
   content: "";
-  border-bottom: 0.1rem dotted rgb(235, 233, 233);
-  border-radius: 100%;
+  border-bottom: 0.3rem dotted rgb(235, 233, 233);
   width: 100%;
   left: 0;
-  bottom: -0.2rem;
+  bottom: -0.5rem;
 }
 .projet h4 {
   font-size: clamp(1.4rem, 2.5vw, 3rem);
@@ -35,11 +34,10 @@
 .projet h4::after {
   position: absolute;
   content: "";
-  border-bottom: 0.1rem dotted rgb(235, 233, 233);
-  border-radius: 100%;
+  border-bottom: 0.3rem dotted rgb(235, 233, 233);
   width: 100%;
   left: 0;
-  bottom: -0.2rem;
+  bottom: -0.5rem;
 }
 .projet .liensProject ul {
   display: flex;
@@ -59,7 +57,7 @@
   margin-bottom: 10%;
 }
 .projet .ImgProject ul li img {
-  width: clamp(5rem, 32vw, 15rem);
+  width: clamp(5rem, 20vw, 15rem);
   height: auto;
   border-radius: 0.5rem;
   margin-right: 6%;
@@ -73,8 +71,42 @@
   margin-right: 5%;
 }
 .projet .techUseProject ul li img {
-  width: clamp(5rem, 32vw, 15rem);
+  width: clamp(5rem, 20vw, 15rem);
   height: auto;
+}
+.projet .date {
+  font-size: clamp(0.8rem, 1.7vw, 2.4rem);
+  text-align: right;
+}
+.projet .PresentationProg {
+  cursor: crosshair;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+}
+.projet .PresentationProg h3 {
+  font-size: clamp(1.4rem, 3vw, 3rem);
+  align-self: center;
+  padding: 4% 6%;
+  border-radius: 2rem;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.projet .PresentationProg h3::after {
+  content: none;
+}
+.projet .PresentationProg p {
+  font-size: clamp(0.9rem, 2.2vw, 5rem);
+}
+.projet .PresentationProg ul li {
+  list-style-type: disc !important;
+}
+.projet .PresentationProg ol li {
+  list-style-type: decimal;
+  margin-left: 2%;
+  padding-left: 2%;
 }
 
 .Project {
@@ -100,7 +132,7 @@
 .aPropos {
   margin-left: 5%;
   margin-right: 5%;
-  height: 100vh;
+  min-height: 100vh;
   white-space: pre-wrap;
   font-size: 1em;
   background-color: rgba(0, 0, 0, 0.2);
@@ -114,7 +146,6 @@
 }
 .aPropos h1 {
   margin: 0;
-  margin-top: 20%;
   font-size: clamp(1.4em, 7vw, 4em);
 }
 .aPropos h2 {
@@ -123,14 +154,12 @@
   font-size: clamp(1.1em, 4.5vw, 2.4em);
 }
 .aPropos p {
-  font-size: clamp(1em, 4vw, 2em);
+  font-size: clamp(1em, 2.6vw, 2em);
   margin-top: 0;
   line-height: 125%;
-  margin-bottom: 20%;
 }
 
 .Transition {
-  background: linear-gradient(to bottom, transparent 0%, #090909 50%, transparent 100%);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -139,36 +168,23 @@
 }
 .Transition h1 {
   font-size: clamp(1.6em, 3vw, 6em);
-  background-color: rgba(250, 252, 255, 0.1);
+  background: linear-gradient(to right, #090909, #39488b);
+  background-size: 200% 200%;
+  animation: moveBG 10s linear infinite;
   padding: 5% 10%;
   border-radius: 1rem;
 }
 
-.date {
-  font-size: clamp(0.8rem, 1.7vw, 2.4rem);
-  text-align: right;
-}
-
-.PresentationProg {
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
-}
-.PresentationProg h3 {
-  font-size: clamp(1.4rem, 3vw, 3rem);
-  align-self: center;
-  padding: 4% 6%;
-  border-radius: 2rem;
-  width: fit-content;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.PresentationProg h3::after {
-  content: none;
-}
-.PresentationProg p {
-  font-size: clamp(0.8rem, 2vw, 5rem);
+@keyframes moveBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.module.css.map */

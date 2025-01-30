@@ -44,18 +44,18 @@ const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) 
             <article className={styles.PresentationProg}>
                 <h2>{project.title}</h2>
                 <h3>Presentation</h3>
-                <p>{project.presentation}</p>
-                {project.technique && 
+                {Texts.project[project.key - 1]?.presentation}
+                {Texts.project[project.key - 1]?.technique && 
                     <>
                         <h3>Techniques</h3>
-                        <p>{project.technique}</p>
+                        {Texts.project[project.key - 1].technique}
                     </>
                 }
 
-                {project.fonctionnalitees && 
+                {Texts.project[project.key - 1]?.fonctionnalitees && 
                     <>
-                        <h3>Fonctionnalitées</h3>
-                        <p>{project.fonctionnalitees}</p>
+                        <h3>{Texts.home.fonctionnalitees}</h3>
+                        {Texts.project[project.key - 1]?.fonctionnalitees}
                     </>
                 }
             </article>
@@ -100,7 +100,7 @@ const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) 
                 <h4>{Texts.home.lien}</h4>
                 <ul>
                     <li>
-                        {project.lien && <Link href={project.lien} target='_blanks'>→ GitHub</Link>}
+                        {project.lien && <Link href={project.lien} target='_blanks'>→ {project.lien.includes("github") ? "GitHub" : "Drive" }</Link>}
                     </li>
                     <li>
                         {project.siteweb && <Link href={project.siteweb} target='_blanks'>→ {Texts.home.siteWeb}</Link>}
