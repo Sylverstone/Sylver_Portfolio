@@ -20,8 +20,8 @@ const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) 
     const basePath = "/public";
     const pathFileProjectIMG = path.join(project.title,"Project");
     const pathFileProjectTechImg = path.join("Technologies");
-    const publicPath = path.join(process.cwd(), 'public');
-    console.log(process.cwd());
+    const publicPath = path.join(__dirname,'..','..','..','public');
+    console.log(publicPath);
     let filesProjectImg = fs.readdirSync(path.join(publicPath,pathFileProjectIMG));
     let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,pathFileProjectTechImg));
 
