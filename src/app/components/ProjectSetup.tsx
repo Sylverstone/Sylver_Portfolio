@@ -15,9 +15,7 @@ const __dirname = path.dirname(__filename);
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     
     const publicPath = path.join(__dirname,'..',"files");
-    console.log(publicPath);
-    
-    if(!(fs.existsSync(publicPath))) return <h2>{publicPath}</h2>
+    console.log(publicPath);    
     let filesProjectImg = fs.readdirSync(path.join(publicPath,project.title,"Project"));
     let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,"Technologies"));
 
