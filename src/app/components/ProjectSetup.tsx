@@ -16,30 +16,26 @@ const __dirname = path.dirname(__filename);
 
 const ProjectSetup = ({project,Texts} : {project : project_t, Texts : Texts_t}) => {
 
-    console.log(__dirname);
-    const basePath = path.join(__dirname,"..","..","..","public");
-    console.log(basePath);
-    //if(!fs.existsSync(basePath)) return <><h2>Something went very bad !</h2></>
-    const pathFileProjectIMG = path.join(basePath,project.title,"Project");
-    const pathFileProjectTechImg = path.join(basePath,"Technologies");
-    let filesProjectImg = getFiles(pathFileProjectIMG);
-    let filesProjectTechUse = getFiles(pathFileProjectTechImg);
 
-    if(filesProjectImg != undefined)
-    {
-        filesProjectImg = filesProjectImg.map(file => {
-            return `/${project.title}/Project/${file}`;
-        })
-    }
+    const basePath = "/public";
+    const pathFileProjectIMG = path.join(project.title,"Project");
+    const pathFileProjectTechImg = path.join("Technologies");
+    const publicPath = path.join(process.cwd(), 'public');
+    console.log(process.cwd());
+    let filesProjectImg = fs.readdirSync(path.join(publicPath,pathFileProjectIMG));
+    let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,pathFileProjectTechImg));
+
+    filesProjectImg = filesProjectImg.map(file => {
+        return `/${project.title}/Project/${file}`;
+    })
+    
         
-    if(filesProjectTechUse != undefined)
-    {
-        filesProjectTechUse = filesProjectTechUse.filter(file => {
-            const ext = path.extname(file)
-            const fileWithoutExtension = file.slice(0, file.length - ext.length);
-            return  project.comptence.includes(fileWithoutExtension)
-        }).map(file => {return `/Technologies/${file}`});
-    }
+    filesProjectTechUse = filesProjectTechUse.filter(file => {
+        const ext = path.extname(file)
+        const fileWithoutExtension = file.slice(0, file.length - ext.length);
+        return  project.comptence.includes(fileWithoutExtension)
+    }).map(file => {return `/Technologies/${file}`});
+    
 
     return (
     <section key={project.key} className={styles.projet} id={project.title}>
