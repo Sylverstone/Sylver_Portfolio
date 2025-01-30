@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     
-    const publicPath = path.join(__dirname,'..','..','..','public');
+    const publicPath = path.join(__dirname,'..',"files");
     console.log(publicPath);
     
     if(!(fs.existsSync(publicPath))) return <h2>{publicPath}</h2>
@@ -25,7 +25,6 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
         return `/${project.title}/Project/${file}`;
     })
     
-        
     filesProjectTechUse = filesProjectTechUse.filter(file => {
         const ext = path.extname(file)
         const fileWithoutExtension = file.slice(0, file.length - ext.length);
