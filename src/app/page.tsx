@@ -13,8 +13,12 @@ import Nav from "./components/Nav";
 export const metadata: Metadata = {
   title: "Sylvio PELAGE MAXIME",
   description: "Mon Portfolio qui regroupe mes projets",
+  verification: 
+	{
+		google:"jhptsBxmILa9vLlhCAKya-9mtDZkvyWSRZdN_cm_r6k"
+	}
+  
 };
-
 
 export default async function Home() {
 

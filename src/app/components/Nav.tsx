@@ -12,9 +12,7 @@ const Nav = () => {
     const srcArray : string[] = [
         "/delete.svg",
         "/valid.svg",
-        
     ];
-
     
     const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target : string) => 
     {

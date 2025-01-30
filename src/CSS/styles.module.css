@@ -57,7 +57,7 @@
   margin-bottom: 10%;
 }
 .projet .ImgProject ul li img {
-  width: clamp(5rem, 20vw, 15rem);
+  width: clamp(7rem, 20vw, 19rem);
   height: auto;
   border-radius: 0.5rem;
   margin-right: 6%;
@@ -90,7 +90,7 @@
   font-size: clamp(1.4rem, 3vw, 3rem);
   align-self: center;
   padding: 4% 6%;
-  border-radius: 2rem;
+  border-radius: 1rem;
   width: fit-content;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -98,6 +98,9 @@
   content: none;
 }
 .projet .PresentationProg p {
+  font-size: clamp(0.9rem, 2.2vw, 5rem);
+}
+.projet .PresentationProg li {
   font-size: clamp(0.9rem, 2.2vw, 5rem);
 }
 .projet .PresentationProg ul li {
