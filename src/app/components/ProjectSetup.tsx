@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from "@/style/styles.module.css"
 import { fileURLToPath } from 'url';
 import * as path from 'path'
-import * as fs from 'fs'
 import { project_t } from '../Scripts/projects';
 import { Texts_t } from '../Scripts/en';
 
@@ -14,22 +13,19 @@ const __dirname = path.dirname(__filename);
 
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     
-    const publicPath = path.join(__dirname,'..',"files");
-    console.log(publicPath);    
-    let filesProjectImg = fs.readdirSync(path.join(publicPath,project.title,"Project"));
-    let  filesProjectTechUse = fs.readdirSync(path.join(publicPath,"Technologies"));
+    let filesProjectImg : string[] = [];
+    for(let i = 0; i < project.nombreImage; i++)
+    {
+        const file = `${project.title}${i+1}.png`;
+        filesProjectImg.push(`/${project.title}/Project/${file}`);
+    }
 
-    filesProjectImg = filesProjectImg.map(file => {
-        return `/${project.title}/Project/${file}`;
-    })
+    let filesProjectTechUse : string[] = [];
+    for(const comp of project.comptence)
+    {
+        filesProjectTechUse.push(`/Technologies/${comp}.svg`);
+    }
     
-    filesProjectTechUse = filesProjectTechUse.filter(file => {
-        const ext = path.extname(file)
-        const fileWithoutExtension = file.slice(0, file.length - ext.length);
-        return  project.comptence.includes(fileWithoutExtension)
-    }).map(file => {return `/Technologies/${file}`});
-    
-
     return (
     <section key={project.key} className={styles.projet} id={project.title}>
             <article className={styles.PresentationProg}>
