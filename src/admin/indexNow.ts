@@ -1,7 +1,6 @@
 //fonction s'execute directe
 import axios from "axios"
-import "dotenv/config";
-
+import "dotenv/config"
 interface ReponseIndexNow
 {
     statusCode : number;
@@ -11,8 +10,12 @@ interface ReponseIndexNow
 
 (async () => {
     const baseUrl = "sylvio-pelagemaxime-portfolio.vercel.app"
-    let url = `https://${baseUrl}/`;
+    let url = [`https://${baseUrl}/`];
 
+    if(process.env.IndexNowKey === undefined){
+        console.log(process.env)
+        return 
+    }
     const data = {
         host: baseUrl,
         key: process.env.IndexNowKEY,
@@ -20,18 +23,27 @@ interface ReponseIndexNow
         urlList: url
     };
 
-    const response : ReponseIndexNow = await axios.post('https://api.indexnow.org/indexnow',
-        data,{
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
+    try
+    {
+        axios.post('https://api.indexnow.org/indexnow',
+            data,{
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
             }
-        }
-    );
+        ).then(response => {
+           
+            for(const key of Object.keys(response))
+            {
+                console.log(key, response[key]);
+            }
+        })
 
-    console.log("Result index Now : \n");
-    console.log("Reponse Status : ", response.statusCode);
-    console.log("Reponse Message : ", response.statusMessage);
-    console.log("Reponse data : \n");
-    console.table(response.data);
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+    
 
 })();

@@ -2,6 +2,7 @@
   "name": "sylver_portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.1.0",
     "dotenv": "^16.4.7",
     "next": "15.1.6",
     "node-fetch": "^3.3.2",
@@ -24,6 +26,7 @@
     "axios": "^1.7.9",
     "eslint": "^9.19.0",
     "eslint-config-next": "15.1.6",
+    "tsc-node": "^0.0.3",
     "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@9.15.4+sha1.ffa0b5c573381e8035b354028ccff97c8e452047"

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -22,12 +22,12 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/style/*": ["./src/CSS/*"],
+      "@/style/*": ["./src/SCSS/*"],
       "@/components/*" : ["./src/app/components/*"],
       "@/Scripts/*": ["./src/app/Scripts/*"],
       "@/locales/*": ["./locales/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src/CSS/*.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules","src/admin/*.ts"]
 }

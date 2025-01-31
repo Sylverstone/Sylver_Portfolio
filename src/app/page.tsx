@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import styles from "@/style/styles.module.css"
+import styles from "@/style/styles.module.scss"
 import { Metadata } from "next";
 import ProjectSetup from "./components/ProjectSetup";
 import DefilementText from "./components/DefilementText";
@@ -60,7 +60,7 @@ export default async function Home() {
 				<p>{mainContent}</p>
 			</section>
 			<section className={styles.Transition}>
-				<h1>{mesProjets}</h1>
+				<h2>{mesProjets}</h2>
 			</section>
 			{projects.map(project => (
 				<ProjectSetup key={project.title} project={project} Texts={Texts} />

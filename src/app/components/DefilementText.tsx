@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import "@/style/globals.css"
+import "@/style/globals.scss"
 import { Texts_t } from '../Scripts/en';
 
 const DefilementText = ({ Texts } : {Texts : Texts_t}) => {

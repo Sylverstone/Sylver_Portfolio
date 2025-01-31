@@ -1,11 +1,11 @@
-import "@/style/globals.css"
+import "@/style/globals.scss"
 import FooterDiv from "./components/FooterDiv";
 import { headers } from "next/headers";
 import TextEn from "@/Scripts/en";
 import TextFr from "@/Scripts/fr";
 import { setCategorie } from "./Scripts/footerCategorie";
 import React from "react";
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 
@@ -35,6 +35,7 @@ export default async function RootLayout(
 		<html lang="fr">
 			<body>
 				{children}
+				<SpeedInsights />
 				<footer>					
 					<section>
 						{categories.map(categorie => (

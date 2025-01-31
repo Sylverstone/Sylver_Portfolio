@@ -74,7 +74,7 @@
     text-align: center;
     background: linear-gradient(to bottom,transparent 0%,$hearderBackgroundColor 40%,$hearderBackgroundColor 60%, transparent 100%);
 
-    h1 
+    h2
     {
         font-size : clamp(1.6em,3vw,6em);
         background: linear-gradient(to right, $hearderBackgroundColor, $colorSubTible);

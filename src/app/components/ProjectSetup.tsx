@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from "@/style/styles.module.css"
+import styles from "@/style/styles.module.scss"
 import { fileURLToPath } from 'url';
 import * as path from 'path'
 import { project_t } from '../Scripts/projects';
