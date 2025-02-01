@@ -7,8 +7,6 @@ import { setCategorie } from "./Scripts/footerCategorie";
 import React from "react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-
-
 export default async function RootLayout(
 {
   children,
