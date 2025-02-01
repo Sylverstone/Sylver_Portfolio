@@ -1,4 +1,5 @@
 "use client";
+import styles from "@/style/styles.module.scss"
 
 const Isvisible = (element : HTMLElement) =>
 {
@@ -7,7 +8,7 @@ const Isvisible = (element : HTMLElement) =>
     const vw = window.innerWidth || document.documentElement.clientWidth;
     
     return (
-        (rect.top <= vh / 3) && rect.left <= vw
+        (rect.top <= vh / 1.5) && rect.left <= vw
     );
 }
 
@@ -35,7 +36,6 @@ const lookIfVisible = (pageElements : NodeListOf<Element>) =>
                     break;
             }
         }  
-
         compteur++;
     })
 }
@@ -45,7 +45,7 @@ export function visible()
 {
     const body = document.querySelector('body');
     if(!body) return;
-    const pageElements = body.querySelectorAll(".styles-module-scss-module__MDJA0q__projet, .styles-module-scss-module__MDJA0q__aPropos");
+    const pageElements = body.querySelectorAll(`.${styles.projet}, .${styles.aPropos}`);
     console.log("length  : ", pageElements.length)
     
     body.onload = () => {

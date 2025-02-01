@@ -2,14 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/style/styles.module.scss"
-import { fileURLToPath } from 'url';
-import * as path from 'path'
 import { project_t } from '../Scripts/projects';
 import { Texts_t } from '../Scripts/en';
-
-const __filename = fileURLToPath(import.meta.url);
-
-const __dirname = path.dirname(__filename);
 
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     

@@ -28,6 +28,6 @@
       "@/locales/*": ["./locales/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src/CSS/*.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src/CSS/*.d.ts", "public/Scripts/visible.js"],
   "exclude": ["node_modules","src/admin/*.ts"]
 }

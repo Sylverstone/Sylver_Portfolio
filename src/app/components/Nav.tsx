@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
-import { visible } from '../Scripts/visible';
+import { visible } from '@/Scripts/visible';
 
 
 const Nav = () => {
