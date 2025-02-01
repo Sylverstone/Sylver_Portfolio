@@ -53,7 +53,7 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                                     alt={file}
                                     width={1000}
                                     height={1000}
-                                />
+                                />                             
                             </Link>
                         </li>
                     ))}

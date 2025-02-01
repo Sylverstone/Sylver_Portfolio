@@ -20,6 +20,8 @@ export interface Texts_t
 		"meSuivre" : string;
 		"rights" : string;
 		"fonctionnalitees" : string;
+		"aPropos" : string;
+		"mesProjetNav" : string;
     },
 	project : project_t;
 };
@@ -40,6 +42,8 @@ const Texts : Texts_t =
 		bienvenue : "WELCOME TO MY PORTFOLIO",
 		titre : "Sylvio Pelage Maxime",
 		subTitre : "Student in Computer Graphics Bachelor",
+		aPropos : "About Me",
+		mesProjetNav : "My Projects",
 		mainContent : 
 		`
 Since I was a child, I have been passionate about video games, which is why I want to become a video game programmer.

@@ -4,9 +4,23 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
 import { visible } from '@/Scripts/visible';
+import { Texts_t } from '../Scripts/en';
 
-
-const Nav = () => {
+const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target : string) => 
+{
+    const elementCible = document.querySelector(target);
+    const evTarget = ev.currentTarget;
+    if(!elementCible) return;
+    const rectevTargetRect = evTarget.getBoundingClientRect();
+    const rect = elementCible.getBoundingClientRect();
+    const bas = rectevTargetRect.top + rectevTargetRect.height;
+    window.scrollTo({
+        top : rect.top - (bas * 1.5) + window.scrollY  ,
+        behavior : "smooth"
+    })
+    ev.preventDefault();
+}
+const Nav = ({Texts} : {Texts : Texts_t}) => {
 
     const [compteur, setcompteur] = useState(0);
     const [srcImg, setsrc] = useState("/valid.svg");
@@ -18,21 +32,6 @@ const Nav = () => {
     useEffect(() => {
         visible();
     },[]);
-
-    const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target : string) => 
-    {
-        const elementCible = document.querySelector(target);
-        const evTarget = ev.currentTarget;
-        if(!elementCible) return;
-        const rectevTargetRect = evTarget.getBoundingClientRect();
-        const rect = elementCible.getBoundingClientRect();
-        const bas = rectevTargetRect.top + rectevTargetRect.height;
-        window.scrollTo({
-            top : rect.top - (bas * 1.5) + window.scrollY  ,
-            behavior : "smooth"
-        })
-        ev.preventDefault();
-    }
 
     const handleClickDeleter = (ev : React.MouseEvent<HTMLImageElement, MouseEvent>) => {
         const nav = document.querySelector("nav");
@@ -81,17 +80,16 @@ const Nav = () => {
                 width={1000}
                 height={1000}
                 className="ImgDelete"
-                
             />
             <ul>
                 <li>
                     <Link href="#aPropos" onClick={(e) => handleClick(e,"#aPropos")}>
-                        A Propos
+                        {Texts.home.aPropos}
                     </Link>
                 </li>
                 <li>
                     <Link href="#SylverService" onClick={(e) => handleClick(e,"#SylverService")}>
-                        Mes Projets
+                        {Texts.home.mesProjetNav}
                     </Link>
                 </li>
             </ul>

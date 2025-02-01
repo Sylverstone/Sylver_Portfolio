@@ -42,7 +42,7 @@ export default async function Home() {
 			<div>
 				<Image 
 					src="/photo_cv.jpg"
-					alt="jsp"
+					alt="portrait Sylvio Pelage Maxime"
 					width={1000}
 					height={1000}
 					className={styles.ImageProfil}
@@ -51,7 +51,7 @@ export default async function Home() {
 				<p className="bienvenue">{bienvenue}</p>
 			</div>
 		</header>
-		<Nav />
+		<Nav Texts={Texts}/>
 		<main>
 			<section className={styles.aPropos} id="aPropos">
 				<h1>{titre}</h1>

@@ -16,6 +16,8 @@ const Texts : Texts_t =
 		bienvenue : "BIENVENUE DANS MON PORTFOLIO",
 		titre : "Sylvio Pelage Maxime",
 		subTitre : "Etudiant en BUT Informatique graphique",
+		aPropos : "A Propos",
+		mesProjetNav : "Mes Projets",
 		mainContent : 
 		`
 Depuis petit je suis passionné par les jeux vidéo, c'est pourquoi je souhaite devenir programmeur de jeux vidéo.
