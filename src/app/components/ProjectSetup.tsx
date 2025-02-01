@@ -95,8 +95,7 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                 </ul>
             </article>
             }
-            <p className={styles.date}>date : {project.date}</p>
-            
+            <p className={styles.date}>date : {project.date}</p> 
     </section>
     )
 }

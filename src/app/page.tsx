@@ -9,15 +9,15 @@ import TextEn from "@/Scripts/en";
 import TextFr from "@/Scripts/fr";
 import { projects } from "./Scripts/projects";
 import Nav from "./components/Nav";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Sylvio PELAGE MAXIME",
-  description: "Mon Portfolio qui regroupe mes projets",
-  verification: 
+	title: "Sylvio PELAGE MAXIME",
+	description: "Mon Portfolio qui regroupe mes projets",
+	verification: 
 	{
 		google:"jhptsBxmILa9vLlhCAKya-9mtDZkvyWSRZdN_cm_r6k"
 	}
-  
 };
 
 export default async function Home() {
@@ -32,8 +32,7 @@ export default async function Home() {
 		userLanguage = "en";
 		Texts = TextEn;
 	}
-	// Extraire la langue préférée
-	
+
 	const {titre,subTitre,bienvenue,mainContent,mesProjets} = Texts.home;
 
 	return (
@@ -66,6 +65,7 @@ export default async function Home() {
 				<ProjectSetup key={project.title} project={project} Texts={Texts} />
 			))}
 		</main>
+		
 	</>
 	);
 };

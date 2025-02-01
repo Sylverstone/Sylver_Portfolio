@@ -49,7 +49,31 @@ main
     align-self: center;
     display: flex;
     flex-direction: column;
-
     margin-top: 5%;
     margin-bottom: 5%;
+    overflow-x: hidden
+}
+
+$locations : "Left", "Right";
+$transforms : translateX(-20%), translateX(20%);
+$i : 0;
+$combined: zip($locations,$transforms);
+
+@each $location,$transform in $combined {
+    
+    .hidden#{$location}
+    {
+        opacity: 0;
+       
+        transform: $transform;        
+        transition: opacity $transitionGetInView ease, transform $transitionGetInView ease;
+    }
+    $i: $i +1;
+}
+
+.visible
+{
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
 }

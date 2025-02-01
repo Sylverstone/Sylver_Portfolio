@@ -1,12 +1,6 @@
 //fonction s'execute directe
 import axios from "axios"
 import "dotenv/config"
-interface ReponseIndexNow
-{
-    statusCode : number;
-    statusMessage : string;
-    data : unknown;
-}
 
 (async () => {
     const baseUrl = "sylvio-pelagemaxime-portfolio.vercel.app"
@@ -16,6 +10,7 @@ interface ReponseIndexNow
         console.log(process.env)
         return 
     }
+
     const data = {
         host: baseUrl,
         key: process.env.IndexNowKEY,
@@ -35,7 +30,7 @@ interface ReponseIndexNow
            
             for(const key of Object.keys(response))
             {
-                console.log(key, response[key]);
+                console.log(key, ":", response[key]);
             }
         })
 

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
+import { visible } from '../Scripts/visible';
 
 
 const Nav = () => {
@@ -14,6 +15,10 @@ const Nav = () => {
         "/valid.svg",
     ];
     
+    useEffect(() => {
+        visible();
+    },[]);
+
     const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target : string) => 
     {
         const elementCible = document.querySelector(target);
@@ -68,7 +73,7 @@ const Nav = () => {
     }
 
     return (
-        
+
         <nav>
             <Image onClick={handleClickDeleter}
                 src="/delete.svg"
@@ -91,8 +96,8 @@ const Nav = () => {
                 </li>
             </ul>
         </nav>
-        
+
     )
-    }
+}
 
 export default Nav
