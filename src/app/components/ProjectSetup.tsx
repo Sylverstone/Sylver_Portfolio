@@ -46,13 +46,15 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                 <h3>{Texts.home.apercu}</h3>
                 <ul>
                     {filesProjectImg.map(file => (
-                        <li key={file}>                        
-                            <Image 
-                                src={file}
-                                alt={file}
-                                width={1000}
-                                height={1000}
-                            />                  
+                        <li key={file}>
+                            <Link href={`/public/${file}`} target='_blanks'>
+                                <Image 
+                                    src={file}
+                                    alt={file}
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </Link>
                         </li>
                     ))}
                 </ul>
