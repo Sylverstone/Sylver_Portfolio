@@ -47,14 +47,12 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                 <ul>
                     {filesProjectImg.map(file => (
                         <li key={file}>
-                            <Link href={file} target='_blank'>
-                                <Image 
-                                    src={file}
-                                    alt={file}
-                                    width={1000}
-                                    height={1000}
-                                />                             
-                            </Link>
+                            <Image 
+                                src={file}
+                                alt={file}
+                                width={1000}
+                                height={1000}
+                            />                             
                         </li>
                     ))}
                 </ul>
