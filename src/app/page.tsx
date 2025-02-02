@@ -63,7 +63,6 @@ export default async function Home() {
 				<ProjectSetup key={project.title} project={project} Texts={Texts} />
 			))}
 		</main>
-		
 	</>
 	);
 };

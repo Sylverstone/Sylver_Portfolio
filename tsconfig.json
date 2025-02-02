@@ -28,6 +28,6 @@
       "@/locales/*": ["./locales/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src/CSS/*.d.ts", "public/Scripts/visible.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src/CSS/*.d.ts", "src/app/api/form/route.mts"],
   "exclude": ["node_modules","src/admin/*.ts"]
 }

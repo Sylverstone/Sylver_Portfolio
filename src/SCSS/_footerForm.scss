@@ -1,0 +1,83 @@
+@use "./variables" as *;
+
+$borderChamp : 1px solid white;
+$fondChamp : rgba(black,0.1);
+$borderRadius : .6rem;
+
+
+form 
+{
+    fieldset
+    {
+        border-radius: $borderRadius;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include flexColum();
+        align-items: baseline;
+    
+        #objet
+        {
+            width : 99%
+        }
+    
+        input, textarea
+        {
+            border-radius: $borderRadius;
+            border: $borderChamp;
+            background-color: $fondChamp;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            color: white;
+            padding-left: 1%;
+        }
+    
+        input::placeholder, textarea::placeholder
+        {
+            color: white;
+            padding-left: 1%;
+            
+        }
+    
+        aside 
+        {
+            margin-top: 4%;
+            margin-bottom: 4%;
+            display: flex;
+            justify-content: space-around;
+    
+            & > * 
+            {
+                width: 40%;
+            }
+        
+            #name 
+            {
+                flex : 1;
+            }
+    
+            #email 
+            {
+                margin-left: 2%;
+                flex : 2;
+            }
+        }
+    
+        textarea
+        {
+            margin-bottom: 4%;
+            width: 99%;
+            height: 4em;
+        }
+    
+        button
+        {
+            background-color: $fondChamp;
+            border-radius: 1vw;
+            border: $borderChamp;
+            color: white;
+            padding: 2% 4%;
+            align-self: center;
+        }
+        
+    }
+}

@@ -9,18 +9,18 @@
     "start": "next start",
     "lint": "next lint"
   },
-
   "dependencies": {
+    "@types/nodemailer": "^6.4.17",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "dotenv": "^16.4.7",
     "next": "15.1.6",
     "node-fetch": "^3.3.2",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.83.4"
   },
-
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@types/node": "^20.17.16",
@@ -32,6 +32,5 @@
     "tsc-node": "^0.0.3",
     "typescript": "^5.7.3"
   },
-  
   "packageManager": "pnpm@9.15.4+sha1.ffa0b5c573381e8035b354028ccff97c8e452047"
 }

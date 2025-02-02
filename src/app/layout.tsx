@@ -7,6 +7,7 @@ import { setCategorie } from "./Scripts/footerCategorie";
 import React from "react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
+import ContactForm from "./components/ContactForm";
 
 export default async function RootLayout(
 {
@@ -44,6 +45,7 @@ export default async function RootLayout(
 							</FooterDiv>
 						))}
 					</section>
+					<ContactForm />
 					<p className="rights">© {new Date().getFullYear()} Sylvio Pelage Maxime. {Texts.home.rights}</p>
 				</footer>
 			</body>

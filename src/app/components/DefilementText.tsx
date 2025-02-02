@@ -7,19 +7,25 @@ import { Texts_t } from '../Scripts/en';
 const DefilementText = ({ Texts } : {Texts : Texts_t}) => {
     const liste = [
         Texts.home.titre,
-        Texts.home.etude
+        Texts.home.etude,
+        "Passioné par l'informatique."
     ]
     const [texteDebut, settexteDebut] = useState(liste[0]);
-
+    const [i,seti] = useState(0);
     
-    let i = 1;
+    
     useEffect(() => {
-        setInterval(() => {
-            settexteDebut(liste[i % liste.length])
-            i++;
-     
+        const interval = setInterval(() => {
+            seti(prev => (prev + 1) % liste.length); // Cycle propre
         }, 8000);
+    
+        return () => clearInterval(interval);
     }, []);
+    
+    // Mise à jour synchronisée
+    useEffect(() => {
+        settexteDebut(liste[i]);
+    }, [i]); // Déclenché uni
    
     
     return  (

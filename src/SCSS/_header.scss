@@ -13,8 +13,37 @@ header
     {
         position: absolute;
         top: 0;
-        width: 90vw;
+        width: 99vw;
         overflow-x: hidden;
+    }
+
+    p 
+    {
+        text-align: center;
+        font-size: clamp(1.3em,1.6vw,2em);
+        position: relative;
+        animation: defileText 8s ease-in-out infinite;
+    
+    }
+
+    @keyframes defileText {
+
+        0%
+        {  // Ajout d'un début plus net
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        50% 
+        {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        90%, 100% { // Fin plus progressive
+            opacity: 0;
+            transform: scale(1.05);
+        }
     }
 
     div 
@@ -27,18 +56,7 @@ header
     }
 
    
-    p 
-    {
-        font-size: clamp(1em,1.6vw,2em);
-        position: relative;
-        animation: defileText 8s linear infinite;
-    }
-
-    @keyframes defileText {
-        0% {left: -100%;}
-        100% {left: 100%;}
-
-    }
+    
 
     .bienvenue
     {
