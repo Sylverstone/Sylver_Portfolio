@@ -6,6 +6,7 @@ import TextFr from "@/Scripts/fr";
 import { setCategorie } from "./Scripts/footerCategorie";
 import React from "react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
 
 export default async function RootLayout(
 {
@@ -34,6 +35,7 @@ export default async function RootLayout(
 			<body>
 				{children}
 				<SpeedInsights />
+				<Analytics />
 				<footer>					
 					<section>
 						{categories.map(categorie => (
