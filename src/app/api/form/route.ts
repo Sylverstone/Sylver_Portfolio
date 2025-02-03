@@ -1,4 +1,4 @@
-⁸import { NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 import * as nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import * as path from "path";
