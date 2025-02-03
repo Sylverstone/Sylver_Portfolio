@@ -19,6 +19,7 @@ export async function POST(request : Request)
 {
     try
     {
+         console.log(process.env.EMAILOUT, process.env.EMAILIN);
         if(process.env.EMAILIN == undefined) return;
         const dataForm : dataSendForm= await request.json()
         const transporteur = nodemailer.createTransport({
