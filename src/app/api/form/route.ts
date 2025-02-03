@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server"
+⁸import { NextResponse } from "next/server"
 import * as nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import * as path from "path";
@@ -19,6 +19,7 @@ export async function POST(request : Request)
 {
     try
     {
+        if(process.env.EMAILIN == undefined) return;
         const dataForm : dataSendForm= await request.json()
         const transporteur = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -39,7 +40,7 @@ export async function POST(request : Request)
         const mailOptions = {
             from: process.env.EMAILIN,
             to: process.env.EMAILOUT,
-            subject: "Formulaire Portfolio - " + dataForm.objet,
+            subject: `Formulaire portfolio - ${dataForm.objet}`,
             html: html,
         };                      
         
