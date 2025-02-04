@@ -5,6 +5,7 @@ import "@/style/globals.scss"
 import { Texts_t } from '../Scripts/en';
 
 const DefilementText = ({ Texts } : {Texts : Texts_t}) => {
+
     const liste = [
         Texts.home.titre,
         Texts.home.etude,

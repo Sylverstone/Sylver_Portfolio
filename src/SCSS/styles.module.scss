@@ -19,7 +19,7 @@
 .ImageProfil
 {
     margin : 3%;
-    height: calc($headerHeight / 4);
+    height: clamp(10em,20vw,50em);
     width: auto;
     border-radius: 100%;
 }

@@ -20,7 +20,7 @@ const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target 
     })
     ev.preventDefault();
 }
-const Nav = ({Texts} : {Texts : Texts_t}) => {
+const  Nav = ({ Texts } : {Texts : Texts_t}) => {
 
     const [compteur, setcompteur] = useState(0);
     const [srcImg, setsrc] = useState("/valid.svg");

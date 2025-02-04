@@ -48,7 +48,7 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                     {filesProjectImg.map(file => (
                         <li key={file}>
                             <Image 
-                                src={file}
+                                src={`${file}`}
                                 alt={file}
                                 width={1000}
                                 height={1000}
@@ -64,7 +64,7 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                     {filesProjectTechUse && filesProjectTechUse.map(file => (
                         <li key={file}>
                             <Image 
-                                src={file}
+                                src={`${file}`}
                                 alt="jsp"
                                 width={100}
                                 height={100}
