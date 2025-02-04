@@ -14,7 +14,7 @@ async function  getLocale(request : NextRequest)
     {
         locale = "fr";
     }
-    return "en";
+    return locale;
 }
  
 export async function middleware(request : NextRequest) {
@@ -29,6 +29,7 @@ export async function middleware(request : NextRequest) {
 	if (pathnameHasLocale) return;
 
 	if(extInterdite.some( ext => pathname.endsWith(ext))) return;
+	if(pathname.startsWith("/api")) return;
 	if(startWithNoRedirect)
 	{
 		request.nextUrl.pathname = pathname.slice(11);

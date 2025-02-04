@@ -28,7 +28,7 @@ export default async function Home({ params} : {params : Promise<{lang : 'en' | 
 			<DefilementText Texts={Texts} />
 			<div>
 				<Image 
-					src="/photoPro.jpg"
+					src="/photo_cv.jpg"
 					alt="portrait Sylvio Pelage Maxime"
 					width={1000}
 					height={1000}
