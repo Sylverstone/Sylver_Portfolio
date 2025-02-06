@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./footerForm" as *;
+
 footer
 {
     display: flex;
@@ -8,6 +9,7 @@ footer
     justify-content: space-around;
     font-family: "Titillium Web", serif;
     font-weight: 200;
+    font-size: clamp(1em, 2vw, 2em);
     width: 100%;
     align-items: center;
     background-color: $hearderBackgroundColor;

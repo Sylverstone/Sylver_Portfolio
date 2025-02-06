@@ -2,20 +2,21 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import "@/style/globals.scss"
-import { Texts_t } from '../Scripts/en';
-
+import { Texts_t } from '../translation/en';
+import { makeCursorMove } from '../Scripts/cursorScript';
 const DefilementText = ({ Texts } : {Texts : Texts_t}) => {
 
     const liste = [
         Texts.home.titre,
         Texts.home.etude,
-        "Passioné par l'informatique."
+        Texts.home.passion
     ]
     const [texteDebut, settexteDebut] = useState(liste[0]);
     const [i,seti] = useState(0);
     
     
     useEffect(() => {
+        makeCursorMove(); // Initialisation du curseur
         const interval = setInterval(() => {
             seti(prev => (prev + 1) % liste.length); // Cycle propre
         }, 8000);

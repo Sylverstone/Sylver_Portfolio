@@ -7,6 +7,8 @@ import DefilementText from "../components/DefilementText";
 import { projects } from "../Scripts/projects";
 import Nav from "../components/Nav";
 import { getTexts } from "../Scripts/getTexts";
+import ChangeLangue from "../components/ChangeLangue";
+
 
 export const metadata: Metadata = {
 	title: "Sylvio PELAGE MAXIME - Mon Portfolio",
@@ -17,24 +19,29 @@ export const metadata: Metadata = {
 	}
 };
 
-export default async function Home({ params} : {params : Promise<{lang : 'en' | 'fr'}>}) {
+export default async function Home({ params } : {params : Promise<{lang : 'en' | 'fr'}>}) {
 	const lang = (await params).lang;
 	let Texts = await getTexts(lang);
-	const {titre,subTitre,bienvenue,mainContent,mesProjets} = Texts.home;
+	const {titre,subTitre,bienvenue,mainContent,mesProjets,textePhoto} = Texts.home;
 
 	return (
 	<>
 		<header>
+		<ChangeLangue langueActuel={lang}/>
+		<div className={styles.cursor}></div>
 			<DefilementText Texts={Texts} />
 			<div>
-				<Image 
-					src="/photo_cv.jpg"
-					alt="portrait Sylvio Pelage Maxime"
-					width={1000}
-					height={1000}
-					className={styles.ImageProfil}
-					priority
-				/>
+				<aside>
+					<Image 
+						src="/photo_cv.jpg"
+						alt="portrait Sylvio Pelage Maxime"
+						width={1000}
+						height={1000}
+						className={styles.ImageProfil}
+						priority
+					/>
+					<p>{textePhoto}</p>
+				</aside>
 				<p className="bienvenue">{bienvenue}</p>
 			</div>
 		</header>

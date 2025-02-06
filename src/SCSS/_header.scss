@@ -2,25 +2,27 @@
 
 header
 {
+    cursor: crosshair;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    overflow-x: hidden;
     background: linear-gradient(to bottom,$hearderBackgroundColor 70%, transparent 100%);
 
     .defilementText
     {
         position: absolute;
         top: 0;
-        width: 99vw;
+        width: 80vw;
         overflow-x: hidden;
     }
 
-    p 
+    .defilementText p 
     {
         text-align: center;
-        font-size: clamp(1.3em,1.6vw,2em);
+        font-size: clamp(1em,1.6vw,2em);
         position: relative;
         animation: defileText 8s ease-in-out infinite;
     
@@ -53,6 +55,53 @@ header
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    
+    }
+
+    aside 
+    {
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p 
+        {
+            position: relative;
+            left: -4.6%;
+            font-size: clamp(1.5em,5vw,10em);
+            font-family: "Kanit";
+            animation: appear 4s ease-in-out;
+            transform: skew(-10deg);
+        }
+
+        @keyframes appear {
+            0% 
+            {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        img 
+        {
+            position: 
+            relative;
+            z-index: 1;
+            animation: move 1.5s cubic-bezier(0.25,0.5,0.5,1);
+        }
+
+        @keyframes move {
+            0% {
+                left: 60%;
+            }
+
+            100%{
+                left : 0;
+            }
+        }
     }
 
    

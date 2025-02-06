@@ -1,12 +1,12 @@
 import "@/style/globals.scss"
 import FooterDiv from "../components/FooterDiv";
-import TextEn from "@/Scripts/en";
-import TextFr from "@/Scripts/fr";
+
 import { setCategorie } from "../Scripts/footerCategorie";
 import React from "react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 import ContactForm from "../components/ContactForm";
+import { getTexts } from "../Scripts/getTexts";
 
 export default async function RootLayout(
 {
@@ -14,12 +14,13 @@ export default async function RootLayout(
   params,
 }: Readonly<{
   children: React.ReactNode,
-  params : Promise<{lang : string}>
+  params : Promise<{lang : 'en' | 'fr'}>
 }>) 
 {
 	const lang = (await params).lang;
-	let Texts = lang === 'fr' ? TextFr : TextEn;
+	const Texts = await getTexts(lang);
 	const categories = setCategorie(Texts);
+	
 	return (
 		
 		<html lang="fr">

@@ -1,4 +1,4 @@
-import { Texts_t } from "./en"
+import { Texts_t } from "../translation/en"
 import Image from "next/image"
 import { JSX } from "react";
 

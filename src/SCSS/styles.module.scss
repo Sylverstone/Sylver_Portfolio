@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./projet" as *;
+@use "./notFound" as *;
 
 .Project
 {
@@ -19,23 +20,23 @@
 .ImageProfil
 {
     margin : 3%;
-    height: clamp(10em,20vw,50em);
+    height: clamp(9em,20vw,50em);
     width: auto;
     border-radius: 100%;
+    filter: drop-shadow(.1em .1em .4em black);
 }
 
 .aPropos
 {
-    margin-left: 5%;
-    margin-right: 5%;
-
-    min-height: 100vh;
+    margin : 5%;
+    padding: 5%;
+    min-height: 85vh;
     white-space: pre-wrap;
     font-size: 1em;
     background-color: rgba($color: #000000, $alpha: 0.2);
-    padding: 5%;
     border-radius: 1rem;
     margin-bottom: 4%;
+    overflow-x: hidden;
 
     @include flexColum();
     align-items: center;
@@ -87,4 +88,43 @@
 
 @include moveBG();
 
+.cursor 
+{
+    z-index: 69;
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    
+    height: 40px;
+    background-color: $colorSubTible ;
+    border-radius: 100%;
+    transform: translate(-50%,-50%);
+    filter: blur(5);
+}
+
+$widthImg : clamp(1.2em,3vw,3em);
+
+.changementLangue
+{
+    z-index: 100;
+    position: fixed;
+    top: 2%;
+    left: calc(100% - 2 * $widthImg - 2%);
+    width: fit-content;
+
+    img 
+    {
+        width: $widthImg;
+        margin: 10%;
+        height: auto;
+    }
+}
+
+@media  (max-width: 768px){
+    .cursor 
+    {
+        display: none;
+    }
+    
+}
 

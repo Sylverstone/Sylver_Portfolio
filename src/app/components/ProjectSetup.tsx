@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/style/styles.module.scss"
 import { project_t } from '../Scripts/projects';
-import { Texts_t } from '../Scripts/en';
+import { Texts_t } from '../translation/en';
 
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     

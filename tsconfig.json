@@ -25,7 +25,7 @@
       "@/style/*": ["./src/SCSS/*"],
       "@/components/*" : ["./src/app/components/*"],
       "@/Scripts/*": ["./src/app/Scripts/*"],
-      "@/locales/*": ["./locales/*"],
+      "@/translations/*": ["./src/app/translation/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","src/CSS/*.d.ts", "src/app/api/form/route.mts"],

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
 import { visible } from '@/Scripts/visible';
-import { Texts_t } from '../Scripts/en';
+import { Texts_t } from '../translation/en';
 
 const handleClick = (ev : React.MouseEvent<HTMLAnchorElement,MouseEvent>,target : string) => 
 {

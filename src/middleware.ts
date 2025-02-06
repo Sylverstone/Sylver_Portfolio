@@ -26,6 +26,8 @@ export async function middleware(request : NextRequest) {
 	console.log("path : ",pathname);
 	const startWithNoRedirect = pathname.startsWith('/noredirect');
 
+
+	
 	if (pathnameHasLocale) return;
 
 	if(extInterdite.some( ext => pathname.endsWith(ext))) return;
@@ -39,9 +41,11 @@ export async function middleware(request : NextRequest) {
 	// Redirect if there is no locale
 	const locale = await getLocale(request)
 	request.nextUrl.pathname = `/${locale}${pathname}`
+
 	// e.g. incoming request is /products
 	// The new URL is now /en-US/products
 	console.log("redirecting to",request.nextUrl.pathname)
+
 	return NextResponse.redirect(request.nextUrl)
 }
  
