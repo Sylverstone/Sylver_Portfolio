@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import "@/style/globals.scss"
 import { Texts_t } from '../translation/en';
-import { makeCursorMove } from '../Scripts/cursorScript';
 const DefilementText = ({ Texts } : {Texts : Texts_t}) => {
 
     const liste = [
@@ -15,8 +14,8 @@ const DefilementText = ({ Texts } : {Texts : Texts_t}) => {
     const [i,seti] = useState(0);
     
     
-    useEffect(() => {
-        makeCursorMove(); // Initialisation du curseur
+    useEffect(() => {// Initialisation du curseur
+        
         const interval = setInterval(() => {
             seti(prev => (prev + 1) % liste.length); // Cycle propre
         }, 8000);

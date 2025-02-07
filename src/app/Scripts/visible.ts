@@ -45,9 +45,7 @@ export function visible()
 {
     const body = document.querySelector('body');
     if(!body) return;
-    const pageElements = body.querySelectorAll(`.${styles.projet}, .${styles.aPropos}`);
-    console.log("length  : ", pageElements.length)
-    
+    const pageElements = body.querySelectorAll(`.${styles.projet}, .${styles.aPropos}`);    
     body.onload = () => {
         lookIfVisible(pageElements);
     }

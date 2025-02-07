@@ -7,4 +7,7 @@ const dictionnary =
 }
 
 export const getTexts = async (locale: 'en' | 'fr') =>
-    dictionnary[locale]();
+{
+    return dictionnary[locale]();
+}
+    

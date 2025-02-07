@@ -7,6 +7,7 @@ $borderRadius : .6rem;
 
 form 
 {
+    font-family: "Ubuntu";
     font-size: clamp(1em, 2vw, 2em);
     fieldset
     {
@@ -23,6 +24,7 @@ form
     
         input, textarea
         {
+            font-family: inherit;
             font-size: clamp(0.6em, 1vw, 1em);
             border-radius: $borderRadius;
             border: $borderChamp;
@@ -73,6 +75,7 @@ form
     
         button
         {
+            font-family: inherit;
             background-color: $fondChamp;
             border-radius: 1vw;
             border: $borderChamp;

@@ -1,6 +1,8 @@
+import { url } from "inspector";
 import { Texts_t } from "../translation/en"
 import Image from "next/image"
 import { JSX } from "react";
+import Link from "next/link";
 
 export interface reseaux_t
 {
@@ -33,8 +35,15 @@ export const contacts =
 [
 	{
 		nom : "Email",
-        email : "sylvio8.pm@gmail.com"
-	}
+        url : "mailto:Sylvio.PelageMaxime@outlook.fr",
+		download : false,
+	},
+	/*
+	{
+		nom : "CV",
+		url : "/photo_cv.jpg",
+		download: false,
+	}*/
 ];
 
 const suivreTXT = "Me Suivre";
@@ -42,11 +51,11 @@ const suivreTXT = "Me Suivre";
 export let categories = 
 [
 	{
-		nom : "Contact",
+		nom : "Pro",
         liste : <ul>
                     {contacts.map(contact => (
                         <li key={contact.nom}>
-                            <a href={`mailto:${contact.email}`}>{contact.nom}</a>
+                            <Link href={contact.url} target="_blank" download={contact.download}>{contact.nom}</Link>
                         </li>
                     ))}
                 </ul>

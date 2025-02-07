@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+body::-webkit-scrollbar
+{
+    width: 1vw;
+}
+
+body::-webkit-scrollbar-track {
+    background: linear-gradient(to right,$backgroundColor,#151520);
+    animation : moveBG 10s infinite alternate ; 
+    background-size: 200% 200%;     /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $colorSubTible;    /* color of the scroll thumb */
+  border-radius: 1rem;       /* roundness of the scroll thumb */
+}

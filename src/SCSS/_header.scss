@@ -60,18 +60,29 @@ header
 
     aside 
     {
-        overflow-x: hidden;
+        overflow: hidden;
         display: flex;
         flex-direction: row;
         align-items: center;
-        p 
+
+        .texteProfil
         {
             position: relative;
             left: -4.6%;
             font-size: clamp(1.5em,5vw,10em);
             font-family: "Kanit";
             animation: appear 4s ease-in-out;
-            transform: skew(-10deg);
+            transform: skew(-10deg) rotateX(0deg) rotateY(-0deg);
+        }
+
+        .backToNormal
+        {
+            transition: transform 500ms ease-in-out;
+            
+        }
+        .Comp 
+        {
+            transform: skew(-10deg) rotateX(0deg) rotateY(-0deg);
         }
 
         @keyframes appear {

@@ -19,11 +19,19 @@
 
 .ImageProfil
 {
+    cursor: pointer;
     margin : 3%;
     height: clamp(9em,20vw,50em);
     width: auto;
     border-radius: 100%;
-    filter: drop-shadow(.1em .1em .4em black);
+    z-index: 200;
+    filter: drop-shadow(.1em .1em .4em black), blur(0);
+    transition: filter 1s ease-in-out;
+}
+
+.hidden
+{
+    filter: blur(2rem);
 }
 
 .aPropos
@@ -99,7 +107,7 @@
     background-color: $colorSubTible ;
     border-radius: 100%;
     transform: translate(-50%,-50%);
-    filter: blur(5);
+    filter: blur(15px);
 }
 
 $widthImg : clamp(1.2em,3vw,3em);
@@ -109,9 +117,9 @@ $widthImg : clamp(1.2em,3vw,3em);
     z-index: 100;
     position: fixed;
     top: 2%;
-    left: calc(100% - 2 * $widthImg - 2%);
+    right: $widthImg;
     width: fit-content;
-
+    cursor: pointer;
     img 
     {
         width: $widthImg;
@@ -119,6 +127,16 @@ $widthImg : clamp(1.2em,3vw,3em);
         height: auto;
     }
 }
+
+.contenaireCursor
+{
+
+    position : absolute;
+    width: 99vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 
 @media  (max-width: 768px){
     .cursor 

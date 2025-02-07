@@ -8,7 +8,8 @@ import { projects } from "../Scripts/projects";
 import Nav from "../components/Nav";
 import { getTexts } from "../Scripts/getTexts";
 import ChangeLangue from "../components/ChangeLangue";
-
+import ScriptComponent from "../components/ScriptComponent";
+import ImageProfil from "../components/ImageProfil";
 
 export const metadata: Metadata = {
 	title: "Sylvio PELAGE MAXIME - Mon Portfolio",
@@ -28,19 +29,15 @@ export default async function Home({ params } : {params : Promise<{lang : 'en' |
 	<>
 		<header>
 		<ChangeLangue langueActuel={lang}/>
-		<div className={styles.cursor}></div>
+		<article className={styles.contenaireCursor}>
+			<div className={styles.cursor}></div>
+		</article>
+		
 			<DefilementText Texts={Texts} />
 			<div>
 				<aside>
-					<Image 
-						src="/photo_cv.jpg"
-						alt="portrait Sylvio Pelage Maxime"
-						width={1000}
-						height={1000}
-						className={styles.ImageProfil}
-						priority
-					/>
-					<p>{textePhoto}</p>
+					<ImageProfil />
+					<p className="texteProfil">{textePhoto}</p>
 				</aside>
 				<p className="bienvenue">{bienvenue}</p>
 			</div>
@@ -59,6 +56,7 @@ export default async function Home({ params } : {params : Promise<{lang : 'en' |
 				<ProjectSetup key={project.title} project={project} Texts={Texts} />
 			))}
 		</main>
+		<ScriptComponent />
 	</>
 	);
 };

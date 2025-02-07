@@ -8,9 +8,10 @@ import { Texts_t } from '../translation/en';
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     
     let filesProjectImg : string[] = [];
-    for(let i = 0; i < project.nombreImage; i++)
+    for(let i = 0; i <project.nombreImage; ++i)
     {
         const file = `${project.title}${i+1}.png`;
+
         filesProjectImg.push(`/${project.title}/Project/${file}`);
     }
 
@@ -21,6 +22,7 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
     }
     
     return (
+
     <section key={project.key} className={styles.projet} id={project.title}>
             <article className={styles.PresentationProg}>
                 <h2>{project.title}</h2>
