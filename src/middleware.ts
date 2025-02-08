@@ -23,21 +23,12 @@ export async function middleware(request : NextRequest) {
 	const pathnameHasLocale = locales.some(
 	(locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
 	)
-	console.log("path : ",pathname);
-	const startWithNoRedirect = pathname.startsWith('/noredirect');
-
 
 	
 	if (pathnameHasLocale) return;
 
 	if(extInterdite.some( ext => pathname.endsWith(ext))) return;
 	if(pathname.startsWith("/api")) return;
-	if(startWithNoRedirect)
-	{
-		request.nextUrl.pathname = pathname.slice(11);
-		console.log("redirecting to",request.nextUrl.pathname)
-		return NextResponse.redirect(request.nextUrl)
-	}
 	// Redirect if there is no locale
 	const locale = await getLocale(request)
 	request.nextUrl.pathname = `/${locale}${pathname}`
