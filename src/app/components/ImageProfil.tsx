@@ -19,11 +19,10 @@ const ImageProfil = () => {
             setisOnAnim(true);
             target.classList.add(styles.blur);target.classList.add(styles.hidden)
             setTimeout(() => {
-                target.classList.remove(styles.hidden);
-                setisOnAnim(false);
                 setImgPos((ImgPos + 1) % nbImage);
                 setsrc(`/photoProfil/photo_sylvio${ImgPos + 1}.jpg`);
-                console.log(`/photoProfil/photo_sylvio${ImgPos + 1}.jpg`);
+                setisOnAnim(false);
+                target.classList.remove(styles.hidden);               
             }, 1000);
         }
     

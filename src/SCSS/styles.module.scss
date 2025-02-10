@@ -34,6 +34,7 @@
     filter: blur(2rem);
 }
 
+
 .aPropos
 {
     margin : 5%;
@@ -180,6 +181,11 @@ $widthImg : clamp(1.2em,3vw,3em);
     .cursor 
     {
         display: none;
+    }
+
+    .hidden
+    {
+        filter: blur(1rem);
     }
     
 }

@@ -100,6 +100,9 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 				<li>By <strong>tutorial title</strong></li>
 				<li>By <strong>category</strong></li>
 			  </ol>
+			  <p>
+                To learn more about <strong>Sylver Service</strong>, you can visit its website or download the application on its Github.
+              </p>
 			</>
 		  ),
 		},

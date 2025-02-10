@@ -147,7 +147,7 @@ D'ailleurs ce portfolio a été développé en apprenant le framework Next.Js
 
 			fonctionnalitees:(
 			<p>
-				Nous avons opter pour un système simple de jeu infini où quand le jour arrive à la fin, celui-ci recommence simpelement, mais avec des ennemis plus fort.
+				Nous avons opter pour un système simple de jeu infini où quand le jour arrive à la fin, celui-ci recommence simplement, mais avec des ennemis plus fort.
 			</p>       
 			) 
             
