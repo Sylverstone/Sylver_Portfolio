@@ -23,6 +23,7 @@ const ImageProfil = () => {
                 setisOnAnim(false);
                 setImgPos((ImgPos + 1) % nbImage);
                 setsrc(`/photoProfil/photo_profil${ImgPos + 1}.jpg`);
+                console.log(`/photoProfil/photo_profil${ImgPos + 1}.jpg`);
             }, 1000);
         }
     
