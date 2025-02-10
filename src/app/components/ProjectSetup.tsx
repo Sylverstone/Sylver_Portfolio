@@ -27,18 +27,18 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
             <article className={styles.PresentationProg}>
                 <h2>{project.title}</h2>
                 <h3>Presentation</h3>
-                {Texts.project[project.key - 1]?.presentation}
-                {Texts.project[project.key - 1]?.technique && 
+                {Texts.project[project.title]?.presentation}
+                {Texts.project[project.title]?.technique && 
                     <>
                         <h3>Techniques</h3>
-                        {Texts.project[project.key - 1].technique}
+                        {Texts.project[project.title].technique}
                     </>
                 }
 
-                {Texts.project[project.key - 1]?.fonctionnalitees && 
+                {Texts.project[project.title]?.fonctionnalitees && 
                     <>
                         <h3>{Texts.home.fonctionnalitees}</h3>
-                        {Texts.project[project.key - 1]?.fonctionnalitees}
+                        {Texts.project[project.title]?.fonctionnalitees}
                     </>
                 }
             </article>

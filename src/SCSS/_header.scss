@@ -1,4 +1,4 @@
-@use "./_variables" as *;
+@use "./variables" as *;
 
 header
 {
@@ -101,7 +101,7 @@ header
             position: 
             relative;
             z-index: 1;
-            animation: move 1.5s cubic-bezier(0.25,0.5,0.5,1);
+            animation: move $duree_anim_header $animation_tempo_header;
         }
 
         @keyframes move {
@@ -128,7 +128,7 @@ header
         font-size: clamp(1.3em,2vw,4em);
         background: linear-gradient(to right, $hearderBackgroundColor, $colorSubTible);
         background-size: 200% 200%;
-        animation: moveBG 10s linear infinite;
+        animation: moveBG 10s linear infinite, appearBienvenu $duree_anim_header $animation_tempo_header;
         padding-left: 10%;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
@@ -138,6 +138,20 @@ header
         padding-bottom: 2%;
     }
 
+}
+
+@keyframes appearBienvenu 
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @include moveBG();

@@ -18,7 +18,6 @@ const ImageProfil = () => {
             target.classList.remove(styles.hidden);
             setImgPos((ImgPos + 1) % nbImage);
             target.setAttribute("src",`/photoProfil/photo_profil${ImgPos + 1}.jpg`);
-            
         }, 1000);
         
     }
@@ -34,7 +33,6 @@ const ImageProfil = () => {
                 className={styles.ImageProfil}
             />
         </>
-    
     )
 }
 

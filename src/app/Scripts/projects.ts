@@ -1,7 +1,8 @@
+type projectName = "SylverService" | "BotDiscordBDE" | "pgmToAA" | "SylverDonjon";
 export type project_t =
 {
 	key : number,
-    title : string,
+    title : projectName,
     technique : string | null,
     fonctionnalitees : string | null,
     comptence : string[],
@@ -17,7 +18,6 @@ export const projects : project_t[] = [
         title: "SylverService",
         technique : null,
         fonctionnalitees : null,
-    
         comptence : ["Python","MySQL"],
         lien : "https://github.com/Sylverstone/",
         siteweb : "https://sylverservice.up.railway.app/",

@@ -5,6 +5,8 @@ $hearderBackgroundColor: #090909;
 $headerHeight : 100vh;
 $colorSubTible : #39488b;
 $transitionGetInView : 700ms;
+$animation_tempo_header : cubic-bezier(0.25,0.5,0.5,1);
+$duree_anim_header : 1s;
 
 @mixin flexColum()
 {

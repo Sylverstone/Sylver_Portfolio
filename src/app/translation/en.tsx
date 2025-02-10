@@ -1,7 +1,7 @@
 import React from "react";
 import { JSX } from "react";
 
-type project_t = {presentation : JSX.Element, technique : JSX.Element, fonctionnalitees : JSX.Element}[];
+type project_t = {presentation : JSX.Element, technique : JSX.Element, fonctionnalitees : JSX.Element};
 
 export interface Texts_t 
 {
@@ -26,7 +26,12 @@ export interface Texts_t
 		"passion" : string;
 		"notFound" : string;
     },
-	project : project_t;
+	project : {
+		SylverService : project_t,
+		BotDiscordBDE : project_t,
+		pgmToAA : project_t,
+		SylverDonjon : project_t,
+	};
 };
 
 const Texts : Texts_t = 
@@ -60,9 +65,10 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 		passion : "Passionate about coding",
 		notFound : "What are you looking for ?",
 	},
+
 	project : 
-	[
-		{
+	{
+	  SylverService : {
 		  presentation: (
 			<p>
 			  <strong>Sylver Service</strong> is an application developed in <strong>Python</strong>, using the <strong>Pygame</strong> module. It relies on an online database to <strong>store information</strong>.<br /><br />
@@ -74,7 +80,8 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 			<p>
 			  In this project, we applied <strong>object-oriented programming (OOP)</strong> and learned about <strong>database management</strong>.<br />
 			  We designed <strong>efficient algorithms</strong> to <strong>optimize the application's key features</strong>. This project allowed me to <strong>fully focus</strong> on developing a complete application, from technical architecture to the user interface.
-			  In parallel, I used <strong>Git and GitHub</strong> extensively for versioning and collaborative source code management.
+			  In parallel, I used <strong>Git and GitHub</strong> extensively for versioning and collaborative source code management.<br />
+			  The application uses a <strong>MySQL</strong> database hosted on <strong>AlwaysData</strong>, with triggers and stored procedures to ensure data consistency and integrity.
 			</p>
 		  ),
 		  fonctionnalitees: (
@@ -96,7 +103,8 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 			</>
 		  ),
 		},
-		{
+
+		BotDiscordBDE : {
 		  presentation: (
 			<p>
 			  <strong>I really enjoy</strong> making Discord bots, which is why I decided to create one for fun for the <strong>BDE of my IUT</strong>.
@@ -126,7 +134,8 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 			</>
 		  ),
 		},
-		{
+
+		pgmToAA : {
 		  presentation: (
 			<p>
 			  <strong>pgmToAA → pgm to AsciiArt</strong> is a project carried out by a team of two during an SAÉ at the IUT. In this project, we had to implement the requirements of a client who wanted a console application to convert an image into AsciiArt. To achieve this, we used the .pgm format, hence the project's title.
@@ -151,7 +160,8 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 			</>
 		  ),
 		},
-		{
+
+		SylverDonjon: {
 		  presentation: (
 			<p>
 			  <strong>SylverDonjon</strong> is a Python project developed by a <strong>team of three</strong>, presented at the Trophée NSI 2023.
@@ -170,7 +180,7 @@ Moreover, this portfolio was developed while learning the Next.js framework.
 			</>
 		  ),
 		},
-	  ]
+	}
 };
 
 

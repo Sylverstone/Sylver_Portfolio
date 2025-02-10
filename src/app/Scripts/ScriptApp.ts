@@ -1,6 +1,7 @@
 import styles from "@/style/styles.module.scss"
 import { makeTexteMove,resetRotaTexte } from "./partial/algorithmTexteRota";
 import { makeCursorMove } from "./partial/algorithmCursorMove";
+import { visible } from "./visible";
 
 export const makeScript = () => 
 {
@@ -8,6 +9,7 @@ export const makeScript = () =>
     const cursor = document.querySelector(`.${styles.cursor}`);
     const texteProfile = document.querySelector(".texteProfil");
     const image = document.querySelector(`.${styles.ImageProfil}`);
+
     if(image instanceof HTMLElement)
     {
         image.onanimationend = () => 
@@ -32,5 +34,7 @@ export const makeScript = () =>
     {
         console.error("Header or cursor not found");
     }
+
+    visible();
 }
 

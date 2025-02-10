@@ -20,6 +20,7 @@ const ChangeLangue = ({ langueActuel } : {langueActuel : 'en' | 'fr'}) => {
         <ul>
             <li onClick={() => redirectTo("fr")}>
                 <Image 
+                    id = {styles.Francais}
                     src="/Langue/france.png"
                     alt='image drapeau français'
                     width={96}
@@ -28,6 +29,7 @@ const ChangeLangue = ({ langueActuel } : {langueActuel : 'en' | 'fr'}) => {
             </li>
             <li onClick={() => redirectTo("en")}>
                 <Image 
+                    id = {styles.Anglais}
                     src="/Langue/gbt.png"
                     alt='image drapeau français'
                     width={96}

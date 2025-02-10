@@ -29,9 +29,6 @@ const  Nav = ({ Texts } : {Texts : Texts_t}) => {
         "/valid.svg",
     ];
     
-    useEffect(() => {
-        visible();
-    },[]);
 
     const handleClickDeleter = (ev : React.MouseEvent<HTMLImageElement, MouseEvent>) => {
         const nav = document.querySelector("nav");

@@ -120,11 +120,49 @@ $widthImg : clamp(1.2em,3vw,3em);
     right: $widthImg;
     width: fit-content;
     cursor: pointer;
+
     img 
     {
         width: $widthImg;
         margin: 10%;
         height: auto;
+        
+        
+    }
+
+}
+
+#Francais
+{
+    animation: appearImg1 $duree_anim_header $animation_tempo_header;
+}
+
+#Anglais
+{
+    animation: appearImg2 $duree_anim_header $animation_tempo_header;
+}
+
+@keyframes appearImg1 {
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appearImg2 {
+    0%
+    {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
