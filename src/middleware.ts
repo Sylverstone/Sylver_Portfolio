@@ -24,7 +24,6 @@ export async function middleware(request : NextRequest) {
 	(locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
 	)
 
-	
 	if (pathnameHasLocale) return;
 
 	if(extInterdite.some( ext => pathname.endsWith(ext))) return;
