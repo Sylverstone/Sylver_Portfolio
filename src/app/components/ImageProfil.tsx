@@ -10,6 +10,7 @@ const ImageProfil = () => {
     const [ImgPos,setImgPos] = useState(1);
     const [src, setsrc] = useState("/photoProfil/photo_profil1.jpg");
     const [isOnAnim, setisOnAnim] = useState(false);
+
     const handleClick = (e : React.MouseEvent<HTMLImageElement, MouseEvent>) =>
     {
         if(!isOnAnim)
@@ -31,7 +32,7 @@ const ImageProfil = () => {
         <>
             <Image 
                 src={src}
-                onClick={(e) => handleClick(e)}
+                onClick={handleClick}
                 alt="portrait Sylvio Pelage Maxime"
                 width={1000}
                 height={1000}
