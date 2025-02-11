@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from "@/style/styles.module.scss"
 import { project_t } from '../Scripts/projects';
 import { Texts_t } from '../translation/en';
+import Link from 'next/link';
 
 const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts_t}) => {
     
@@ -26,6 +26,30 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
     <section key={project.key} className={styles.projet} id={project.title}>
             <article className={styles.PresentationProg}>
                 <h2>{project.title}</h2>
+                {filesProjectImg.length >= 1 && 
+                <article className={styles.ImgProject}>
+                    <h3>{Texts.home.apercu}</h3>
+                    <ul>
+                        {filesProjectImg.map(file => (
+                            <li key={file}>
+                                <Link 
+                                    href={file}
+                                    download={false}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >                                      
+                                    <Image 
+                                        src={`${file}`}
+                                        alt={file}
+                                        width={1000}
+                                        height={1000}
+                                    />      
+                                </Link>              
+                            </li>
+                        ))}
+                    </ul>
+                </article>
+                }
                 <h3>Presentation</h3>
                 {Texts.project[project.title]?.presentation}
                 {Texts.project[project.title]?.technique && 
@@ -43,23 +67,7 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                 }
             </article>
            
-            {filesProjectImg.length >= 1 && 
-            <article className={styles.ImgProject}>
-                <h3>{Texts.home.apercu}</h3>
-                <ul>
-                    {filesProjectImg.map(file => (
-                        <li key={file}>
-                            <Image 
-                                src={`${file}`}
-                                alt={file}
-                                width={1000}
-                                height={1000}
-                            />                             
-                        </li>
-                    ))}
-                </ul>
-            </article>
-            }
+            
             <article className={styles.techUseProject}>
                 <h3>{Texts.home.techUse}</h3>
                 <ul>
@@ -81,10 +89,28 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                 <h4>{Texts.home.lien}</h4>
                 <ul>
                     <li>
-                        {project.lien && <Link href={project.lien} target='_blanks'>→ {project.lien.includes("github") ? "GitHub" : "Drive" }</Link>}
+                        {project.lien && 
+                        <Link href={project.lien} target='_blanks' className={styles.linkImgProjet}>
+                            → {project.lien.includes("github") ? "GitHub" : "Drive" }
+                            <Image 
+                                src={"/Technologies/github.svg"}
+                                alt="logo github"
+                                width={100}
+                                height={100} 
+                            />
+                        </Link>}
                     </li>
                     <li>
-                        {project.siteweb && <Link href={project.siteweb} target='_blanks'>→ {Texts.home.siteWeb}</Link>}
+                        {project.siteweb && 
+                        <Link href={project.siteweb} target='_blanks' className={styles.linkImgProjet}>
+                            → {Texts.home.siteWeb}
+                            <Image 
+                                src={"/web.png"}
+                                alt="logo github"
+                                width={100}
+                                height={100} 
+                            />
+                        </Link>}
                     </li>
                 </ul>
             </article>

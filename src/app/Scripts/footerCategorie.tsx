@@ -65,7 +65,7 @@ export let categories =
 		liste : <ul>
 					{reseaux.map(reseau => (
 						<li key={reseau.nom}>
-							<a href={reseau.url} target="_blank" rel="noopener noreferrer">
+							<Link href={reseau.url} target="_blank" rel="noopener noreferrer" >
 								<Image 
 								src={reseau.icon}
 								alt="jsp"
@@ -73,7 +73,7 @@ export let categories =
 								height={100}
 								/>
 								{reseau.nom}
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
