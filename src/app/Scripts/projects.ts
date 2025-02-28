@@ -1,4 +1,5 @@
 type projectName = "SylverService" | "BotDiscordBDE" | "pgmToAA" | "SylverDonjon";
+
 export type project_t =
 {
 	key : number,
@@ -9,7 +10,8 @@ export type project_t =
     lien : string | null,
 	siteweb : string | null,
 	date:string,
-    nombreImage: number
+    nombreImage: number,
+    subTitre : string[]
 };
 
 export const projects : project_t[] = [
@@ -18,20 +20,20 @@ export const projects : project_t[] = [
         title: "SylverService",
         technique : null,
         fonctionnalitees : null,
-        comptence : ["Python","MySQL"],
+        comptence : ["Python","MySQL","PlSql"],
+        subTitre : ["Python","MySQL","PlSQL"],
         lien : "https://github.com/Sylverstone/",
         siteweb : "https://sylverservice.up.railway.app/",
         date: "2024",
         nombreImage: 5
-
     },
     {
         key : 2,
         title: "BotDiscordBDE",
         technique : null,
         fonctionnalitees : null,
-
-        comptence : ["TypeScript","Discord"],
+        comptence : ["TypeScript","Discord","MySQL","PlSql"],
+        subTitre : ["TypeScript","Discord","MySQL","PlSQL"],
         lien : "https://github.com/Sylverstone/BotDiscordBDE",
         siteweb : null,
         date: "2025",
@@ -44,6 +46,7 @@ export const projects : project_t[] = [
         fonctionnalitees : null,
 
         comptence : ["cpp"],
+        subTitre : ["Cpp"],
         lien : null,
         siteweb : null,
         date: "2024",
@@ -56,6 +59,7 @@ export const projects : project_t[] = [
         fonctionnalitees : null,
 
         comptence : ["Python"],
+        subTitre : ["Python"],
         lien : "https://github.com/Sylverstone/Sylver-Donjon",
         siteweb : null,
         date: "2023",

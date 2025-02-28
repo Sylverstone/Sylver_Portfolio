@@ -96,12 +96,19 @@
 
             li 
             {
+                cursor: crosshair;
+                text-align: center;
                 margin-right: 5%;
                 img 
                 {
                     width: clamp(5rem, 20vw,15rem);
                     height: auto;   
                 }     
+                
+                figcaption 
+                {
+                    font-weight: 500;
+                }
             }
         }
     }

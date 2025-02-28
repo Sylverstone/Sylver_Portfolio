@@ -15,10 +15,12 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
         filesProjectImg.push(`/${project.title}/Project/${file}`);
     }
 
-    let filesProjectTechUse : string[] = [];
+    let filesProjectTechUse : string[][] = [];
+    let i = 0;
     for(const comp of project.comptence)
     {
-        filesProjectTechUse.push(`/Technologies/${comp}.svg`);
+        filesProjectTechUse.push([`/Technologies/${comp}.svg`,project.subTitre[i]]);
+        i++;
     }
     
     return (
@@ -72,13 +74,14 @@ const ProjectSetup = async({project,Texts} : {project : project_t, Texts : Texts
                 <h3>{Texts.home.techUse}</h3>
                 <ul>
                     {filesProjectTechUse && filesProjectTechUse.map(file => (
-                        <li key={file}>
+                        <li key={file[0]}>
                             <Image 
-                                src={`${file}`}
-                                alt="jsp"
+                                src={`${file[0]}`}
+                                alt={file[0]}
                                 width={100}
                                 height={100}
                             />
+                            <figcaption>{file[1]}</figcaption>
                         </li>
                     ))}
                 </ul>
