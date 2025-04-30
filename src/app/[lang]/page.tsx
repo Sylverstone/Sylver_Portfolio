@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import styles from "@/style/styles.module.scss"
 import { Metadata } from "next";
 import ProjectSetup from "../components/ProjectSetup";
@@ -31,8 +30,7 @@ export default async function Home({ params } : {params : Promise<{lang : 'en' |
 		<ChangeLangue langueActuel={lang}/>
 		<article className={styles.contenaireCursor}>
 			<div className={styles.cursor}></div>
-		</article>
-		
+		</article>		
 			<DefilementText Texts={Texts} />
 			<div>
 				<aside>

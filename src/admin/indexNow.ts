@@ -3,8 +3,8 @@ import axios from "axios"
 import "dotenv/config"
 
 (async () => {
-    const baseUrl = "sylvio-pelagemaxime-portfolio.vercel.app"
-    let url = [`https://${baseUrl}/`];
+    const baseUrl = "https://sylvio-pelagemaxime-portfolio.vercel.app"
+    let urls = [`${baseUrl}/fr`,`${baseUrl}/en`];
 
     if(process.env.IndexNowKey === undefined){
         console.log(process.env)
@@ -14,8 +14,8 @@ import "dotenv/config"
     const data = {
         host: baseUrl,
         key: process.env.IndexNowKEY,
-        keyLocation: `${url}${process.env.IndexNowKEY}.txt`,
-        urlList: url
+        keyLocation: `${baseUrl}/${process.env.IndexNowKEY}.txt`,
+        urlList: urls
     };
 
     try
@@ -32,12 +32,15 @@ import "dotenv/config"
             {
                 console.log(key, ":", response[key]);
             }
+            console.log("Succes");
         })
 
     }
     catch(error)
     {
         console.log(error);
+        console.log("Il y a eu une erreur")
+        
     }
     
 
