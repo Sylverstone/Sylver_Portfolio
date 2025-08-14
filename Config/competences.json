@@ -13,7 +13,7 @@
         "Illustration" : "web.png",
         "subTitle" : "Le développement web me permet de mettre en avant mes autres compétences et j'adore ça. Surtout le back-end",
         "miniTitre" : "Les langages que je maîtrise",
-        "Images" : ["Html.svg","CSS.svg","JS.svg","PHP.svg","MySql.svg"],
+        "Images" : ["Html.svg","CSS.svg","JS.svg","PHP.svg","MySQL"],
         "ImagesNames" : ["HTML","CSS","JS et NodeJS","PHP","MySQL"]
     },
 
