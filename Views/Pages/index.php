@@ -64,14 +64,14 @@
             <section id="Competences">
                 <?php foreach($competences as $competence) : ?>
                     <div class="Competence">
-                        <img class="Illustration" src="Images/icon/<?=$competence["Illustration"]?>" alt="<?= $competence["Nom"]?>"/>
+                        <img class="Illustration" src="Images/Icon/<?=$competence["Illustration"]?>" alt="<?= $competence["Nom"]?>"/>
                         <p class="titre"><?= $competence["Nom"]?></p>
                         <p class="subTitle"><?=$competence["subTitle"]?></p>
                         <p class="phrase"><?= $competence["miniTitre"]?></p>
                         <aside class="ImageCompetenceContainer">
                             <?php for($i = 0; $i < count($competence["Images"]); $i++) : ?>
                                 <div>
-                                    <img class="compImg" src="Images/icon/<?=$competence['Images'][$i]?>" alt="Image compétence" />
+                                    <img class="compImg" src="Images/Icon/<?=$competence['Images'][$i]?>" alt="Image compétence" />
                                     <p><?=$competence["ImagesNames"][$i]?></p>
                                 </div>
                             <?php endfor;?>
