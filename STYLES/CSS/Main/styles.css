@@ -1,0 +1,619 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#HomeNav {
+  z-index: 2;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #324880;
+}
+#HomeNav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+#HomeNav ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+#HomeNav ul li a img {
+  width: 25px;
+  height: 25px;
+}
+#HomeNav figcaption {
+  font-size: 0.9em;
+}
+
+#SectionPP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8%;
+}
+#SectionPP > p {
+  text-align: center;
+  font-size: clamp(0.8em, 1.3vw, 1.8em);
+  font-family: "Malish", sans-serif;
+}
+
+#EnTete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10%;
+}
+#EnTete #PP {
+  width: clamp(2em, 50vw, 18em);
+  height: auto;
+  border-radius: 100%;
+}
+#EnTete p {
+  padding-left: 2%;
+  text-align: center;
+  font-size: clamp(1.2em, 5vw, 3em);
+  overflow-wrap: break-word;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+@media (min-width: 750px) {
+  #HomeNav {
+    opacity: 0.95;
+    z-index: 2;
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #324880;
+  }
+}
+#Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
+  background-color: #324880;
+  color: white;
+  display: grid;
+  place-content: center;
+  padding: 10%;
+  font-size: clamp(1.2em, 3vw, 3em);
+  text-align: center;
+  margin: 10% 0;
+}
+#Projets #ProjetPhare p, #Projets #ProjetPRO p, #Projets #ProjetPerso p {
+  font-size: 1em;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+}
+#Projets #ProjetPhare .CTA, #Projets #ProjetPRO .CTA, #Projets #ProjetPerso .CTA {
+  margin: 0;
+  font-size: 0.6em;
+}
+#Projets #ProjetPersoContainer, #Projets #ProjetProContainer, #Projets #ProjetPhareContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#Projets #ProjetPhare {
+  margin-top: 0 !important;
+}
+#Projets .Projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#Projets .Projet > ul {
+  list-style-type: circle;
+  margin-bottom: unset;
+  padding-left: 3.5rem;
+  padding-right: 2rem;
+}
+#Projets .Projet .contribution {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+#Projets .Projet .contribution > p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+#Projets .Projet .ImgProjet {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  align-self: center;
+  position: relative;
+  margin-bottom: 3rem;
+  width: fit-content;
+}
+#Projets .Projet .ImgProjet p {
+  font-size: clamp(0.9em, 1.35vw, 1.5em);
+  font-style: italic;
+  display: grid;
+  place-content: center;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  overflow: hidden;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#Projets .Projet .ImgProjet img, #Projets .Projet .ImgProjet a {
+  border-radius: 1em;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+}
+#Projets .Projet .DescriptionProjet, #Projets .Projet .Date {
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  font-style: italic;
+  text-align: center;
+  padding: 0 2%;
+  margin-top: 1rem;
+}
+#Projets .Projet .Date {
+  align-self: flex-end;
+  padding-right: 5%;
+  font-weight: 500;
+}
+
+.CompContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+}
+.CompContainer [class^=Comp-] {
+  cursor: pointer;
+  position: relative;
+  font-size: clamp(0.75em, 2vw, 0.95rem);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  margin: 0 0.2rem;
+}
+.CompContainer [class^=Comp-] .tips {
+  visibility: hidden;
+  position: absolute;
+  width: 30vw;
+  text-align: center;
+  padding: 10%;
+  top: 1.8em;
+  color: black;
+  background-color: rgba(217, 217, 217, 0.8);
+  border: 2px solid #324880;
+  border-radius: 1em;
+}
+.CompContainer .Comp-gamedev {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.CompContainer .Comp-cpp {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.CompContainer .Comp-UE5 {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.CompContainer .Comp-SAé {
+  background-color: rgba(238, 130, 238, 0.5);
+}
+.CompContainer .Comp-Blueprint {
+  background-color: rgba(165, 42, 42, 0.5);
+}
+.CompContainer .Comp-git {
+  background-color: rgba(255, 165, 0, 0.5);
+}
+.CompContainer .Comp-MySQL {
+  background-color: rgba(255, 192, 203, 0.5);
+}
+.CompContainer .Comp-PLSQL {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.CompContainer .Comp-Python {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+.CompContainer .Comp-Equipe {
+  background-color: rgba(55, 90, 55, 0.5);
+}
+.CompContainer .Comp-Solo {
+  background-color: rgba(102, 32, 32, 0.5);
+}
+.CompContainer .Comp-TS {
+  background-color: rgba(59, 122, 194, 0.5);
+}
+.CompContainer .Comp-freelance {
+  background-color: rgba(71, 27, 27, 0.5);
+}
+
+@media (min-width: 750px) {
+  #Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
+    padding: 2em;
+  }
+  #Projets #ProjetPhare p, #Projets #ProjetPRO p, #Projets #ProjetPerso p {
+    margin: 0;
+  }
+  #Projets #ProjetPhare .CTA, #Projets #ProjetPRO .CTA, #Projets #ProjetPerso .CTA {
+    margin: 0;
+    font-size: 0.5em;
+  }
+  #Projets .Projet {
+    max-width: 30vw;
+  }
+  #Projets #ProjetPhareContainer {
+    width: 100%;
+  }
+  #Projets #ProjetPhareContainer .Projet {
+    max-width: unset;
+    width: 100% !important;
+  }
+  #Projets #ProjetPhareContainer .Projet .ImgProjet {
+    height: 40vh;
+  }
+}
+#Competences {
+  filter: drop-shadow(1px 5px 10px black);
+  position: relative;
+  top: -200px;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#Competences .Competence {
+  border: 0.05rem solid #797474;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  background-color: #D9D9D9;
+  padding: 5% 5%;
+  width: 100%;
+}
+#Competences .Competence .Illustration {
+  width: 30%;
+}
+#Competences .Competence .ImageCompetenceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
+  min-width: 100%;
+}
+#Competences .Competence .ImageCompetenceContainer div {
+  width: 30%;
+}
+#Competences .Competence .ImageCompetenceContainer div .compImg {
+  width: 100%;
+}
+#Competences .Competence .ImageCompetenceContainer div p {
+  text-align: center;
+  font-size: 0.8em;
+}
+#Competences .Competence .ImageCompetenceContainer p {
+  margin-top: 0;
+}
+#Competences .Competence .titre {
+  text-align: center;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+#Competences .Competence .phrase {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  align-self: flex-start;
+}
+#Competences .Competence .subTitle {
+  margin: 0;
+  margin-top: 1%;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: center;
+  font-weight: 200;
+}
+#Competences .Competence:first-of-type {
+  border-bottom: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+#Competences .Competence:last-of-type {
+  border-top: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+@media (min-width: 750px) {
+  #Competences {
+    align-self: center;
+    justify-content: center;
+    padding: 0 0%;
+  }
+  #Competences .Competence {
+    max-width: 21%;
+  }
+  #Competences .Competence:first-of-type {
+    border: 0.1rem solid #797474;
+    border-right: none;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 0;
+  }
+  #Competences .Competence:last-of-type {
+    border-left: none;
+    border-top: 0.1rem solid #797474;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 1.5em;
+  }
+}
+@keyframes AppearLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes AppearFromUp {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.AppearFromUp {
+  animation: AppearFromUp 500ms ease forwards;
+}
+
+.AppearLeft {
+  animation: AppearLeft 500ms ease forwards;
+}
+
+.DisappearLeft {
+  animation: AppearLeft 500ms ease reverse;
+}
+
+.hiddenLeft {
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.hiddenRight {
+  opacity: 0;
+  transform: translateX(20%);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#APropos {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #324880;
+}
+#APropos h1 {
+  color: white;
+  text-align: center;
+  font-size: clamp(1.7em, 5vw, 3em);
+  padding-top: 0.8em;
+}
+#APropos p {
+  color: white;
+  padding: 0 5%;
+  font-size: clamp(0.85em, 3.5vw, 1.5em);
+}
+#APropos p i {
+  font-size: 0.8em;
+}
+#APropos p a {
+  cursor: pointer;
+  color: white;
+  font-style: italic;
+}
+
+#ProjetAnnonce {
+  height: 100vh;
+  background-color: #324880;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 20%;
+}
+#ProjetAnnonce h2 {
+  color: white;
+  background-color: rgba(34, 23, 23, 0.2784313725);
+  padding: 25% 20%;
+  text-wrap: nowrap;
+  border-radius: 0.8em;
+}
+
+@media (min-width: 750px) {
+  #APropos {
+    min-height: 0;
+    padding-bottom: 14rem;
+  }
+  #ProjetAnnonce {
+    height: unset;
+    background-color: #324880;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+  }
+  #ProjetAnnonce h2 {
+    color: white;
+    background-color: rgba(34, 23, 23, 0.2784313725);
+    padding: 2em 3em;
+    text-wrap: nowrap;
+    border-radius: 0.8em;
+  }
+}
+footer {
+  background-color: #324880;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+footer #reseaux {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+}
+footer #reseaux img {
+  cursor: pointer;
+  width: 2em;
+  margin: 0 1em;
+}
+footer #contact {
+  cursor: pointer;
+  margin-bottom: 2em;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0% 10%;
+  border-radius: 8em;
+  background-color: rgba(0, 0, 0, 0.23);
+  justify-content: center;
+  transition: background-color 1s ease;
+}
+footer #contact p {
+  margin-right: 10%;
+  transition: color 1s ease;
+}
+footer #contact:hover {
+  background-color: rgba(255, 255, 255, 0.23);
+}
+footer form {
+  display: none;
+  align-self: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: clamp(13rem, 40vw, 20rem);
+  background-color: rgba(0, 0, 0, 0.23);
+  padding: 5%;
+  border-radius: 0.8em;
+  color: white;
+  margin-bottom: 2rem;
+}
+footer form textarea {
+  resize: none;
+  margin-top: 2%;
+  background-color: rgba(0, 0, 0, 0.23);
+  border: none;
+  border-radius: 0.3em;
+  width: 100%;
+  height: 10em;
+  color: inherit;
+}
+footer form textarea::placeholder {
+  padding-left: 2%;
+}
+footer form input {
+  color: inherit;
+  cursor: pointer;
+  margin: 2% 0;
+  background-color: rgba(0, 0, 0, 0.23);
+  width: 50%;
+  border: none;
+  border-radius: 0.3em;
+  height: 2em;
+}
+footer form input::placeholder {
+  padding-left: 2%;
+}
+footer form input::content {
+  padding-left: 2%;
+}
+footer form #Objet {
+  width: 100%;
+}
+footer form input[type=submit] {
+  margin-top: 2em;
+  color: white;
+  border-radius: 8em;
+  align-self: center;
+}
+footer #signature {
+  font-size: 0.8em;
+  color: #D9D9D9;
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  form {
+    padding: 2em !important;
+  }
+}
+body, html {
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  font-family: "Mulish", sans-serif;
+}
+
+h1 {
+  font-weight: 500 !important;
+  font-size: 2em;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 750px) {
+  body {
+    padding-bottom: unset;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

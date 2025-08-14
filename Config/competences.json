@@ -1,0 +1,28 @@
+{
+    "1" : {
+        "Nom" : "Programmation",
+        "Illustration" : "script.png",
+        "subTitle" : "La programmation c'est super :)",
+        "miniTitre" : "Ce que je maîtrise",
+        "Images" : ["cpp.svg","Python.svg","TypeScript.svg","PlSql.svg","C.svg","git.svg"],
+        "ImagesNames" : ["C++","Python","TS","PL/SQL","C","git"]
+    },
+
+    "2" : {
+        "Nom" : "Développement web",
+        "Illustration" : "web.png",
+        "subTitle" : "Le développement web me permet de mettre en avant mes autres compétences et j'adore ça. Surtout le back-end",
+        "miniTitre" : "Les langages que je maîtrise",
+        "Images" : ["Html.svg","CSS.svg","JS.svg","PHP.svg","MySql.svg"],
+        "ImagesNames" : ["HTML","CSS","JS et NodeJS","PHP","MySQL"]
+    },
+
+    "3" : {
+        "Nom" : "Développement de jeu vidéo",
+        "Illustration" : "game.png",
+        "subTitle" : "Depuis petit je souhaite créer des jeux vidéo, et je ne m'étais pas trompé, j'adore ça.",
+        "miniTitre" : "Mes expériences",
+        "Images" : ["UE5.svg","Unity.svg","BP.svg"],
+        "ImagesNames" : ["UE5","Unity","Blueprint"]
+    }
+}

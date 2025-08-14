@@ -1,0 +1,130 @@
+@use 'var' as *;
+
+#Competences
+{
+    filter: drop-shadow(1px 5px 10px black);
+    position: relative;
+    top: -200px;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .Competence
+    {
+
+        border: .05rem solid #797474;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        background-color: $Color3;
+        padding: 5% 5%;
+        width: 100%;
+
+        .Illustration 
+        {
+            width: 30%;
+        }
+
+        .ImageCompetenceContainer
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: stretch;
+            min-width: 100%;
+            div
+            {
+                width: 30%;
+                .compImg 
+                {
+                    width: 100%;
+                }
+
+                p 
+                {
+                    text-align: center;
+                    font-size: .8em;
+                }
+            }
+
+            p
+            {
+                margin-top: 0;
+            }
+        }
+
+        .titre
+        {
+            text-align: center;
+            margin :0;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 500;
+        }
+
+        .phrase
+        {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: bold;
+            align-self: flex-start;
+        }
+
+        .subTitle
+        {
+            margin:0;
+            margin-top: 1%;
+            font-style: italic;
+            font-size: .8em;
+            text-align: center;
+            font-weight: 200;
+        }
+    }
+
+    .Competence:first-of-type
+    {
+        border-bottom: none;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .Competence:last-of-type
+    {
+        border-top: none;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+}
+
+@media (min-width: $computerSize) 
+{
+    #Competences
+    {
+        align-self: center;
+        justify-content: center;
+        padding: 0 0%;
+        .Competence
+        {
+            max-width: 21%;
+        }
+
+        .Competence:first-of-type
+        {
+            border: .1rem solid #797474;
+            border-right: none;
+            border-top-left-radius: 1.5em;
+            border-top-right-radius: 0;
+        }
+
+        .Competence:last-of-type
+        {
+
+            border-left: none;
+            border-top: .1rem solid #797474;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 1.5em;
+        }
+    }   
+}

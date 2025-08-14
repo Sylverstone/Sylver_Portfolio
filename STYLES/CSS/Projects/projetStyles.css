@@ -1,0 +1,171 @@
+@charset "UTF-8";
+header {
+  all: unset;
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+header img {
+  align-self: center;
+  width: clamp(2em, 70vw, 25em);
+}
+header #info {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-size: clamp(0.8em, 8vw, 3em);
+}
+header #titre {
+  text-align: center;
+  font-size: inherit;
+  margin-bottom: 0;
+}
+header #date {
+  font-style: italic;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 0.5em;
+}
+
+@media (min-width: 750px) {
+  header {
+    margin: 0;
+    margin-top: 5rem;
+  }
+}
+main .Partie {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #324880;
+  width: clamp(8rem, 40vw, 15rem);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  justify-content: flex-end;
+  font-weight: 600;
+  margin: 2% 0;
+}
+main .Partie p {
+  margin: 1rem 0;
+  color: white;
+  padding-right: 5%;
+}
+main .Partie img {
+  padding-right: 10%;
+}
+main #AperçuProjet {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+main #AperçuProjet img {
+  margin-top: 1rem;
+  width: clamp(5rem, 80vw, 25rem);
+  border-radius: 0.5em;
+}
+main #AperçuProjet figcaption {
+  text-align: center;
+  font-size: clamp(0.8em, 1.5vw, 1em);
+  margin-bottom: 2em;
+  font-style: italic;
+}
+main #section_Apropos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #section_Apropos p {
+  font-size: clamp(1em, 1.8vw, 1.5em);
+  margin: 1rem;
+}
+main img {
+  cursor: pointer;
+}
+main #LienProjet a {
+  font-size: clamp(1em, 1.8vw, 1.1em);
+  margin-top: 0;
+  color: white;
+  text-decoration: none;
+  margin: 1rem 1rem 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+main .Etape {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(1em, 1.5vw, 1.5em);
+  margin-right: 1rem;
+}
+main .Etape h2 {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 500;
+}
+main .Etape p {
+  font-size: 1em;
+  margin-top: 0;
+  margin-left: 1rem;
+}
+main #EtapeProjet {
+  display: flex;
+  flex-direction: column;
+}
+
+#backHome {
+  padding: 0;
+  bottom: 6rem;
+  right: 1rem;
+  position: fixed;
+  text-decoration: none;
+  padding: 0.5em;
+  z-index: 2000;
+}
+
+@media (min-width: 750px) {
+  main {
+    width: 80vw;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+  }
+  main .Partie {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #324880;
+    width: 100%;
+    border-radius: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  main .Partie p {
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: white;
+    padding-right: 1rem;
+  }
+  main .Partie img {
+    padding-right: 0%;
+  }
+  main .Partie:first-of-type {
+    margin-top: 3rem;
+  }
+  main #AperçuProjet .ImageApercu {
+    margin-right: 1.5rem;
+  }
+  #section_Apropos p {
+    margin: 1rem 10rem !important;
+  }
+}
+
+/*# sourceMappingURL=projetStyles.css.map */

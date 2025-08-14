@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /src/app/admin/
-
-
-Sitemap: https://sylvio-pelagemaxime-portfolio.vercel.app/sitemap.xml
+Disallow:

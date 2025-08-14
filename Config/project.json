@@ -1,0 +1,125 @@
+
+{ 
+    "SylverService" : {
+        "categorie" : 1,
+        "Title" : "SylverService",
+        "Desc" : "Une application permettant au élève de s'entraider en leur permettant de poster des documents/tuto/etc.. en ligne.",
+        "Comp" : ["Equipe","Python","PLSQL","MySQL"],
+        "Helps" : ["","","",""],
+        "Contributions" : [
+            "Intégration de l'UI",
+            "Développement des fonctionnalitées",
+            "Gestion de la BDD"
+        ],
+        "APropos" : "<b>Sylver Service</b> est une application développée en <b>Python</b>, utilisant le module Pygame.<br /> Elle repose sur une base de données MySQL pour <b>stocker les informations</b>. Son objectif principal est de permettre aux étudiants de trouver ou de publier des tutoriels ou/et documents utiles à leur réussite scolaire.<br /><br />Ce projet a été réalisé en équipe de trois personnes : j’étais le <b>programmeur principal</b>, en collaboration avec un designer et un autre programmeur. Il a été présenté au <b>Trophée NSI 2024</b> et a remporté un prix en Guadeloupe.",
+        
+        "Liens" : ["https://github.com/Sylverstone/Sylver_Service/releases"],
+
+        "NomLien" : ["GitHub"],
+        "Etapes" : ["Base de donnée","Dans un premier temps, nous avons établi la <b>structure de la base de donnée</b> servant à stocker les informations des <b>utilisateurs</b> et des tutoriels dans l'application.","Interface utilisateur","Ensuite nous avons mit en place <b>une interface utilisateur minimale</b> afin de pouvoir <b>tester les différentes fonctionnalités</b> au fur et à mesure de leur développement.","Développement","<b>L'application</b> a été développé <b>page par page</b> : nous avons commencé par le <b>menu principal</b>, celui qui permet d'acceder a toutes les autres pages, pour ensuite développer <b>la page de recherche</b> et celle du <b>compte utilisateur</b>."],
+        "Legendes" : ["Compte utilisateur","Menu","Page de recherche","Page création de compte","Page connexion au compte","Logo de l'application"],
+        "Date" : 2023
+    },
+
+    "TheCasinoRP" : {
+        "categorie" : 1,
+        "Title" : "The casino",
+        "Desc" : "C'est un serveur RP sur discord pour lequel j'ai développé une dizaine de bots",
+        "Comp" : ["freelance","TS","PLSQL","MySQL"],
+        "Helps" : ["C'est un projet fait pour un client","","","",""],
+        "Contributions" : [
+            "Développement des fonctionnalitées",
+            "Gestion de la BDD",
+            "Hébergement"
+        ],
+        "APropos" : "",
+        "Liens" : ["https://www.fiverr.com/users/sylverstone08/portfolio/Njg4NTJiOTMxOGE1ZmMwMDAxMmMzMzlj"],
+        "NomLien" : ["Fiverr"],
+        "Etapes" : ["esfsefesfse","esfesfsefse"],
+        "Legendes" : ["",""],
+        "Date" : 2025
+    },
+
+    "LesRouagesDuDestin" : {
+        "categorie" : 2,
+        "Title" : "Les rouages du destin",
+        "Desc" : "Mon premier jeu vidéo fait sur Unreal engine.<br/>Un détective doit résoudre une enquête du passé.",
+        "Comp" : ["Equipe","gamedev","UE5","Blueprint","git"],
+        "Helps" : ["","","","","",""],
+        "Contributions" : [
+            "Développement UI",
+            "Système intéraction",
+            "Développement gameplay",
+            "Gestion gitlab",
+            "Réalisation de quelques cinématiques",
+            "Implémentation du level streaming",
+            "Quelques assets 3D"
+        ],
+        "APropos" : "",
+
+        "Liens" : ["",""],
+        "NomLien" : ["",""],
+        "Etapes" : ["",""],
+        "Legendes" : ["","",""],
+        "Date" : 2025
+    },
+
+    "pgmToAA" : 
+    {
+        "categorie" : 1,
+        "Title" : "pgmToAA",
+        "Desc" : "Une application console qui transforme une image en AsciiArt selon divers palette personnalisable.",
+        "Comp" : ["Equipe","cpp","SAé"],
+        "Helps" : 
+        [
+        "",
+        "",
+        "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement"
+        ],
+
+        "Contributions" : [
+            "Développement des algorithmes",
+            "Débogages"
+        ],
+        "APropos" : "<b>pgmToAA</b> est un projet fait sur 2 jours (12h) en équipe où nous devions créer une <b>application console</b> transformant une image (en .pgm) en <b>AsciiArt</b> tout en <b>suivant les demandes d'un client</b>.\nNous devions donc intégrer différente fonctionnalités selon un <i><b>cahier des charges</b></i>",
+        "Liens" : ["https://gitlab-lepuy.iut.uca.fr/sypelagema/pgmtoaa/-/releases"],
+        "NomLien" : ["GitLab"],
+        "Etapes" : [
+            "Études du cahier des charges",
+            "Dans un premier temps, nous avons <b>étudié le cahier des charges</b> afin de nous <b>projeter</b> dans la manière dont on devait <b>coder l'application</b>.",
+            "AsciiArt dans la console",
+            "Nous avons commencé par développer l'application de façon à ce qu'elle <b>affiche l'AsciiArt dans la console</b>.",
+            "AsciiArt dans un fichier de sortie",
+            "Nous avons mis en place le fait que l'AsciiArt se fasse dans <b>un fichier de sortie</b> défini par l'utilisateur.",
+            "Palette personnalisable",
+            "Nous avons fait en sorte que l'AsciiArt puisse se faire avec <b>n'importe quelle palette</b>",
+            "Paramètres",
+            "Nous avons modifié l'application afin que celle-ci puisse prendre des <b>arguments en entrée</b> pour que l'utilisateur puisse <b>choisir le fichier à transformer</b>, le <b>fichier de sortie</b> s'il veut, ainsi que <b>la palette qu'il souhaite utiliser</b>.\nNous avons également mis un <b>--help</b> pour qu'il puisse avoir des informations sur <b>l'utilisation de l'application</b>.",
+            "Redimension",
+            "Nous avons mis en place un algorithme afin que l'utilisateur puisse <b>réduire l'image</b> s'il le souhaite. Quand une image a une grande résolution, cela <b>accélère le processus de génération de l'AsciiArt</b>."
+        ],
+
+        "Legendes" : ["Exemple d'AsciiArt","Exemple d'AsciiArt","Exemple d'AsciiArt","Exemple d'AsciiArt"],
+        "Date" : 2024
+    },
+
+    "MeteoApp" :
+    {
+        
+        "categorie" : 1,
+        "Title" : "Application météo",
+        "Desc" : "Une application représentant le réchauffement climatique d'une station de ski de manière claire et précise.",
+        "Comp" : ["Equipe","cpp","SAé"],
+        "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement"],
+        "Contributions" : [
+            "Traitement des données excel",
+            "Développement de l'UI"
+        ],
+        "APropos" : "",
+        "Liens" : ["https://gitlab-lepuy.iut.uca.fr/sypelagema/sae2.01/-/releases"],
+        "NomLien" : ["GitLab"],
+        "Etapes" : ["",""],
+        "Legendes" : ["",""],
+        "Date" : 2025
+    }
+}

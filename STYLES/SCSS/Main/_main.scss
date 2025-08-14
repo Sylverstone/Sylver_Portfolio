@@ -1,0 +1,95 @@
+@use 'var' as *;
+@use 'projet';
+@use 'competence';
+@use 'animation';
+
+main 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#APropos
+{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $Color2;
+
+    h1 
+    {
+        color : $Color1;
+        text-align: center;
+        font-size: clamp(1.7em,5vw,3em);
+        padding-top: .8em;
+    }
+
+    p
+    {
+        color: $Color1;
+        padding: 0 5%;
+        font-size: clamp(.85em,3.5vw,1.5em);
+
+        i 
+        {
+            font-size: .8em;
+        }
+        a 
+        {
+            cursor: pointer;
+            color: $Color1;
+            font-style: italic;
+        }
+    }
+}
+
+
+
+
+#ProjetAnnonce
+{
+    height: 100vh;
+    background-color: $Color2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 20%;
+
+
+    h2 
+    {
+        color: $Color1;
+        background-color: #22171747;
+        padding: 25% 20%;
+        text-wrap: nowrap;
+        border-radius: .8em;
+    }
+}
+
+
+@media (min-width: $computerSize) {
+    #APropos
+    {
+        min-height: 0;
+        padding-bottom: 14rem;
+    }
+
+    #ProjetAnnonce
+    {
+        height: unset;
+        background-color: $Color2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0;
+
+
+        h2 
+        {
+            color: $Color1;
+            background-color: #22171747;
+            padding: 2em 3em;
+            text-wrap: nowrap;
+            border-radius: .8em;
+        }
+    }
+}

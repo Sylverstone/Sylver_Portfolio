@@ -1,0 +1,113 @@
+@use 'var' as *;
+
+header 
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#HomeNav
+{
+    z-index: 2;
+    width: 100%;
+    height: $footerHeight;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $Color2;
+
+    ul 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+        padding: 0;
+        
+        li 
+        {
+            a 
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: $Color1;
+
+                img 
+                {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            
+
+        }
+    }
+
+    figcaption
+    {
+        font-size: .9em;
+    }  
+}
+
+#SectionPP
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin : 8%;
+
+    & > p 
+    {
+       text-align: center; 
+       font-size: clamp(.8em,1.3vw,1.8em);
+       font-family: "Malish", sans-serif;
+    }
+}
+
+
+#EnTete
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10%;
+
+    #PP
+    {
+        width: clamp(2em,50vw,18em);
+        height: auto;
+        border-radius: 100%;
+    }
+
+    p 
+    {
+        padding-left: 2%;
+        text-align: center;
+        font-size: clamp(1.2em,5vw,3em);
+        overflow-wrap: break-word;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+    }
+
+}
+
+@media (min-width: $computerSize) {
+    #HomeNav
+    {
+        opacity: .95;
+        z-index: 2;
+        width: 100%;
+        height: $footerHeight;
+        position:fixed;
+        top: 0;
+        left: 0;
+        background-color: $Color2;
+    }
+}
