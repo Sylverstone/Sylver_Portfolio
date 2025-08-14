@@ -10,4 +10,5 @@ $router->set("sendMail.php","./Scripts/sendMail.php");
 
 $router->work();
 
+//s
 ?>
