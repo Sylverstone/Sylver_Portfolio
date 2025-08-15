@@ -72,7 +72,7 @@
                         <aside class="ImageCompetenceContainer">
                             <?php for($i = 0; $i < count($competence["Images"]); $i++) : ?>
                                 <div>
-                                    <img class="compImg" src="Images/Icon/<?=$competence['Images'][$i]?>" alt="Image compétence" />
+                                    <img class="compImg" src="Images/Icon/<?=$competence['Images'][$i]?>" alt="Image compétence"/>
                                     <p><?=$competence["ImagesNames"][$i]?></p>
                                 </div>
                             <?php endfor;?>

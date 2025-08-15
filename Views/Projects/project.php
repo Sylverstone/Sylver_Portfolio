@@ -79,7 +79,7 @@
             <section id="AperçuProjet">
                 <?php for($i = 1; $i <= $nb; $i++): ?>
                     <article class="ImageApercu">
-                        <img class = "Illustration" src="<?= BASE_URL ?>/Images/<?=$slug?>/<?=$slug?><?=$i?>.png" alt="<?=$slug?> - Image" />
+                        <img class = "Illustration" loading="lazy" src="<?= BASE_URL ?>/Images/<?=$slug?>/<?=$slug?><?=$i?>.png" alt="<?=$slug?> - Image" />
                         <figcaption><?=$projet["Legendes"][$i - 1]?></figcaption>
                     </article>
                 <?php endfor ?>
