@@ -9,10 +9,6 @@ function toogleForm(element)
 {
     const url = window.location.href;
     let baseUrl = "";
-    if(url.includes("localhost"))
-    {
-        baseUrl = "/RemakePortfolio";
-    }
     const contactButton = document.querySelector("#contact");
     const form = document.querySelector("#formAccueil");
     const img = element.querySelector("img");

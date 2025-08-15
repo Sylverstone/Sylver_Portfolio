@@ -282,7 +282,7 @@ header {
 #Competences {
   filter: drop-shadow(1px 5px 10px black);
   position: relative;
-  top: -200px;
+  top: -170px;
   padding: 0 10%;
   display: flex;
   flex-direction: row;
@@ -363,14 +363,14 @@ header {
     max-width: 21%;
   }
   #Competences .Competence:first-of-type {
-    border: 0.1rem solid #797474;
+    border: 0.05rem solid #797474;
     border-right: none;
     border-top-left-radius: 1.5em;
     border-top-right-radius: 0;
   }
   #Competences .Competence:last-of-type {
     border-left: none;
-    border-top: 0.1rem solid #797474;
+    border-top: 0.05rem solid #797474;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 1.5em;
@@ -551,12 +551,29 @@ footer form textarea {
 footer form textarea::placeholder {
   padding-left: 2%;
 }
+footer form .input-container, footer form .textarea-container {
+  position: relative;
+  margin: 0.2rem 0;
+  width: 100%;
+}
+footer form .textarea-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+footer form .textarea-container #compteur {
+  font-size: 0.5em;
+  align-self: flex-end;
+}
+footer form .name-email {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 footer form input {
   color: inherit;
   cursor: pointer;
-  margin: 2% 0;
   background-color: rgba(0, 0, 0, 0.23);
-  width: 50%;
   border: none;
   border-radius: 0.3em;
   height: 2em;
@@ -567,14 +584,56 @@ footer form input::placeholder {
 footer form input::content {
   padding-left: 2%;
 }
+footer form input#Objet {
+  width: 80%;
+}
+footer form input#Email {
+  width: 100%;
+}
+footer form input#name {
+  width: 80%;
+}
+footer form input + label {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 0.8em;
+  transition: top 1s ease, font-size 500ms ease;
+}
+footer form textarea + label {
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.8em;
+  transition: top 1s ease, font-size 500ms ease;
+}
+footer form textarea:focus + label, footer form textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 0.5em;
+}
+footer form input {
+  font-size: 0.8em;
+  padding: 0.3rem 0.2rem;
+}
+footer form input:focus + label, footer form input:not(:placeholder-shown) + label {
+  top: 8px;
+  font-size: 0.5em;
+}
+footer form input:focus {
+  border: none;
+}
 footer form #Objet {
   width: 100%;
 }
 footer form input[type=submit] {
   margin-top: 2em;
   color: white;
-  border-radius: 8em;
+  border-radius: 0.2em;
   align-self: center;
+  width: 50%;
 }
 footer #signature {
   font-size: 0.8em;

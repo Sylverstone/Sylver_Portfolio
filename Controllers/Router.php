@@ -52,7 +52,11 @@ class Router
             $result = $this->routes[$url];
             if(str_starts_with($result,"public") && !str_ends_with($result,".html"))
             {
-                header("Content-Type: text/plain");
+                if(str_ends_with($result, "txt"))
+                    header("Content-Type: text/plain");
+                else if(str_ends_with($result, "ico"))
+                    header("Content-Type: image/vnd.microsoft.icon");
+
                 readfile(__DIR__ . "/../" . $result);
                 exit;
             }

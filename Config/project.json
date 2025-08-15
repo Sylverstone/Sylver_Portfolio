@@ -32,10 +32,22 @@
             "Gestion de la BDD",
             "Hébergement"
         ],
-        "APropos" : "",
+        "APropos" : "C'est un <b>projet freelance</b> pour un serveur RP nommé THE CASINO.<br />Celui-ci avait besoin de <b>bots discord</b> afin <b>d'améliorer</b> le RP du serveur et que la gestion de celui-ci soit <b>plus facile</b>.<br />J'ai donc développé <b>11 bots</b> avec chacun des <b>fonctionnalitées bien particulières.</b>",
         "Liens" : ["https://www.fiverr.com/users/sylverstone08/portfolio/Njg4NTJiOTMxOGE1ZmMwMDAxMmMzMzlj"],
         "NomLien" : ["Fiverr"],
-        "Etapes" : ["esfsefesfse","esfesfsefse"],
+        "Etapes": [
+            "Étude des besoins du client",
+            "Tout d'abord, j'ai commencé par <b>étudier ce dont le client</b> avait besoin. C'était un projet <b>assez conséquent</b>, donc je ne devais pas me perdre pendant le développement.",
+            "Base de données",
+            "Le projet avait besoin d'une base de données pour <b>fonctionner convenablement</b>. J'ai donc dû <b>établir les schémas</b> de celle-ci afin de <b>gérer les données le plus efficacement possible</b>.",
+            "Développements",
+            "Quand tout cela était fait, j'ai pu commencer à <b>développer les bots</b>, consulter le client pour avoir <b>plus de précisions sur ses requêtes</b> et <b>le conseiller</b> sur certaines <b>fonctionnalités</b> des bots.",
+            "Déploiement",
+            "Dès que tous les bots étaient terminés, et même un peu avant, j'ai commencé à <b>étudier avec le client</b> quel hébergement était le plus adapté.<br/>Nous sommes partis sur <b>Railway</b>, où sont donc hébergés les <b>11 bots</b> ainsi que la <b>base de données.</b>",
+            "Ajustements",
+            "Après la <b>finalisation du projet</b>, je suis resté à <b>l'écoute du client</b> afin de régler <b>les possibles soucis</b>, modifier certaines choses <b>si besoins.</b>"
+        ]
+,
         "Legendes" : ["",""],
         "Date" : 2025
     },

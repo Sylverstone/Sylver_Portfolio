@@ -1,4 +1,12 @@
 <?php
+
+
+    $env = parse_ini_file(__DIR__ . "/../.env");
+
+    require __DIR__ . "/../vendor/autoload.php";
+    
+    use PHPMailer\PHPMailer\PHPMailer;
+
     if(!(
         isset($_POST["Email"]) && 
         isset($_POST["Objet"]) && 
@@ -9,25 +17,45 @@
         )
     )
     {
+        echo "exit mail";
         exit;
     }
 
-    $to = "sylvio8.pm@gmail.com";
-    $Email = $_POST["Email"];
-    $Objet = "Portfolio mail - " . $_POST["Objet"];
-    $Message = $_POST["Message"];
+    try
+    {
+        $to = "sylvio8.pm@gmail.com";
+        $Email = $_POST["Email"];
+        $Objet = "Portfolio mail - " . $_POST["Objet"];
+        $Message = $_POST["Message"];
 
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-    // Additional headers
-    $headers[] = 'To: Boss <Sylvio.PelageMaxime@outlook.fr>';
-    $headers[] = "From: Portfolio User <$Email>";
+        $mail = new PHPMailer(true);
 
-    $message = "
-        <h1>Mail Automatique</h1>
-        <p>Message :<br/>$Message</p>
-    ";
-    
-    mail($to,$Objet,$message,implode("\r\n",$headers));
-    header("Location: ");
+        $mail->isSMTP();
+        $mail->SMTPAuth = true;
+
+        $mail->Host = "smtp.gmail.com";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        $mail->Username = $env["USER"] ?? $_ENV["USER"];
+        $mail->Password = $env["MDP"] ?? $_ENV["MDP"];
+
+        $mail->setFrom($Email, "Inconnu");
+        $mail->addAddress($env["USER"],"Sylvio");
+
+        $mail->Subject = $Objet;
+        $mail->Body = $Message;
+
+        $mail->CharSet="UTF-8";
+        $mail->Encoding="base64";
+        $mail->send();
+
+
+        header("Location: /");
+    }
+    catch(Exception $e)
+    {
+        echo "Une erreur à eu lieu";
+    }
+
 ?>

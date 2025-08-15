@@ -19,9 +19,25 @@
         <img src="<?=BASE_URL?>/Images/ContactButtonIconDown.png" alt="Icone contact" />
     </aside>
     <form id="formAccueil" action="<?=BASE_URL?>/Scripts/sendMail.php" method="POST">
-        <input type="email" name="Email" placeholder="Email" id="Email" required>
-        <input type="text" name="Objet" placeholder="Objet" id="Objet" required>
-        <textarea name="Message" placeholder="Votre message :)" required></textarea>
+        <article class="name-email">
+            <div class="input-container">
+                <input type="text" name="name" id="name" required placeholder=" " autocapitalize autocomplete="additional-name">
+                <label for="Email">Nom</label>
+            </div>
+            <div class="input-container">
+                <input type="email" name="Email" id="Email" autocomplete="email" required placeholder=" ">
+                <label for="Email">Email</label>
+            </div>
+        </article>
+        <div class="input-container">
+            <input type="text" name="Objet" id="Objet" placeholder=" " required>
+            <label for="Objet">Objet</label>            
+        </div>
+        <div class="textarea-container">
+            <textarea name="Message" placeholder=" " id="Message" required maxlength="500" ></textarea>
+            <label for="Message">Message</label>
+            <span id="compteur">0/500</span>
+        </div>
         <input type="submit" value="ENVOYER"/>
     </form>
     <p id="signature">Fait main - Sylvio</p>

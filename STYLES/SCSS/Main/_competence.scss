@@ -4,7 +4,7 @@
 {
     filter: drop-shadow(1px 5px 10px black);
     position: relative;
-    top: -200px;
+    top: -170px;
     padding: 0 10%;
     display: flex;
     flex-direction: row;
@@ -111,7 +111,7 @@
 
         .Competence:first-of-type
         {
-            border: .1rem solid #797474;
+            border: .05rem solid #797474;
             border-right: none;
             border-top-left-radius: 1.5em;
             border-top-right-radius: 0;
@@ -121,7 +121,7 @@
         {
 
             border-left: none;
-            border-top: .1rem solid #797474;
+            border-top: .05rem solid #797474;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             border-top-right-radius: 1.5em;

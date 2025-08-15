@@ -26,10 +26,6 @@ const handleListeData = async(val,bool) => {
 }
 
 let baseUrl = "";
-if(url.includes("localhost"))
-{
-    baseUrl = "/RemakePortfolio";
-}
 let Etat = [];
 Parties.forEach((val,key) => {
     if(!(val instanceof HTMLElement)) return;

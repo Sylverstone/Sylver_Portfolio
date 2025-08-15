@@ -48,8 +48,8 @@
             </aside>
         </header>
 
-        <a id="backHome" href="<?= BASE_URL ?>">
-            <img src="<?= BASE_URL ?>/Images/Icon/home.svg" alt="Accueil - icon"/>
+        <a id="backHome" href="/">
+            <img src="<?= BASE_URL ?>/Images/Icon/home.svg" alt="Accueil - Icon"/>
         </a>
         <main>
             <?php partie("A propos","AProposProjet"); ?>            
@@ -108,4 +108,5 @@
     <?php include "./Views/Template/Scripts.php"?>
     <script type="module" src="<?= BASE_URL ?>/Scripts/Partie.js" defer></script>
     <script type="module" src="<?= BASE_URL ?>/Scripts/projet.js" defer></script>
+    <script type="text/JavaScript" src="<?= BASE_URL ?>/Scripts/formCompteur.js"></script>
 </html>

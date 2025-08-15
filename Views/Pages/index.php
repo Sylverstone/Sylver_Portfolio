@@ -11,6 +11,7 @@
     $phareProjectShowed = false;
     $lastCat = null;
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -91,4 +92,5 @@
         </body>
         <?php include "./Views/Template/Scripts.php"?>
         <script type="text/JavaScript" src="Scripts/visible.js"></script>
+        <script type="text/JavaScript" src="Scripts/formCompteur.js"></script>                 
 </html>

@@ -3,11 +3,6 @@ import {MakePartieVisible}  from "./func.mjs";
 let statesPartie = JSON.parse(localStorage.getItem("partieData")) || {};
 
 let baseUrl = "";
-const url = window.location.href;
-if(url.includes("localhost"))
-{
-    baseUrl = "/RemakePortfolio";
-}
 
 if(typeof statesPartie === "object" && Object.keys(statesPartie).length > 0)
 {
