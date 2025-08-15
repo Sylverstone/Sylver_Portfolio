@@ -59,6 +59,7 @@
     }
     catch(Exception $e)
     {
+        echo $e;
         echo "Une erreur à eu lieu";
     }
 
