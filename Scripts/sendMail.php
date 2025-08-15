@@ -1,7 +1,10 @@
 <?php
 
 
-    $env = parse_ini_file(__DIR__ . "/../.env") ?? [];
+
+    $env = [];
+    if(file_exists(__DIR__ . "/../.env"))
+        $env = parse_ini_file(__DIR__ . "/../.env");
 
     require __DIR__ . "/../vendor/autoload.php";
     
