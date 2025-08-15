@@ -30,6 +30,7 @@
         $Email = $_POST["Email"];
         $Objet = "Portfolio mail - " . $_POST["Objet"];
         $Message = $_POST["Message"];
+        $name = $_POST["name"];
 
         $mail = new PHPMailer(true);
 
@@ -43,8 +44,8 @@
         $mail->Username = $env["USER"] ?? $_ENV["USER"];
         $mail->Password = $env["MDP"] ?? $_ENV["MDP"];
 
-        $mail->setFrom($Email, "Inconnu");
-        $mail->addAddress($env["USER"],"Sylvio");
+        $mail->setFrom($Email, $name);
+        $mail->addAddress($env["USER"] ?? $_ENV["USER"],"Sylvio");
 
         $mail->Subject = $Objet;
         $mail->Body = $Message;
