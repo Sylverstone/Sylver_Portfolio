@@ -41,7 +41,7 @@
                     </li>
                 </ul>
             </nav>            
-            <img src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.jpg" />      
+            <img src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" />      
             <aside id="info">
                 <h1 id="titre"><?=$projet["Title"]?></h1>
                 <p id="date"><?=$projet["Date"]?></p>
