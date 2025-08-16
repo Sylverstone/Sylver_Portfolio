@@ -15,7 +15,7 @@
     <div class="Projet">                        
         <aside class="ImgProjet">
             <a href="Projets/<?=$keys[$i]?>">
-                <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.jpg"/>
+                <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp"/>
             </a>                            
             <p><?=$projet['Title']?></p>
         

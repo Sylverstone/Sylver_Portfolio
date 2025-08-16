@@ -43,7 +43,7 @@
                 </nav>
                 <section id="SectionPP">
                     <div id="EnTete">
-                        <img id="PP" alt="Sylvio PELAGE MAXIME" src="Images/Sylvio.jpg" />
+                        <img id="PP" alt="Sylvio PELAGE MAXIME" src="Images/Sylvio.webp" />
                         <p>Développeur de jeux vidéo</p>
                     </div>
                     <p>
