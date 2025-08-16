@@ -9,6 +9,7 @@
 <html lang="fr">
     <head>
         <?php include "./Views/Template/head.php"?>
+        <title><?=$projet["Title"]?></title>
         <link href="<?= BASE_URL ?>/STYLES/CSS/Projects/projetStyles.css" rel="stylesheet" />
     </head>
     <body>
@@ -108,5 +109,5 @@
     <?php include "./Views/Template/Scripts.php"?>
     <script type="module" src="<?= BASE_URL ?>/Scripts/Partie.js" defer></script>
     <script type="module" src="<?= BASE_URL ?>/Scripts/projet.js" defer></script>
-    <script type="text/JavaScript" src="<?= BASE_URL ?>/Scripts/formCompteur.js"></script>
+    <script type="text/JavaScript" src="<?= BASE_URL ?>/Scripts/formCompteur.js" defer></script>
 </html>

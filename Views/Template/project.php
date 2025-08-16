@@ -14,8 +14,8 @@
 
     <div class="Projet">                        
         <aside class="ImgProjet">
-            <a href="Projets/<?=$keys[$i]?>">
-                <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp"/>
+            <a href="Projets/<?=$keys[$i]?>" aria-label="Voir le projet">
+                <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp" alt="$<?=$keys[$i]?> - Image"/>
             </a>                            
             <p><?=$projet['Title']?></p>
         

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://sylvio-pelagemaxime.up.railway.app/</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://sylvio-pelagemaxime.up.railway.app/Projets/SylverService</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://sylvio-pelagemaxime.up.railway.app/Projets/TheCasinoRP</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://sylvio-pelagemaxime.up.railway.app/Projets/LesRouagesDuDestin</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://sylvio-pelagemaxime.up.railway.app/Projets/pgmToAA</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://sylvio-pelagemaxime.up.railway.app/Projets/MeteoApp</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>

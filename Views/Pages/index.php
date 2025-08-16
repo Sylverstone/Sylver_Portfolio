@@ -15,6 +15,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <meta name="description" content="C'est mon portfolio, j'y parle de moi, de mes projets, et possiblement de mon actualité">
+        <title>Sylvio - Portfolio</title>
         <?php include "./Views/Template/head.php" ?>
     </head>
     <body>
@@ -91,6 +93,6 @@
         <?php include "./Views/Template/footer.php"?>
         </body>
         <?php include "./Views/Template/Scripts.php"?>
-        <script type="text/JavaScript" src="Scripts/visible.js"></script>
-        <script type="text/JavaScript" src="Scripts/formCompteur.js"></script>                 
+        <script type="text/JavaScript" src="Scripts/visible.js" defer></script>
+        <script type="text/JavaScript" src="Scripts/formCompteur.js" defer></script>                 
 </html>
