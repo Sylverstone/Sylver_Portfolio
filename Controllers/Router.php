@@ -39,7 +39,6 @@ class Router
     public function work()
     {
         $url = $_SERVER['REQUEST_URI'] ?? "";
- 
         if(str_starts_with($url,"/RemakePortfolio/"))
         {
             $url = substr($url,offset: 16);
@@ -52,6 +51,7 @@ class Router
             $result = $this->routes[$url];
             if(str_starts_with($result,"public") && !str_ends_with($result,".html"))
             {
+                echo $result;
                 if(str_ends_with($result, "txt"))
                     header("Content-Type: text/plain");
                 else if(str_ends_with($result, "ico"))
@@ -91,6 +91,7 @@ class Router
                 $nameFinal = substr($name,0,-4);
             else
                 $nameFinal = $name;
+
             if($nameFinal == "index")
             {
                 $nameFinal = "";

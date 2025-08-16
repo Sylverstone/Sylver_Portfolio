@@ -32,7 +32,8 @@
             "Gestion de la BDD",
             "Hébergement"
         ],
-        "APropos" : "C'est un <b>projet freelance</b> pour un serveur RP nommé THE CASINO.<br />Celui-ci avait besoin de <b>bots discord</b> afin <b>d'améliorer</b> le RP du serveur et que la gestion de celui-ci soit <b>plus facile</b>.<br />J'ai donc développé <b>11 bots</b> avec chacun des <b>fonctionnalitées bien particulières.</b>",
+        "APropos" : 
+        "C'est un <b>projet freelance</b> pour un serveur RP nommé THE CASINO.<br />Celui-ci avait besoin de <b>bots discord</b> afin <b>d'améliorer</b> le RP du serveur et que la gestion de celui-ci soit <b>plus facile</b>.<br />J'ai donc développé <b>11 bots</b> avec chacun des <b>fonctionnalitées bien particulières.</b><br /><i>Si vous êtes <b>interressé.e par mes services</b> contacté moi grâce au <a href='#contact' onclick=\"scrollTOElement('#contact');return false;\">formulaire</a> ou directement via <a href='https://www.fiverr.com/s/Gzbjwl7' target='_blank'>Fiverr</a></i>",
         "Liens" : ["https://www.fiverr.com/users/sylverstone08/portfolio/Njg4NTJiOTMxOGE1ZmMwMDAxMmMzMzlj"],
         "NomLien" : ["Fiverr"],
         "Etapes": [
@@ -48,7 +49,17 @@
             "Après la <b>finalisation du projet</b>, je suis resté à <b>l'écoute du client</b> afin de régler <b>les possibles soucis</b>, modifier certaines choses <b>si besoins.</b>"
         ]
 ,
-        "Legendes" : ["",""],
+        "Legendes" : [
+            "<b><i>/solde</i></b> du bot de banque",
+            "<b><i>/boire</i></b> du bot barman",
+            "Devinette avec le barman",
+            "Tirage avec un bot de jeu",
+            "<b><i>/blackjack</i></b> avec le bot blackjack",
+            "<b><i>/roulette</i></b> avec le bot de la roulette",
+            "Aperçu cooldown de commandes",
+            "duel de dés avec le bot de dés",
+            "duél de dés avec un autre joueur",
+            "Aperçu de l'hébergement"],
         "Date" : 2025
     },
 
@@ -67,12 +78,31 @@
             "Implémentation du level streaming",
             "Quelques assets 3D"
         ],
-        "APropos" : "",
 
-        "Liens" : ["",""],
-        "NomLien" : ["",""],
-        "Etapes" : ["",""],
-        "Legendes" : ["","",""],
+        "APropos" : "C'est un jeu développé sur <b>Unreal Engine 5.3</b> avec une équipe de 8 personnes.<br />On y incarne un <b>détective</b> qui doit résoudre une enquête du passé en <b>retournant dans le temps</b> grâce à un <b>train spécial</b>.<br />Ce fut notre <b>première expérience sur Unreal Engine</b> et le développement a duré environ <b>3 mois</b>.<br /><br />Dans ce projet, j'ai développé le <b>gameplay</b>, les <b>UI</b>, réalisé quelques <b>assets 3D</b> et <b>cinématiques</b>, ainsi qu'effectué de <b>l'optimisation</b>.",
+
+        "Liens" : ["https://gamejolt.com/games/LesRouagesDuDestin/1013468"],
+        "NomLien" : ["Gamejolt"],
+        
+        "Etapes": [
+            "Scénario",
+            "Dans un premier temps, nous nous sommes intéressés à <b>l'histoire que nous voulions raconter dans le jeu</b>.<br />Nous avons donc organisé des réunions afin de déterminer <b>quel jeu nous voulions créer</b>.",
+            "Assets 3D",
+            "Nous avons effectué des recherches concernant <b>tous les assets 3D que nous devions créer pour le jeu</b>, afin de nous organiser sur <b>qui modéliserait quoi</b>.",
+            "Unreal Engine",
+            "Nous ne savions <b>pas utiliser le moteur</b>, et encore moins faire du <b>Blueprint</b>. Grâce à <b>diverses ressources</b>, nous nous sommes formés (les programmeurs) <b>afin d'acquérir les connaissances nécessaires pour développer le jeu</b>.",
+            "Développement d'éléments de gameplay",
+            "Avant de passer au <b>développement du gameplay complet</b>, nous avons choisi de <b>développer certaines mécaniques</b> qui nous seraient <b>utiles pendant le jeu</b> et que nous pourrions <b>réutiliser facilement</b>. <i>Ex : interaction avec les objets, UI flexible, système d'inspection, mise en place de différents types d'objets avec leurs spécificités...</i>",
+            "Level Design",
+            "Nous avons ensuite commencé à créer les différents <b>niveaux</b> dans lesquels le <b>jeu devait se dérouler</b>.",
+            "Gameplay",
+            "Une fois toutes ces étapes réalisées, nous avons pu commencer à développer le <b>gameplay du jeu</b> : mise en place du <b>changement de niveau</b>, <b>lignes directrices d'un niveau</b>, <b>indications pour le joueur</b>...",
+            "Cinématiques",
+            "Vers la fin du développement, nous avons ajouté <b>quelques cinématiques</b> afin <b>d'améliorer la narration</b> et les <b>transitions entre niveaux</b>."
+        ],
+
+        "Legendes" : ["Menu du jeu","Aperçu in-game - Maison d'enquête","Aperçu in-game - Maison d'enquête","Aperçu in-game - Hanger","Aperçu quête  fusible","Aperçu in-game","Tableau explicatif des quêtes","Quête des fusibles","Quête moteurs","Egnigme de fusibles","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Vertolaye", "Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye"],
+
         "Date" : 2025
     },
 
@@ -127,11 +157,21 @@
             "Traitement des données excel",
             "Développement de l'UI"
         ],
-        "APropos" : "",
+        "APropos" : 
+        "C'est un projet fait sur <b>2 jours</b> en équipe de 2 <i>(16h)</i> où nous devions faire une application qui <b>analyse les données du mont Aigoual</b> en utilisant la bibliothèque graphique <b>Libgraph2</b>.<br />En contrainte nous devions faire une application <b>originale</b> avec des <b>intéractions utilisateurs.</b>",
         "Liens" : ["https://gitlab-lepuy.iut.uca.fr/sypelagema/sae2.01/-/releases"],
         "NomLien" : ["GitLab"],
-        "Etapes" : ["",""],
-        "Legendes" : ["",""],
+        "Etapes": [
+            "Conception",
+            "Dans un premier temps, nous avons <b>imaginé ce à quoi l'application pourrait ressembler</b> ainsi que les différentes <b>fonctionnalités qu'elle pourrait proposer</b>.",
+            "Traitement des données",
+            "Les données à traiter étaient contenues dans un <b>fichier CSV</b>. Nous avons donc mis en place différents algorithmes afin de les exploiter de la manière <b>la plus optimale et flexible possible</b>.",
+            "Développement",
+            "Une fois cette étape réalisée, nous avons pu commencer à développer <b>l'interface utilisateur</b> ainsi que les <b>différentes fonctionnalités de l'application</b>.<br />"
+        ]
+        ,
+        "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
+
         "Date" : 2025
     }
 }

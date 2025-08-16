@@ -66,6 +66,12 @@ main
 
             font-size: clamp(1em,1.8vw,1.5em);
             margin: 1rem;
+
+            a 
+            {
+                color: $Color2;
+                font-weight: 700;
+            }
         }
     }
 
@@ -131,6 +137,7 @@ main
     text-decoration: none;
     padding: .5em;
     z-index: 2000;
+
 }
 
 @media (min-width : $computerSize)
@@ -194,7 +201,7 @@ main
     {
         p
         {
-            margin: 1rem 10rem !important;
+            margin: 1rem 5rem !important;
         }
     }
 

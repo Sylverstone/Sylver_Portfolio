@@ -81,6 +81,10 @@ main #section_Apropos p {
   font-size: clamp(1em, 1.8vw, 1.5em);
   margin: 1rem;
 }
+main #section_Apropos p a {
+  color: #324880;
+  font-weight: 700;
+}
 main img {
   cursor: pointer;
 }
@@ -164,7 +168,7 @@ main #EtapeProjet {
     margin-right: 1.5rem;
   }
   #section_Apropos p {
-    margin: 1rem 10rem !important;
+    margin: 1rem 5rem !important;
   }
 }
 
