@@ -54,8 +54,9 @@
                 </section>
         </header>
         <main>
-            <section id="APropos">
-                <h1>Pelage Maxime Sylvio</h1>
+            
+            <section id="APropos"> 
+                <h1>Pelage Maxime Sylvio</h1>              
                 <p>
                     Je suis actuellement étudiant en <b>Informatique Graphique</b> au Puy-en-Velay (43000).<br><br>
                     Passionné par la <b>programmation</b> et les <b>jeux vidéo</b>, je souhaite me spécialiser dans le <b>développement de jeux vidéo</b>.<br><br>

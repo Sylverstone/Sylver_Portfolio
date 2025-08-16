@@ -9,11 +9,17 @@ main
     flex-direction: column;
 }
 
+h1 
+{
+    font-size: 50px;
+}
+
 #APropos
 {
     min-height: 100vh;
     min-width: 100vw;
     background-color: $Color2;
+    font-size: 1em;
 
     h1 
     {
