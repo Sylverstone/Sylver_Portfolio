@@ -7,7 +7,7 @@ include "config.php";
 $host = $_SERVER['HTTP_HOST'];
 
 
-if ($host === 'https://sylver-pelagemaxime.up.railway.app') {
+if ($host === 'sylver-pelagemaxime.up.railway.app') {
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: https://www.sylvio-pelagemaxime.fr" . $_SERVER['REQUEST_URI']);
     exit();
