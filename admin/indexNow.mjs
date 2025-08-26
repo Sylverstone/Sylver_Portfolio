@@ -26,9 +26,9 @@ async function main()
             "Content-Type" : "application/json; charset=utf-8"
         },
         body: JSON.stringify({
-            host : "api.indexnow.org",
-            key : process.env.INDEXNOWKEY,
-            keyLocation : `https://www.sylvio-pelagemaxime.fr/${process.env.INDEXNOWKEY}`
+            host : "www.sylvio-pelagemaxime.fr",
+            key : `${process.env.INDEXNOWKEY}`,
+            keyLocation : `https://www.sylvio-pelagemaxime.fr/${process.env.INDEXNOWKEY}.txt`
             ,urlList : UrlsSite
         })
     });
@@ -39,8 +39,7 @@ async function main()
         return;
     }
 
-    const jsonData = await response.json();
-    console.log(jsonData);
+    console.log(response);
 
     console.log("Fetch success")
 }
