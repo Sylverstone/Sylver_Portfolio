@@ -12,6 +12,13 @@ if ($host === 'sylver-pelagemaxime.up.railway.app') {
     header("Location: https://www.sylvio-pelagemaxime.fr" . $_SERVER['REQUEST_URI']);
     exit();
 }
+
+if($host === "sylvio-pelagemaxime.fr")
+{
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: https://www.sylvio-pelagemaxime.fr" . $_SERVER['REQUEST_URI']);
+    exit();    
+}
     
 $router = Router::getRouter();
 
