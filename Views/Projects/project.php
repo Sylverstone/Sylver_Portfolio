@@ -8,8 +8,10 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+
         <?php include "./Views/Template/head.php"?>
-        <title><?=$projet["Title"]?></title>
+        <meta name="description" content="<?=$projet["Desc"]?>">
+        <title>Projet - <?=$projet["Title"]?></title>
         <link href="<?= BASE_URL ?>/STYLES/CSS/Projects/projetStyles.css" rel="stylesheet" />
     </head>
     <body>
@@ -42,7 +44,7 @@
                     </li>
                 </ul>
             </nav>            
-            <img src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" />      
+            <img src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" alt="Illustration - <?=$projet["Title"]?>"/>      
             <aside id="info">
                 <h1 id="titre"><?=$projet["Title"]?></h1>
                 <p id="date"><?=$projet["Date"]?></p>

@@ -7,7 +7,7 @@
         <a target="_blank" href="https://linkedin.com/in/sylviopelagemaxime" title="LinkedIn">
             <img src="<?=BASE_URL?>/Images/Icon/linkedIn.png" alt="LinkedIn - Icon" />
         </a>
-        <a target="_blank" href="https://https://gitlab-lepuy.iut.uca.fr/sypelagema" title="GitLab">
+        <a target="_blank" href="https://gitlab-lepuy.iut.uca.fr/sypelagema" title="GitLab">
             <img src="<?= BASE_URL ?>/Images/Icon/gitlab.svg" alt="GitLab - Icon"/>
         </a>
         <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
