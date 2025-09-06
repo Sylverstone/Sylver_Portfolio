@@ -1,6 +1,13 @@
 <?php
 
 
+    function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+    }
 
     $env = [];
     if(file_exists(__DIR__ . "/../.env"))
@@ -26,7 +33,6 @@
 
     try
     {
-        $to = "sylvio8.pm@gmail.com";
         $Email = $_POST["Email"];
         $Objet = "Portfolio mail - " . $_POST["Objet"];
         $Message = $_POST["Message"];
@@ -39,7 +45,9 @@
 
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Port = 587; 
+
+        debug_to_console($_ENV["USER"] . " " . $_ENV["MDP"]);
 
         $mail->Username = $env["USER"] ?? $_ENV["USER"];
         $mail->Password = $env["MDP"] ?? $_ENV["MDP"];
