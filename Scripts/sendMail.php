@@ -45,7 +45,7 @@
         $mail->Password = $env["MDP"] ?? $_ENV["MDP"];
 
         $mail->setFrom($Email, $name);
-        $mail->addAddress($env["USER"] ?? $_ENV["USER"],"Sylvio");
+        $mail->addAddress("contact@sylvio-pelagemaxime.fr","Sylvio");
 
         $mail->Subject = $Objet;
         $mail->Body = $Message;
