@@ -26,7 +26,7 @@
 
     try
     {
-        $to = "contact@sylvio-pelagemaxime.fr";
+        $to = "sylvio8.pm@gmail.com";
         $Email = $_POST["Email"];
         $Objet = "Portfolio mail - " . $_POST["Objet"];
         $Message = $_POST["Message"];
