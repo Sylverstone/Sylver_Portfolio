@@ -33,38 +33,65 @@ header #date {
     margin-top: 5rem;
   }
 }
-main .Partie {
-  align-self: flex-start;
+main .Container {
+  display: none;
+  flex-direction: column;
+}
+main .Link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #324880;
-  width: clamp(8rem, 40vw, 15rem);
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
-  justify-content: flex-end;
-  font-weight: 600;
-  margin: 2% 0;
+  align-self: flex-start !important;
+  position: sticky;
 }
-main .Partie p {
-  margin: 1rem 0;
+main .Link p {
+  margin: 1rem 3rem !important;
+  min-width: 5em;
+}
+main section:first-of-type {
+  margin-top: 0 !important;
+}
+main #AperçuProjet, main #AperçuProjet, main #EtapeProjet, main #section_Apropos, main #LienProjet {
+  margin-top: 1rem;
+  background-color: #052A59;
   color: white;
-  padding-right: 5%;
+  border-radius: 1rem;
+  transition: height 500ms ease;
+  overflow: hidden;
+  font-size: clamp(1em, 1.8vw, 1.5em);
+  height: 4rem;
 }
-main .Partie img {
-  padding-right: 10%;
+main #LienProjet {
+  flex-direction: column;
+}
+main #LienProjet .Container {
+  justify-content: center;
+  align-items: flex-start;
+}
+main .startConditionProjet {
+  display: flex;
 }
 main #AperçuProjet {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
 }
-main #AperçuProjet img {
+main #AperçuProjet .Container img {
   margin-top: 1rem;
   width: clamp(5rem, 80vw, 25rem);
   border-radius: 0.5em;
+}
+main #AperçuProjet .Container {
+  flex-direction: row;
+  margin-top: 2em;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+main #AperçuProjet .Container .ImageApercu {
+  margin-right: 0;
 }
 main #AperçuProjet figcaption {
   text-align: center;
@@ -82,7 +109,7 @@ main #section_Apropos p {
   margin: 1rem;
 }
 main #section_Apropos p a {
-  color: #324880;
+  color: #052A59;
   font-weight: 700;
 }
 main img {
@@ -90,13 +117,11 @@ main img {
 }
 main #LienProjet a {
   font-size: clamp(1em, 1.8vw, 1.1em);
-  margin-top: 0;
   color: white;
-  text-decoration: none;
   margin: 1rem 1rem 2rem 1rem;
-  background-color: rgba(0, 0, 0, 0.8);
   padding: 0 0.5rem;
   border-radius: 0.5rem;
+  text-decoration: underline;
 }
 main .Etape {
   margin-left: 2rem;
@@ -121,7 +146,6 @@ main #EtapeProjet {
 }
 
 #backHome {
-  padding: 0;
   bottom: 6rem;
   right: 1rem;
   position: fixed;
@@ -139,35 +163,10 @@ main #EtapeProjet {
     margin-bottom: 1rem;
     border-radius: 0.8rem;
   }
-  main .Partie {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #324880;
-    width: 100%;
-    border-radius: 0.5rem;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: 600;
-    margin: 0.5rem 0;
-  }
-  main .Partie p {
-    padding-left: 1rem;
-    margin: 1rem 0;
-    color: white;
-    padding-right: 1rem;
-  }
-  main .Partie img {
-    padding-right: 0%;
-  }
-  main .Partie:first-of-type {
-    margin-top: 3rem;
-  }
   main #AperçuProjet .ImageApercu {
     margin-right: 1.5rem;
   }
-  #section_Apropos p {
+  #section_Apropos p.content {
     margin: 1rem 5rem !important;
   }
 }

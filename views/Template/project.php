@@ -1,6 +1,6 @@
 <?php for($i = 0; $i < count($projets); $i++) : ?>
     <?php $projet = $projets[$keys[$i]]; ?>
-        <?php include "./Views/Template/categorie.php"?>
+        <?php include "./views/Template/categorie.php" ?>
     <?php if($projet["categorie"] == 0 && !$persoProjectShowed) : ?>
         <aside id="ProjetPersoContainer">
         <?php $lastCat = 0; $persoProjectShowed = true ?>
@@ -14,30 +14,28 @@
 
     <div class="Projet">                        
         <aside class="ImgProjet">
-            <a href="Projets/<?=$keys[$i]?>" aria-label="Voir le projet">
-                <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp" alt="$<?=$keys[$i]?> - Image"/>
-            </a>                            
-            <p><?=$projet['Title']?></p>
-        
-            <div class="CompContainer">
-                <?php foreach($projet["Comp"] as $key => $comp) : ?>
-                    <?php if($projet["Helps"][$key] != "") : ?>
-                        <span class="Comp-<?=$comp?>" onclick="help(this,10)">
+            <article>
+                    <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp" alt="$<?=$keys[$i]?> - Image" project="<?=$keys[$i]?>"/>
+<!--                <p>--><?php //=$projet['Title']?><!--</p>-->
+            </article>
+        </aside>
+        <div class="CompContainer">
+            <?php foreach($projet["Comp"] as $key => $comp) : ?>
+                <?php if($projet["Helps"][$key] != "") : ?>
+                    <span class="Comp-<?=$comp?>" onclick="help(this,10)">
                             <?=$comp?>
                             &#9432;
                             <div class="tips">
                                 <?=$projet['Helps'][$key]?>
                             </div>
                         </span>
-                    <?php else : ?>
-                        <span class="Comp-<?=$comp?>">
+                <?php else : ?>
+                    <span class="Comp-<?=$comp?>">
                             <?=$comp?>
                         </span>
-                    <?php endif; ?>
-                <?php endforeach?>
-            </div>
-        </aside>
-
+                <?php endif; ?>
+            <?php endforeach?>
+        </div>
         <span class="DescriptionProjet"><?=$projet["Desc"]?></span>
         <article class="contribution">
             <p>Ma contribution :</p>

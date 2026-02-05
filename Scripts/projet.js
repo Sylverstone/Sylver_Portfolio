@@ -35,4 +35,144 @@ if((a instanceof HTMLAnchorElement))
         localStorage.setItem("partieData","{}");
         window.location.href = this.href;
     }
-} 
+}
+
+const linkDiv = document.querySelectorAll(".Link");
+for(const l of linkDiv) {
+    const img = l.querySelector("img");
+
+    img.onclick = (e) => {
+        const parentSection = l.parentElement;
+        const content = parentSection.querySelector(".Container");
+
+        if (getComputedStyle(content).getPropertyValue("display") !== "none") {
+            if (!parentSection) {
+                console.log("not a section")
+                return;
+            }
+
+            setTimeout(() => {
+                content.style.display = "none";
+            }, 400);
+            parentSection.classList.remove("Appear");
+            parentSection.style.height = "4rem";
+        } else {
+
+            if (!parentSection) {
+                console.log("not a section")
+                return;
+            }
+
+            content.style.display = "flex";
+            parentSection.classList.add("Appear");
+            const target = parentSection.offsetHeight + content.offsetHeight;
+            parentSection.style.height = `${target}px`;
+        }
+    }
+}
+// function anim(parentSection, content)
+// {
+//     const target = parentSection.offsetHeight + content.offsetHeight;
+//     let iter = 1;
+//     let currentHeight = parentSection.offsetHeight;
+//     while(currentHeight < target && iter < 0)
+//     {
+//         console.log("in");
+//         parentSection.style.height = `${currentHeight + 0}px`;
+//         currentHeight++;
+//         iter++;
+//     }
+//     window.requestAnimationFrame(anim);
+// }
+
+/*
+* 1.
+
+Client :
+
+
+
+NumClient k, NomClient, Solde
+
+
+
+Commande :
+
+NumCommande, k
+
+Date, IdAdresse,
+
+
+
+Produit :
+
+NumProduit, k
+
+NomProduit, Stock, Minimal
+
+
+
+Fournisseurs :
+
+IDFournisseur k
+
+Nom
+
+
+
+ProduitFournisseurs :
+
+IDFournisseur k
+
+NumProduit k
+
+Prix
+
+
+
+CommandeProduit :
+
+NumCommande k
+
+NumProduit k
+
+Quantite
+
+
+
+Adresse
+
+IDAdresse
+
+Adresse
+
+
+
+ClientAdresse
+
+IDAdrresse k
+
+NumClient k
+
+
+
+2.
+
+
+
+Numclient -> Nom, solde
+
+NumCommande -> date idAdress
+
+NumProduit -> Nom, stock, minimal
+
+IdFournisseur -> nom
+
+(IdFournisseur, NumProduit) -> Prix
+
+(NumCommande, NumProduit) -> Quantite
+
+IDAdress -> Adresse
+
+(IDAdress,NumClient)
+* */

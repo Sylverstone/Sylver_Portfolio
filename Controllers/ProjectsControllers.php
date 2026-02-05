@@ -19,18 +19,18 @@ class ProjectsControllers
     {
         if(!array_key_exists($slug,$this->Projects)) return $this->nothing("/Projets/$slug");
         $projet = $this->Projects[$slug];
-        include "./Views/Projects/project.php";
+        include "./views/Projects/project.php";
     }
 
     public function home()
     {
-        include "./Views/Pages/index.php";
+        include "./views/pages/index.php";
     }
 
     public function nothing($path)
     {
         $url = $path;
-        include "./Views/404/notFound.php";
+        include "./views/404/notFound.php";
     }
 }
 ?>

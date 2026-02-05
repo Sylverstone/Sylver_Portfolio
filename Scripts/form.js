@@ -1,7 +1,7 @@
 
 let posScroll = 0;
 /**
- * 
+ * Afficher et cacher le formulaire de contact
  * @param {HTMLElement} element 
  * @returns 
  */
@@ -12,8 +12,8 @@ function toogleForm(element)
     const contactButton = document.querySelector("#contact");
     const form = document.querySelector("#formAccueil");
     const img = element.querySelector("img");
+
     if(!(form instanceof HTMLFormElement) || !(img instanceof HTMLImageElement)) return;
-    
 
     if(getComputedStyle(form).display === "none")
     {

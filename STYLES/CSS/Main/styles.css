@@ -14,7 +14,7 @@ header {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #324880;
+  background-color: #052A59;
 }
 #HomeNav ul {
   display: flex;
@@ -81,18 +81,18 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #324880;
+    background-color: #052A59;
   }
 }
 #Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
-  background-color: #324880;
+  background-color: #052A59;
   color: white;
   display: grid;
   place-content: center;
   padding: 10%;
   font-size: clamp(1.2em, 3vw, 3em);
   text-align: center;
-  margin: 10% 0;
+  margin: 5% 0;
 }
 #Projets #ProjetPhare p, #Projets #ProjetPRO p, #Projets #ProjetPerso p {
   font-size: 1em;
@@ -142,7 +142,6 @@ header {
   height: 30vh;
   align-self: center;
   position: relative;
-  margin-bottom: 3rem;
   width: fit-content;
 }
 #Projets .Projet .ImgProjet p {
@@ -192,7 +191,6 @@ header {
 }
 .CompContainer [class^=Comp-] {
   cursor: pointer;
-  position: relative;
   font-size: clamp(0.75em, 2vw, 0.95rem);
   padding: 0.2rem 0.3rem;
   border-radius: 0.5em;
@@ -209,7 +207,7 @@ header {
   top: 1.8em;
   color: black;
   background-color: rgba(217, 217, 217, 0.8);
-  border: 2px solid #324880;
+  border: 2px solid #052A59;
   border-radius: 1em;
 }
 .CompContainer .Comp-gamedev {
@@ -278,7 +276,7 @@ header {
   }
 }
 #Competences {
-  filter: drop-shadow(1px 5px 10px black);
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
   position: relative;
   top: -170px;
   padding: 0 10%;
@@ -287,54 +285,66 @@ header {
   flex-wrap: wrap;
 }
 #Competences .Competence {
-  border: 0.05rem solid #797474;
+  border: 0.05rem solid #e6ecf8;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
   align-items: center;
-  background-color: #D9D9D9;
+  background-color: white;
   padding: 5% 5%;
   width: 100%;
 }
 #Competences .Competence .Illustration {
-  width: 30%;
+  width: 5rem;
 }
-#Competences .Competence .ImageCompetenceContainer {
+#Competences .Competence p {
+  text-align: center;
+}
+#Competences .Competence .text-column {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+#Competences .Competence .text-column:last-of-type {
+  margin-bottom: 1em;
+}
+#Competences .Competence .CompetenceContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: center;
   min-width: 100%;
 }
-#Competences .Competence .ImageCompetenceContainer div {
+#Competences .Competence .CompetenceContainer div {
   width: 30%;
 }
-#Competences .Competence .ImageCompetenceContainer div .compImg {
+#Competences .Competence .CompetenceContainer div .compImg {
   width: 100%;
 }
-#Competences .Competence .ImageCompetenceContainer div p {
+#Competences .Competence .CompetenceContainer div p {
   text-align: center;
   font-size: 0.8em;
 }
-#Competences .Competence .ImageCompetenceContainer p {
+#Competences .Competence .CompetenceContainer p {
   margin-top: 0;
 }
 #Competences .Competence .titre {
+  color: #052A59;
   text-align: center;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
 }
 #Competences .Competence .phrase {
+  color: #052A59;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: bold;
-  align-self: flex-start;
+  align-self: center;
 }
 #Competences .Competence .subTitle {
   margin: 0;
-  margin-top: 1%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-style: italic;
   font-size: 0.8em;
   text-align: center;
@@ -342,84 +352,53 @@ header {
 }
 #Competences .Competence:first-of-type {
   border-bottom: none;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 #Competences .Competence:last-of-type {
   border-top: none;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 @media (min-width: 750px) {
   #Competences {
     align-self: center;
     justify-content: center;
-    padding: 0 0%;
+    padding: 0 0;
   }
   #Competences .Competence {
     max-width: 21%;
   }
   #Competences .Competence:first-of-type {
-    border: 0.05rem solid #797474;
     border-right: none;
-    border-top-left-radius: 1.5em;
+    border-bottom: 0.05rem solid #e6ecf8;
+    border-bottom-left-radius: 0.5rem;
     border-top-right-radius: 0;
   }
   #Competences .Competence:last-of-type {
     border-left: none;
-    border-top: 0.05rem solid #797474;
+    border-top-right-radius: 0.5rem;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 1.5em;
+  }
+  #Competences .titre {
+    min-height: 2rem;
+    max-height: 2rem;
+  }
+  #Competences .phrase {
+    min-height: 2rem;
+    max-height: 2rem;
+  }
+  #Competences .subTitle {
+    display: grid;
+    place-items: center;
+    min-height: 4rem;
+    max-height: 4rem;
+  }
+  #Competences .CompetenceContainer {
+    min-height: 5em;
   }
 }
-@keyframes AppearLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes AppearFromUp {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.AppearFromUp {
-  animation: AppearFromUp 500ms ease forwards;
-}
-
-.AppearLeft {
-  animation: AppearLeft 500ms ease forwards;
-}
-
-.DisappearLeft {
-  animation: AppearLeft 500ms ease reverse;
-}
-
-.hiddenLeft {
-  opacity: 0;
-  transform: translateX(-20%);
-  transition: opacity 500ms ease, transform 500ms ease;
-}
-
-.hiddenRight {
-  opacity: 0;
-  transform: translateX(20%);
-  transition: opacity 500ms ease, transform 500ms ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateX(0);
-  transform: translateY(0);
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -432,7 +411,7 @@ h1 {
 #APropos {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #324880;
+  background-color: #052A59;
   font-size: 1em;
 }
 #APropos h1 {
@@ -457,7 +436,7 @@ h1 {
 
 #ProjetAnnonce {
   height: 100vh;
-  background-color: #324880;
+  background-color: #052A59;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,7 +457,7 @@ h1 {
   }
   #ProjetAnnonce {
     height: unset;
-    background-color: #324880;
+    background-color: #052A59;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -493,7 +472,7 @@ h1 {
   }
 }
 footer {
-  background-color: #324880;
+  background-color: #052A59;
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
@@ -649,6 +628,51 @@ footer #signature {
     padding: 2em !important;
   }
 }
+@keyframes AppearLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes AppearFromUp {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes BaseAppear {
+  from {
+    height: 0;
+  }
+  to {
+    height: fit-content;
+  }
+}
+.AppearFromUp {
+  animation: AppearFromUp 500ms ease forwards;
+}
+
+.Appear {
+  overflow: hidden;
+}
+
+.Disappear {
+  animation: BaseAppear 500ms ease reverse;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
 body, html {
   margin: 0;
   max-width: 100vw;
@@ -676,6 +700,12 @@ h1, h2, h3, h4 {
   body {
     padding-bottom: unset;
   }
+}
+.SimpleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

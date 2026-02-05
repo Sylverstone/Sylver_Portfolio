@@ -8,6 +8,8 @@ class Router
     private static Router $router;
     private static ProjectsControllers $ProjectControllers;
 
+    private static Twig\Environment $twig;
+
     private function __construct()
     {
     }
@@ -29,6 +31,14 @@ class Router
     public static function getRouter() : Router 
     {
         self::$ProjectControllers = new ProjectsControllers("./Config/project.json");
+
+        if(!isset(self::$twig))
+        {
+            $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "\..\\views");
+            self::$twig = new \Twig\Environment($loader);
+        }
+
+
         if(!isset(self::$router))
         {
             return new Router();
@@ -45,6 +55,14 @@ class Router
         }
 
         $slug = substr($url,9);
+
+        if($url == "/test")
+        {
+            self::$twig->render("/pages/index.html", [
+                "var" => "hello"
+            ]);
+            exit;
+        }
 
         if(array_key_exists($url,$this->routes))
         {

@@ -2,33 +2,57 @@
 
 main 
 {
-    .Partie
+    .Container
     {
-        
-        align-self: flex-start;
+        display: none ;
+        flex-direction: column;
+    }
 
+    .Link
+    {
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: $Color2;
-        width: clamp(8rem,40vw,15rem);
-        border-bottom-right-radius: 2rem;
-        border-top-right-radius: 2rem;
-        justify-content: flex-end;
-        font-weight: 600;
-        margin: 2% 0;
-        
-        p 
-        {
-            margin: 1rem 0;
-            color: $Color1;
-            padding-right: 5%;
-        }
+        align-self: flex-start !important;
+        position: sticky;
 
-        img 
+        p
         {
-            padding-right: 10%;
-        }        
+            margin: 1rem 3rem !important;
+            min-width: 5em;
+        }
+    }
+
+    section:first-of-type
+    {
+        margin-top: 0 !important;
+    }
+
+    #AperçuProjet, #AperçuProjet, #EtapeProjet, #section_Apropos, #LienProjet
+    {
+        margin-top: 1rem;
+        background-color: $Color2;
+        color: white;
+        border-radius: 1rem;
+        transition: height 500ms ease;
+        overflow: hidden;
+        font-size: clamp(1em, 1.8vw, 1.5em);
+        height: 4rem;
+    }
+
+    #LienProjet
+    {
+        flex-direction: column;
+        .Container
+        {
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    .startConditionProjet
+    {
+        display: flex;
     }
 
     #AperçuProjet
@@ -37,14 +61,31 @@ main
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
 
-        img
+        .Container img
         {
             margin-top: 1rem;
             width: clamp(5rem,80vw,25rem);
             border-radius: .5em;
         }
+
+        .Container
+        {
+            //display: flex;
+            flex-direction: row;
+            margin-top: 2em;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+            .ImageApercu
+            {
+                margin-right: 0;
+            }
+        }
+
+
 
         figcaption 
         {
@@ -85,13 +126,11 @@ main
         a
         {
             font-size: clamp(1em,1.8vw,1.1em);
-            margin-top: 0;
             color: white;
-            text-decoration: none;
             margin: 1rem 1rem 2rem 1rem;
-            background-color: rgba($color: black, $alpha: .8);
             padding: 0 .5rem;
             border-radius: .5rem;
+            text-decoration: underline;
         }
     }
 
@@ -129,15 +168,12 @@ main
 
 #backHome
 {
-    
-    padding: 0;
     bottom: 6rem;
     right: 1rem;
     position: fixed;
     text-decoration: none;
     padding: .5em;
     z-index: 2000;
-
 }
 
 @media (min-width : $computerSize)
@@ -151,41 +187,40 @@ main
         margin-bottom: 1rem;
         border-radius: .8rem;
 
-        .Partie
-        {
-            
-            align-self: flex-start;
-
-            
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: $Color2;
-            width: 100%;
-            border-radius: .5rem;
-            justify-content: flex-start;
-            align-items: center;
-            font-weight: 600;
-            margin: .5rem 0;
-            
-            p 
-            {
-                padding-left: 1rem;
-                margin: 1rem 0;
-                color: $Color1;
-                padding-right: 1rem;
-            }
-
-            img 
-            {
-                padding-right: 0%;
-            }        
-        }
-
-        .Partie:first-of-type
-        {
-            margin-top: 3rem;
-        }
+        //.Partie
+        //{
+        //
+        //    align-self: flex-start;
+        //
+        //
+        //    display: flex;
+        //    flex-direction: row;
+        //    align-items: center;
+        //    background-color: $Color2;
+        //    width: 100%;
+        //    border-radius: .5rem;
+        //    justify-content: flex-start;
+        //    font-weight: 600;
+        //    margin: .5rem 0;
+        //
+        //    p
+        //    {
+        //        padding-left: 1rem;
+        //        margin: 1rem 0;
+        //        color: $Color1;
+        //        padding-right: 1rem;
+        //    }
+        //
+        //    img
+        //    {
+        //        padding-right: 0%;
+        //    }
+        //}
+        //
+        //.Partie:first-of-type
+        //{
+        //    margin-top: 3rem;
+        //}
 
         
         #AperçuProjet
@@ -199,7 +234,7 @@ main
 
     #section_Apropos
     {
-        p
+        p.content
         {
             margin: 1rem 5rem !important;
         }

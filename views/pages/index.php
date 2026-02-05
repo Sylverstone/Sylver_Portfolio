@@ -17,7 +17,7 @@
     <head>
         <meta name="description" content="C'est mon portfolio, j'y parle de moi, de mes projets, et possiblement de mon actualité">
         <title>Sylvio - Portfolio</title>
-        <?php include "./Views/Template/head.php" ?>
+        <?php include "./views/Template/head.php" ?>
     </head>
     <body>
         <header>
@@ -54,7 +54,6 @@
                 </section>
         </header>
         <main>
-            
             <section id="APropos"> 
                 <h1>Pelage Maxime Sylvio</h1>              
                 <p>
@@ -62,38 +61,42 @@
                     Passionné par la <b>programmation</b> et les <b>jeux vidéo</b>, je souhaite me spécialiser dans le <b>développement de jeux vidéo</b>.<br><br>
                     En parallèle de mes études, je propose mes services sur <a href="https://www.fiverr.com/s/zWNELed" target="_blank"><b>Fiverr</b></a> pour développer des <a href="https://www.fiverr.com/s/yv6DblG" target="_blank"><b>bots Discord</b></a> et des <a href="https://www.fiverr.com/s/xXL37kD" target="_blank"><b>sites vitrines</b></a>, afin de me faire un complément de revenue.<br /><br />
                     <i>Je suis actuellement à la recherche d’un <b>stage</b> en <b>développement de jeux vidéo</b> ou toutes autres opportunitées intéréssantes pour <b>Avril 2026</b>.</i>
-
                 </p>
             </section>
             <section id="Competences">
                 <?php foreach($competences as $competence) : ?>
-                    <div class="Competence">
-                        <img class="Illustration" src="Images/Icon/<?=$competence["Illustration"]?>" alt="<?= $competence["Nom"]?>"/>
-                        <p class="titre"><?= $competence["Nom"]?></p>
-                        <p class="subTitle"><?=$competence["subTitle"]?></p>
-                        <p class="phrase"><?= $competence["miniTitre"]?></p>
-                        <aside class="ImageCompetenceContainer">
-                            <?php for($i = 0; $i < count($competence["Images"]); $i++) : ?>
-                                <div>
-                                    <img class="compImg" src="Images/Icon/<?=$competence['Images'][$i]?>" alt="Image compétence"/>
-                                    <p><?=$competence["ImagesNames"][$i]?></p>
-                                </div>
-                            <?php endfor;?>
-                        </aside>
+                    <div class="Competence" fade>
+                        <article class="SimpleContainer">
+                            <img class="Illustration" src="Images/Icon/<?=$competence["Illustration"]?>" alt="<?= $competence["Nom"]?>"/>
+                            <p class="titre"><?= $competence["Nom"]?></p>
+                            <p class="subTitle"><?=$competence["subTitle"]?></p>
+                            <p class="phrase"><?= $competence["miniTitre"]?></p>
+                            <aside class="CompetenceContainer">
+                                <p>
+                                    <?php for($i = 0; $i < count($competence["ImagesNames"]) - 1; $i++) : ?>
+                                        <?=$competence["ImagesNames"][$i]?>,
+                                    <?php endfor;?>
+                                    <?=$competence["ImagesNames"][count($competence["ImagesNames"]) - 1]?>
+                                </p>
+                            </aside>
+                            <?php if(array_key_exists("miniTitre2", $competence)) : ?>
+                                <p class="phrase"><?=$competence["miniTitre2"]?></p>
+                                <?php for($i = 0; $i < count($competence["content2"]); $i++) : ?>
+                                    <p class="text-column"><?=$competence["content2"][$i]?> </p>
+                                <?php endfor;?>
+                            <?php endif; ?>
+                        </article>
                     </div>
                 <?php endforeach ?>
             </section>
-            <article id="ProjetAnnonce">
-                <h2>MES PROJETS</h2>
-            </article>
             <section id="Projets">
                 <?php $keys = array_keys($projets) ?>
-                <?php include "./Views/Template/project.php"?>
+                <?php include "./views/Template/project.php" ?>
             </section>
         </main>
-        <?php include "./Views/Template/footer.php"?>
+        <?php include "./views/Template/footer.php" ?>
         </body>
-        <?php include "./Views/Template/Scripts.php"?>
+        <?php include "./views/Template/Scripts.php" ?>
         <script type="text/JavaScript" src="Scripts/visible.js" defer></script>
         <script type="text/JavaScript" src="Scripts/formCompteur.js" defer></script>                 
 </html>

@@ -13,6 +13,9 @@
         <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
             <img src="<?= BASE_URL ?>/Images/Icon/fiverr.png" alt="Fiverr - Icon"/>
         </a>
+        <a target="_blank" title="Gamejolt">
+            <img src="<?= BASE_URL ?>/Images/Icon/Gamejolt.svg" alt="Gamejolt - Icon">
+        </a>
     </section>
     <aside id="contact" onclick="toogleForm(this)" title="Montrer le formulaire de contact">
         <p>CONTACT</p>
@@ -21,8 +24,8 @@
     <form id="formAccueil" action="<?=BASE_URL?>/Scripts/sendMail.php" method="POST">
         <article class="name-email">
             <div class="input-container">
-                <input type="text" name="name" id="name" required placeholder=" " autocapitalize autocomplete="additional-name">
-                <label for="Email">Nom</label>
+                <input type="text" name="name" id="name" required placeholder=" " autocapitalize="characters" autocomplete="additional-name">
+                <label for="name">Nom</label>
             </div>
             <div class="input-container">
                 <input type="email" name="Email" id="Email" autocomplete="email" required placeholder=" ">

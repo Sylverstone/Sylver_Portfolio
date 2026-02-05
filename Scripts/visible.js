@@ -16,7 +16,7 @@ const Isvisible = (element) =>
 
 /**
  * 
- * @param {NodeListOf<Element>} pageElements 
+ * @param {Element[]} pageElements
  */
 const lookIfVisible = (pageElements) =>
 {
@@ -30,17 +30,7 @@ const lookIfVisible = (pageElements) =>
         else
         {
             element.classList.remove("visible");
-            switch(compteur % 2)
-            {
-                case 0 :
-                    element.classList.add("hiddenRight");
-                    break;
-                case 1 :
-                    element.classList.add("hiddenLeft");
-                    break;
-                default :
-                    break;
-            }
+            element.classList.add("hidden");
         }  
         compteur++;
     })
@@ -49,12 +39,21 @@ const lookIfVisible = (pageElements) =>
 
 function main() {
     const body = document.querySelector("body");
-    if(!(body instanceof HTMLBodyElement)) return;
+    if(!(body instanceof HTMLBodyElement))
+        return;
 
-    const TargetElement = document.querySelectorAll("#Competences, .Projet");
+    const ElementWithFadeAttribute = document.querySelectorAll("[fade]");
 
+    /**@type {Element[]}*/
+    let FadeElements = [];
+    ElementWithFadeAttribute.forEach(e => {
+        FadeElements.push(...e.querySelectorAll("& > *"));
+    })
+
+    let fade
     body.onscroll = () => {
-        lookIfVisible(TargetElement);
+        lookIfVisible(FadeElements);
     }
 }
+
 main();

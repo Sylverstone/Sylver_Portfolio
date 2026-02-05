@@ -1,7 +1,8 @@
 @use 'header';
 @use 'main';
 @use 'footer';
-@use 'var' as *;
+@use '../shared/var' as *;
+@use '../shared/animation';
 
 body,html
 {
@@ -36,4 +37,13 @@ h1,h2,h3,h4
     {
         padding-bottom: unset;
     }
+}
+
+.SimpleContainer
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
 }

@@ -25,41 +25,39 @@ $animTime: 500ms;
     }
 }
 
+@keyframes  BaseAppear{
+    from {
+        height: 0;
+    }
+    to
+    {
+        height: fit-content;
+    }
+}
+
 .AppearFromUp
 {
     animation: AppearFromUp $animTime ease forwards;
 }
 
-.AppearLeft 
+.Appear
 {
-    animation: AppearLeft $animTime ease forwards;
+    overflow: hidden;
 }
 
-.DisappearLeft
+.Disappear
 {
-    animation: AppearLeft $animTime ease reverse;
+    animation: BaseAppear $animTime ease reverse;
 }
 
-$locations : "Left", "Right";
-$transforms : translateX(-20%), translateX(20%);
-$i : 0;
-$combined: list.zip($locations,$transforms);
-
-@each $location,$transform in $combined {
-    
-    .hidden#{$location}
-    {
-        opacity: 0;
-       
-        transform: $transform;        
-        transition: opacity $animTime ease, transform $animTime ease;
-    }
-    $i: $i + 1;
+.hidden
+{
+    opacity: 0;
+    transition: opacity $animTime ease;
 }
 
 .visible
 {
     opacity: 1;
-    transform: translateX(0);
-    transform: translateY(0);
+
 }

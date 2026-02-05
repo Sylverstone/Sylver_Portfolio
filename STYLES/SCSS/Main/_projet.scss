@@ -1,4 +1,4 @@
-@use 'var' as *;
+@use '../shared/var' as *;
 @use 'sass:list';
 
 #Projets 
@@ -12,7 +12,7 @@
         padding: 10%;
         font-size: clamp(1.2em,3vw,3em);
         text-align: center;
-        margin: 10% 0;
+        margin: 5% 0;
 
         p 
         {
@@ -80,7 +80,6 @@
             height: 30vh;
             align-self: center;
             position: relative;
-            margin-bottom: 3rem;
             width: fit-content;
 
             p 
@@ -147,7 +146,6 @@
     [class^="Comp-"]
     {
         cursor: pointer;
-        position: relative;
         font-size: clamp(.75em,2vw,.95rem);
         padding: .2rem .3rem;
         border-radius: .5em;
@@ -211,6 +209,7 @@
         #ProjetPhareContainer
         {
             width: 100%;
+
             .Projet
             {
                 max-width: unset;

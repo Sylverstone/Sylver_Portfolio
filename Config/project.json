@@ -81,8 +81,8 @@
 
         "APropos" : "C'est un jeu développé sur <b>Unreal Engine 5.3</b> avec une équipe de 8 personnes.<br />On y incarne un <b>détective</b> qui doit résoudre une enquête du passé en <b>retournant dans le temps</b> grâce à un <b>train spécial</b>.<br />Ce fut notre <b>première expérience sur Unreal Engine</b> et le développement a duré environ <b>3 mois</b>.<br /><br />Dans ce projet, j'ai développé le <b>gameplay</b>, les <b>UI</b>, réalisé quelques <b>assets 3D</b> et <b>cinématiques</b>, ainsi qu'effectué de <b>l'optimisation</b>.",
 
-        "Liens" : ["https://gamejolt.com/games/LesRouagesDuDestin/1013468"],
-        "NomLien" : ["Gamejolt"],
+        "Liens" : ["https://gamejolt.com/games/LesRouagesDuDestin/1013468", "https://gitlab-lepuy.iut.uca.fr/evthonneri/les_rouages_du_destin"],
+        "NomLien" : ["Gamejolt","GitLab"],
         
         "Etapes": [
             "Scénario",
@@ -147,7 +147,6 @@
 
     "MeteoApp" :
     {
-        
         "categorie" : 1,
         "Title" : "Application météo",
         "Desc" : "Une application représentant le réchauffement climatique d'une station de ski de manière claire et précise.",
@@ -170,6 +169,38 @@
             "Une fois cette étape réalisée, nous avons pu commencer à développer <b>l'interface utilisateur</b> ainsi que les <b>différentes fonctionnalités de l'application</b>.<br />"
         ]
         ,
+        "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
+
+        "Date" : 2025
+    },
+
+    "LePotager" :
+    {
+        "categorie" : 1,
+        "Title" : "LePotager",
+        "Desc" : "Une application représentant le réchauffement climatique d'une station de ski de manière claire et précise.",
+        "Comp" : ["Blueprint","cpp","gamedev","Equipe"],
+        "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement",""],
+        "Contributions" : [
+            "Traitement des données excel",
+            "Développement de l'UI"
+        ],
+        "APropos" : "LePotager est un jeu vidéo développé avec Unreal engine 5.5 en dans une équipe de <b>4 personnes</b>.<br />Le cahier des charges imposait de créer un jeu eco-responsable,eco-conçu ainsi qu'accessible. Nous avons donc décidé de développer le jeu <i>le potager</i> afin de sensibiliser les joueurs à l'écologie. <br />Dans le jeu, le joueur doit <b>gérer son restaurant</b> en effectuant ses services du midi et du soir, en gérant son stock d'aliment, et surtout, développer son potager afin de devenir autosuffisant proposer des plats plus saints dans son restaurant.<br />",
+        "Liens" :
+            [
+                "https://gitlab-lepuy.iut.uca.fr/sypelagema/LePotager/-/tree/main/Content",
+                "https://gamejolt.com/games/LePotager/1046371"
+            ],
+        "NomLien" : ["GitLab","Gamejolt"],
+        "Etapes": [
+            "Conception",
+            "Dans un premier temps, nous avons <b>imaginé ce à quoi l'application pourrait ressembler</b> ainsi que les différentes <b>fonctionnalités qu'elle pourrait proposer</b>.",
+            "Traitement des données",
+            "Les données à traiter étaient contenues dans un <b>fichier CSV</b>. Nous avons donc mis en place différents algorithmes afin de les exploiter de la manière <b>la plus optimale et flexible possible</b>.",
+            "Développement",
+            "Une fois cette étape réalisée, nous avons pu commencer à développer <b>l'interface utilisateur</b> ainsi que les <b>différentes fonctionnalités de l'application</b>.<br />"
+        ]
+    ,
         "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
 
         "Date" : 2025
