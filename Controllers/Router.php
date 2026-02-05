@@ -34,7 +34,7 @@ class Router
 
         if(!isset(self::$twig))
         {
-            $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "\..\\views");
+            $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "/../views");
             self::$twig = new \Twig\Environment($loader);
         }
 
@@ -46,6 +46,16 @@ class Router
         return self::$router;
     }
 
+    /**
+     * @param string $file Correspond à la view qu'il faut rendre. Ne doit pas contenir d'extension !
+     * @param array $params Les paramètres a ajouter à la fonction render
+     * @return void
+     */
+    public static function render(string $file, array $params = [], string $ext = ".html.twig")
+    {
+        echo self::$twig->render($file . $ext, $params);
+    }
+
     public function work()
     {
         $url = $_SERVER['REQUEST_URI'] ?? "";
@@ -55,14 +65,6 @@ class Router
         }
 
         $slug = substr($url,9);
-
-        if($url == "/test")
-        {
-            self::$twig->render("/pages/index.html", [
-                "var" => "hello"
-            ]);
-            exit;
-        }
 
         if(array_key_exists($url,$this->routes))
         {

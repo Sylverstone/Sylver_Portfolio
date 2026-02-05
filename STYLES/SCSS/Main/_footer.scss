@@ -54,6 +54,7 @@ footer
 
     form 
     {
+        @include littleShadow(.6);
         display: none;
         align-self: center;
         flex-direction: column;
@@ -97,6 +98,7 @@ footer
 
             #compteur 
             {
+                margin-top: 1rem;
                 font-size: .5em;
                 align-self: flex-end;
             }
@@ -134,7 +136,7 @@ footer
 
         input#Objet 
         {
-            width: 80%;
+            width: 100%;
         }
         input#Email
         {

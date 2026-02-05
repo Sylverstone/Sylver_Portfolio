@@ -22,23 +22,21 @@ function toogleForm(element)
         posScroll = window.scrollY;
         form.style.display = "flex";
         const y = form.getBoundingClientRect().top + window.scrollY;
-        form.classList.add("AppearFromUp");       
+        form.classList.add("AppearOpacity");
         console.log(y);
         window.scrollTo({
             top:y + 100,
             behavior:"smooth"
         });
         setTimeout(() => {
-            form.classList.remove("AppearFromUp");
+            form.classList.remove("AppearOpacity");
         }, 1000);
-    
-
     }
     else
     {
         //Faire disparraître
         img.setAttribute("src",`${baseUrl}/Images/ContactButtonIconDown.png`)
-        form.classList.add("DisappearLeft");
+        form.classList.add("DisappearOpacity");
         const y = contactButton.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
                 top:posScroll,
@@ -46,12 +44,12 @@ function toogleForm(element)
             });
             
         setTimeout(() => {
-            
+
 
                 form.style.display = "none";
-                form.classList.remove("DisappearLeft");
-            
-        }, 500);
+                form.classList.remove("DisappearOpacity");
+
+        }, 480);
         
     }
 }

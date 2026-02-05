@@ -35,6 +35,16 @@ $animTime: 500ms;
     }
 }
 
+@keyframes OpacityIn {
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
 .AppearFromUp
 {
     animation: AppearFromUp $animTime ease forwards;
@@ -43,6 +53,16 @@ $animTime: 500ms;
 .Appear
 {
     overflow: hidden;
+}
+
+.AppearOpacity
+{
+    animation: OpacityIn $animTime ease;
+}
+
+.DisappearOpacity
+{
+    animation: OpacityIn $animTime reverse;
 }
 
 .Disappear

@@ -29,8 +29,10 @@ class ProjectsControllers
 
     public function nothing($path)
     {
-        $url = $path;
-        include "./views/404/notFound.php";
+        $url = $_SERVER["SERVER_NAME"] . $path;
+        Router::render("404/notFound", [
+            "message" => "l'URL $path n'existe pas",
+        ]);
     }
 }
 ?>

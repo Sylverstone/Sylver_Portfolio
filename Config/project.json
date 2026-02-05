@@ -64,10 +64,10 @@
     },
 
     "LesRouagesDuDestin" : {
-        "categorie" : 2,
+        "categorie" : 1,
         "Title" : "Les rouages du destin",
         "Desc" : "Mon premier jeu vidéo fait sur Unreal engine.<br/>Un détective doit résoudre une enquête du passé.",
-        "Comp" : ["Equipe","gamedev","UE5","Blueprint","git"],
+        "Comp" : ["Equipe","gamedev","UE5","Blueprint","git","UnrealEngine"],
         "Helps" : ["","","","","",""],
         "Contributions" : [
             "Développement UI",
@@ -176,11 +176,11 @@
 
     "LePotager" :
     {
-        "categorie" : 1,
+        "categorie" : 2,
         "Title" : "LePotager",
-        "Desc" : "Une application représentant le réchauffement climatique d'une station de ski de manière claire et précise.",
-        "Comp" : ["Blueprint","cpp","gamedev","Equipe"],
-        "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement",""],
+        "Desc" : "Un jeu vidéo visant a sensibiliser les joueurs à l'écologie",
+        "Comp" : ["Blueprint","cpp","gamedev","Equipe","UnrealEngine", "git"],
+        "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement","","", ""],
         "Contributions" : [
             "Traitement des données excel",
             "Développement de l'UI"

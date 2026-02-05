@@ -118,6 +118,7 @@ header {
   align-items: center;
   margin-top: 5%;
   margin-bottom: 5%;
+  transition: transform 500ms ease;
 }
 #Projets .Projet > ul {
   list-style-type: circle;
@@ -139,10 +140,16 @@ header {
 #Projets .Projet .ImgProjet {
   display: flex;
   flex-direction: column;
-  height: 30vh;
   align-self: center;
   position: relative;
   width: fit-content;
+  transition: transform 500ms ease;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.3));
+  border: 0.05rem solid #e6ecf8;
+  border-radius: 1em;
+}
+#Projets .Projet .ImgProjet:hover {
+  transform: scale(1.05);
 }
 #Projets .Projet .ImgProjet p {
   font-size: clamp(0.9em, 1.35vw, 1.5em);
@@ -163,11 +170,12 @@ header {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#Projets .Projet .ImgProjet img, #Projets .Projet .ImgProjet a {
+#Projets .Projet .ImgProjet img {
   border-radius: 1em;
   align-self: center;
   height: 100%;
   width: 100%;
+  max-width: 80vw;
 }
 #Projets .Projet .DescriptionProjet, #Projets .Projet .Date {
   font-size: clamp(0.8rem, 4vw, 1rem);
@@ -188,6 +196,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 1.5rem;
+  max-width: 90vw;
 }
 .CompContainer [class^=Comp-] {
   cursor: pointer;
@@ -196,7 +205,7 @@ header {
   border-radius: 0.5em;
   display: flex;
   justify-content: center;
-  margin: 0 0.2rem;
+  margin: 1rem 0.2rem;
 }
 .CompContainer [class^=Comp-] .tips {
   visibility: hidden;
@@ -249,6 +258,9 @@ header {
 .CompContainer .Comp-freelance {
   background-color: rgba(71, 27, 27, 0.5);
 }
+.CompContainer .Comp-UnrealEngine {
+  background-color: rgba(67, 89, 118, 0.5);
+}
 
 @media (min-width: 750px) {
   #Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
@@ -271,8 +283,11 @@ header {
     max-width: unset;
     width: 100% !important;
   }
-  #Projets #ProjetPhareContainer .Projet .ImgProjet {
-    height: 40vh;
+  #Projets #ProjetPhareContainer .Projet img {
+    max-width: 60vw;
+  }
+  #Projets #ProjetPhareContainer .Projet .ImgProjet p {
+    font-size: 1.2em;
   }
 }
 #Competences {
@@ -509,6 +524,7 @@ footer #contact:hover {
   background-color: rgba(255, 255, 255, 0.23);
 }
 footer form {
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.6));
   display: none;
   align-self: center;
   flex-direction: column;
@@ -544,6 +560,7 @@ footer form .textarea-container {
   margin-top: 1rem;
 }
 footer form .textarea-container #compteur {
+  margin-top: 1rem;
   font-size: 0.5em;
   align-self: flex-end;
 }
@@ -567,7 +584,7 @@ footer form input::content {
   padding-left: 2%;
 }
 footer form input#Objet {
-  width: 80%;
+  width: 100%;
 }
 footer form input#Email {
   width: 100%;
@@ -652,12 +669,28 @@ footer #signature {
     height: fit-content;
   }
 }
+@keyframes OpacityIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .AppearFromUp {
   animation: AppearFromUp 500ms ease forwards;
 }
 
 .Appear {
   overflow: hidden;
+}
+
+.AppearOpacity {
+  animation: OpacityIn 500ms ease;
+}
+
+.DisappearOpacity {
+  animation: OpacityIn 500ms reverse;
 }
 
 .Disappear {
@@ -682,7 +715,7 @@ body, html {
 body {
   display: flex;
   flex-direction: column;
-  padding-bottom: 4rem;
+  padding-bottom: 3.9rem;
   font-family: "Mulish", sans-serif;
 }
 
@@ -706,6 +739,24 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.NiceButton {
+  cursor: pointer;
+  margin-bottom: 2em;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 8em;
+  background-color: #052A59;
+  justify-content: center;
+  text-decoration: none !important;
+  transition: transform 500ms ease;
+}
+.NiceButton:hover {
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=styles.css.map */

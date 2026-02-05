@@ -17,7 +17,7 @@ body
 {
     display: flex;
     flex-direction: column;
-    padding-bottom: $footerHeight;
+    padding-bottom: calc($footerHeight - 0.1rem);
     font-family: "Mulish",sans-serif;
 }
 
@@ -47,3 +47,28 @@ h1,h2,h3,h4
     align-items: center;
     justify-content: center;
 }
+
+.NiceButton
+{
+    cursor: pointer;
+    margin-bottom: 2em;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 8em;
+    background-color: $Color2;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: transform 500ms ease;
+    &:hover
+    {
+      transform: scale(1.05);
+    }
+}
+
+
+
+
+

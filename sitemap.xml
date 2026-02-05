@@ -4,42 +4,48 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://www.sylvio-pelagemaxime.fr/</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.sylvio-pelagemaxime.fr/Projets/SylverService</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.sylvio-pelagemaxime.fr/Projets/TheCasinoRP</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.sylvio-pelagemaxime.fr/Projets/LesRouagesDuDestin</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.sylvio-pelagemaxime.fr/Projets/pgmToAA</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.sylvio-pelagemaxime.fr/Projets/MeteoApp</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.sylvio-pelagemaxime.fr/Projets/LePotager</loc>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>

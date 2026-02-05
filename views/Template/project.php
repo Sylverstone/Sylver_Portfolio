@@ -14,10 +14,10 @@
 
     <div class="Projet">                        
         <aside class="ImgProjet">
-            <article>
-                    <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp" alt="$<?=$keys[$i]?> - Image" project="<?=$keys[$i]?>"/>
-<!--                <p>--><?php //=$projet['Title']?><!--</p>-->
-            </article>
+            <a href="Projets/<?=$keys[$i]?>" alt="Lien vers le projet : <?=$keys[$i]?> ">
+                <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp" alt="$<?=$keys[$i]?> - Image" project="<?=$keys[$i]?>" />
+            </a>
+            <p><?=$projet['Title']?></p>
         </aside>
         <div class="CompContainer">
             <?php foreach($projet["Comp"] as $key => $comp) : ?>
@@ -44,8 +44,8 @@
                     <li><?= $contribution ?></li>
                 <?php endforeach?>
             </ul>
+            <span class="Date"><?= $projet["Date"]?></span>
         </article>
-        <span class="Date"><?= $projet["Date"]?></span>
     </div>
 
     <?php if($i + 1 < count($keys) && $projets[$keys[$i + 1]]["categorie"] != $lastCat) : ?>
