@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-
         <?php include "./views/Template/head.php" ?>
         <meta name="description" content="<?=$projet["Desc"]?>">
         <title>Projet - <?=$projet["Title"]?></title>
@@ -17,6 +16,9 @@
     <body>
         <header>
             <nav id="HomeNav">
+                <a id="backHome" href="/">
+                    <img src="<?= BASE_URL ?>/Images/Icon/Home.png" alt="Accueil - Icon"/>
+                </a>
                 <ul>
                     <li>
                         <a href="#AProposProjet" onclick="scrollTOElement('#AProposProjet');return false;">
@@ -44,16 +46,14 @@
                     </li>
                 </ul>
             </nav>            
-            <img src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" alt="Illustration - <?=$projet["Title"]?>"/>      
+            <img class="Illustration" src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" alt="Illustration - <?=$projet["Title"]?>"/>
             <aside id="info">
                 <h1 id="titre"><?=$projet["Title"]?></h1>
                 <p id="date"><?=$projet["Date"]?></p>
             </aside>
         </header>
 
-        <a id="backHome" href="/">
-            <img src="<?= BASE_URL ?>/Images/Icon/home.svg" alt="Accueil - Icon"/>
-        </a>
+
         <main>
             <section id="section_Apropos" class="startConditionProjet">
                 <div class="Link">

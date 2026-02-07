@@ -92,7 +92,7 @@ header {
   padding: 10%;
   font-size: clamp(1.2em, 3vw, 3em);
   text-align: center;
-  margin: 5% 0;
+  margin: 1rem 0;
 }
 #Projets #ProjetPhare p, #Projets #ProjetPRO p, #Projets #ProjetPerso p {
   font-size: 1em;

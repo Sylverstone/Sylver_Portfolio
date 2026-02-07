@@ -49,7 +49,7 @@
                         <p>Développeur de jeux vidéo</p>
                     </div>
                     <p>
-                        Je développe des jeux vidéos et j'adore ce que je fais :)
+                        Je développe des jeux vidéo et j'adore ce que je fais :)
                     </p>
                 </section>
         </header>

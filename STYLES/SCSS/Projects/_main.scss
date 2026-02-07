@@ -166,15 +166,6 @@ main
     }
 }
 
-#backHome
-{
-    bottom: 6rem;
-    right: 1rem;
-    position: fixed;
-    text-decoration: none;
-    padding: .5em;
-    z-index: 2000;
-}
 
 @media (min-width : $computerSize)
 {
