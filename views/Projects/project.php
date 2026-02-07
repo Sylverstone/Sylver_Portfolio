@@ -92,7 +92,9 @@
                     <?php for($i = 1; $i <= $nb; $i++): ?>
                         <article class="ImageApercu">
                             <img class = "Illustration" loading="lazy" src="<?= BASE_URL ?>/Images/<?=$slug?>/<?=$slug?><?=$i?>.png" alt="<?=$slug?> - Image" />
-                            <figcaption><?=$projet["Legendes"][$i - 1]?></figcaption>
+                            <?php if(array_key_exists($i - 1, $projet["Legendes"])) :?>
+                                <figcaption><?=$projet["Legendes"][$i - 1]?></figcaption>
+                            <?php endif;?>
                         </article>
                     <?php endfor ?>
                 </aside>

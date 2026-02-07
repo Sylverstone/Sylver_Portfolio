@@ -180,10 +180,13 @@
         "Title" : "LePotager",
         "Desc" : "Un jeu vidéo visant a sensibiliser les joueurs à l'écologie",
         "Comp" : ["Blueprint","cpp","gamedev","Equipe","UnrealEngine", "git"],
-        "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement","","", ""],
+        "Helps" : ["","","","","", ""],
         "Contributions" : [
-            "Traitement des données excel",
-            "Développement de l'UI"
+            "Développement de mécaniques de gameplay",
+            "Optimisation des performances",
+            "Implémentation du Data Driven Gameplay",
+            "Développement de l'IA des clients",
+            "Développement de l'intéraction avec l'environnement"
         ],
         "APropos" : "LePotager est un jeu vidéo développé avec Unreal engine 5.5 en dans une équipe de <b>4 personnes</b>.<br />Le cahier des charges imposait de créer un jeu eco-responsable,eco-conçu ainsi qu'accessible. Nous avons donc décidé de développer le jeu <i>le potager</i> afin de sensibiliser les joueurs à l'écologie. <br />Dans le jeu, le joueur doit <b>gérer son restaurant</b> en effectuant ses services du midi et du soir, en gérant son stock d'aliment, et surtout, développer son potager afin de devenir autosuffisant proposer des plats plus saints dans son restaurant.<br />",
         "Liens" :
@@ -194,15 +197,11 @@
         "NomLien" : ["GitLab","Gamejolt"],
         "Etapes": [
             "Conception",
-            "Dans un premier temps, nous avons <b>imaginé ce à quoi l'application pourrait ressembler</b> ainsi que les différentes <b>fonctionnalités qu'elle pourrait proposer</b>.",
-            "Traitement des données",
-            "Les données à traiter étaient contenues dans un <b>fichier CSV</b>. Nous avons donc mis en place différents algorithmes afin de les exploiter de la manière <b>la plus optimale et flexible possible</b>.",
-            "Développement",
-            "Une fois cette étape réalisée, nous avons pu commencer à développer <b>l'interface utilisateur</b> ainsi que les <b>différentes fonctionnalités de l'application</b>.<br />"
+            "La description des étapes est en cours..."
         ]
     ,
-        "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
+        "Legendes" : ["","",""],
 
-        "Date" : 2025
+        "Date" : 2026
     }
 }
