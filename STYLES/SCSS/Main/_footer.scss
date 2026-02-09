@@ -18,7 +18,7 @@ footer
         img 
         {
             cursor: pointer;
-            width: 2em;
+            width: $FooterIconSize;
             margin: 0 1em;
         }
     }
@@ -32,7 +32,7 @@ footer
         display: flex;
         align-items: center;
         color: $Color1;
-        padding: 0% 10%;
+        padding: 0 10%;
         border-radius: 8em;
         background-color: rgba(black,.23);
         justify-content: center;

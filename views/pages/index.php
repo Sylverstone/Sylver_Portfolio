@@ -45,13 +45,39 @@
                 </nav>
                 <section id="SectionPP">
                     <div id="EnTete">
-                        <img id="PP" alt="Sylvio PELAGE MAXIME" src="Images/Sylvio.webp" />
-                        <p>Développeur de jeux vidéo</p>
+                        <aside id="Info">
+                            <p class="lightText" id="intro">Salut ! Je suis</p>
+                            <p id="nom">Pelage Maxime<br/>Sylvio</p>
+                            <p id="metier">Développeur de jeux vidéo</p>
+                            <a href="#contact" class="NiceButton" onclick="scrollTOElement('#contact'); return false;">Contactez-moi </a>
+                        </aside>
+                        <aside id="Image">
+                            <img id="PP" alt="Icon - header" src="Images/isagi.jpg">
+                        </aside>
+<!--                        <p>Développeur de jeux vidéo</p>-->
+<!--                        <p class="lightText text-centered">-->
+<!--                            Je développe des jeux vidéo et j'adore ce que je fais :)-->
+<!--                        </p>-->
+<!--                        <img id="PP" alt="Sylvio PELAGE MAXIME" src="Images/isagi.jpg" />-->
                     </div>
-                    <p>
-                        Je développe des jeux vidéo et j'adore ce que je fais :)
-                    </p>
                 </section>
+                <aside id="link">
+                    <a target="_blank" href="https://github.com/Sylverstone/" title="Github">
+                        <img src="<?=BASE_URL?>/Images/Icon/github.svg" alt="GitHub - Icon"/>
+                    </a>
+                    <a target="_blank" href="https://linkedin.com/in/sylviopelagemaxime" title="LinkedIn">
+                        <img src="<?=BASE_URL?>/Images/Icon/linkedin.svg" alt="LinkedIn - Icon" />
+                    </a>
+                    <a target="_blank" href="https://gitlab-lepuy.iut.uca.fr/sypelagema" title="GitLab">
+                        <img src="<?= BASE_URL ?>/Images/Icon/gitlab.svg" alt="GitLab - Icon"/>
+                    </a>
+                    <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
+                        <img src="<?= BASE_URL ?>/Images/Icon/fiverr.svg" alt="Fiverr - Icon"/>
+                    </a>
+                    <a target="_blank" title="Gamejolt">
+                        <img src="<?= BASE_URL ?>/Images/Icon/Gamejolt.svg" alt="Gamejolt - Icon">
+                    </a>
+                </aside>
         </header>
         <main>
             <section id="APropos"> 

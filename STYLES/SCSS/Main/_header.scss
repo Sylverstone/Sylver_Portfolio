@@ -7,6 +7,7 @@ header
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-width: 100vw;
 }
 
 #HomeNav
@@ -57,10 +58,10 @@ header
 
 #SectionPP
 {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin : 8%;
 
     & > p 
     {
@@ -73,32 +74,153 @@ header
 
 #EnTete
 {
+
+    width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    #Info
+    {
+        text-align: center;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        font-size: clamp(2em,7vw,4em);
+        max-width: 10em;
+
+        .NiceButton
+        {
+            margin-top: 1rem;
+            font-size: .4em;
+            margin-bottom: 2rem;
+            align-self: center;
+            padding: .5rem 1rem
+        }
+    }
+
+    #Image
+    {
+        display: grid;
+        place-items: center;
+    }
 
     #PP
     {
-        width: clamp(2em,50vw,18em);
+        width: clamp(2em,50vw,20em);
         height: auto;
         border-radius: 100%;
+        @include littleShadow(.1)
     }
 
-    p 
+    #intro
     {
-        padding-left: 2%;
-        text-align: center;
-        font-size: clamp(1.2em,5vw,3em);
-        overflow-wrap: break-word;
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 500;
+        width: 100%;
+        font-size: .4em;
     }
+
+    #nom
+    {
+        font-size: 1em;
+        margin: .5rem 0;
+        font-weight: 800;
+    }
+
+    #metier
+    {
+        font-size: .5em;
+        color: $Color2  ;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    //p:not([class])
+    //{
+    //    @include littleShadow(.5);
+    //    margin-bottom: .5rem;
+    //    padding-left: 2%;
+    //    text-align: center;
+    //    font-size: clamp(1.2em,5vw,3em);
+    //    overflow-wrap: break-word;
+    //    font-family: "Ubuntu", sans-serif;
+    //    font-weight: 500;
+    //}
+    //
+    //p[class]
+    //{
+    //    margin-bottom: 2rem;
+    //}
 
 }
 
+
+#link
+{
+
+    @include littleShadow(.1);
+    margin-top: 5rem;
+    background-color: $Color2;
+    padding: .5rem 0;
+    border-radius: 2rem;
+    display: flex;
+    border: .1rem solid $borderCompetenceColor;
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+    a
+    {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        text-decoration: none;
+    }
+
+    img
+    {
+        width: calc($FooterIconSize - .2rem);
+        margin: 0 1rem;
+        height: auto;
+        transition: transform 500ms ease, filter 500ms ease;
+
+        &:hover
+        {
+            transform: translateY(-.2rem);
+            @include littleShadow(.2);
+        }
+    }
+}
+
 @media (min-width: $computerSize) {
+
+
+    #Info
+    {
+        text-align: start !important;
+
+        .NiceButton
+        {
+            align-self: flex-start !important;
+            margin-bottom: 0 !important;
+            font-size: .2em !important;
+        }
+    }
+
+    #link
+    {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 5rem;
+    }
+
     #HomeNav
     {
         opacity: .95;
@@ -110,4 +232,10 @@ header
         left: 0;
         background-color: $Color2;
     }
+
+    #sectionPP
+    {
+     margin-top: 5rem;
+    }
+
 }

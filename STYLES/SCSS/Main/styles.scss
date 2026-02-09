@@ -62,12 +62,23 @@ h1,h2,h3,h4
     justify-content: center;
     text-decoration: none !important;
     transition: transform 500ms ease;
+
     &:hover
     {
       transform: scale(1.05);
     }
 }
 
+.lightText
+{
+    margin: 0;
+    font-weight: 100;
+}
+
+.text-centered
+{
+    text-align: center;
+}
 
 
 

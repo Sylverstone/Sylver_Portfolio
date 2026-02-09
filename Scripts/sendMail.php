@@ -47,7 +47,7 @@
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587; 
 
-        debug_to_console($_ENV["USER"] . " " . $_ENV["MDP"]);
+//        debug_to_console($_ENV["USER"] . " " . $_ENV["MDP"]);
 
         $mail->Username = $env["USER"] ?? $_ENV["USER"];
         $mail->Password = $env["MDP"] ?? $_ENV["MDP"];
@@ -62,7 +62,6 @@
         $mail->Encoding="base64";
         $mail->send();
 
-
         header("Location: /");
     }
     catch(Exception $e)
@@ -70,5 +69,3 @@
         echo $e;
         echo "Une erreur à eu lieu";
     }
-
-?>

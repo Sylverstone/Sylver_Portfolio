@@ -6,6 +6,8 @@ $footerHeight:4rem;
 $borderCompetence : .5rem;
 $borderCompetenceColor : #e6ecf8;
 
+$FooterIconSize : clamp(1.5em,1vw,2em);
+
 $computerSize : 750px;
 
 @mixin littleShadow($alpha)
