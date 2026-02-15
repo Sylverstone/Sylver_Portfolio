@@ -203,5 +203,36 @@
         "Legendes" : ["","",""],
 
         "Date" : 2026
+    },
+
+    "Vapeur" :
+    {
+        "categorie" : 1,
+        "Title" : "Vapeur",
+        "Desc" : "C'est une application de gestion d'une bibliothèque de jeux vidéo. Un projet nous permettant d'exercer les bases CRUD",
+        "Comp" : ["Equipe","JS","Express","Prisma","Handlebars"],
+        "Helps" : ["","", "","","",""],
+        "Contributions" : [
+            "Ajout d'un jeu vidéo",
+            "Modification d'un jeu vidéo",
+            "Suppression d'un jeu vidéo",
+            "Implémentation de tests automatique avec GitHub action"
+        ],
+        "APropos" :
+        "C'est un projet fait sur <b>2 semaines</b> dans une équipe de <b>4 étudiants</b>. Nous nous chargions tous de développer une partie de l'application en fullstack.<br /><br/>Ce projet m'a permis d'en <b>apprendre plus</b> sur l'utilisation de <b>moteurs de template</b> comme <b>handlebars</b> en développement web, ainsi que l'utilisation de <b>l'ORM prisma</b>.",
+        "Liens" : ["https://github.com/adrianna-fzn/Vapeur"],
+        "NomLien" : ["GitHub"],
+        "Etapes": [
+            "Conception",
+            "Dans un premier temps, nous avons <b>imaginé ce à quoi l'application pourrait ressembler</b> ainsi que les différentes <b>fonctionnalités qu'elle pourrait proposer</b>.",
+            "Repartition des tâches",
+            "Ensuite nous avons créer des <b>issues</b> associés a des <b>milestones</b> afin de <b>s'attribuer des tâches</b> et d'avoir une <b>vision générale</b> de l'avancement du projet.",
+            "Développement",
+            "Une fois cette étape réalisée, nous avons pu commencer à <b>développer</b> chaque partie indépendante de l'application chacun de notre côté.<br />Durant le développement j'ai implémenté des tests automatiques avec <b>GitHub action</b> afin de tester le projet plus souvent."
+        ]
+    ,
+        "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
+
+        "Date" : 2025
     }
 }

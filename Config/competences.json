@@ -4,7 +4,7 @@
         "Illustration" : "script.png",
         "subTitle" : "La programmation c'est super :)",
         "miniTitre" : "Ce que je maîtrise",
-        "ImagesNames" : ["C++","TypeScript","PL/SQL","Git"],
+        "ImagesNames" : ["C++","C#","TypeScript","PL/SQL","Git","PHP","Python"],
         "miniTitre2" : "Outils de développement",
         "content2" : ["Visual Studio","Rider","WebStorm","PhpStorm", "GitHub/GitLab", "Git","Railway","Qt"]
     },
@@ -14,7 +14,7 @@
         "Illustration" : "web.png",
         "subTitle" : "Le développement web me permet de mettre en avant mes autres compétences et j'adore ça. Surtout le back-end",
         "miniTitre" : "Les langages que je maîtrise",
-        "ImagesNames" : ["HTML","CSS","TypeScript","PHP","MySQL","Handlebars"],
+        "ImagesNames" : ["HTML","SCSS","TypeScript","PHP","MySQL","MongoDB","Handlebars","Twig"],
         "miniTitre2" : "Frameworks",
         "content2" : ["Express", "Symfony", "React"]
     },

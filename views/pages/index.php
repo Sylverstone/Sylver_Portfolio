@@ -24,19 +24,19 @@
                 <nav id="HomeNav">
                     <ul>
                         <li>
-                            <a href="#APropos" onclick="scrollTOElement('#APropos');return false;">
+                            <a href="/#APropos" onclick="scrollTOElement('#APropos');return false;">
                                 <img src="Images/Icon/about.png" alt="Icon a propos" />
                                 <figcaption>A propos</figcaption> 
                             </a>                            
                         </li>
                         <li>
-                            <a href="#Projets" onclick="scrollTOElement('#Projets');return false;">
+                            <a href="/#Projets" onclick="scrollTOElement('#Projets');return false;">
                                 <img src="Images/Icon/book.png" alt="Icon a propos" />
                                 <figcaption>Mes projets</figcaption> 
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" onclick="scrollTOElement('#contact');return false;">
+                            <a href="/#contact" onclick="scrollTOElement('#contact');return false;">
                                 <img src="Images/Icon/phone.png" alt="Icon a propos" />
                                 <figcaption>Me contacter</figcaption> 
                             </a>
@@ -49,10 +49,10 @@
                             <p class="lightText" id="intro">Salut ! Je suis</p>
                             <p id="nom">Pelage Maxime<br/>Sylvio</p>
                             <p id="metier">Développeur de jeux vidéo</p>
-                            <a href="#contact" class="NiceButton" onclick="scrollTOElement('#contact'); return false;">Contactez-moi </a>
+                            <a href="/#contact" class="NiceButton" onclick="scrollTOElement('#contact'); return false;">Contactez-moi </a>
                         </aside>
                         <aside id="Image">
-                            <img id="PP" alt="Icon - header" src="Images/isagi.jpg">
+                            <img id="PP" alt="Icon - header" src="Images/Isagi.webp">
                         </aside>
 <!--                        <p>Développeur de jeux vidéo</p>-->
 <!--                        <p class="lightText text-centered">-->
@@ -74,19 +74,26 @@
                     <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
                         <img src="<?= BASE_URL ?>/Images/Icon/fiverr.svg" alt="Fiverr - Icon"/>
                     </a>
-                    <a target="_blank" title="Gamejolt">
+                    <a target="_blank" title="Gamejolt" href="https://gamejolt.com/@scylverstone/games">
                         <img src="<?= BASE_URL ?>/Images/Icon/Gamejolt.svg" alt="Gamejolt - Icon">
                     </a>
                 </aside>
         </header>
         <main>
             <section id="APropos"> 
-                <h1>Pelage Maxime Sylvio</h1>              
+                <h1>A propos de moi</h1>
+<!--                <p>-->
+<!--                    Je suis actuellement étudiant en <b>Informatique Graphique</b> au Puy-en-Velay (43000).<br><br>-->
+<!--                    Passionné par la <b>programmation</b> et les <b>jeux vidéo</b>, je souhaite me spécialiser dans le <b>développement de jeux vidéo</b>.<br><br>-->
+<!--                    En parallèle de mes études, je propose mes services sur <a href="https://www.fiverr.com/s/zWNELed" target="_blank"><b>Fiverr</b></a> pour développer des <a href="https://www.fiverr.com/s/yv6DblG" target="_blank"><b>bots Discord</b></a> et des <a href="https://www.fiverr.com/s/xXL37kD" target="_blank"><b>sites vitrines</b></a>, afin de me faire un complément de revenue.<br /><br />-->
+<!--                    <i>Je suis actuellement à la recherche d’un <b>stage</b> en <b>développement de jeux vidéo</b> ou toutes autres opportunitées intéréssantes pour <b>Avril 2026</b>.</i>-->
+<!--                </p>-->
                 <p>
-                    Je suis actuellement étudiant en <b>Informatique Graphique</b> au Puy-en-Velay (43000).<br><br>
-                    Passionné par la <b>programmation</b> et les <b>jeux vidéo</b>, je souhaite me spécialiser dans le <b>développement de jeux vidéo</b>.<br><br>
-                    En parallèle de mes études, je propose mes services sur <a href="https://www.fiverr.com/s/zWNELed" target="_blank"><b>Fiverr</b></a> pour développer des <a href="https://www.fiverr.com/s/yv6DblG" target="_blank"><b>bots Discord</b></a> et des <a href="https://www.fiverr.com/s/xXL37kD" target="_blank"><b>sites vitrines</b></a>, afin de me faire un complément de revenue.<br /><br />
-                    <i>Je suis actuellement à la recherche d’un <b>stage</b> en <b>développement de jeux vidéo</b> ou toutes autres opportunitées intéréssantes pour <b>Avril 2026</b>.</i>
+                    Je suis actuellement étudiant en <b>Informatique Graphique</b> au Puy-en-Velay et j'aspire à devenir <b>développeur de jeux vidéo</b>.<br/><br/>
+                    Généralement, je développe mes projets avec <b>Unreal Engine 5</b>, en combinant <b>Blueprint</b> et <b>C++</b>, mais j'ai également une expérience sur <b>Unity</b>, notamment en réalité virtuelle.<br/><br/>
+                    En plus du jeu vidéo, j'ai également une appétence pour le <b>domaine du web</b>, plus particulièrement <b>le back-end</b>.<br/>C'est pourquoi j'ai développé mon portfolio moi-même.<br/><br/>
+                    Si vous voulez en <b>savoir plus</b> sur les <b>jeux vidéo</b> que j'ai pu créer, rendez-vous sur mon <a target="_blank" href="https://gamejolt.com/@scylverstone/games"><b>Gamejolt</b></a>.<br/>
+                    Rendez-vous sur mon <a href="https://github.com/Sylverstone/" target="_blank"><b>GitHub</b></a> afin d'en savoir plus sur mes projets :)
                 </p>
             </section>
             <section id="Competences">

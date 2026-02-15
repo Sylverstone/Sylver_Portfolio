@@ -13,7 +13,7 @@
         <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
             <img src="<?= BASE_URL ?>/Images/Icon/fiverr.png" alt="Fiverr - Icon"/>
         </a>
-        <a target="_blank" title="Gamejolt">
+        <a target="_blank" title="Gamejolt" href="https://gamejolt.com/@scylverstone/games">
             <img src="<?= BASE_URL ?>/Images/Icon/Gamejolt.svg" alt="Gamejolt - Icon">
         </a>
     </section>

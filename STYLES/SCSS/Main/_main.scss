@@ -32,6 +32,7 @@ h1
     {
         color: $Color1;
         padding: 0 5%;
+        padding-bottom: 170px;
         font-size: clamp(.85em,3.5vw,1.5em);
 
         i 
@@ -75,7 +76,6 @@ h1
     #APropos
     {
         min-height: 0;
-        padding-bottom: 14rem;
     }
 
     #ProjetAnnonce

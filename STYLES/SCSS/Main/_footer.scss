@@ -20,6 +20,15 @@ footer
             cursor: pointer;
             width: $FooterIconSize;
             margin: 0 1em;
+
+            transition: filter 500ms ease, transform 500ms ease;
+
+
+            &:hover
+            {
+                transform: translateY(-2px);
+                @include littleShadow(1);
+            }
         }
     }
 

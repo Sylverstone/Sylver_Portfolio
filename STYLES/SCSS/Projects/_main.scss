@@ -2,9 +2,17 @@
 
 main 
 {
+    width: 90vw;
+    align-self: center;
+
+
+    section
+    {
+        @include littleShadow(.2);
+    }
+
     .Container
     {
-        display: none ;
         flex-direction: column;
     }
 
@@ -40,13 +48,20 @@ main
         height: 4rem;
     }
 
+    .CompContainer
+    {
+        align-self: center;
+    }
+
     #LienProjet
     {
         flex-direction: column;
+
         .Container
         {
             justify-content: center;
             align-items: flex-start;
+            padding: 1rem;
         }
     }
 
@@ -71,7 +86,7 @@ main
 
         .Container
         {
-            //display: flex;
+            display: flex;
             flex-direction: row;
             margin-top: 2em;
             width: 100%;

@@ -1,7 +1,7 @@
 @use '../shared/var' as *;
 @use 'sass:list';
 
-$radiusImg : 1em;
+$radiusImg : 1rem;
 
 
 #Projets 
@@ -39,9 +39,27 @@ $radiusImg : 1em;
         justify-content: space-around;
     }
 
-    #ProjetPhare 
+    #ProjetPhareContainer
     {
         margin-top: 0 !important;
+
+        .ImgProjet
+        {
+            img
+            {
+                width: clamp(10vw,40em,80vw);
+            }
+
+            p
+            {
+                font-size: clamp(.9em,3vw,1.5em);
+            }
+        }
+
+        .CompContainer
+        {
+            width: clamp(10vw,40em,80vw);
+        }
     }
 
     .Projet 
@@ -82,13 +100,12 @@ $radiusImg : 1em;
         {
 
 
-
             display: flex;
             flex-direction: column;
             align-self: center;
             position: relative;
-            width: fit-content;
-            transition: transform 500ms ease;
+            transition: transform 500ms ease, filter 500ms ease;
+
 
             @include littleShadow(.3);
             border: .05rem solid $borderCompetenceColor;
@@ -98,12 +115,13 @@ $radiusImg : 1em;
             &:hover
             {
                 transform: scale(1.05);
+                @include littleShadow(.5);
             }
 
             p 
             {
                 //Pour centrer le texte
-                font-size: clamp(.9em,1.35vw,1.5em);
+                font-size: clamp(.9em,1.6vw,1.5em);
                 font-style: italic;
                 display: grid;
                 place-content: center;
@@ -116,20 +134,26 @@ $radiusImg : 1em;
                 height: 25%;
                 text-align: center;
                 overflow: hidden;
-                border-bottom-left-radius: 1em;
-                border-bottom-right-radius: 1em;
+                border-bottom-left-radius: $radiusImg;
+                border-bottom-right-radius: $radiusImg;
 
+                font-weight: 100;
                 color: $Color1;
                 background-color: rgba($color: #000000, $alpha: .5);
             }
 
             img
             {
+                width: clamp(10vw,15em,80vw);
                 border-radius: $radiusImg;
                 align-self: center;
-                height: 100%;
-                width: 100%;
+                height: auto;
                 max-width: 80vw;
+            }
+
+            a
+            {
+                display: flex;
             }
         }
 
@@ -142,6 +166,11 @@ $radiusImg : 1em;
             text-align: center;
             padding: 0 2%;
             margin-top: 1rem;
+        }
+
+        .CompContainer
+        {
+            width: 15em;
         }
 
         .Date 
@@ -190,8 +219,8 @@ $radiusImg : 1em;
         }
     }
 
-    $cat: gamedev, cpp, UE5, SAé, Blueprint, git, MySQL, PLSQL, Python, Equipe,Solo,TS, freelance, UnrealEngine;
-    $color: red, blue, green, violet, brown, orange, pink, yellow, cyan, rgb(55, 90, 55), rgb(102, 32, 32),rgb(59, 122, 194),rgb(71, 27, 27), rgb(67,89,118);
+    $cat: gamedev, cpp, UE5, SAé, Blueprint, git, MySQL, PLSQL, Python, Equipe,Solo,TS, freelance, UnrealEngine, JS,Express,Prisma, Handlebars;
+    $color: red, blue, green, violet, brown, orange, pink, yellow, cyan, rgb(55, 90, 55), rgb(102, 32, 32),rgb(59, 122, 194),rgb(71, 27, 27), rgb(67,89,118),rgb(123,45,210), rgb(87,200,150), rgb(255,120,60), rgb(30,180,95) ;
 
     $length: list.length($cat);
 
@@ -235,19 +264,6 @@ $radiusImg : 1em;
             {
                 max-width: unset;
                 width: 100% !important;
-
-                img
-                {
-                    max-width: 60vw;
-                }
-
-                .ImgProjet
-                {
-                    p
-                    {
-                        font-size: 1.2em;
-                    }
-                }
             }
         }
     }

@@ -37,23 +37,26 @@ if((a instanceof HTMLAnchorElement))
     }
 }
 
+let is = {};
 const linkDiv = document.querySelectorAll(".Link");
 for(const l of linkDiv) {
     const img = l.querySelector("img");
+    const parentParent = img.parentElement.parentElement;
+    is[parentParent.id] = 0;
 
     img.onclick = (e) => {
+        is[parentParent.id] = (is[parentParent.id] + 1) % 2 ;
+
         const parentSection = l.parentElement;
         const content = parentSection.querySelector(".Container");
 
-        if (getComputedStyle(content).getPropertyValue("display") !== "none") {
+        if (is[parentParent.id] % 2 === 0) {
             if (!parentSection) {
                 console.log("not a section")
                 return;
             }
 
-            setTimeout(() => {
-                content.style.display = "none";
-            }, 400);
+
             parentSection.classList.remove("Appear");
             parentSection.style.height = "4rem";
         } else {
@@ -63,7 +66,6 @@ for(const l of linkDiv) {
                 return;
             }
 
-            content.style.display = "flex";
             parentSection.classList.add("Appear");
             const target = parentSection.offsetHeight + content.offsetHeight;
             parentSection.style.height = `${target}px`;
