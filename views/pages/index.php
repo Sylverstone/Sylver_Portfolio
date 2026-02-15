@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/#contact" onclick="scrollTOElement('#contact');return false;">
+                            <a href="/#contact" onclick="scrollTOElement('#contact'); return false;">
                                 <img src="Images/Icon/phone.png" alt="Icon a propos" />
                                 <figcaption>Me contacter</figcaption> 
                             </a>
@@ -49,7 +49,7 @@
                             <p class="lightText" id="intro">Salut ! Je suis</p>
                             <p id="nom">Pelage Maxime<br/>Sylvio</p>
                             <p id="metier">Développeur de jeux vidéo</p>
-                            <a href="/#contact" class="NiceButton" onclick="scrollTOElement('#contact'); return false;">Contactez-moi </a>
+                            <a href="/#contact" class="NiceButton" onclick="scrollTOElement('#contact'); showContactForm(); return false;">Contactez-moi </a>
                         </aside>
                         <aside id="Image">
                             <img id="PP" alt="Icon - header" src="Images/Isagi.webp">

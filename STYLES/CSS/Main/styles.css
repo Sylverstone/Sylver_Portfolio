@@ -178,6 +178,7 @@ header {
 #Projets #ProjetPhare .CTA, #Projets #ProjetPRO .CTA, #Projets #ProjetPerso .CTA {
   margin: 0;
   font-size: 0.6em;
+  font-weight: 200;
 }
 #Projets #ProjetPersoContainer, #Projets #ProjetProContainer, #Projets #ProjetPhareContainer {
   display: flex;
@@ -538,6 +539,7 @@ h1 {
   padding: 0 5%;
   padding-bottom: 170px;
   font-size: clamp(0.85em, 3.5vw, 1.5em);
+  font-weight: 200;
 }
 #APropos p i {
   font-size: 0.8em;

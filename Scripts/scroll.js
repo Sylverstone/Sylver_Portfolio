@@ -11,3 +11,11 @@ function scrollTOElement(id)
         behavior:"smooth"
     })
 }
+
+function showContactForm()
+{
+    setTimeout(() => {
+        const contactButton = document.querySelector("#contact");
+        contactButton.onclick();
+    },1000)
+}
