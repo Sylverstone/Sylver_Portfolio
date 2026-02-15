@@ -1,6 +1,6 @@
 <?php
 
-include "Controllers/ProjectsControllers.php";
+require_once __DIR__ . "/ProjectsControllers.php";
 //singleton. Il ne peut y avoir qu'un seul router
 class Router
 {
