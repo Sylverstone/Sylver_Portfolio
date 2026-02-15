@@ -27,17 +27,21 @@ class Router
             $this->set($route,$action);
         }
     }
- 
+
+    public static function InitTwig()
+    {
+        $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "/../views");
+        self::$twig = new \Twig\Environment($loader);
+    }
+
     public static function getRouter() : Router 
     {
         self::$ProjectControllers = new ProjectsControllers("./Config/project.json");
 
         if(!isset(self::$twig))
         {
-            $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "/../views");
-            self::$twig = new \Twig\Environment($loader);
+            self::InitTwig();
         }
-
 
         if(!isset(self::$router))
         {
@@ -53,6 +57,10 @@ class Router
      */
     public static function render(string $file, array $params = [], string $ext = ".html.twig")
     {
+        if(!isset(self::$twig))
+        {
+            self::InitTwig();
+        }
         echo self::$twig->render($file . $ext, $params);
     }
 
@@ -93,8 +101,12 @@ class Router
         }
         else
         {
-            http_response_code(404);
-            self::$ProjectControllers->nothing($url);
+//            http_response_code(404);
+//            self::$ProjectControllers->nothing($url);
+            self::render("error/error", [
+                "message" => "l'URL $url n'existe pas",
+                "title" => "On dirait que vous vous êtes perdu xD"
+            ]);
         }
 
     }

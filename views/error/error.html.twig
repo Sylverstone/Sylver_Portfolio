@@ -1,4 +1,4 @@
-{% extends "base.html.twig" %}
+﻿{% extends "base.html.twig" %}
 
 {% block styles %}
     <link rel="stylesheet" href="/STYLES/CSS/Main/full_page.css" />
@@ -6,7 +6,7 @@
 
 {% block body %}
     <main>
-        <h1>On dirait que vous êtes perdu xD</h1>
+        <h1>{{ title }}</h1>
         <p>{{ message }}</p>
         <a href="/" class="NiceButton">Retour à la page d'accueil :) </a>
     </main>
