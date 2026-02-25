@@ -177,7 +177,7 @@
     "LePotager" :
     {
         "categorie" : 2,
-        "Title" : "LePotager",
+        "Title" : "Le Potager",
         "Desc" : "Un jeu vidéo visant à sensibiliser les joueurs à l'écologie.",
         "Comp" : ["Blueprint","cpp","gamedev","Equipe","UnrealEngine", "git"],
         "Helps" : ["","","","","", ""],

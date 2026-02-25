@@ -160,6 +160,9 @@ header {
     margin-top: 5rem;
   }
 }
+#Projets .Date {
+  font-weight: 600;
+}
 #Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
   background-color: #052A59;
   color: white;
@@ -186,19 +189,53 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+#Projets .MainProjectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #Projets #ProjetPhareContainer {
   margin-top: 0 !important;
 }
+#Projets #ProjetPhareContainer .Projet {
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 2rem !important;
+  margin-left: 2rem;
+}
+#Projets #ProjetPhareContainer .ImgProjet {
+  display: flex;
+  flex-direction: row;
+  border: none;
+}
 #Projets #ProjetPhareContainer .ImgProjet img {
-  width: clamp(10vw, 40em, 80vw);
+  width: clamp(10vw, 35em, 80vw);
 }
 #Projets #ProjetPhareContainer .ImgProjet p {
+  position: initial;
   font-size: clamp(0.9em, 3vw, 1.5em);
+  background-color: unset;
 }
 #Projets #ProjetPhareContainer .CompContainer {
   width: clamp(10vw, 40em, 80vw);
 }
+#Projets #ProjetPhareContainer h2 {
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.8));
+  color: #052A59;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 2em;
+}
 #Projets .Projet {
+  /*
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-right: 2rem !important;
+      margin-left: 2rem;
+  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,7 +329,6 @@ header {
   max-width: 90vw;
 }
 .CompContainer [class^=Comp-] {
-  cursor: pointer;
   font-size: clamp(0.75em, 2vw, 0.95rem);
   padding: 0.2rem 0.3rem;
   border-radius: 0.5em;
@@ -871,6 +907,14 @@ h1, h2, h3, h4 {
 
 .text-centered {
   text-align: center;
+}
+
+li::marker {
+  content: "- ";
+}
+
+.cliquable {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */

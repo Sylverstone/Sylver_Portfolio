@@ -6,6 +6,11 @@ $radiusImg : 1rem;
 
 #Projets 
 {
+    .Date
+    {
+        font-weight: 600;
+    }
+
     #ProjetPhare, #ProjetPRO, #ProjetPerso
     {
         background-color: $Color2;
@@ -40,20 +45,44 @@ $radiusImg : 1rem;
         justify-content: space-around;
     }
 
+    .MainProjectContainer
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     #ProjetPhareContainer
     {
         margin-top: 0 !important;
 
+        .Projet
+        {
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-right: 2rem !important;
+            margin-left: 2rem;
+        }
+
         .ImgProjet
         {
+            display: flex;
+            flex-direction: row;
+            border: none;
+
             img
             {
-                width: clamp(10vw,40em,80vw);
+                width: clamp(10vw,35em,80vw);
             }
 
             p
             {
+                position: initial;
                 font-size: clamp(.9em,3vw,1.5em);
+                background-color: unset;
+
+
             }
         }
 
@@ -61,18 +90,35 @@ $radiusImg : 1rem;
         {
             width: clamp(10vw,40em,80vw);
         }
+
+        h2
+        {
+            @include littleShadow(.8);
+            color: $Color2  ;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            margin-bottom: 0;
+            font-size: 2em;
+        }
     }
 
     .Projet 
     {
+        /*
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-right: 2rem !important;
+            margin-left: 2rem;
+        */
+
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 5%;
         margin-bottom: 5%;
         transition: transform 500ms ease;
-
-
 
         & > ul 
         {
@@ -195,8 +241,6 @@ $radiusImg : 1rem;
 
     [class^="Comp-"]
     {
-
-        cursor: pointer;
         font-size: clamp(.75em,2vw,.95rem);
         padding: .2rem .3rem;
         border-radius: .5em;

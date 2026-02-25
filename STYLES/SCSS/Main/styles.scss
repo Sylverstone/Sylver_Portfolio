@@ -80,6 +80,17 @@ h1,h2,h3,h4
     text-align: center;
 }
 
+li
+{
+    &::marker
+    {
+        content: "- ";
+    }
+}
 
 
 
+.cliquable
+{
+    cursor: pointer;
+}
