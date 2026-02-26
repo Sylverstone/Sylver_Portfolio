@@ -7,6 +7,10 @@ header {
   min-width: 100vw;
 }
 
+nav li::marker {
+  all: unset;
+}
+
 #HomeNav {
   z-index: 2;
   width: 100%;
