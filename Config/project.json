@@ -1,9 +1,11 @@
 
 { 
-    "SylverService" : {
+    "SylverService" :
+    {
         "categorie" : 1,
         "Title" : "SylverService",
-        "Desc" : "Une application permettant au élève de s'entraider en leur permettant de poster des documents/tuto/etc.. en ligne.",
+        "role" : "Développeur python",
+        "Desc" : "Une application permettant aux élèves de s'entraider en leur permettant de poster des documents/tuto/etc.. en ligne.",
         "Comp" : ["Equipe","Python","PLSQL","MySQL"],
         "Helps" : ["","","",""],
         "Contributions" : [
@@ -18,13 +20,17 @@
         "NomLien" : ["GitHub"],
         "Etapes" : ["Base de donnée","Dans un premier temps, nous avons établi la <b>structure de la base de donnée</b> servant à stocker les informations des <b>utilisateurs</b> et des tutoriels dans l'application.","Interface utilisateur","Ensuite nous avons mit en place <b>une interface utilisateur minimale</b> afin de pouvoir <b>tester les différentes fonctionnalités</b> au fur et à mesure de leur développement.","Développement","<b>L'application</b> a été développé <b>page par page</b> : nous avons commencé par le <b>menu principal</b>, celui qui permet d'acceder a toutes les autres pages, pour ensuite développer <b>la page de recherche</b> et celle du <b>compte utilisateur</b>."],
         "Legendes" : ["Compte utilisateur","Menu","Page de recherche","Page création de compte","Page connexion au compte","Logo de l'application"],
-        "Date" : 2023
+
+        "Date" : "Juillet 2022 - Mars 2023 : 9 mois",
+        "Annee" : 2023
     },
 
-    "TheCasinoRP" : {
+    "TheCasinoRP" :
+    {
         "categorie" : 1,
         "Title" : "The casino",
-        "Desc" : "C'est un serveur RP sur discord pour lequel j'ai développé une dizaine de bots",
+        "role" : "Développeur TypeScript",
+        "Desc" : "C’est un serveur RP sur Discord pour lequel j’ai développé une dizaine de bots. Ceux-ci étaient chargés d’animer le serveur en proposant des activités et des services.",
         "Comp" : ["freelance","TS","PLSQL","MySQL"],
         "Helps" : ["C'est un projet fait pour un client","","","",""],
         "Contributions" : [
@@ -60,12 +66,15 @@
             "duel de dés avec le bot de dés",
             "duél de dés avec un autre joueur",
             "Aperçu de l'hébergement"],
-        "Date" : 2025
+        "Date" : "Juillet 2025 : 3 semaines",
+        "Annee" : 2025
     },
 
-    "LesRouagesDuDestin" : {
+    "LesRouagesDuDestin" :
+    {
         "categorie" : 1,
         "Title" : "Les rouages du destin",
+        "role" : "Développeur gameplay",
         "Desc" : "Mon premier jeu vidéo fait sur Unreal engine.<br/>Un détective doit résoudre une enquête du passé.",
         "Comp" : ["Equipe","gamedev","UE5","Blueprint","git","UnrealEngine"],
         "Helps" : ["","","","","",""],
@@ -103,12 +112,14 @@
 
         "Legendes" : ["Menu du jeu","Aperçu in-game - Maison d'enquête","Aperçu in-game - Maison d'enquête","Aperçu in-game - Hanger","Aperçu quête  fusible","Aperçu in-game","Tableau explicatif des quêtes","Quête des fusibles","Quête moteurs","Egnigme de fusibles","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Vertolaye", "Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye"],
 
-        "Date" : 2025
+        "Date" : "Mars 2025 - Juin 2025 : 4 mois",
+        "Annee" : 2025.1
     },
 
     "pgmToAA" : 
     {
         "categorie" : 1,
+        "role" : "Développeur C++",
         "Title" : "pgmToAA",
         "Desc" : "Une application console qui transforme une image en AsciiArt selon divers palette personnalisable.",
         "Comp" : ["Equipe","cpp","SAé"],
@@ -142,13 +153,15 @@
         ],
 
         "Legendes" : ["Exemple d'AsciiArt","Exemple d'AsciiArt","Exemple d'AsciiArt","Exemple d'AsciiArt"],
-        "Date" : 2024
+        "Date" : "2024 : 2 jours",
+        "Annee" : 2024
     },
 
     "MeteoApp" :
     {
         "categorie" : 1,
         "Title" : "Application météo",
+        "role" : "Développeur C++",
         "Desc" : "Une application représentant le réchauffement climatique d'une station de ski de manière claire et précise.",
         "Comp" : ["Equipe","cpp","SAé"],
         "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement"],
@@ -171,14 +184,16 @@
         ,
         "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
 
-        "Date" : 2025
+        "Date" : "2025 : 2 jours",
+        "Annee" : 2025
     },
 
     "LePotager" :
     {
         "categorie" : 2,
         "Title" : "Le Potager",
-        "Desc" : "Un jeu vidéo visant à sensibiliser les joueurs à l'écologie.",
+        "Desc" : "Un jeu vidéo visant à sensibiliser les joueurs à l’écologie. Le joueur doit gérer son restaurant, ses services et son stock d’aliments, en essayant d’utiliser au maximum son potager.",
+        "role" : "Développeur gameplay",
         "Comp" : ["Blueprint","cpp","gamedev","Equipe","UnrealEngine", "git"],
         "Helps" : ["","","","","", ""],
         "Contributions" : [
@@ -201,17 +216,18 @@
         ]
     ,
         "Legendes" : ["","",""],
-
-        "Date" : 2026
+        "Date" : "Janvier 2026 : 3 semaines",
+        "Annee" : 2026
     },
 
     "Vapeur" :
     {
         "categorie" : 1,
         "Title" : "Vapeur",
-        "Desc" : "C'est une application de gestion d'une bibliothèque de jeux vidéo. Un projet nous permettant d'exercer les bases CRUD",
+        "Desc" : "C'est une application de gestion d'une bibliothèque de jeux vidéo. Un projet nous permettant d'exercer les bases CRUD.",
         "Comp" : ["Equipe","JS","Express","Prisma","Handlebars"],
         "Helps" : ["","", "","","",""],
+        "role": "Développeur fullstack",
         "Contributions" : [
             "Ajout d'un jeu vidéo",
             "Modification d'un jeu vidéo",
@@ -232,7 +248,7 @@
         ]
     ,
         "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
-
-        "Date" : 2025
+        "Date" : "Décembre 2025 : 2 semaines",
+        "Annee" : 2025
     }
 }

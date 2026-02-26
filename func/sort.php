@@ -22,7 +22,7 @@
                 }
                 else if($min["categorie"] == $val["categorie"])
                 {
-                    if($min["Date"] < $val["Date"])
+                    if($min["Annee"] < $val["Annee"])
                     {
                         $min = $val;
                         $minKey = $key;

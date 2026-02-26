@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   min-height: 100vh;
   display: flex;
@@ -161,7 +160,39 @@ header {
   }
 }
 #Projets .Date {
-  font-weight: 600;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+#Projets .role {
+  position: relative;
+  font-size: 0.9em;
+  margin-top: 0.2rem;
+  font-weight: 200;
+}
+#Projets .role::before {
+  content: " ";
+  position: absolute;
+  bottom: -0.1rem;
+  width: 100%;
+  height: 1px;
+  padding: 0 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 0.001rem solid rgba(0, 0, 0, 0.3);
+}
+#Projets .bottom {
+  margin-top: 1rem;
+  font-weight: 200 !important;
+  font-style: italic;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#Projets .bottom a {
+  color: black;
+  margin-right: 1rem;
 }
 #Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
   background-color: #052A59;
@@ -189,6 +220,12 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+#Projets #ProjetPersoContainer .Projet, #Projets #ProjetProContainer .Projet, #Projets #ProjetPhareContainer .Projet {
+  margin-top: 5rem;
+}
+#Projets #ProjetPersoContainer .Projet:nth-child(1), #Projets #ProjetProContainer .Projet:nth-child(1), #Projets #ProjetPhareContainer .Projet:nth-child(1) {
+  margin-top: 1rem;
+}
 #Projets .MainProjectContainer {
   display: flex;
   flex-direction: column;
@@ -203,6 +240,9 @@ header {
   flex-wrap: wrap;
   margin-right: 2rem !important;
   margin-left: 2rem;
+}
+#Projets #ProjetPhareContainer .reversedRow {
+  flex-direction: row !important;
 }
 #Projets #ProjetPhareContainer .ImgProjet {
   display: flex;
@@ -220,7 +260,7 @@ header {
 #Projets #ProjetPhareContainer .CompContainer {
   width: clamp(10vw, 40em, 80vw);
 }
-#Projets #ProjetPhareContainer h2 {
+#Projets h2 {
   filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.8));
   color: #052A59;
   text-transform: uppercase;
@@ -229,18 +269,13 @@ header {
   font-size: 2em;
 }
 #Projets .Projet {
-  /*
-      justify-content: space-around;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-right: 2rem !important;
-      margin-left: 2rem;
-  */
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 5% 2rem;
   transition: transform 500ms ease;
 }
 #Projets .Projet > ul {
@@ -253,6 +288,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
+  width: 100%;
 }
 #Projets .Projet .contribution > p {
   font-family: "Ubuntu", sans-serif;
@@ -295,7 +331,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
 }
 #Projets .Projet .ImgProjet img {
-  width: clamp(10vw, 15em, 80vw);
+  width: clamp(10vw, 25em, 80vw);
   border-radius: 1rem;
   align-self: center;
   height: auto;
@@ -305,19 +341,16 @@ header {
   display: flex;
 }
 #Projets .Projet .DescriptionProjet, #Projets .Projet .Date {
+  font-weight: 100;
   font-size: clamp(0.8rem, 4vw, 1rem);
   font-style: italic;
   text-align: center;
   padding: 0 2%;
   margin-top: 1rem;
 }
-#Projets .Projet .CompContainer {
-  width: 15em;
-}
 #Projets .Projet .Date {
   align-self: flex-end;
   padding-right: 5%;
-  font-weight: 500;
 }
 
 .CompContainer {
@@ -325,16 +358,33 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 1.5rem;
+  margin-top: 0.2rem;
   max-width: 90vw;
 }
 .CompContainer [class^=Comp-] {
   font-size: clamp(0.75em, 2vw, 0.95rem);
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.5em;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2em;
   display: flex;
   justify-content: center;
   margin: 1rem 0.2rem;
+  color: white;
+  position: relative;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.CompContainer [class^=Comp-]::before {
+  content: " ";
+  background-color: #052A59;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 0.4rem;
+  filter: blur(1px);
 }
 .CompContainer [class^=Comp-] .tips {
   visibility: hidden;
@@ -348,62 +398,14 @@ header {
   border: 2px solid #052A59;
   border-radius: 1em;
 }
-.CompContainer .Comp-gamedev {
-  background-color: rgba(255, 0, 0, 0.5);
-}
-.CompContainer .Comp-cpp {
-  background-color: rgba(0, 0, 255, 0.5);
-}
-.CompContainer .Comp-UE5 {
-  background-color: rgba(0, 128, 0, 0.5);
-}
-.CompContainer .Comp-SAé {
-  background-color: rgba(238, 130, 238, 0.5);
-}
-.CompContainer .Comp-Blueprint {
-  background-color: rgba(165, 42, 42, 0.5);
-}
-.CompContainer .Comp-git {
-  background-color: rgba(255, 165, 0, 0.5);
-}
-.CompContainer .Comp-MySQL {
-  background-color: rgba(255, 192, 203, 0.5);
-}
-.CompContainer .Comp-PLSQL {
-  background-color: rgba(255, 255, 0, 0.5);
-}
-.CompContainer .Comp-Python {
-  background-color: rgba(0, 255, 255, 0.5);
-}
-.CompContainer .Comp-Equipe {
-  background-color: rgba(55, 90, 55, 0.5);
-}
-.CompContainer .Comp-Solo {
-  background-color: rgba(102, 32, 32, 0.5);
-}
-.CompContainer .Comp-TS {
-  background-color: rgba(59, 122, 194, 0.5);
-}
-.CompContainer .Comp-freelance {
-  background-color: rgba(71, 27, 27, 0.5);
-}
-.CompContainer .Comp-UnrealEngine {
-  background-color: rgba(67, 89, 118, 0.5);
-}
-.CompContainer .Comp-JS {
-  background-color: rgba(123, 45, 210, 0.5);
-}
-.CompContainer .Comp-Express {
-  background-color: rgba(87, 200, 150, 0.5);
-}
-.CompContainer .Comp-Prisma {
-  background-color: rgba(255, 120, 60, 0.5);
-}
-.CompContainer .Comp-Handlebars {
-  background-color: rgba(30, 180, 95, 0.5);
-}
 
 @media (min-width: 750px) {
+  #Projets .DescriptionProjet {
+    max-width: 40vw !important;
+  }
+  #Projets .contribution {
+    width: unset;
+  }
   #Projets #ProjetPhare, #Projets #ProjetPRO, #Projets #ProjetPerso {
     padding: 2em;
   }
@@ -413,9 +415,6 @@ header {
   #Projets #ProjetPhare .CTA, #Projets #ProjetPRO .CTA, #Projets #ProjetPerso .CTA {
     margin: 0;
     font-size: 0.5em;
-  }
-  #Projets .Projet {
-    max-width: 30vw;
   }
   #Projets #ProjetPhareContainer {
     width: 100%;
@@ -911,6 +910,10 @@ h1, h2, h3, h4 {
 
 li::marker {
   content: "- ";
+}
+
+.reversedRow {
+  flex-direction: row-reverse !important;
 }
 
 .cliquable {

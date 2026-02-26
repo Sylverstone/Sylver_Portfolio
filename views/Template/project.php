@@ -12,19 +12,18 @@
         <?php $lastCat = 2; $phareProjectShowed = true; ?>
     <?php endif ?>
 
-    <div class="Projet">                        
+    <div class="Projet <?= $i % 2 == 0 ? "reversedRow" : "" ?>">
         <aside class="ImgProjet">
             <a href="Projets/<?=$keys[$i]?>" alt="Lien vers le projet : <?=$keys[$i]?> ">
                 <img class="Illustration" loading="lazy" src="Images/Projet/<?=$keys[$i]?>.webp" alt="$<?=$keys[$i]?> - Image" project="<?=$keys[$i]?>" />
             </a>
-            <?php if($projet["categorie"] !== 2) : ?>
-                <p><?=$projet['Title']?></p>
-            <?php endif ?>
+<!--            --><?php //if($projet["categorie"] !== 2) : ?>
+<!--                <p>--><?php //=$projet['Title']?><!--</p>-->
+<!--            --><?php //endif ?>
         </aside>
         <section class="MainProjectContainer">
-            <?php if($projet["categorie"] === 2) : ?>
-                <h2 class="text-centered"><?=$projet['Title']?></h2>
-            <?php endif ?>
+            <h2 class="text-centered"><?=$projet['Title']?></h2>
+            <p class="role"><?=$projet["role"]?></p>
             <div class="CompContainer">
                 <?php foreach($projet["Comp"] as $key => $comp) : ?>
                     <?php if($projet["Helps"][$key] != "") : ?>
@@ -50,8 +49,12 @@
                         <li><?= $contribution ?></li>
                     <?php endforeach?>
                 </ul>
-                <span class="Date"><?= $projet["Date"]?></span>
+
             </article>
+            <aside class="bottom">
+                <a href="<?=$projet["Liens"][0]?>"><?=$projet["NomLien"][0]?></a>
+                <span class="Date"><?= $projet["Date"]?></span>
+            </aside>
         </section>
     </div>
 
