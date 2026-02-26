@@ -206,10 +206,11 @@
         "APropos" : "LePotager est un jeu vidéo développé avec Unreal engine 5.5 en dans une équipe de <b>4 personnes</b>.<br />Le cahier des charges imposait de créer un jeu eco-responsable,eco-conçu ainsi qu'accessible. Nous avons donc décidé de développer le jeu <i>le potager</i> afin de sensibiliser les joueurs à l'écologie. <br />Dans le jeu, le joueur doit <b>gérer son restaurant</b> en effectuant ses services du midi et du soir, en gérant son stock d'aliment, et surtout, développer son potager afin de devenir autosuffisant proposer des plats plus saints dans son restaurant.<br />",
         "Liens" :
             [
-                "https://gitlab-lepuy.iut.uca.fr/sypelagema/LePotager/-/tree/main/Content",
-                "https://gamejolt.com/games/LePotager/1046371"
+                "https://gamejolt.com/games/LePotager/1046371",
+                "https://gitlab-lepuy.iut.uca.fr/sypelagema/LePotager/-/tree/main/Content"
             ],
-        "NomLien" : ["GitLab","Gamejolt"],
+
+        "NomLien" : ["Gamejolt","GitLab"],
         "Etapes": [
             "Conception",
             "La description des étapes est en cours..."
