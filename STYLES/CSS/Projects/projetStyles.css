@@ -7,7 +7,7 @@ header {
 }
 header .Illustration {
   align-self: center;
-  width: clamp(2em, 70vw, 25em);
+  width: clamp(2em, 70vw, 40em);
 }
 header nav {
   position: relative;
@@ -72,8 +72,11 @@ main .Container {
   flex-direction: column;
 }
 main .Link {
+  height: 4rem;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   align-self: flex-start !important;
   position: sticky;
@@ -81,6 +84,13 @@ main .Link {
 main .Link p {
   margin: 1rem 3rem !important;
   min-width: 5em;
+}
+main .Link img {
+  margin-right: 1rem;
+}
+main section[id] {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
 }
 main section:first-of-type {
   margin-top: 0 !important;
@@ -121,6 +131,7 @@ main #AperçuProjet .Container img {
   border-radius: 0.5em;
 }
 main #AperçuProjet .Container {
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   margin-top: 2em;
@@ -138,13 +149,17 @@ main #AperçuProjet figcaption {
   margin-bottom: 2em;
   font-style: italic;
 }
+main section p {
+  font-weight: 100;
+}
 main #section_Apropos {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 main #section_Apropos p {
-  font-size: clamp(1em, 1.8vw, 1.5em);
+  font-size: clamp(1em, 1.5vw, 1.5em);
+  line-height: 1.2em;
   margin: 1rem;
 }
 main #section_Apropos p a {
@@ -188,7 +203,6 @@ main #EtapeProjet {
   main {
     width: 80vw;
     align-self: center;
-    background-color: rgba(0, 0, 0, 0.1);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.8rem;
@@ -197,7 +211,7 @@ main #EtapeProjet {
     margin-right: 1.5rem;
   }
   #section_Apropos p.content {
-    margin: 1rem 5rem !important;
+    margin: 2rem 5rem !important;
   }
 }
 

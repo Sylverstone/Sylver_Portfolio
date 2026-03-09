@@ -37,20 +37,19 @@ if((a instanceof HTMLAnchorElement))
     }
 }
 
-let is = {};
+let OpenDivObject = {};
 const linkDiv = document.querySelectorAll(".Link");
-for(const l of linkDiv) {
-    const img = l.querySelector("img");
-    const parentParent = img.parentElement.parentElement;
-    is[parentParent.id] = 0;
+for(const div of linkDiv) {
+    const parentElement = div.parentElement;
+    OpenDivObject[parentElement.id] = 0;
 
-    img.onclick = (e) => {
-        is[parentParent.id] = (is[parentParent.id] + 1) % 2 ;
+    div.onclick = (e) => {
+        OpenDivObject[parentElement.id] = (OpenDivObject[parentElement.id] + 1) % 2 ;
 
-        const parentSection = l.parentElement;
+        const parentSection = div.parentElement;
         const content = parentSection.querySelector(".Container");
 
-        if (is[parentParent.id] % 2 === 0) {
+        if (OpenDivObject[parentElement.id] % 2 === 0) {
             if (!parentSection) {
                 console.log("not a section")
                 return;
