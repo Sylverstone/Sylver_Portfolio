@@ -8,6 +8,7 @@ header
     align-items: center;
     justify-content: center;
     min-width: 100vw;
+    margin-top: calc($footerHeight - 2.5rem);
 }
 
 nav
@@ -394,6 +395,11 @@ $slideLeftPourcent: -120%;
 @media (min-width: $computerSize) {
 
 
+    header
+    {
+        margin-top: 0;
+    }
+
     #Info
     {
         text-align: start !important;
@@ -415,8 +421,9 @@ $slideLeftPourcent: -120%;
 
     #DesktopNav
     {
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #MobileNav

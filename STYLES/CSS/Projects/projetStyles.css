@@ -65,7 +65,7 @@ main .Container {
   flex-direction: column;
 }
 main .Link {
-  height: 4rem;
+  min-height: 4rem;
   display: flex;
   flex-direction: row;
   width: 100%;

@@ -5,6 +5,7 @@ header {
   align-items: center;
   justify-content: center;
   min-width: 100vw;
+  margin-top: 1.5rem;
 }
 
 nav li::marker {
@@ -268,6 +269,9 @@ nav li::marker {
 }
 
 @media (min-width: 750px) {
+  header {
+    margin-top: 0;
+  }
   #Info {
     text-align: start !important;
   }
@@ -282,8 +286,9 @@ nav li::marker {
     margin-top: 5rem;
   }
   #DesktopNav {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #MobileNav {
     display: none;
@@ -992,7 +997,6 @@ body, html {
 body {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3.9rem;
   font-family: "Mulish", sans-serif;
 }
 
