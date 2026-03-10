@@ -3,6 +3,7 @@
 @use 'footer';
 @use '../shared/var' as *;
 @use '../shared/animation';
+@use "cvSelector";
 
 body,html
 {
@@ -114,4 +115,24 @@ li
     position: absolute;
     width: 100vw;
     height: 100vh;
+}
+
+.full-space
+{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.up
+{
+    text-transform: uppercase;
+}
+
+.none-appareance
+{
+    appearance: none;
 }

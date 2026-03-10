@@ -20,10 +20,11 @@
         <?php include "./views/Template/head.php" ?>
     </head>
     <body>
+        <?php
+        Router::render("Template/nav");
+        ?>
         <header>
-               <?php
-                    Router::render("Template/nav");
-               ?>
+
                 <section id="SectionPP">
                     <div id="EnTete">
                         <aside id="Info">
@@ -60,6 +61,9 @@
                     </a>
                 </aside>
         </header>
+        <?php
+            Router::render("Template/cvSelector");
+        ?>
         <main>
             <section id="APropos"> 
                 <h1>A propos de moi</h1>

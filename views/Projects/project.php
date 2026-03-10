@@ -14,18 +14,20 @@
         <link href="<?= BASE_URL ?>/STYLES/CSS/Projects/projetStyles.css" rel="stylesheet" />
     </head>
     <body>
+        <?php
+         Router::render("Template/nav");
+        ?>
         <header>
-            <?php
-                Router::render("Template/nav");
-            ?>
+
             <img class="Illustration" src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" alt="Illustration - <?=$projet["Title"]?>"/>
             <aside id="info">
                 <h1 id="titre"><?=$projet["Title"]?></h1>
                 <p id="date"><?=$projet["Date"]?></p>
             </aside>
         </header>
-
-
+        <?php
+        Router::render("Template/cvSelector");
+        ?>
         <main>
             <section id="section_Apropos" class="startConditionProjet">
                 <div class="Link">
