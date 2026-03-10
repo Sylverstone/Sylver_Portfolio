@@ -11,23 +11,27 @@ nav li::marker {
   all: unset;
 }
 
-#HomeNav {
+#DesktopNav {
+  display: none;
+  bottom: 0;
+  opacity: 0.95;
   z-index: 2;
   width: 100%;
   height: 4rem;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   background-color: #052A59;
 }
-#HomeNav ul {
+#DesktopNav ul {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
   padding: 0;
 }
-#HomeNav ul li a {
+#DesktopNav ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,14 +39,142 @@ nav li::marker {
   text-decoration: none;
   color: white;
 }
-#HomeNav ul li a img {
+#DesktopNav ul li a img {
   width: 25px;
   height: 25px;
 }
-#HomeNav figcaption {
+#DesktopNav figcaption {
   font-size: 0.9em;
 }
 
+#MobileNav {
+  z-index: 3;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#MobileNav #full {
+  display: none;
+}
+#MobileNav [id^=bar-] {
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #052A59;
+  border-radius: 1rem;
+  filter: brightness(1.1);
+  transition: all 500ms ease;
+  box-shadow: 0 0 0.1em white;
+}
+#MobileNav #bar-bottom {
+  top: 100%;
+  transform: translateY(-100%);
+}
+#MobileNav #bar-top {
+  top: 0;
+}
+#MobileNav #toggle-nav-checkbox {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  margin: 0;
+  position: absolute;
+  z-index: 4;
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+#MobileNav #toggle-nav-checkbox:unchecked ~ #full {
+  display: none;
+}
+#MobileNav #toggle-nav-checkbox:checked ~ #full {
+  display: block;
+}
+#MobileNav #toggle-nav-checkbox:checked ~ p {
+  color: white;
+}
+#MobileNav #toggle-nav-checkbox:checked ~ #toggle-button * {
+  background-color: white;
+}
+#MobileNav #toggle-nav-checkbox:checked ~ #toggle-button #bar-top {
+  top: 50%;
+  transform: rotate(45deg);
+}
+#MobileNav #toggle-nav-checkbox:checked ~ #toggle-button #bar-middle {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+#MobileNav #toggle-nav-checkbox:checked ~ #toggle-button #bar-bottom {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+#MobileNav #toggle-nav-checkbox:checked ~ #nav-container {
+  transform: translateX(0);
+}
+#MobileNav #toggle-nav-checkbox:unchecked ~ #nav-container {
+  transform: translate(-120%);
+}
+#MobileNav #toggle-button {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+#MobileNav #toggle-button:before {
+  filter: drop-shadow(0px 0px 50px black);
+  border-radius: 2rem;
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#MobileNav #nav-container {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 50px black);
+  opacity: 1 !important;
+  padding-top: 4rem;
+  transform: translateX(-120%);
+  transition: transform 1s;
+  background-color: #052a59;
+  width: clamp(1em, 20em, 80vw);
+  height: calc(100vh - 4rem);
+}
+#MobileNav #nav-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  list-style-type: none;
+  height: 100%;
+  padding-left: 0;
+}
+#MobileNav #nav-container ul li {
+  padding: 1rem 2rem;
+}
+#MobileNav #nav-container ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+@keyframes SlideFromLeft {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 #SectionPP {
   width: 100%;
   display: flex;
@@ -149,15 +281,12 @@ nav li::marker {
     margin-left: 0;
     margin-top: 5rem;
   }
-  #HomeNav {
-    opacity: 0.95;
-    z-index: 2;
-    width: 100%;
-    height: 4rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #052A59;
+  #DesktopNav {
+    display: grid;
+    place-items: center;
+  }
+  #MobileNav {
+    display: none;
   }
   #sectionPP {
     margin-top: 5rem;
@@ -856,6 +985,10 @@ body, html {
   overflow-x: hidden;
 }
 
+[mobile] {
+  display: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -922,6 +1055,19 @@ li::marker {
 
 .cliquable {
   cursor: pointer;
+}
+
+.tab {
+  margin-left: 5rem;
+}
+
+#full {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

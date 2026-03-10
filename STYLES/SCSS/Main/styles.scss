@@ -12,6 +12,10 @@ body,html
     
 }
 
+[mobile]
+{
+    display: none;
+}
 
 body 
 {
@@ -96,4 +100,19 @@ li
 .cliquable
 {
     cursor: pointer;
+}
+
+.tab
+{
+    margin-left: 5rem;
+}
+
+#full
+{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 }

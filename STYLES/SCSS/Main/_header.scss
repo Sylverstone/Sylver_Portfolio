@@ -17,27 +17,31 @@ nav
         all: unset;
     }
 }
-#HomeNav
+#DesktopNav
 {
+    display: none;
+    bottom: 0;
+    opacity: .95;
     z-index: 2;
     width: 100%;
     height: $footerHeight;
     position:fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     background-color: $Color2;
 
-    ul 
+    ul
     {
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         list-style-type: none;
         padding: 0;
-        
-        li 
+
+        li
         {
-            a 
+            a
             {
                 display: flex;
                 flex-direction: column;
@@ -46,13 +50,13 @@ nav
                 text-decoration: none;
                 color: $Color1;
 
-                img 
+                img
                 {
                     width: 25px;
                     height: 25px;
                 }
             }
-            
+
 
         }
     }
@@ -60,8 +64,189 @@ nav
     figcaption
     {
         font-size: .9em;
-    }  
+    }
 }
+
+@mixin setupPositionButtonNav
+{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem
+}
+$slideLeftPourcent: -120%;
+
+#MobileNav {
+    $button_with: 1.6rem;
+
+    //opacity: .95;
+    z-index: 3;
+    width: 100%;
+    height: $footerHeight;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //background-color: rgba($Color2,.95);
+
+    #full
+    {
+        display: none;
+    }
+
+    [id^="bar-"]
+    {
+        position: absolute;
+        width: 100%;
+        height: .2rem;
+        background-color: $Color2;
+        border-radius: 1rem;
+
+        filter: brightness(1.1);
+        transition: all 500ms ease;
+
+        box-shadow: 0 0 .1em white;
+    }
+
+    #bar-bottom
+    {
+        top: 100%;
+        transform: translateY(-100%);
+    }
+
+    #bar-top
+    {
+        top: 0;
+    }
+
+    #toggle-nav-checkbox {
+
+        @include setupPositionButtonNav();
+        margin: 0;
+        position: absolute;
+        z-index: 4;
+        appearance: none;
+
+        width: $button_with;
+        height: $button_with;
+
+        &:unchecked ~ #full
+        {
+            display: none;
+        }
+
+        &:checked ~ #full
+        {
+            display: block;
+        }
+
+        &:checked ~ p {
+            color: white;
+        }
+
+        &:checked ~ #toggle-button *
+        {
+            background-color: white;
+        }
+
+        &:checked ~ #toggle-button #bar-top
+        {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+        &:checked ~ #toggle-button #bar-middle
+        {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        &:checked ~ #toggle-button #bar-bottom
+        {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+
+        &:checked ~ #nav-container {
+            transform: translateX(0);
+        }
+
+        &:unchecked ~ #nav-container {
+            transform: translate($slideLeftPourcent);
+        }
+    }
+
+    #toggle-button {
+        @include setupPositionButtonNav();
+        z-index: 3;
+        display: grid;
+        place-items: center;
+        position: absolute;
+
+        width: $button_with;
+        height: $button_with;
+
+        &:before
+        {
+            @include littleShadow(1);
+            border-radius: 2rem;
+            //content: ""; décommenter pour réactiver le before
+            position: absolute;
+            width: 160%;
+            height: 160%;
+            background-color: rgba(black,.2);
+        }
+    }
+
+    #nav-container {
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: 2;
+        @include littleShadow(1);
+        opacity: 1 !important;
+        padding-top: $footerHeight;
+
+        transform: translateX($slideLeftPourcent);
+        transition: transform 1s;
+
+        background-color: rgba($Color2,1);
+        width: clamp(1em,20em,80vw);
+        height: calc(100vh - $footerHeight);
+
+        ul
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin : 0;
+            list-style-type: none;
+            height: 100%;
+            padding-left: 0;
+
+
+            li
+            {
+                padding: 1rem 2rem;
+
+                a
+                {
+                    text-decoration: none;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@keyframes SlideFromLeft {
+    from {
+        transform: translateX($slideLeftPourcent);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
 
 #SectionPP
 {
@@ -228,16 +413,15 @@ nav
         margin-top: 5rem;
     }
 
-    #HomeNav
+    #DesktopNav
     {
-        opacity: .95;
-        z-index: 2;
-        width: 100%;
-        height: $footerHeight;
-        position:fixed;
-        top: 0;
-        left: 0;
-        background-color: $Color2;
+        display: grid;
+        place-items: center;
+    }
+
+    #MobileNav
+    {
+        display: none;
     }
 
     #sectionPP

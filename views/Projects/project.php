@@ -15,37 +15,9 @@
     </head>
     <body>
         <header>
-            <nav id="HomeNav">
-                <a id="backHome" href="/">
-                    <img src="<?= BASE_URL ?>/Images/Icon/Home.png" alt="Accueil - Icon"/>
-                </a>
-                <ul>
-                    <li>
-                        <a href="#AProposProjet" onclick="scrollTOElement('#AProposProjet');return false;">
-                            <img src="<?= BASE_URL ?>/Images/Icon/about.png" alt="Icon a propos" />
-                            <figcaption>A propos</figcaption> 
-                        </a>                            
-                    </li>
-                    <li>
-                        <a href="#Aperçu" onclick="scrollTOElement('#Aperçu');return false;">
-                            <img src="<?= BASE_URL ?>/Images/Icon/ImageIcon.png" alt="Icon a propos" />
-                            <figcaption>Aperçu</figcaption> 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#Etapes" onclick="scrollTOElement('#Etapes');return false;">
-                            <img src="<?= BASE_URL ?>/Images/Icon/EtapesIcon.png" alt="Icon a propos" />
-                            <figcaption>Etapes</figcaption> 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#Lien" onclick="scrollTOElement('#Lien');return false;">
-                            <img src="<?= BASE_URL ?>/Images/Icon/lienIcon.png" alt="Icon a propos" />
-                            <figcaption>Liens</figcaption> 
-                        </a>
-                    </li>
-                </ul>
-            </nav>            
+            <?php
+                Router::render("Template/nav");
+            ?>
             <img class="Illustration" src="<?= BASE_URL ?>/Images/Projet/<?=$slug?>.webp" alt="Illustration - <?=$projet["Title"]?>"/>
             <aside id="info">
                 <h1 id="titre"><?=$projet["Title"]?></h1>

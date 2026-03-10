@@ -27,13 +27,6 @@ header nav #backHome img {
   height: 80%;
   width: auto;
 }
-header nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80vw;
-  height: 100%;
-}
 header #info {
   display: flex;
   flex-direction: column;
@@ -107,6 +100,9 @@ main #AperçuProjet, main #AperçuProjet, main #EtapeProjet, main #section_Aprop
 }
 main .CompContainer {
   align-self: center;
+}
+main [class^=Comp-]::before {
+  display: none;
 }
 main #LienProjet {
   flex-direction: column;

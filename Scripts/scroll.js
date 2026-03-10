@@ -9,7 +9,15 @@ function scrollTOElement(id)
     window.scrollTo({
         top: y,
         behavior:"smooth"
-    })
+    });
+
+    closeNav();
+}
+
+function closeNav()
+{
+    const check = document.querySelector("#toggle-nav-checkbox");
+    check.checked = false;
 }
 
 function showContactForm()

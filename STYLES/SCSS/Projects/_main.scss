@@ -65,6 +65,14 @@ main
         align-self: center;
     }
 
+    [class^="Comp-"]
+    {
+        &::before
+        {
+          display: none;
+        }
+    }
+
     #LienProjet
     {
         flex-direction: column;

@@ -21,28 +21,9 @@
     </head>
     <body>
         <header>
-                <nav id="HomeNav">
-                    <ul>
-                        <li>
-                            <a href="/#APropos" onclick="scrollTOElement('#APropos');return false;">
-                                <img src="Images/Icon/about.png" alt="Icon a propos" />
-                                <figcaption>A propos</figcaption> 
-                            </a>                            
-                        </li>
-                        <li>
-                            <a href="/#Projets" onclick="scrollTOElement('#Projets');return false;">
-                                <img src="Images/Icon/book.png" alt="Icon a propos" />
-                                <figcaption>Mes projets</figcaption> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/#contact" onclick="scrollTOElement('#contact'); return false;">
-                                <img src="Images/Icon/phone.png" alt="Icon a propos" />
-                                <figcaption>Me contacter</figcaption> 
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+               <?php
+                    Router::render("Template/nav");
+               ?>
                 <section id="SectionPP">
                     <div id="EnTete">
                         <aside id="Info">

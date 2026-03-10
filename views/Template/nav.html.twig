@@ -1,24 +1,17 @@
-﻿<header>
-    <nav id="HomeNav">
-        <ul>
-            <li>
-                <a href="/#APropos" onclick="scrollTOElement('#APropos');return false;">
-                    <img src="/Images/Icon/about.png" alt="Icon a propos" />
-                    <figcaption>A propos</figcaption>
-                </a>
-            </li>
-            <li>
-                <a href="/#Projets" onclick="scrollTOElement('#Projets');return false;">
-                    <img src="/Images/Icon/book.png" alt="Icon a propos" />
-                    <figcaption>Mes projets</figcaption>
-                </a>
-            </li>
-            <li>
-                <a href="/#contact" onclick="scrollTOElement('#contact');return false;">
-                    <img src="/Images/Icon/phone.png" alt="Icon a propos" />
-                    <figcaption>Me contacter</figcaption>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+﻿<nav id="DesktopNav">
+    {{ include("Template/links.html.twig") }}
+</nav>
+
+<nav id="MobileNav">
+    <input type="checkbox" id="toggle-nav-checkbox">
+    <div id="toggle-button">
+{#        <img src="/Images/PartieClose.png" alt="Icon menu" />#}
+        <div id="bar-top"></div>
+        <div id="bar-middle"></div>
+        <div id="bar-bottom"></div>
+    </div>
+    <aside id="nav-container">
+        {{ include("Template/links.html.twig") }}
+    </aside>
+    <div id="full"></div>
+</nav>

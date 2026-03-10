@@ -10,7 +10,9 @@
         {{ include("Template/head.html.twig") }}
     </head>
     <body>
-        {{ include("Template/nav.html.twig") }}
+        <header>
+            {{ include("Template/nav.html.twig") }}
+        </header>
         {% block body %}
 
         {% endblock %}
