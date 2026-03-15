@@ -234,7 +234,7 @@ $slideLeftPourcent: -120%;
                 padding-left: 2rem;
                 height: 3em;
 
-                a
+                a,span
                 {
                     display: grid;
                     width: 100%;
@@ -462,7 +462,7 @@ $slideLeftPourcent: -120%;
                     width: unset;
 
                     padding: 0;
-                    a
+                    a,span
                     {
                         display: grid;
                         place-items: center;
