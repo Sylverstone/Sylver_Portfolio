@@ -17,7 +17,9 @@
     <head>
         <meta name="description" content="C'est mon portfolio, j'y parle de moi, de mes projets, et possiblement de mon actualité">
         <title>Sylvio - Portfolio</title>
-        <?php include "./views/Template/head.php" ?>
+        <?php
+            Router::render("Template/head");
+        ?>
     </head>
     <body>
         <?php
@@ -112,9 +114,13 @@
                 <?php include "./views/Template/project.php" ?>
             </section>
         </main>
-        <?php include "./views/Template/footer.php" ?>
+        <?php
+            Router::render("Template/footer");
+        ?>
         </body>
-        <?php include "./views/Template/Scripts.php" ?>
+        <?php
+            Router::render("Template/scripts");
+        ?>
         <script type="text/JavaScript" src="Scripts/visible.js" defer></script>
         <script type="text/JavaScript" src="Scripts/formCompteur.js" defer></script>                 
 </html>

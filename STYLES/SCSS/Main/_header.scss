@@ -83,7 +83,6 @@ $slideLeftPourcent: -120%;
 
     //opacity: .95;
     z-index: 3;
-    width: 100%;
     height: $footerHeight;
     position: sticky;
     top: 0;
@@ -435,6 +434,7 @@ $slideLeftPourcent: -120%;
 
     #MobileNav
     {
+        width: 100%;
 
         //display: none;
 

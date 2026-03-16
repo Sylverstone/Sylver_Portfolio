@@ -8,7 +8,9 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <?php include "./views/Template/head.php" ?>
+        <?php
+            Router::render("Template/head");
+        ?>
         <meta name="description" content="<?=$projet["Desc"]?>">
         <title>Projet - <?=$projet["Title"]?></title>
         <link href="<?= BASE_URL ?>/STYLES/CSS/Projects/projetStyles.css" rel="stylesheet" />
@@ -103,9 +105,13 @@
                 </aside>
             </section>
         </main>
-        <?php include "./views/Template/footer.php" ?>
+        <?php
+            Router::render("Template/footer");
+        ?>
     </body>
-    <?php include "./views/Template/Scripts.php" ?>
+    <?php
+        Router::render("Template/scripts");
+    ?>
     <script type="module" src="<?= BASE_URL ?>/Scripts/Partie.js" defer></script>
     <script type="module" src="<?= BASE_URL ?>/Scripts/projet.js" defer></script>
     <script type="text/JavaScript" src="<?= BASE_URL ?>/Scripts/formCompteur.js" defer></script>
