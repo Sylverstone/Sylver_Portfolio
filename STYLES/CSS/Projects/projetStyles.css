@@ -3,11 +3,23 @@ header {
   all: unset;
   margin: 3rem 2rem;
   display: flex;
-  flex-direction: column;
+  min-height: unset !important;
+  min-width: unset !important;
+}
+header #Outils {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+header #Outils img {
+  width: clamp(1em, 12vw, 5em);
+  height: auto;
 }
 header .Illustration {
   align-self: center;
   width: clamp(2em, 70vw, 40em);
+  border-radius: 0.5em;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
 }
 header nav {
   position: relative;
@@ -35,14 +47,16 @@ header #info {
 }
 header #titre {
   text-align: center;
-  font-size: inherit;
+  font-size: clamp(1em, 8vw, 2em);
   margin-bottom: 0;
+  letter-spacing: 0.3em;
 }
 header #date {
   font-style: italic;
   margin-top: 2%;
   text-align: center;
   font-size: 0.5em;
+  font-weight: 100;
 }
 
 @media (min-width: 750px) {

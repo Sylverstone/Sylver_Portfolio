@@ -1,22 +1,29 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block meta %}
+        {% endblock %}
         <title>{% block title%}{% endblock %}</title>
         {% block styles %}
 
         {% endblock %}
-        {{ include("Template/head.html.twig") }}
+        {{ include("Templates/head.html.twig") }}
     </head>
     <body>
+        {{ include("Templates/nav.html.twig") }}
+        {{ include("Templates/cvSelector.html.twig") }}
         <header>
-            {{ include("Template/nav.html.twig") }}
+            {% block header %}
+            {% endblock %}
         </header>
         {% block body %}
 
         {% endblock %}
-        {{ include("Template/footer.html.twig") }}
+        {{ include("Templates/footer.html.twig") }}
     </body>
-    {% block javascript %}{% endblock %}
+    {{ include("Templates/scripts.html.twig") }}
+    {% block scripts %}
+    {% endblock %}
 </html>

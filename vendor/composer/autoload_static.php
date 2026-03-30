@@ -9,8 +9,8 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '0754989a10baadda533479884b399278' => __DIR__ . '/..' . '/resend/resend-php/src/Resend.php',
         '89efb1254ef2d1c5d80096acd12c4098' => __DIR__ . '/..' . '/twig/twig/src/Resources/core.php',
@@ -28,6 +28,7 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\Yaml\\' => 23,
         ),
         'R' =>
         array (
@@ -59,6 +60,10 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
         'Symfony\\Polyfill\\Ctype\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Component\\Yaml\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Resend\\' =>
         array (

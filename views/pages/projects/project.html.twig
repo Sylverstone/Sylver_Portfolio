@@ -1,0 +1,90 @@
+{% extends "base.html.twig" %}
+
+{% block meta %}
+    <meta name="description" content="{{ projet.Desc }}">
+{% endblock %}
+{% block title %}
+    Projet - {{ projet.Title }}
+{% endblock %}
+
+{% block styles %}
+    <link href="/STYLES/CSS/Projects/projetStyles.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+    <main>
+        <section id="section_Apropos" class="startConditionProjet">
+            <div class="Link">
+                <p>A propos</p>
+                <img src="/Images/PartieClose.png" alt="ok"/>
+            </div>
+            <aside class="Container">
+                {{ include("Templates/competenceProjet.html.twig") }}
+                <p class="content">{{ projet.APropos|raw }}</p>
+            </aside>
+        </section>
+
+        <!--$slug est une variable qui proviens du controlleur-->
+        <section id="AperçuProjet" class="startConditionProjet">
+            <div class="Link">
+                <p>Aperçu</p>
+                <img src="/Images/PartieClose.png" alt="ok"/>
+            </div>
+            <aside class="Container">
+                {% for i in 1..nb_image %}
+                    <article class="ImageApercu">
+                        <img class = "Illustration" loading="lazy" src="/Images/{{ projet.slug }}/{{ projet.slug }}{{ i }}.png" alt="{{ projet.slug }}- Image" />
+                        {% if projet.Legendes[i - 1] %}
+                            <figcaption>{{ projet.Legendes[i - 1] }}</figcaption>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            </aside>
+        </section>
+        <section id="EtapeProjet" class="startConditionProjet">
+            <div class="Link">
+                <p>Etapes</p>
+                <img src="/Images/PartieClose.png" alt="ok"/>
+            </div>
+            <aside class="Container">
+                {%  for i in range(0,projet.Etapes|length - 2, 2) %}
+                    <div class="Etape">
+                        <h2>{{ projet.Etapes[i] }}</h2>
+                        <p>{{ projet.Etapes[i + 1] }}</p>
+                    </div>
+                {% endfor %}
+            </aside>
+        </section>
+
+        <section id="LienProjet" class="startConditionProjet">
+            <div class="Link">
+                <p>Lien.s</p>
+                <img src="/Images/PartieClose.png" alt="ok"/>
+            </div>
+            <aside class="Container">
+                {% for lien in projet.Liens %}
+                    <a target = "_blank" href="{{ lien }}">{{ projet.NomLien[loop.index] }}</a>
+                {% endfor %}
+            </aside>
+        </section>
+    </main>
+{% endblock %}
+
+{% block header %}
+    <aside id="info">
+        <h1 id="titre">{{ projet.Title }}</h1>
+        <p id="date">{{ projet.Date }}</p>
+    </aside>
+    <img class="Illustration" src="/Images/Projet/{{ projet.slug }}.webp" alt="Illustration - {{ projet.Title }}"/>
+    <section id="Outils">
+        {% for outil in projet.Outils %}
+            <img src="/Images/Icon/{{ outil }}" alt="{{ outil }}" width="50" height="50"/>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    <script type="module" src="/Scripts/Partie.js" defer></script>
+    <script type="module" src="/Scripts/projet.js" defer></script>
+    <script type="text/JavaScript" src="/Scripts/formCompteur.js" defer></script>
+{% endblock %}

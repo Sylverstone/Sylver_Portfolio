@@ -217,8 +217,9 @@
         ]
     ,
         "Legendes" : ["","",""],
-        "Date" : "Janvier 2026 : 3 semaines",
-        "Annee" : 2026
+        "Date" : "Janvier 2026 à Mars 2026",
+        "Annee" : 2026,
+        "Outils" : ["UE5.svg","cpp.svg","git.svg"]
     },
 
     "Vapeur" :

@@ -5,6 +5,7 @@
     z-index: 9;
     display: none;
     position:fixed !important;
+    pointer-events: auto !important;
 }
 
 #cv-close
