@@ -19,7 +19,7 @@ class ProjectsController
     {
         try {
 
-            $content = file_get_contents("./Config/project.json",true);
+            $content = file_get_contents("./Config/projects.json",true);
             $Projects = json_decode($content,true);
 
             $path = "/../Images/" . $name . "/";

@@ -1182,4 +1182,18 @@ li::marker {
   appearance: none;
 }
 
+.custom-ul li::marker {
+  content: "+ ";
+  font-weight: bolder;
+}
+
+figure figcaption {
+  text-align: center;
+  text-wrap: wrap;
+}
+
+#signature a {
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -7,9 +7,10 @@
         {% endblock %}
         <title>{% block title%}{% endblock %}</title>
         {% block styles %}
-
         {% endblock %}
         {{ include("Templates/head.html.twig") }}
+        {% block links %}
+        {% endblock %}
     </head>
     <body>
         {{ include("Templates/nav.html.twig") }}

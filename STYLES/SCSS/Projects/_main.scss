@@ -1,133 +1,31 @@
 @use "../shared/var" as *;
 
-main 
+$radiusImg : .7rem;
+
+figure
 {
-    width: 90vw;
+    figcaption
+    {
+        font-size: clamp(.7em,1.2vw,1em);
+    }
+}
+
+main
+{
     align-self: center;
 
-    section
-    {
+    section {
         @include littleShadow(.2);
     }
 
-    .Container
-    {
-        flex-direction: column;
-    }
-
-    .Link
-    {
-        min-height: 4rem;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        align-self: flex-start !important;
-        position: sticky;
-
-        p
-        {
-            margin: 1rem 3rem !important;
-            min-width: 5em;
-        }
-
-        img
-        {
-            margin-right: 1rem;
-        }
-    }
-
-    section[id] {
-        cursor: pointer;
-        @include littleShadow(.2);
-    }
+    //section[id] {
+    //    cursor: pointer;
+    //    @include littleShadow(.2);
+    //}
 
     section:first-of-type
     {
         margin-top: 0 !important;
-    }
-
-    #AperçuProjet, #AperçuProjet, #EtapeProjet, #section_Apropos, #LienProjet
-    {
-        margin-top: 1rem;
-        background-color: $Color2;
-        color: white;
-        border-radius: 1rem;
-        transition: height 500ms ease;
-        overflow: hidden;
-        font-size: clamp(1em, 1.8vw, 1.5em);
-        height: 4rem;
-    }
-
-    .CompContainer
-    {
-        align-self: center;
-    }
-
-    [class^="Comp-"]
-    {
-        &::before
-        {
-          display: none;
-        }
-    }
-
-    #LienProjet
-    {
-        flex-direction: column;
-
-        .Container
-        {
-            justify-content: center;
-            align-items: flex-start;
-            padding: 1rem;
-        }
-    }
-
-    .startConditionProjet
-    {
-        display: flex;
-    }
-
-    #AperçuProjet
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-
-        .Container img
-        {
-            margin-top: 1rem;
-            width: clamp(5rem,80vw,25rem);
-            border-radius: .5em;
-        }
-
-        .Container
-        {
-            padding: 1rem;
-            display: flex;
-            flex-direction: row;
-            margin-top: 2em;
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-
-            .ImageApercu
-            {
-                margin-right: 0;
-            }
-        }
-
-        figcaption 
-        {
-            text-align: center;
-            font-size: clamp(.8em,1.5vw,1em);
-            margin-bottom: 2em;
-            font-style: italic;
-        }
     }
 
     section
@@ -138,84 +36,244 @@ main
         }
     }
 
-    #section_Apropos
+    .project-section-title
     {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        font-weight: bold;
+        //margin-top: 5rem;
+        letter-spacing: .3em;
+        text-align: center;
+        font-size: clamp(1.3em,3vw,3em);
+        text-transform: uppercase;
+        padding: 0 2rem;
+    }
+
+    #apropos
+    {
+        align-self: center;
+        width: 70vw;
 
         p
         {
-            font-size: clamp(1em,1.5vw,1.5em);
-            line-height: 1.2em;
-            margin: 1rem;
-            a 
+            font-size: clamp(.8em,3vw,1.5em);
+            text-align: center;
+        }
+    }
+
+
+    #missions
+    {
+        display: flex;
+        flex-direction: column;
+        $marge : 2rem;
+        margin-top: 2em;
+        background-color: $Color2;
+        color: white;
+
+        h3
+        {
+            margin-top: $marge;
+        }
+
+        aside
+        {
+            align-self: center;
+            padding-bottom: $marge;
+            //padding-bottom: 5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            ul
             {
-                color: $Color2;
-                font-weight: 700;
+                //padding-left: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin-right: 2em;
+
+                li
+                {
+                    margin: .4em 0;
+                    font-size: clamp(.8em,1.3vw,1.8em);
+                }
+            }
+
+            img
+            {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                height: auto;
+                border-radius: .7rem;
+                @include littleShadow(.2);
+            }
+
+            figure
+            {
+                width: clamp(14em,35vw,40em);
+                margin: auto;
             }
         }
     }
 
-    img 
+    #etapes
     {
-        cursor: pointer;
-    }
-
-    #LienProjet
-    {
-        a
-        {
-            font-size: clamp(1em,1.8vw,1.1em);
-            color: white;
-            margin: 1rem 1rem 2rem 1rem;
-            padding: 0 .5rem;
-            border-radius: .5rem;
-            text-decoration: underline;
-        }
-    }
-
-    .Etape 
-    {
-        margin-left: 2rem;
-        display:  flex;
-        flex-direction: column;
-        font-size: clamp(1em,1.5vw,1.5em);
-        margin-right: 1rem;
-
-        h2 
-        {
-            font-size: 1.2em;
-            font-style: italic;
-            font-weight: 500;
-        }
-
-        p 
-        {
-            
-            font-size: 1em;
-            margin-top: 0;
-            margin-left: 1rem;
-        }
-
-    }
-
-    #EtapeProjet
-    {
+        margin-top: 4rem;
         display: flex;
         flex-direction: column;
+
+        h3
+        {
+            color: $Color2;
+        }
+
+        aside
+        {
+            width: 100%;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            ul
+            {
+
+                margin: 0 1rem;
+                li
+                {
+                    font-size: clamp(.98em,1.6vw,2em);
+                    margin: .8em 0;
+
+                    & > b
+                    {
+                        text-transform: uppercase;
+                        color: $Color2;
+                        font-weight: bolder;
+                    }
+
+                    &::marker
+                    {
+                        color: $Color2;
+                        font-weight: bolder;
+                    }
+                }
+            }
+
+            figure
+            {
+
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                    border-radius: $radiusImg;
+                }
+            }
+
+        }
+
+        & > figure
+        {
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            max-width: 100%;
+            width: 100%;
+
+            img
+            {
+                width: 100%;
+                height: auto;
+                border-radius: $radiusImg;
+            }
+        }
+    }
+
+    #conclusion
+    {
+        background-color: $Color2;
+        color: white;
+        display: grid;
+        place-items: center;
+
+        margin-top: 5rem;
+        padding: 5rem 0;
+        font-size: clamp(.9em,1.5vw,2em);
+
+        p
+        {
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+
+            a
+            {
+                color: white;
+            }
+        }
+
+        aside
+        {
+            a
+            {
+                font-size: 1.2em;
+                color: white;
+                font-weight: bolder;
+            }
+
+            a:first-of-type
+            {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    #images
+    {
+
+        margin-top: 7rem;
+
+        h3
+        {
+            color: $Color2;
+        }
+
+        aside
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            figure
+            {
+                margin-bottom: 2rem;
+                width: clamp(14em,35vw,40em);
+
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                    border-radius: $radiusImg;
+                }
+            }
+        }
     }
 }
 
 
 @media (min-width : $computerSize)
 {
+
+
     main 
     {
-        width: 80vw;
+        //width: 80vw;
         align-self: center;
         //background-color : rgba(0, 0, 0, .05);
-        padding: 1rem;
+        //padding: 1rem;
         margin-bottom: 1rem;
         border-radius: .8rem;
 
@@ -224,6 +282,65 @@ main
             .ImageApercu 
             {
                 margin-right: 1.5rem;
+            }
+        }
+
+        #missions
+        {
+            $marge : 7rem;
+
+            h3
+            {
+                margin-top: $marge;
+            }
+
+            aside
+            {
+
+                justify-content: center;
+                align-items: center;
+
+                ul
+                {
+                    width: 50%;
+                }
+
+                figure
+                {
+                    width: 40%;
+                }
+
+                width: 80%;
+                padding-bottom: $marge;
+            }
+        }
+
+        #etapes
+        {
+
+            align-self: center;
+            width: 80%;
+
+            aside
+            {
+
+                ul
+                {
+                    margin-right: 1rem;
+                    width: 45%;
+                }
+
+                figure
+                {
+                    margin: 0;
+
+                    width: 45%;
+                }
+            }
+
+            & > figure
+            {
+                margin-top: 5rem;
             }
         }
     }

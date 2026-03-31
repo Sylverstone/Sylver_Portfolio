@@ -1,0 +1,353 @@
+{
+    "SylverService" :
+    {
+        "categorie" : 1,
+        "Title" : "SylverService",
+        "role" : "Développeur python",
+        "Desc" : "Une application permettant aux élèves de s'entraider en leur permettant de poster des documents/tuto/etc.. en ligne.",
+        "Comp" : ["Equipe","Python","PLSQL","MySQL"],
+        "Helps" : ["","","",""],
+
+        "Contributions" : [
+            "Intégration de l'UI",
+            "Développement des fonctionnalitées",
+            "Gestion de la BDD"
+        ],
+
+        "APropos" : "<b>Sylver Service</b> est une application développée en <b>Python</b>, utilisant le module Pygame.<br /> Elle repose sur une base de données MySQL pour <b>stocker les informations</b>. Son objectif principal est de permettre aux étudiants de trouver ou de publier des tutoriels ou/et documents utiles à leur réussite scolaire.<br /><br />Ce projet a été réalisé en équipe de trois personnes : j’étais le <b>programmeur principal</b>, en collaboration avec un designer et un autre programmeur. Il a été présenté au <b>Trophée NSI 2024</b> et a remporté un prix en Guadeloupe.",
+
+        "Liens" : {
+            "GitHub" : "https://github.com/Sylverstone/Sylver_Service/releases"
+        },
+
+        "Missions" : {
+            "Administration de base de donnée" : "J'ai crée la base de donnée MySQL et j'ai fait les tables.",
+            "Développement de l'application" : "J'ai développé les fonctionnalités de l'application page par page, en commençant par le menu.",
+            "Intégration du design des pages" : "J'intégrait le design des pages à l'application.",
+            "Création d'un installeur pour l'application" : "Avec InnoSetup j'ai fait un installeur pour l'application pour permettre une installation plus user-friendly."
+        },
+
+        "Etapes": {
+            "Base de donnée": "Dans un premier temps, nous avons établi la <b>structure de la base de donnée</b> servant à stocker les informations des <b>utilisateurs</b> et des tutoriels dans l'application.",
+
+            "Interface utilisateur": "Ensuite nous avons mis en place <b>une interface utilisateur minimale</b> afin de pouvoir <b>tester les différentes fonctionnalités</b> au fur et à mesure de leur développement.",
+
+            "Développement": "<b>L'application</b> a été développée <b>page par page</b> : nous avons commencé par le <b>menu principal</b>, permettant d'accéder à toutes les autres pages, puis la <b>page de recherche</b> et celle du <b>compte utilisateur</b>."
+        },
+
+        "Retrospection" : "Cette application m'a permit de m'impliquer sur le développement d'une application sur une longue période de temps. Ce fut ma première expérience avec l'utilisation du SQL et des bases de données directement dans un language de programmation. J'ai pu y développer des fonctionnalités intéréssanetes : envoie de mail, connexion utilisateur, etc...Tout n'était pas parfait dû à mon manque d'expérience, mais j'ai aimé développé cette application. L'une de mes dernières expériences avec le python.",
+
+        "Legendes" : ["Compte utilisateur","Menu","Page de recherche","Page création de compte","Page connexion au compte","Logo de l'application"],
+
+        "Date" : "Juillet 2022 - Mars 2023 : 9 mois",
+        "Annee" : 2023
+    },
+
+    "TheCasinoRP" :
+    {
+        "categorie" : 1,
+        "Title" : "The casino",
+        "role" : "Développeur TypeScript",
+        "Desc" : "C’est un serveur RP sur Discord pour lequel j’ai développé une dizaine de bots. Ceux-ci étaient chargés d’animer le serveur en proposant des activités et des services.",
+        "Comp" : ["freelance","TS","PLSQL","MySQL"],
+        "Helps" : ["C'est un projet fait pour un client","","","",""],
+
+        "Contributions" : [
+            "Développement des fonctionnalitées",
+            "Gestion de la BDD",
+            "Hébergement"
+        ],
+
+        "APropos" :
+        "C'est un <b>projet freelance</b> pour un serveur RP nommé THE CASINO.<br />Celui-ci avait besoin de <b>bots discord</b> afin <b>d'améliorer</b> le RP du serveur et que la gestion de celui-ci soit <b>plus facile</b>.<br />J'ai donc développé <b>11 bots</b> avec chacun des <b>fonctionnalitées bien particulières.</b><br /><i>Si vous êtes <b>interressé.e par mes services</b> contacté moi grâce au <a href='#contact' onclick=\"scrollTOElement('#contact');return false;\">formulaire</a> ou directement via <a href='https://www.fiverr.com/s/Gzbjwl7' target='_blank'>Fiverr</a></i>",
+
+        "Liens" : {
+            "Fiverr" : "https://www.fiverr.com/users/sylverstone08/portfolio/Njg4NTJiOTMxOGE1ZmMwMDAxMmMzMzlj"
+        },
+
+        "Etapes": {
+            "Étude des besoins du client": "Tout d'abord, j'ai commencé par <b>étudier ce dont le client</b> avait besoin. C'était un projet <b>assez conséquent</b>, donc je ne devais pas me perdre pendant le développement.",
+
+            "Base de données": "Le projet avait besoin d'une base de données pour <b>fonctionner convenablement</b>. J'ai donc dû <b>établir les schémas</b> de celle-ci afin de <b>gérer les données le plus efficacement possible</b>.",
+
+            "Développements": "Quand tout cela était fait, j'ai pu commencer à <b>développer les bots</b>, consulter le client pour avoir <b>plus de précisions sur ses requêtes</b> et <b>le conseiller</b> sur certaines <b>fonctionnalités</b> des bots.",
+
+            "Déploiement": "Dès que tous les bots étaient terminés, et même un peu avant, j'ai commencé à <b>étudier avec le client</b> quel hébergement était le plus adapté.<br/>Nous sommes partis sur <b>Railway</b>, où sont donc hébergés les <b>11 bots</b> ainsi que la <b>base de données.</b>",
+
+            "Ajustements": "Après la <b>finalisation du projet</b>, je suis resté à <b>l'écoute du client</b> afin de régler <b>les possibles soucis</b>, modifier certaines choses <b>si besoins.</b>"
+        },
+
+        "Missions" : {
+            "Développement des bots" : "J'ai développé une dizaine de bots.",
+            "Présentation des prototypes au client" : "Je présentais au client les différents prototypes des bots, et je faisais des ajustement en fonction.",
+            "Administration de la base de donnée" : "Pour stocker les informations j'ai décidé d'utilisé une base de donnée MySQL, j'ai donc réalisé les différentes tables, et j'ai également fait du PL/SQL pour simplifier certaine fonctionnalités des bots."
+        },
+
+        "Legendes" : [
+            "<b><i>/solde</i></b> du bot de banque",
+            "<b><i>/boire</i></b> du bot barman",
+            "Devinette avec le barman",
+            "Tirage avec un bot de jeu",
+            "<b><i>/blackjack</i></b> avec le bot blackjack",
+            "<b><i>/roulette</i></b> avec le bot de la roulette",
+            "Aperçu cooldown de commandes",
+            "duel de dés avec le bot de dés",
+            "duél de dés avec un autre joueur",
+            "Aperçu de l'hébergement"],
+
+        "Date" : "Juillet 2025 : 3 semaines",
+        "Annee" : 2025,
+
+        "Retrospection" : "J'ai toujours aimé développé des bots discords, et ce projet m'a permit d'en développer beaucoup ! Également, j'ai pu développer des fonctionnalités intéressantes comme le jeu du black-jack, l'invitation d'un autre pour jouer à un jeu, etc..., et grâce à ça j'ai pu utilisé des fonctionnalités plus avancés de l'API discord que je n'avais jamais utilisé avant.<br /><br />Si vous êtes intéressé.e par le <b>développements de bots discord</b>, contactez moi !"
+    },
+
+    "LesRouagesDuDestin" :
+    {
+        "categorie" : 1,
+        "Title" : "Les rouages du destin",
+        "role" : "Développeur gameplay",
+        "Desc" : "Mon premier jeu vidéo fait sur Unreal engine.<br/>Un détective doit résoudre une enquête du passé.",
+        "Comp" : ["Equipe","gamedev","UE5","Blueprint","git","UnrealEngine"],
+        "Helps" : ["","","","","",""],
+        "Contributions" : [
+            "Développement UI",
+            "Système intéraction",
+            "Développement gameplay",
+            "Gestion gitlab",
+            "Réalisation de quelques cinématiques",
+            "Implémentation du level streaming",
+            "Quelques assets 3D"
+        ],
+
+        "APropos" : "C'est un jeu développé sur <b>Unreal Engine 5.3</b> avec une équipe de 8 personnes.<br />On y incarne un <b>détective</b> qui doit résoudre une enquête du passé en <b>retournant dans le temps</b> grâce à un <b>train spécial</b>.",
+
+        "Liens": {
+            "Gamejolt" : "https://gamejolt.com/games/LesRouagesDuDestin/1013468",
+            "GitLab" : "https://gitlab-lepuy.iut.uca.fr/evthonneri/les_rouages_du_destin"
+        },
+
+
+        "Etapes": {
+            "Scénario": "Dans un premier temps, nous nous sommes intéressés à <b>l'histoire que nous voulions raconter dans le jeu</b>.<br />Nous avons donc organisé des réunions afin de déterminer <b>quel jeu nous voulions créer</b>.",
+            "Assets 3D": "Nous avons effectué des recherches concernant <b>tous les assets 3D que nous devions créer pour le jeu</b>, afin de nous organiser sur <b>qui modéliserait quoi</b>.",
+            "Unreal Engine": "Nous ne savions <b>pas utiliser le moteur</b>, et encore moins faire du <b>Blueprint</b>. Grâce à <b>diverses ressources</b>, nous nous sommes formés (les programmeurs) <b>afin d'acquérir les connaissances nécessaires pour développer le jeu</b>.",
+            "Développement d'éléments de gameplay": "Avant de passer au <b>développement du gameplay complet</b>, nous avons choisi de <b>développer certaines mécaniques</b> qui nous seraient <b>utiles pendant le jeu</b> et que nous pourrions <b>réutiliser facilement</b>. <i>Ex : interaction avec les objets, UI flexible, système d'inspection, mise en place de différents types d'objets avec leurs spécificités...</i>",
+            "Level Design": "Nous avons ensuite commencé à créer les différents <b>niveaux</b> dans lesquels le <b>jeu devait se dérouler</b>.",
+            "Gameplay": "Une fois toutes ces étapes réalisées, nous avons pu commencer à développer le <b>gameplay du jeu</b> : mise en place du <b>changement de niveau</b>, <b>lignes directrices d'un niveau</b>, <b>indications pour le joueur</b>...",
+            "Cinématiques": "Vers la fin du développement, nous avons ajouté <b>quelques cinématiques</b> afin <b>d'améliorer la narration</b> et les <b>transitions entre niveaux</b>."
+        },
+
+        "Legendes" : ["Menu du jeu","Aperçu in-game - Maison d'enquête","Aperçu in-game - Maison d'enquête","Aperçu in-game - Hanger","Aperçu quête  fusible","Aperçu in-game","Tableau explicatif des quêtes","Quête des fusibles","Quête moteurs","Egnigme de fusibles","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Vertolaye", "Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye"],
+
+        "Missions" : {
+            "Développement du gameplay" : "J'ai développé l'intéraction avec l'environnement et le déroulement des niveaux. J'ai également développé les quêtes des niveaux : relier des fils, brancher des fusibles, trouver des indices, ...",
+            "Gestion du gitlab" : "J'étais en charge du GitLab. J'assistais mon équipe en cas de conflits sur le git.",
+            "Optimisation du jeu" : "J'ai mit en place le level streaming et j'ai produit du code propre et optimisé en Blueprint.",
+            "Développement des interfaces utilisateurs" : "J'ai développé l'interface du menu principal, du menus pauses, et d'autres interfaces concernant le gameplay."
+        },
+
+        "Date" : "Mars 2025 - Juin 2025 : 4 mois",
+        "Annee" : 2025.1,
+
+        "Retrospection" : "Ce jeu était ma première expérience sur Unreal Engine 5. J'ai pu y apprendre les bases du développement de jeu sous Unreal Engine, ainsi que les bases du Blueprint. Cette expérience m'a motivé a essayé le C++ avec Unreal Engine, Ce que j'ai fait l'année suivant dans mon autre projet sous Unreal Engine 5.5 : <a href=\"/Projets/LePotager\">Le Potager</a>."
+    },
+
+    "pgmToAA" :
+    {
+        "categorie" : 1,
+        "role" : "Développeur C++",
+        "Title" : "pgmToAA",
+        "Desc" : "Une application console qui transforme une image en AsciiArt selon divers palette personnalisable.",
+        "Comp" : ["Equipe","cpp","SAé"],
+        "Helps" :
+        [
+        "",
+        "",
+        "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement"
+        ],
+
+        "Contributions" : [
+            "Développement des algorithmes",
+            "Débogages"
+        ],
+
+        "APropos" : "<b>pgmToAA</b> est un projet fait sur 2 jours (12h) en équipe où nous devions créer une <b>application console</b> transformant une image (en .pgm) en <b>AsciiArt</b> tout en <b>suivant les demandes d'un client</b>.\nNous devions donc intégrer différente fonctionnalités selon un <i><b>cahier des charges</b></i>",
+
+
+        "Liens" : {
+            "GitLab" : "https://gitlab-lepuy.iut.uca.fr/sypelagema/pgmtoaa"
+        },
+
+        "Etapes": {
+            "Études du cahier des charges": "Nous avons étudié le <b>cahier des charges</b> afin de définir <b>l'organisation et le développement</b> de l'application.",
+
+            "AsciiArt dans la console": "Développement d'un affichage de l'<b>AsciiArt dans la console</b>.",
+
+            "AsciiArt en fichier": "Mise en place de la génération de l'<b>AsciiArt dans un fichier de sortie</b>.",
+
+            "Palette personnalisable": "Ajout de la possibilité d'utiliser <b>n'importe quelle palette</b>.",
+
+            "Paramètres": "Ajout d'<b>arguments en entrée</b> pour choisir le fichier, la sortie et la palette, ainsi qu'un <b>--help</b>.",
+
+            "Redimension": "Implémentation d'un système de <b>redimensionnement</b> pour accélérer la génération de l'AsciiArt."
+        },
+
+        "Missions" : {
+            "Développement des algorithmes" : "J'ai co-développé les algorithmes permettant la transformation en AsciiArt."
+        },
+
+        "Legendes" : ["Exemple d'AsciiArt","Exemple d'AsciiArt","Exemple d'AsciiArt","Exemple d'AsciiArt"],
+        "Date" : "2024 : 2 jours",
+        "Annee" : 2024,
+
+        "Retrospection" : "Ce fut l'un de mes premiers projets en C++, la qualité du code n'est pas exceptionnel mais ce fut une expérience avec beaucoup de challenge et un sujet très intéressant."
+    },
+
+    "MeteoApp" :
+    {
+        "categorie" : 1,
+        "Title" : "Application météo",
+        "role" : "Développeur C++",
+        "Desc" : "Une application représentant le réchauffement climatique d'une station de ski de manière claire et précise.",
+        "Comp" : ["Equipe","cpp","SAé"],
+        "Helps" : ["","", "Une SAé (Situation d'Apprentissage évaluée) est un examen se déroulant sur 12H généralement"],
+        "Contributions" : [
+            "Traitement des données excel",
+            "Développement de l'UI"
+        ],
+        "APropos" :
+        "C'est un projet fait sur <b>2 jours</b> en équipe de 2 <i>(16h)</i> où nous devions faire une application qui <b>analyse les données du mont Aigoual</b> en utilisant la bibliothèque graphique <b>Libgraph2</b>.<br />En contrainte nous devions faire une application <b>originale</b> avec des <b>intéractions utilisateurs.</b>",
+
+
+        "Liens" : {
+            "GitLab" : "https://gitlab-lepuy.iut.uca.fr/sypelagema/sae2.01"
+        },
+
+        "Missions" : {
+            "Traitements des données" : "J'ai crée une class permettant d'afficher les données du Excel, de plus grâce à elle, le graphique afficher est extrêmement facile à changer.",
+            "Amélioration de l'UI" : "Après avoir faire une interface utilisation minimal, en ajoutant une image de fond, ainsi qu'une couleur aux barres des graphiques."
+        },
+
+        "Etapes": {
+            "Conception": "Dans un premier temps, nous avons <b>imaginé ce à quoi l'application pourrait ressembler</b> ainsi que les différentes <b>fonctionnalités qu'elle pourrait proposer</b>.",
+
+            "Traitement des données": "Les données à traiter étaient contenues dans un <b>fichier CSV</b>. Nous avons donc mis en place différents algorithmes afin de les exploiter de la manière <b>la plus optimale et flexible possible</b>.",
+
+            "Développement": "Une fois cette étape réalisée, nous avons pu commencer à développer <b>l'interface utilisateur</b> ainsi que les <b>différentes fonctionnalités de l'application</b>.<br />"
+        },
+
+        "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
+
+        "Date" : "2025 : 2 jours",
+        "Annee" : 2025,
+
+        "Retrospection" : "Ce projet m'a permit d'améliorer mes compétences dans le traitement de données en C++. J'ai pu également y développer des choses intéressantes, comme l'affichage du graphique, l'intéraction avec éléments de l'application, l'utilisation du polymorphisme. Ce fut un bon moyen de consolider mes compétences en développement C++."
+    },
+
+    "LePotager" :
+    {
+        "categorie" : 2,
+        "Title" : "Le Potager",
+        "Desc" : "Un jeu vidéo visant à sensibiliser les joueurs à l’écologie. Le joueur doit gérer son restaurant, ses services et son stock d’aliments, en essayant d’utiliser au maximum son potager.",
+        "role" : "Développeur gameplay",
+        "Comp" : ["Blueprint","cpp","gamedev","Equipe","UnrealEngine", "git"],
+        "Helps" : ["","","","","", ""],
+        "Contributions" : [
+            "Développement de mécaniques de gameplay",
+            "Optimisation des performances",
+            "Implémentation du Data Driven Gameplay",
+            "Développement de l'IA des clients",
+            "Développement de l'intéraction avec l'environnement"
+        ],
+        "APropos" : "Le Potager est un jeu vidéo développé avec <b>Unreal engine 5.5</b> en dans une équipe de <b>4 personnes</b>. Le <b>cahier des charges</b> imposait de créer un jeu <b>eco-responsable</b>,<b>eco-conçu</b> ainsi qu'<b>accessible</b>.<br/>Nous avons donc décidé de développer le jeu <i>Le Potager</i> afin de <b>sensibiliser les joueurs à l'écologie</b>. Dans le jeu, le joueur doit <b>gérer son restaurant</b> en effectuant ses services du <b>midi et du soir</b>, en gérant son stock d'aliment, et surtout, <b>développer son potager</b> afin de devenir autosuffisant et proposer des <b>plats plus saints</b> dans son restaurant.",
+
+        "Date" : "Janvier 2026 à Mars 2026",
+        "Annee" : 2026,
+
+        "Liens" : {
+            "Gamejolt" :  "https://gamejolt.com/games/LePotager/1046371",
+            "GitLab" : "https://gitlab-lepuy.iut.uca.fr/sypelagema/LePotager/-/tree/main/Content"
+        },
+
+        "Etapes" : {
+            "Concept" : "Réflexion au sujet du concept du jeu, des fonctionnalités, ...",
+            "Répartition des tâches" : "Création d'un Excel et d'un GitLab pour avoir une vision d'ensemble de l'avancé",
+            "Croquis des différents environnements du jeu" : "Restaurant, potager, ville",
+            "Développement des mécaniques du jeu et modélisations des assets 3D" : "Développement des mécaniques importantes du jeu : intéraction, changement de niveaux, ..."
+        },
+
+        "Legendes" : [
+            "Image du joueur devant une plantation dans le potager",
+            "Image du joueur jetant un sac poubelle dans le composte",
+            "Image du joueur dans le restaurant côté client",
+            "Image de l'UI de la constitution du menu",
+            "Image du joueur devant son restaurant",
+            "Image du joueur dans le restaurant côté cuisine",
+            "Image du joueur en train de mettre dans le frigo ce qu'il a récolté dans le potager",
+            "Image du joueur en train de récupérer ce qu'il a planté"
+        ],
+
+
+        "Outils" : ["UE5.svg","cpp.svg","git.svg"],
+
+        "Missions" : {
+            "Développement du Gameplay" : "J'ai développé de nombreux aspects du gameplay, comme l'intéraction avec l'environnement (aliments, meubles,...), la composition des plats, la cuisson des plats, etc... J'ai également mis en place le data driven gameplay afin de simplifier la gestion des aliments.",
+            "Gestion du GitLab" : "J'étais en charge du GitLab. J'assistais mon équipe sur la résolution de conflits éventuels.",
+            "Développement de l'IA" : "J'ai développé l'IA des clients, en leur permettant d'apparaître dans le restaurant, de choisir une table au hasard et de passer commande tout en se déplaçant dans le restaurant.",
+            "Compilation des shaders" : "J'ai réalisé un bundle de PSO en suivant la doc d'Unreal Engine pour permettre la compilation des shaders au début du jeu. J'ai également développé l'UI montrant la compilation des shaders.",
+            "Optimisation du jeu" : "J'ai mit en place le level streaming, produit du code propre et optimisé en C++ et en Blueprint.",
+            "Création d'un installeur" : "Avec InnoSetup, j'ai crée un installeur pour le jeu afin de permettre une installation plus user-friendly."
+        },
+
+        "Illustration" : 5,
+
+        "Retrospection" : "Ce projet m'a permit de renforcer mes compétences en développement de jeux vidéo sur Unreal Engine 5.5.<br />J'y appliqué des choses intéréssantes comme le Data Driven Gameplay, l'optimisation d'un jeu Unreal Engine, la compilation des shaders au premier lancement du jeu, et j'ai également pu en apprendre plus sur l'utilisation du C++ dans Unreal Engine 5."
+    },
+
+    "Vapeur" :
+    {
+        "categorie" : 1,
+        "Title" : "Vapeur",
+        "Desc" : "C'est une application de gestion d'une bibliothèque de jeux vidéo. Un projet nous permettant d'exercer les bases CRUD.",
+        "Comp" : ["Equipe","JS","Express","Prisma","Handlebars"],
+        "Helps" : ["","", "","","",""],
+        "role": "Développeur fullstack",
+
+        "Contributions" : [
+            "Ajout d'un jeu vidéo",
+            "Modification d'un jeu vidéo",
+            "Suppression d'un jeu vidéo",
+            "Implémentation de tests automatique avec GitHub action"
+        ],
+
+        "APropos" :
+        "C'est un projet fait sur <b>2 semaines</b> dans une équipe de <b>4 étudiants</b>. Nous nous chargions tous de développer une partie de l'application en fullstack.<br /><br/>Ce projet m'a permis d'en <b>apprendre plus</b> sur l'utilisation de <b>moteurs de template</b> comme <b>handlebars</b> en développement web, ainsi que l'utilisation de <b>l'ORM prisma</b>.",
+
+        "Liens" : {
+            "GitHub" : "https://github.com/adrianna-fzn/Vapeur"
+        },
+
+        "Missions" : {
+            "Gestion d'un jeu vidéo" : "Je me suis occupé de l'ajout, la modification et de la suppression d'un jeu vidéo.",
+            "Développement front-end" : "J'ai développé le front-end des pages concernés, donc surtout des formulaires, et l'affichage des jeux",
+            "Développement back-end" : "J'ai développé le back-end des pages concernés, donc la liaison avec la base de donnée",
+            "Création de tests automatisés" : "Avec GitHub actions, j'ai crée des tests qui se lançait à chaque commit afin de savoir directement si l'application fonctionnait toujours comme on le souhaite."
+        },
+
+        "Etapes" : {
+            "Répartitions des tâches" : "Création d'issues et de milestones sur un GitLab afin d'avoir une vision d'ensemble sur le reste à faire du projet.",
+            "Développement" : "Développement des différentes fonctionnalités de l'application web."
+        },
+
+        "Legendes" : [
+            "Page liste des jeux",
+            "Page ajout d'un éditeur de jeu",
+            "Page liste des éditeurs de jeu",
+            "Page ajout d'un jeu"
+        ],
+        "Date" : "Décembre 2025 : 2 semaines",
+        "Annee" : 2025,
+
+        "Retrospection" : "Ce projet m'a permit de renforcer mes compétences en CRUD avec Express. De plus, j'ai pu approfondir mon expérience dans l'utilisation d'un ORM avec prisma ainsi que des moteurs de templates avec handlebars."
+    }
+}
