@@ -66,15 +66,15 @@
         },
 
         "Etapes": {
-            "Étude des besoins du client": "Tout d'abord, j'ai commencé par <b>étudier ce dont le client</b> avait besoin. C'était un projet <b>assez conséquent</b>, donc je ne devais pas me perdre pendant le développement.",
+            "Étude des besoins du client": "Analyse des <b>besoins du client</b> pour cadrer le projet.",
 
-            "Base de données": "Le projet avait besoin d'une base de données pour <b>fonctionner convenablement</b>. J'ai donc dû <b>établir les schémas</b> de celle-ci afin de <b>gérer les données le plus efficacement possible</b>.",
+            "Base de données": "Conception de la <b>base de données</b> et de ses schémas.",
 
-            "Développements": "Quand tout cela était fait, j'ai pu commencer à <b>développer les bots</b>, consulter le client pour avoir <b>plus de précisions sur ses requêtes</b> et <b>le conseiller</b> sur certaines <b>fonctionnalités</b> des bots.",
+            "Développements": "Développement des <b>bots</b> avec échanges réguliers et <b>conseil client</b>.",
 
-            "Déploiement": "Dès que tous les bots étaient terminés, et même un peu avant, j'ai commencé à <b>étudier avec le client</b> quel hébergement était le plus adapté.<br/>Nous sommes partis sur <b>Railway</b>, où sont donc hébergés les <b>11 bots</b> ainsi que la <b>base de données.</b>",
+            "Déploiement": "Choix de l'hébergement et déploiement sur <b>Railway</b> (bots + base de données).",
 
-            "Ajustements": "Après la <b>finalisation du projet</b>, je suis resté à <b>l'écoute du client</b> afin de régler <b>les possibles soucis</b>, modifier certaines choses <b>si besoins.</b>"
+            "Ajustements": "Suivi post-projet : <b>corrections</b> et <b>améliorations</b> selon les retours."
         },
 
         "Missions" : {
@@ -128,13 +128,19 @@
 
 
         "Etapes": {
-            "Scénario": "Dans un premier temps, nous nous sommes intéressés à <b>l'histoire que nous voulions raconter dans le jeu</b>.<br />Nous avons donc organisé des réunions afin de déterminer <b>quel jeu nous voulions créer</b>.",
-            "Assets 3D": "Nous avons effectué des recherches concernant <b>tous les assets 3D que nous devions créer pour le jeu</b>, afin de nous organiser sur <b>qui modéliserait quoi</b>.",
-            "Unreal Engine": "Nous ne savions <b>pas utiliser le moteur</b>, et encore moins faire du <b>Blueprint</b>. Grâce à <b>diverses ressources</b>, nous nous sommes formés (les programmeurs) <b>afin d'acquérir les connaissances nécessaires pour développer le jeu</b>.",
-            "Développement d'éléments de gameplay": "Avant de passer au <b>développement du gameplay complet</b>, nous avons choisi de <b>développer certaines mécaniques</b> qui nous seraient <b>utiles pendant le jeu</b> et que nous pourrions <b>réutiliser facilement</b>. <i>Ex : interaction avec les objets, UI flexible, système d'inspection, mise en place de différents types d'objets avec leurs spécificités...</i>",
-            "Level Design": "Nous avons ensuite commencé à créer les différents <b>niveaux</b> dans lesquels le <b>jeu devait se dérouler</b>.",
-            "Gameplay": "Une fois toutes ces étapes réalisées, nous avons pu commencer à développer le <b>gameplay du jeu</b> : mise en place du <b>changement de niveau</b>, <b>lignes directrices d'un niveau</b>, <b>indications pour le joueur</b>...",
-            "Cinématiques": "Vers la fin du développement, nous avons ajouté <b>quelques cinématiques</b> afin <b>d'améliorer la narration</b> et les <b>transitions entre niveaux</b>."
+            "Scénario": "Définition de <b>l'histoire</b> et du <b>concept du jeu</b> à travers des réunions.",
+
+            "Assets 3D": "Organisation de la création des <b>assets 3D</b> et répartition des tâches.",
+
+            "Unreal Engine": "Formation sur <b>Unreal Engine</b> et le <b>Blueprint</b> via diverses ressources.",
+
+            "Gameplay (éléments)": "Développement de <b>mécaniques réutilisables</b> (interactions, UI, inspection...).",
+
+            "Level Design": "Création des <b>niveaux</b> du jeu.",
+
+            "Gameplay": "Mise en place du <b>gameplay</b> : progression, objectifs et indications joueur.",
+
+            "Cinématiques": "Ajout de <b>cinématiques</b> pour améliorer la narration et les transitions."
         },
 
         "Legendes" : ["Menu du jeu","Aperçu in-game - Maison d'enquête","Aperçu in-game - Maison d'enquête","Aperçu in-game - Hanger","Aperçu quête  fusible","Aperçu in-game","Tableau explicatif des quêtes","Quête des fusibles","Quête moteurs","Egnigme de fusibles","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Hangar","Aperçu in-game - Vertolaye", "Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye","Aperçu in-game - Vertolaye"],
@@ -179,17 +185,17 @@
         },
 
         "Etapes": {
-            "Études du cahier des charges": "Nous avons étudié le <b>cahier des charges</b> afin de définir <b>l'organisation et le développement</b> de l'application.",
+            "Études du cahier des charges": "Analyse du <b>cahier des charges</b> pour structurer le développement.",
 
-            "AsciiArt dans la console": "Développement d'un affichage de l'<b>AsciiArt dans la console</b>.",
+            "AsciiArt (console)": "Affichage de l'<b>AsciiArt dans la console</b>.",
 
-            "AsciiArt en fichier": "Mise en place de la génération de l'<b>AsciiArt dans un fichier de sortie</b>.",
+            "AsciiArt (fichier)": "Génération de l'<b>AsciiArt en fichier</b>.",
 
-            "Palette personnalisable": "Ajout de la possibilité d'utiliser <b>n'importe quelle palette</b>.",
+            "Palette personnalisable": "Support de <b>palettes personnalisées</b>.",
 
-            "Paramètres": "Ajout d'<b>arguments en entrée</b> pour choisir le fichier, la sortie et la palette, ainsi qu'un <b>--help</b>.",
+            "Paramètres": "Gestion des <b>arguments CLI</b> (fichier, sortie, palette, <b>--help</b>).",
 
-            "Redimension": "Implémentation d'un système de <b>redimensionnement</b> pour accélérer la génération de l'AsciiArt."
+            "Redimension": "Ajout du <b>redimensionnement</b> pour optimiser les performances."
         },
 
         "Missions" : {
@@ -229,11 +235,11 @@
         },
 
         "Etapes": {
-            "Conception": "Dans un premier temps, nous avons <b>imaginé ce à quoi l'application pourrait ressembler</b> ainsi que les différentes <b>fonctionnalités qu'elle pourrait proposer</b>.",
+            "Conception": "Définition des <b>fonctionnalités</b> et de l'<b>interface</b> de l'application.",
 
-            "Traitement des données": "Les données à traiter étaient contenues dans un <b>fichier CSV</b>. Nous avons donc mis en place différents algorithmes afin de les exploiter de la manière <b>la plus optimale et flexible possible</b>.",
+            "Traitement des données": "Exploitation des données <b>CSV</b> via des algorithmes <b>optimisés et flexibles</b>.",
 
-            "Développement": "Une fois cette étape réalisée, nous avons pu commencer à développer <b>l'interface utilisateur</b> ainsi que les <b>différentes fonctionnalités de l'application</b>.<br />"
+            "Développement": "Développement de l'<b>interface utilisateur</b> et des <b>fonctionnalités</b>."
         },
 
         "Legendes" : ["Interface d'origine de l'app","détails de 1994 à 2007","détails sur l'année 2016"],
