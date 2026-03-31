@@ -24,10 +24,9 @@ class DefaultController
         $content = file_get_contents("./Config/competences.json",true);
         $competences = json_decode($content,true);
 
-
-
-        $content = file_get_contents("./Config/project.json",true);
+        $content = file_get_contents("./Config/projects.json",true);
         $projets = json_decode($content,true);
+
         \sortProject($projets);
         $newArray = [];
         $idToString = [

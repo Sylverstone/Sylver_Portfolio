@@ -78,7 +78,7 @@ class Router
 
     public static function getRouter(): Router
     {
-//        self::$ProjectControllers = new ProjectsControllers("./Config/project.json");
+//        self::$ProjectControllers = new ProjectsControllers("./Config/projects.json");
 
         if (!isset(self::$twig)) {
             self::InitTwig();

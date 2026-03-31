@@ -21,24 +21,6 @@ header .Illustration {
   border-radius: 0.5em;
   filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
 }
-header nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header nav #backHome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 0;
-  height: 60%;
-}
-header nav #backHome img {
-  height: 80%;
-  width: auto;
-}
 header #info {
   display: flex;
   flex-direction: column;
@@ -68,157 +50,211 @@ header #date {
     left: 2rem !important;
   }
 }
+figure figcaption {
+  font-size: clamp(0.7em, 1.2vw, 1em);
+}
+
 main {
-  width: 90vw;
   align-self: center;
 }
 main section {
   filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
 }
-main .Container {
-  flex-direction: column;
-}
-main .Link {
-  min-height: 4rem;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  align-self: flex-start !important;
-  position: sticky;
-}
-main .Link p {
-  margin: 1rem 3rem !important;
-  min-width: 5em;
-}
-main .Link img {
-  margin-right: 1rem;
-}
-main section[id] {
-  cursor: pointer;
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
-}
 main section:first-of-type {
   margin-top: 0 !important;
-}
-main #AperçuProjet, main #AperçuProjet, main #EtapeProjet, main #section_Apropos, main #LienProjet {
-  margin-top: 1rem;
-  background-color: #052A59;
-  color: white;
-  border-radius: 1rem;
-  transition: height 500ms ease;
-  overflow: hidden;
-  font-size: clamp(1em, 1.8vw, 1.5em);
-  height: 4rem;
-}
-main .CompContainer {
-  align-self: center;
-}
-main [class^=Comp-]::before {
-  display: none;
-}
-main #LienProjet {
-  flex-direction: column;
-}
-main #LienProjet .Container {
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-}
-main .startConditionProjet {
-  display: flex;
-}
-main #AperçuProjet {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-main #AperçuProjet .Container img {
-  margin-top: 1rem;
-  width: clamp(5rem, 80vw, 25rem);
-  border-radius: 0.5em;
-}
-main #AperçuProjet .Container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  margin-top: 2em;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-main #AperçuProjet .Container .ImageApercu {
-  margin-right: 0;
-}
-main #AperçuProjet figcaption {
-  text-align: center;
-  font-size: clamp(0.8em, 1.5vw, 1em);
-  margin-bottom: 2em;
-  font-style: italic;
 }
 main section p {
   font-weight: 100;
 }
-main #section_Apropos {
+main .project-section-title {
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  text-align: center;
+  font-size: clamp(1.3em, 3vw, 3em);
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+main #apropos {
+  align-self: center;
+  width: 70vw;
+}
+main #apropos p {
+  font-size: clamp(0.8em, 3vw, 1.5em);
+  text-align: center;
+}
+main #missions {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-main #section_Apropos p {
-  font-size: clamp(1em, 1.5vw, 1.5em);
-  line-height: 1.2em;
-  margin: 1rem;
-}
-main #section_Apropos p a {
-  color: #052A59;
-  font-weight: 700;
-}
-main img {
-  cursor: pointer;
-}
-main #LienProjet a {
-  font-size: clamp(1em, 1.8vw, 1.1em);
+  margin-top: 2em;
+  background-color: #052A59;
   color: white;
-  margin: 1rem 1rem 2rem 1rem;
-  padding: 0 0.5rem;
-  border-radius: 0.5rem;
-  text-decoration: underline;
 }
-main .Etape {
-  margin-left: 2rem;
+main #missions h3 {
+  margin-top: 2rem;
+}
+main #missions aside {
+  align-self: center;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main #missions aside ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 2em;
+}
+main #missions aside ul li {
+  margin: 0.4em 0;
+  font-size: clamp(0.8em, 1.3vw, 1.8em);
+}
+main #missions aside img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
+}
+main #missions aside figure {
+  width: clamp(14em, 35vw, 40em);
+  margin: auto;
+}
+main #etapes {
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  font-size: clamp(1em, 1.5vw, 1.5em);
+}
+main #etapes h3 {
+  color: #052A59;
+}
+main #etapes aside {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main #etapes aside ul {
+  margin: 0 1rem;
+}
+main #etapes aside ul li {
+  font-size: clamp(0.98em, 1.6vw, 2em);
+  margin: 0.8em 0;
+}
+main #etapes aside ul li > b {
+  text-transform: uppercase;
+  color: #052A59;
+  font-weight: bolder;
+}
+main #etapes aside ul li::marker {
+  color: #052A59;
+  font-weight: bolder;
+}
+main #etapes aside figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+}
+main #etapes > figure {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+}
+main #etapes > figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+}
+main #conclusion {
+  background-color: #052A59;
+  color: white;
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+  padding: 5rem 0;
+  font-size: clamp(0.9em, 1.5vw, 2em);
+}
+main #conclusion p {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+main #conclusion p a {
+  color: white;
+}
+main #conclusion aside a {
+  font-size: 1.2em;
+  color: white;
+  font-weight: bolder;
+}
+main #conclusion aside a:first-of-type {
   margin-right: 1rem;
 }
-main .Etape h2 {
-  font-size: 1.2em;
-  font-style: italic;
-  font-weight: 500;
+main #images {
+  margin-top: 7rem;
 }
-main .Etape p {
-  font-size: 1em;
-  margin-top: 0;
-  margin-left: 1rem;
+main #images h3 {
+  color: #052A59;
 }
-main #EtapeProjet {
+main #images aside {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main #images aside figure {
+  margin-bottom: 2rem;
+  width: clamp(14em, 35vw, 40em);
+}
+main #images aside figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
 }
 
 @media (min-width: 750px) {
   main {
-    width: 80vw;
     align-self: center;
-    padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.8rem;
   }
   main #AperçuProjet .ImageApercu {
     margin-right: 1.5rem;
+  }
+  main #missions h3 {
+    margin-top: 7rem;
+  }
+  main #missions aside {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 7rem;
+  }
+  main #missions aside ul {
+    width: 50%;
+  }
+  main #missions aside figure {
+    width: 40%;
+  }
+  main #etapes {
+    align-self: center;
+    width: 80%;
+  }
+  main #etapes aside ul {
+    margin-right: 1rem;
+    width: 45%;
+  }
+  main #etapes aside figure {
+    margin: 0;
+    width: 45%;
+  }
+  main #etapes > figure {
+    margin-top: 5rem;
   }
   #section_Apropos p.content {
     margin: 2rem 5rem !important;

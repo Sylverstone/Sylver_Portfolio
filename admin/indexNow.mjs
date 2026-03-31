@@ -8,7 +8,7 @@ async function main()
 
 
     let urls = [""];
-    const json = JSON.parse(fs.readFileSync("./../Config/project.json"));
+    const json = JSON.parse(fs.readFileSync("./../Config/projects.json"));
 
     const projects = Object.keys(json);
     urls = urls.concat(projects.map(path => `Projets/${path}`));

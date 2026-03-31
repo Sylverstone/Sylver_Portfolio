@@ -5,13 +5,21 @@
  */
 function scrollTOElement(id)
 {
-    const y = document.querySelector(id).getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: y,
-        behavior:"smooth"
-    });
+    try
+    {
+        const y = document.querySelector(id).getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: y,
+            behavior:"smooth"
+        });
 
-    closeNav();
+        closeNav();
+        return false;
+    }
+    catch (e)
+    {
+        return true;
+    }
 }
 
 function closeNav()

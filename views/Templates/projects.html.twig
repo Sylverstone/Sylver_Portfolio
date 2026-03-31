@@ -22,7 +22,9 @@
                         </ul>
                     </article>
                     <aside class="bottom">
-                        <a href="{{ projet.Liens[0] }}">{{ projet.NomLien[0] }}</a>
+                        {% for nom,lien in projet.Liens|slice(0,1) %}
+                            <a href="{{ lien }}">{{ nom }}</a>
+                        {% endfor %}
                         <span class="Date">{{ projet.Date }}</span>
                     </aside>
                 </section>
