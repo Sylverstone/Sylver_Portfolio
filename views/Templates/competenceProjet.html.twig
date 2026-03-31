@@ -1,0 +1,18 @@
+﻿<div class="CompContainer">
+    {#                                <?php foreach($projet["Comp"] as $key => $comp) : ?>#}
+    {% for key,comp in  projet.Comp %}
+        {% if projet.Helps[key] != "" %}
+            <span class="Comp-{{ comp}} cliquable" onclick="help(this,10)">
+                                            {{ comp }}
+                                                &#9432;
+                                            <div class="tips">
+                                                {{ projet.Helps[key] }}
+                                            </div>
+                                        </span>
+        {% else %}
+            <span class="Comp-{{ comp }}">
+                                            {{ comp }}
+                                        </span>
+        {% endif %}
+    {% endfor %}
+</div>

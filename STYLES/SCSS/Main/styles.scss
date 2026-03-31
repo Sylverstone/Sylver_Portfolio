@@ -1,0 +1,167 @@
+@use 'header';
+@use 'main';
+@use 'footer';
+@use '../shared/var' as *;
+@use '../shared/animation';
+@use "cvSelector";
+
+body,html
+{
+    margin: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+    
+}
+
+[mobile]
+{
+    display: none;
+}
+
+body 
+{
+    display: flex;
+    flex-direction: column;
+    font-family: "Mulish",sans-serif;
+}
+
+h1{
+    font-weight: 500 !important;
+    font-size: 2em;
+}
+
+h1,h2,h3,h4
+{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+}
+
+@media (min-width: $computerSize) {
+    body 
+    {
+        padding-bottom: unset;
+    }
+}
+
+.SimpleContainer
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.NiceButton
+{
+    cursor: pointer;
+    margin-bottom: 2em;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 8em;
+    background-color: $Color2;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: transform 500ms ease;
+
+    &:hover
+    {
+      transform: scale(1.05);
+    }
+}
+
+.lightText
+{
+    margin: 0;
+    font-weight: 100;
+}
+
+.text-centered
+{
+    text-align: center;
+}
+
+li
+{
+    &::marker
+    {
+        content: "- ";
+    }
+}
+
+.reversedRow
+{
+    flex-direction: row-reverse !important;
+}
+
+.cliquable
+{
+    cursor: pointer;
+}
+
+.tab
+{
+    margin-left: 5rem;
+}
+
+#full
+{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.full-space
+{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.up
+{
+    text-transform: uppercase;
+}
+
+.none-appareance
+{
+    appearance: none;
+}
+
+.custom-ul
+{
+    li
+    {
+        &::marker
+        {
+            content: "+ ";
+            font-weight: bolder;
+        }
+    }
+}
+
+figure
+{
+    figcaption
+    {
+        text-align: center;
+        text-wrap: wrap;
+    }
+}
+
+#signature
+{
+    a
+    {
+        color: white;
+    }
+}

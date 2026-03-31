@@ -1,0 +1,356 @@
+@use "../shared/var" as *;
+
+$radiusImg : .7rem;
+
+figure
+{
+    figcaption
+    {
+        font-size: clamp(.7em,1.2vw,1em);
+    }
+}
+
+main
+{
+    align-self: center;
+
+    section {
+        @include littleShadow(.2);
+    }
+
+    //section[id] {
+    //    cursor: pointer;
+    //    @include littleShadow(.2);
+    //}
+
+    section:first-of-type
+    {
+        margin-top: 0 !important;
+    }
+
+    section
+    {
+        p
+        {
+            font-weight: 100;
+        }
+    }
+
+    .project-section-title
+    {
+        font-weight: bold;
+        //margin-top: 5rem;
+        letter-spacing: .3em;
+        text-align: center;
+        font-size: clamp(1.3em,3vw,3em);
+        text-transform: uppercase;
+        padding: 0 2rem;
+    }
+
+    #apropos
+    {
+        align-self: center;
+        width: 70vw;
+
+        p
+        {
+            font-size: clamp(.8em,3vw,1.5em);
+            text-align: center;
+        }
+    }
+
+
+    #missions
+    {
+        display: flex;
+        flex-direction: column;
+        $marge : 2rem;
+        margin-top: 2em;
+        background-color: $Color2;
+        color: white;
+
+        h3
+        {
+            margin-top: $marge;
+        }
+
+        aside
+        {
+            align-self: center;
+            padding-bottom: $marge;
+            //padding-bottom: 5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            ul
+            {
+                //padding-left: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin-right: 2em;
+
+                li
+                {
+                    margin: .4em 0;
+                    font-size: clamp(.8em,1.3vw,1.8em);
+                }
+            }
+
+            img
+            {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                height: auto;
+                border-radius: .7rem;
+                @include littleShadow(.2);
+            }
+
+            figure
+            {
+                width: clamp(14em,35vw,40em);
+                margin: auto;
+            }
+        }
+    }
+
+    #etapes
+    {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+
+        h3
+        {
+            color: $Color2;
+        }
+
+        aside
+        {
+            width: 100%;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            ul
+            {
+
+                margin: 0 1rem;
+                li
+                {
+                    font-size: clamp(.98em,1.6vw,2em);
+                    margin: .8em 0;
+
+                    & > b
+                    {
+                        text-transform: uppercase;
+                        color: $Color2;
+                        font-weight: bolder;
+                    }
+
+                    &::marker
+                    {
+                        color: $Color2;
+                        font-weight: bolder;
+                    }
+                }
+            }
+
+            figure
+            {
+
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                    border-radius: $radiusImg;
+                }
+            }
+
+        }
+
+        & > figure
+        {
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            max-width: 100%;
+            width: 100%;
+
+            img
+            {
+                width: 100%;
+                height: auto;
+                border-radius: $radiusImg;
+            }
+        }
+    }
+
+    #conclusion
+    {
+        background-color: $Color2;
+        color: white;
+        display: grid;
+        place-items: center;
+
+        margin-top: 5rem;
+        padding: 5rem 0;
+        font-size: clamp(.9em,1.5vw,2em);
+
+        p
+        {
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+
+            a
+            {
+                color: white;
+            }
+        }
+
+        aside
+        {
+            a
+            {
+                font-size: 1.2em;
+                color: white;
+                font-weight: bolder;
+            }
+
+            a:first-of-type
+            {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    #images
+    {
+
+        margin-top: 7rem;
+
+        h3
+        {
+            color: $Color2;
+        }
+
+        aside
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            figure
+            {
+                margin-bottom: 2rem;
+                width: clamp(14em,35vw,40em);
+
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                    border-radius: $radiusImg;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width : $computerSize)
+{
+
+
+    main 
+    {
+        //width: 80vw;
+        align-self: center;
+        //background-color : rgba(0, 0, 0, .05);
+        //padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: .8rem;
+
+        #AperçuProjet
+        {
+            .ImageApercu 
+            {
+                margin-right: 1.5rem;
+            }
+        }
+
+        #missions
+        {
+            $marge : 7rem;
+
+            h3
+            {
+                margin-top: $marge;
+            }
+
+            aside
+            {
+
+                justify-content: center;
+                align-items: center;
+
+                ul
+                {
+                    width: 50%;
+                }
+
+                figure
+                {
+                    width: 40%;
+                }
+
+                width: 80%;
+                padding-bottom: $marge;
+            }
+        }
+
+        #etapes
+        {
+
+            align-self: center;
+            width: 80%;
+
+            aside
+            {
+
+                ul
+                {
+                    margin-right: 1rem;
+                    width: 45%;
+                }
+
+                figure
+                {
+                    margin: 0;
+
+                    width: 45%;
+                }
+            }
+
+            & > figure
+            {
+                margin-top: 5rem;
+            }
+        }
+    }
+
+    #section_Apropos
+    {
+        p.content
+        {
+            margin: 2rem 5rem !important;
+        }
+    }
+
+}

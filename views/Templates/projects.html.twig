@@ -1,0 +1,34 @@
+<section id="Projets">
+    {% for key,categorie in projets %}
+        {{ include("Templates/projetEntete.html.twig", { categorie : key }) }}
+        {% for projet in categorie %}
+            <div class="Projet {{ loop.index % 2 == 0 ? "reversedRow" : ""}}">
+                <aside class="ImgProjet">
+                    <a href="{{ navTo("app_projects" , {"name" : projet.path}) }}">
+                        <img class="Illustration" loading="lazy" src="/Images/Projet/{{ projet.path }}.webp" alt="{{ projet.path}} - Image" project="{{ projet.path }}" />
+                    </a>
+                </aside>
+                <section class="MainProjectContainer">
+                    <h2 class="text-centered">{{ projet.Title }}</h2>
+                    <p class="role">{{ projet.role }}</p>
+                    {{ include("Templates/competenceProjet.html.twig") }}
+                    <span class="DescriptionProjet">{{ projet.Desc }}</span>
+                    <article class="contribution">
+                        <p>Ma contribution :</p>
+                        <ul>
+                            {% for contribution in projet.Contributions %}
+                                <li>{{ contribution }}</li>
+                            {% endfor %}
+                        </ul>
+                    </article>
+                    <aside class="bottom">
+                        {% for nom,lien in projet.Liens|slice(0,1) %}
+                            <a href="{{ lien }}">{{ nom }}</a>
+                        {% endfor %}
+                        <span class="Date">{{ projet.Date }}</span>
+                    </aside>
+                </section>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</section>

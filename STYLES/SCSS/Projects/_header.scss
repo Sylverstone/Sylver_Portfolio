@@ -1,0 +1,104 @@
+@use "../shared/var" as *;
+
+header 
+{
+    all : unset;
+    margin: 3rem 2rem;
+    display: flex;
+    min-height: unset !important;
+    min-width: unset !important;
+
+    #Outils
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        img
+        {
+            width: clamp(1em,12vw,5em);
+            height: auto;
+        }
+    }
+
+    .Illustration
+    {
+        align-self: center;
+        width: clamp(2em,70vw,40em);
+        border-radius: .5em;
+        @include littleShadow(.2);
+    }
+
+    //nav
+    //{
+    //    position: relative;
+    //    display: flex;
+    //    align-items: center;
+    //    justify-content: center;
+    //
+    //    #backHome
+    //    {
+    //
+    //        display: flex;
+    //        align-items: center;
+    //        justify-content: center;
+    //        position: absolute;
+    //        left: 0;
+    //
+    //        height: 60%;
+    //
+    //        img
+    //        {
+    //            height: 80%;
+    //            width: auto;
+    //        }
+    //    }
+    //
+    //    ul
+    //    {
+    //        //display: flex;
+    //        //align-items: center;
+    //        //justify-content: space-between;
+    //        //width: 80vw;
+    //        //height: 100%;
+    //    }
+    //}
+
+    #info 
+    {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        font-size: clamp(.8em,8vw,3em);
+    }
+
+    #titre 
+    {
+        text-align: center;
+        font-size: clamp(1em,8vw,2em);
+        margin-bottom: 0;
+        letter-spacing: .3em;
+    }
+
+    #date 
+    {
+        font-style: italic;
+        margin-top: 2%;
+        text-align: center;
+        font-size: 0.5em;
+        font-weight: 100;
+    }
+}
+
+@media (min-width : $computerSize)
+{
+    header 
+    {
+        margin: 0;
+        margin-top: 5rem;
+    }
+
+    #backHome
+    {
+        left: 2rem !important;
+    }
+}

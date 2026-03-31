@@ -1,0 +1,235 @@
+@use '../shared/var' as *;
+
+footer 
+{
+    background-color: $Color2;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+
+    #reseaux
+    {
+        padding-top: 2em;
+        padding-bottom: 1em;
+        display: flex;
+        justify-content: center;
+
+        img 
+        {
+            cursor: pointer;
+            width: $FooterIconSize;
+            margin: 0 1em;
+
+            transition: filter 500ms ease, transform 500ms ease;
+
+
+            &:hover
+            {
+                transform: translateY(-2px);
+                @include littleShadow(1);
+            }
+        }
+    }
+
+    #contact 
+    {
+
+        cursor: pointer;
+        margin-bottom: 2em;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        color: $Color1;
+        padding: 0 10%;
+        border-radius: 8em;
+        background-color: rgba(black,.23);
+        justify-content: center;
+        transition: background-color 1s ease;
+
+        p 
+        {
+            margin-right: 10%;
+            transition: color 1s ease;
+        }
+
+        &:hover 
+        {
+            background-color: rgba(white,.23);
+        }
+
+        
+    }
+
+    form 
+    {
+        @include littleShadow(.6);
+        display: none;
+        align-self: center;
+        flex-direction: column;
+        align-items: flex-start;
+        width: clamp(13rem,40vw,20rem);
+        background-color: rgba(black,.23);
+        padding:5%;
+        border-radius: .8em;
+        color: white;
+        margin-bottom: 2rem;
+        
+        textarea 
+        {
+            resize: none;
+            margin-top: 2%;
+            background-color: rgba(black,.23);
+            border:none;
+            border-radius: .3em;
+            width: 100%;
+            height: 10em;
+            color: inherit;
+
+            &::placeholder
+            {
+                padding-left: 2%;
+            }
+        }
+
+        .input-container, .textarea-container
+        {
+            position: relative;
+            margin: .2rem 0;
+            width: 100%;
+        }
+
+        .textarea-container
+        {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            #compteur 
+            {
+                margin-top: 1rem;
+                font-size: .5em;
+                align-self: flex-end;
+            }
+        }
+
+
+        .name-email
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        input
+        {
+            color: inherit;
+            cursor: pointer;
+            
+            background-color: rgba(black,.23);
+            border: none;
+            border-radius: .3em;
+            height: 2em;
+
+
+            &::placeholder
+            {
+                padding-left: 2%;
+            }
+
+            &::content
+            {
+                padding-left: 2%;
+            }
+        }
+
+        input#Objet 
+        {
+            width: 100%;
+        }
+        input#Email
+        {
+            width: 100%;
+        }
+
+        input#name
+        {
+            width: 80%;
+        }
+
+        input + label
+        {
+            color: white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            font-size: .8em;
+            transition: top 1s ease, font-size 500ms ease;
+        }
+    
+        textarea + label
+        {
+            color: white;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: .8em;
+            transition: top 1s ease, font-size 500ms ease;            
+        }
+
+        textarea
+        {
+            &:focus + label, &:not(:placeholder-shown) + label
+            {
+                top: -8px;
+                font-size: .5em;
+            }            
+        }
+
+        input
+        {
+            font-size: .8em;
+            padding: .3rem .2rem;
+            &:focus + label, &:not(:placeholder-shown) + label
+            {
+                top: 8px;
+                font-size: .5em;
+            }
+
+            &:focus
+            {
+                border: none;
+            }
+        }
+
+        #Objet
+        {
+            width: 100%;
+        }
+        
+        input[type="submit"]
+        {
+            margin-top: 2em;
+            color : white;
+            border-radius: .2em;
+            align-self: center;
+            width: 50%;
+        }
+    }
+
+    #signature
+    {
+        font-size: .8em;
+        color: $Color3;
+        text-align: center;
+    }
+}
+
+@media (min-width: $computerSize) 
+{
+    form 
+    {
+        padding: 2em !important;
+    }
+}

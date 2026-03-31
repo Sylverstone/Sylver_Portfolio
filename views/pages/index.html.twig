@@ -1,0 +1,87 @@
+﻿{% extends "base.html.twig" %}
+
+
+{% block meta %}
+    <meta name="description" content="C'est mon portfolio, j'y parle de moi, de mes projets, et possiblement de mon actualité">
+{% endblock %}
+{% block title %}Sylvio - Portfolio{% endblock %}
+
+{% block body %}
+<main>
+        <section id="APropos">
+            <h1>À propos de moi</h1>
+            <p>
+                Je suis actuellement étudiant en <b>Informatique Graphique</b> au Puy-en-Velay et j'aspire à devenir <b>développeur de jeux vidéo</b>.<br/><br/>
+                Généralement, je développe mes projets avec <b>Unreal Engine 5</b>, en combinant <b>Blueprint</b> et <b>C++</b>, mais j'ai également une expérience sur <b>Unity</b>, notamment en réalité virtuelle.<br/><br/>
+                En plus du jeu vidéo, j'ai également une appétence pour le <b>domaine du web</b>, plus particulièrement <b>le back-end</b>.<br/>C'est pourquoi j'ai développé mon portfolio moi-même.<br/><br/>
+                Si vous voulez en <b>savoir plus</b> sur les <b>jeux vidéo</b> que j'ai pu créer, rendez-vous sur mon <a target="_blank" href="https://gamejolt.com/@scylverstone/games"><b>Gamejolt</b></a>.<br/>
+                Rendez-vous sur mon <a href="https://github.com/Sylverstone/" target="_blank"><b>GitHub</b></a> afin d'en savoir plus sur mes projets :)
+            </p>
+        </section>
+        <section id="Competences">
+{#            <?php foreach($competences as $competence) : ?>#}
+            {% for competence in competences %}
+                <div class="Competence" fade>
+                    <article class="SimpleContainer">
+                        <img class="Illustration" src="/Images/Icon/{{ competence.Illustration }}" alt="{{ competence.Nom }}>"/>
+                        <p class="titre">{{ competence.Nom }}</p>
+                        <p class="subTitle">{{ competence.subTitle }}</p>
+                        <p class="phrase">{{ competence.miniTitre }}</p>
+                        <aside class="CompetenceContainer">
+                            <p>
+                                {% for i in 0..competence.ImagesNames|length - 2 %}
+                                    {{ competence.ImagesNames[i] }},
+                                {% endfor %}
+                                {{ competence.ImagesNames|last }}
+                            </p>
+                        </aside>
+                        <p class="phrase">{{ competence.miniTitre2 }}</p>
+                        {% for content in competence.content2 %}
+                            <p class="text-column">{{ content }}</p>
+                        {% endfor %}
+                    </article>
+                </div>
+            {% endfor %}
+        </section>
+        {{ include("Templates/projects.html.twig") }}
+</main>
+{% endblock %}
+
+{% block header %}
+    <section id="SectionPP">
+        <div id="EnTete">
+            <aside id="Info">
+                <p class="lightText" id="intro">Salut ! Je suis</p>
+                <p id="nom">Pelage Maxime<br/>Sylvio</p>
+                <p id="metier">Développeur de jeux vidéo</p>
+                <a href="/#contact" class="NiceButton" onclick="scrollTOElement('#contact'); showContactForm(); return false;">Contactez-moi </a>
+            </aside>
+            <aside id="Image">
+                <img id="PP" alt="Icon - header" src="/Images/Isagi.webp">
+            </aside>
+        </div>
+    </section>
+    <aside id="link">
+        <a target="_blank" href="https://github.com/Sylverstone/" title="Github">
+            <img src="/Images/Icon/github.svg" alt="GitHub - Icon"/>
+        </a>
+        <a target="_blank" href="https://linkedin.com/in/sylviopelagemaxime" title="LinkedIn">
+            <img src="/Images/Icon/linkedin.svg" alt="LinkedIn - Icon" />
+        </a>
+        <a target="_blank" href="https://gitlab-lepuy.iut.uca.fr/sypelagema" title="GitLab">
+            <img src="/Images/Icon/gitlab.svg" alt="GitLab - Icon"/>
+        </a>
+        <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
+            <img src="/Images/Icon/fiverr.svg" alt="Fiverr - Icon"/>
+        </a>
+        <a target="_blank" title="Gamejolt" href="https://gamejolt.com/@scylverstone/games">
+            <img src="/Images/Icon/Gamejolt.svg" alt="Gamejolt - Icon">
+        </a>
+    </aside>
+{% endblock %}
+
+
+{% block scripts %}
+    <script type="text/JavaScript" src="/Scripts/visible.js" defer></script>
+    <script type="text/JavaScript" src="/Scripts/formCompteur.js" defer></script>
+{% endblock %}

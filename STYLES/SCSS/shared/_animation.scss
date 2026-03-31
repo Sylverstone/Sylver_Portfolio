@@ -1,0 +1,83 @@
+@use "sass:list";
+
+$animTime: 500ms;
+
+@keyframes AppearLeft 
+{
+    from 
+    {
+        transform: translateX(100%);
+    }
+    to 
+    {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes AppearFromUp {
+    from 
+    {
+        transform: translateY(-100%);
+    }
+    to 
+    {
+        transform: translateY(0);
+    }
+}
+
+@keyframes  BaseAppear{
+    from {
+        height: 0;
+    }
+    to
+    {
+        height: fit-content;
+    }
+}
+
+@keyframes OpacityIn {
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+.AppearFromUp
+{
+    animation: AppearFromUp $animTime ease forwards;
+}
+
+.Appear
+{
+    overflow: hidden;
+}
+
+.AppearOpacity
+{
+    animation: OpacityIn $animTime ease;
+}
+
+.DisappearOpacity
+{
+    animation: OpacityIn $animTime reverse;
+}
+
+.Disappear
+{
+    animation: BaseAppear $animTime ease reverse;
+}
+
+.hidden
+{
+    opacity: 0;
+    transition: opacity $animTime ease;
+}
+
+.visible
+{
+    opacity: 1;
+
+}

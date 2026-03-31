@@ -1,0 +1,17 @@
+{#<nav id="DesktopNav">#}
+{#    {{ include("Templates/links.html.twig") }}#}
+{#</nav>#}
+
+<nav id="MobileNav" sticky>
+    <input type="checkbox" id="toggle-nav-checkbox">
+    <div id="toggle-button">
+{#        <img src="/Images/PartieClose.png" alt="Icon menu" />#}
+        <div id="bar-top"></div>
+        <div id="bar-middle"></div>
+        <div id="bar-bottom"></div>
+    </div>
+    <aside id="nav-container">
+        {{ include("Templates/links.html.twig") }}
+    </aside>
+    <div id="full"></div>
+</nav>

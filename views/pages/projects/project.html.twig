@@ -1,0 +1,109 @@
+{% extends "base.html.twig" %}
+
+{% block meta %}
+    <meta name="description" content="{{ projet.Desc }}">
+{% endblock %}
+{% block title %}
+    Projet - {{ projet.Title }}
+{% endblock %}
+
+{% block styles %}
+    <link href="/STYLES/CSS/Projects/projetStyles.css" rel="stylesheet" />
+{% endblock %}
+
+{%  block links %}
+    <link rel="preload" as="image" href="/Images/Projet/{{ projet.slug }}.webp">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <section id="apropos" class="content">
+            <p>{{ projet.APropos|raw }}</p>
+        </section>
+
+        <section id="missions">
+            <h3 class="project-section-title">Mes missions</h3>
+            <aside>
+                <ul class="custom-ul">
+                    {% for nom, description in projet.Missions %}
+                        <li><b>{{ nom }}</b> : <span class="lightText">{{ description|raw }}</span></li>
+                    {% endfor %}
+                </ul>
+                <figure>
+                    <img src="/Images/{{ projet.slug }}/{{ projet.slug }}1.png" alt="{{ projet.Title }} - Première illustration" width="50" height="50" />
+                    <figcaption class="lightText">{{ projet.Legendes[0]|raw }}</figcaption>
+                </figure>
+            </aside>
+        </section>
+
+        <section id="etapes">
+            <h3 class="project-section-title">Étapes</h3>
+            <aside>
+                <ul class="custom-ul">
+                    {% for nom,description in projet.Etapes %}
+                        <li>
+                            <b>
+                                {{ nom }}
+                            </b><br/>
+                            <span>
+                                {{ description|raw }}
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <figure>
+                    <img src="/Images/{{ projet.slug }}/{{ projet.slug }}2.png" alt="{{ projet.Title }} - Deuxième illustration" width="50" height="50" />
+                    <figcaption class="lightText">{{ projet.Legendes[1]|raw }}</figcaption>
+                </figure>
+            </aside>
+            <figure>
+                <img src="/Images/{{ projet.slug }}/{{ projet.slug }}3.png" alt="{{ projet.Title }} - Deuxième illustration" width="50" height="50" />
+                <figcaption class="lightText">{{ projet.Legendes[2]|raw }}</figcaption>
+            </figure>
+        </section>
+
+        <section id="conclusion">
+            <p class="lightText">
+                {{ projet.Retrospection|raw }}
+            </p>
+            <aside>
+                {% for nom,lien in projet.Liens %}
+                    <a href="{{ lien }}" target="_blank">{{ nom }}</a>
+                {% endfor %}
+            </aside>
+        </section>
+
+        <section id="images">
+            <h3 class="project-section-title">Les images du projets</h3>
+            <aside>
+                {% for i in 1..nb_image %}
+                    <figure>
+                        <img src="/Images/{{ projet.slug }}/{{ projet.slug }}{{ i }}.png" alt="{{ projet.Legendes[i - 1] }}"/>
+                        <figcaption class="lightText">
+                            {{ projet.Legendes[i - 1]|raw }}
+                        </figcaption>
+                    </figure>
+                {% endfor %}
+            </aside>
+        </section>
+    </main>
+{% endblock %}
+
+{% block header %}
+    <aside id="info">
+        <h1 id="titre">{{ projet.Title }}</h1>
+        <p id="date">{{ projet.Date }}</p>
+    </aside>
+    <img class="Illustration" src="/Images/Projet/{{ projet.slug }}.webp" alt="Illustration - {{ projet.Title }}"/>
+    <section id="Outils">
+        {% for outil in projet.Outils %}
+            <img src="/Images/Icon/{{ outil }}" alt="{{ outil }}" width="50" height="50"/>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    <script type="module" src="/Scripts/Partie.js" defer></script>
+    <script type="module" src="/Scripts/projet.js" defer></script>
+    <script type="text/JavaScript" src="/Scripts/formCompteur.js" defer></script>
+{% endblock %}

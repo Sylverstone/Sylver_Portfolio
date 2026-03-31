@@ -1,0 +1,31 @@
+{
+    "1" : {
+        "Nom" : "Programmation",
+        "Illustration" : "script.png",
+        "subTitle" : "La programmation c'est super :)",
+        "miniTitre" : "Ce que je maîtrise",
+        "ImagesNames" : ["C++","C#","TypeScript","PL/SQL","Git","PHP","Python"],
+        "miniTitre2" : "Outils de développement",
+        "content2" : ["Visual Studio","Rider","WebStorm","PhpStorm", "GitHub/GitLab", "Git","Railway","Qt"]
+    },
+
+    "2" : {
+        "Nom" : "Développement web",
+        "Illustration" : "web.png",
+        "subTitle" : "Le développement web me permet de mettre en avant mes autres compétences et j'adore ça. Surtout le back-end",
+        "miniTitre" : "Les langages que je maîtrise",
+        "ImagesNames" : ["HTML","SCSS","TypeScript","PHP","MySQL","MongoDB","Handlebars","Twig"],
+        "miniTitre2" : "Frameworks",
+        "content2" : ["Express", "Symfony", "React"]
+    },
+
+    "3" : {
+        "Nom" : "Développement de jeu vidéo",
+        "Illustration" : "game.png",
+        "subTitle" : "Depuis petit je souhaite créer des jeux vidéo, et je ne m'étais pas trompé, j'adore ça.",
+        "miniTitre" : "Les moteurs que je maîtrise",
+        "ImagesNames" : ["Unreal engine 5","Unity"],
+        "miniTitre2" : "Outils de développement",
+        "content2" : ["C++", "Blueprint", "C#"]
+    }
+}
