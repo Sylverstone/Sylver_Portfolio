@@ -435,8 +435,11 @@ nav li::marker {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 5% 2rem;
+  margin: 4rem 0;
   transition: transform 500ms ease;
+}
+#Projets .Projet * {
+  max-width: 90vw;
 }
 #Projets .Projet > ul {
   list-style-type: circle;
