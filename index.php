@@ -16,11 +16,15 @@ require_once "Class/Router.php";
 use Symfony\Component\Dotenv\Dotenv;
 
 
-if(!isset($_ENV["ENV"]))
-{
+try {
     $dotenv = new Dotenv();
     $dotenv->load(__DIR__ . "/.env");
 }
+catch (\Exception $e)
+{
+
+}
+
 
 
 
