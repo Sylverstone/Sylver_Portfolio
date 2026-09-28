@@ -49,18 +49,21 @@ class Router
         return self::$twig;
     }
 
-    public static function InitTwig()
+    public static function InitTwig(): void
     {
         $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "/../views");
         self::$twig = new \Twig\Environment($loader);
 
-        $func = new \Twig\TwigFunction('navTo', function (string $alias, array $params)
+        $func = new \Twig\TwigFunction('navTo', function (string $alias, array $params = null)
         {
             $yamlFile = Yaml::parseFile("./Config/alias.yml");
-            error_log("TEST ARRAY KEY");
             if(array_key_exists($alias, $yamlFile)) {
-                error_log("array key exist");
                 $target = $yamlFile[$alias];
+                if($params == null)
+                {
+                    echo $target;
+                    return;
+                }
                 foreach($params as $key => $value)
                 {
                     error_log("key : ".$key);
@@ -69,8 +72,7 @@ class Router
                 echo $target;
                 return;
             }
-
-            echo $alias ;
+            echo $alias;
         });
 
         self::$twig->addFunction($func);
@@ -161,27 +163,5 @@ class Router
         ]);
     }
 
-//    public function serve(string $pattern, bool $preserveExt = false)
-//    {
-//        $files = [];
-//
-//        foreach (glob($pattern) as $fichier) {
-//            $name = basename($fichier);
-//            //sans extension
-//            if (!$preserveExt)
-//                $nameFinal = substr($name, 0, -4);
-//            else
-//                $nameFinal = $name;
-//
-//            if ($nameFinal == "index") {
-//                $nameFinal = "";
-//            }
-//            $t = '/' . $nameFinal;
-//            $files[$t] = $fichier;
-//        }
-//
-//        $this->setMany($files);
-//    }
 }
 
-?>

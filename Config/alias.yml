@@ -1,6 +1,3 @@
-'/Projets/:name': '/Projets/:name'
-/: /
-'/test/:id': '/test/:id'
-'/test/:id/ok/:paid': '/test/:id/ok/:paid'
-/mail: /mail
+home: /
+send_mail: /mail
 app_projects: '/Projets/:name'

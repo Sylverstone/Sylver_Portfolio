@@ -18,7 +18,6 @@ class ProjectsController
     public function detail(string $name) : void
     {
         try {
-
             $content = file_get_contents("./Config/projects.json",true);
             $Projects = json_decode($content,true);
 
@@ -28,7 +27,6 @@ class ProjectsController
 
             $projet = $Projects[$name];
             $projet["slug"] = $name;
-
 
             echo $this->twig->render("pages/projects/project.html.twig", [
                 "projet" => $projet,

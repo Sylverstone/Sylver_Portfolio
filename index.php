@@ -6,13 +6,17 @@
 use Class\Route;
 use Class\Router;
 
+
 include "config.php";
 
 require_once 'vendor/autoload.php';
 require_once "Class/Route.php";
 require_once "Class/Router.php";
 
+use Symfony\Component\Dotenv\Dotenv;
 
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__ . "/.env");
 
 $host = $_SERVER['HTTP_HOST'];
 

@@ -31,7 +31,7 @@ class Route
             $this->alias = $alias;
         }
 
-        $origin_yaml = Yaml::parse(file_get_contents("./Config/alias.yml"));
+        $origin_yaml = Yaml::parse(file_get_contents("./Config/alias.yml")) ?? [];
 
         $val = [
             $this->alias => $path,

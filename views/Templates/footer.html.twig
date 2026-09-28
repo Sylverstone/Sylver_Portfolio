@@ -21,7 +21,7 @@
         <p>CONTACT</p>
         <img src="/Images/ContactButtonIconDown.png" alt="Icone contact" />
     </aside>
-    <form id="formAccueil" action="/Scripts/sendMail.php" method="POST">
+    <form id="formAccueil" action="{{ navTo("send_mail") }}" method="POST">
         <article class="name-email">
             <div class="input-container">
                 <input type="text" name="name" id="name" required placeholder=" " autocapitalize="characters" autocomplete="additional-name">

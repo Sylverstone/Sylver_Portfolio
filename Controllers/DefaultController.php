@@ -2,11 +2,16 @@
 
 namespace Controllers;
 
-use Class\Route;
+require_once "Class/Route.php";
 require_once 'vendor/autoload.php';
 require_once "func/sort.php";
+require_once "Services/MailService.php";
+
+use \Class\Route;
+use Services\MailService;
 
 use Twig\Environment;
+
 class DefaultController
 {
     private Environment $twig;
@@ -18,7 +23,7 @@ class DefaultController
         $this->twig = $twig;
     }
 
-    #[Route(path: "/")]
+    #[Route(path: "/", alias: "home")]
     public function index() : void
     {
         $content = file_get_contents("./Config/competences.json",true);
@@ -50,22 +55,9 @@ class DefaultController
         ]);
     }
 
-    #[Route(path: "/test/:id")]
-    public function test() : void
+    #[Route(path: "/mail", methods: ["POST"], alias: "send_mail")]
+    public function send_mail()
     {
-        echo "la rue ";
-    }
-
-
-    #[Route(path: "/test/:id/ok/:paid")]
-    public function test2(string $id, string $paid) : void
-    {
-        echo "C'EST NOUS LA TEAM <br />";
-        echo $id . " " . $paid . "<br />";
-    }
-    #[Route(path: "/mail", methods: ["POST"])]
-    public function sendMail()
-    {
-
+        MailService::send_mail();
     }
 }
