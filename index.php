@@ -15,8 +15,15 @@ require_once "Class/Router.php";
 
 use Symfony\Component\Dotenv\Dotenv;
 
-$dotenv = new Dotenv();
-$dotenv->load(__DIR__ . "/.env");
+
+$env = $_ENV["ENV"] ?? true;
+if($env === true)
+{
+    $dotenv = new Dotenv();
+    $dotenv->load(__DIR__ . "/.env");
+}
+
+
 
 $host = $_SERVER['HTTP_HOST'];
 
