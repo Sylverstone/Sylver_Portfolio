@@ -1,0 +1,5 @@
+﻿{% for key,reseau in reseaux %}
+    <a target="_blank" href="{{ reseau.Link }}" title="{{ key }}">
+        <img src="{{ reseau.ImageUrl }}" alt="{{ key }} - Icon" />
+    </a>
+{% endfor %}

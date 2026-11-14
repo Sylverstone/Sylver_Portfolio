@@ -7,7 +7,7 @@ use Twig;
 
 //require_once __DIR__ . "/ProjectsControllers.php";
 
-//singleton. Il ne peut y avoir qu'un seul router
+// Singleton : il ne peut y avoir qu'un seul routeur.
 class Router
 {
     private array $routes = [];
@@ -54,7 +54,7 @@ class Router
         $loader = new Twig\Loader\FilesystemLoader(__DIR__ . "/../views");
         self::$twig = new \Twig\Environment($loader);
 
-        $func = new \Twig\TwigFunction('navTo', function (string $alias, array $params = null)
+        $func = new \Twig\TwigFunction('navTo', function (string $alias, ?array $params = null)
         {
             $yamlFile = Yaml::parseFile("./Config/alias.yml");
             if(array_key_exists($alias, $yamlFile)) {
@@ -95,8 +95,8 @@ class Router
     }
 
     /**
-     * @param string $file Correspond à la view qu'il faut rendre. Ne doit pas contenir d'extension !
-     * @param array $params Les paramètres a ajouter à la fonction render
+     * @param string $file Correspond à la vue à rendre. Ne doit pas contenir d'extension.
+     * @param array $params Les paramètres à ajouter à la fonction render
      * @return void
      */
     public static function render(string $file, array $params = [], string $ext = ".html.twig"): void
@@ -126,7 +126,7 @@ class Router
 //            echo "url : " . $url . "<br />";
             if (preg_match($regex, $url, $matches)) {
 //                print_r($matches);
-                array_shift($matches); //retirer le premier élémént
+                array_shift($matches); // retirer le premier élément
                 $routesParamsValues = $matches;
 
                 $routeParamsNames = [];
@@ -157,11 +157,11 @@ class Router
             };
         }
 
+        http_response_code(404);
         self::render("pages/error/error", [
-            "message" => "l'URL $url n'existe pas",
+            "message" => "L'URL $url n'existe pas",
             "title" => "On dirait que vous vous êtes perdu xD"
         ]);
     }
 
 }
-

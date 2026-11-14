@@ -2,57 +2,69 @@
 
 namespace Controllers;
 
-require_once "Class/Route.php";
 require_once 'vendor/autoload.php';
+require_once "Class/Route.php";
+require_once "Class/BaseController.php";
 require_once "func/sort.php";
 require_once "Services/MailService.php";
 
-use \Class\Route;
+use Class\BaseController;
+use Class\Route;
+use JetBrains\PhpStorm\FileReference;
 use Services\MailService;
+use function sortProject;
 
-use Twig\Environment;
-
-class DefaultController
+class DefaultController extends BaseController
 {
-    private Environment $twig;
 
     public string $name = "salut";
 
-    public function __construct(Environment $twig)
-    {
-        $this->twig = $twig;
+    public static function getJson(#[FileReference] string $path): array {
+        $content = file_get_contents($path, true);
+        if(!$content)
+            return [];
+        $json =json_decode($content, true);
+        unset($json["\$schema"]);
+        return $json;
     }
-
     #[Route(path: "/", alias: "home")]
     public function index() : void
     {
-        $content = file_get_contents("./Config/competences.json",true);
-        $competences = json_decode($content,true);
+        try {
+            $competences = $this->getJson("./Config/competences.json");
+            $projets = $this->getJson("./Config/projects.json");
+            $reseaux = $this->getJson("./Config/reseaux.json");
 
-        $content = file_get_contents("./Config/projects.json",true);
-        $projets = json_decode($content,true);
+            sortProject($projets);
+            $newArray = [];
+            $idToString = [
+                "PERSO" => "PROJET PERSO",
+                "PRO" => "PROJET PRO",
+                "PHARE" => "PROJET PHARE"
+            ];
 
-        \sortProject($projets);
-        $newArray = [];
-        $idToString = [
-            0 => "PROJET PERSO",
-            1 => "PROJET PRO",
-            2 => "PROJET PHARE"
-        ];
-        foreach ($projets as $url => $projet) {
-            $projet["path"] = $url;
-            if(!array_key_exists($idToString[$projet["categorie"]], $newArray)){
-                $newArray[$idToString[$projet["categorie"]]] = [];
+            foreach ($projets as $url => $projet) {
+                $projet["path"] = $url;
+                if(!array_key_exists($idToString[$projet["categorie"]], $newArray)){
+                    $newArray[$idToString[$projet["categorie"]]] = [];
+                }
+                //ajout
+                $newArray[$idToString[$projet["categorie"]]][] = $projet;
             }
-            //ajout
 
-            $newArray[$idToString[$projet["categorie"]]][] = $projet;
+            $this->render("pages/index.html.twig",[
+                "competences" => $competences,
+                "projets" => $newArray,
+                "reseaux" => $reseaux
+            ]);
+
+            return;
+        }
+        catch (\Exception $e)
+        {
+            $this->renderError($e);
         }
 
-        echo $this->twig->render("pages/index.html.twig", [
-            "competences" => $competences,
-            "projets" => $newArray
-        ]);
     }
 
     #[Route(path: "/mail", methods: ["POST"], alias: "send_mail")]

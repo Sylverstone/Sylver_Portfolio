@@ -1,10 +1,8 @@
 {
     "require": {
-        "phpmailer/phpmailer": "^6.10",
-        "twig/twig": "^3.23",
+        "twig/twig": "3.27.0.0",
         "resend/resend-php": "^1.1",
-        "symfony/yaml": "^8.0",
-        "vlucas/phpdotenv": "*",
+        "symfony/yaml": "8.1.11.0",
         "symfony/dotenv": "*"
     }
 }

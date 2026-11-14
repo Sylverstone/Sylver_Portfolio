@@ -8,7 +8,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 class MailService
 {
-
     public static function send_mail(): void
     {
         if(!(

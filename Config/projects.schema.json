@@ -1,0 +1,109 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "patternProperties": {
+    "^[A-Za-z0-9_]+$": {
+      "$ref": "#/definitions/projet"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "projet": {
+      "type": "object",
+      "required": [
+        "categorie",
+        "Title",
+        "Desc",
+        "Comp",
+        "Helps",
+        "Contributions",
+        "APropos",
+        "Missions",
+        "Etapes",
+        "Legendes",
+        "Date",
+        "Annee",
+        "Retrospection"
+      ],
+      "properties": {
+        "categorie": {
+          "enum": ["PRO","PERSO","PHARE"]
+        },
+        "Title": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "Desc": {
+          "type": "string"
+        },
+        "Comp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Helps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Contributions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "APropos": {
+          "type": "string"
+        },
+        "Liens": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "Etapes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "Missions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "Legendes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Date": {
+          "type": "string"
+        },
+        "Annee": {
+          "type": "number"
+        },
+        "Illustration": {
+          "type": "integer"
+        },
+        "Outils": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Retrospection": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

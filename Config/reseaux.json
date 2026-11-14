@@ -1,0 +1,20 @@
+{
+    "$schema" : "./reseaux.schema.json",
+
+    "GitHub": {
+        "Link": "https://github.com/Sylverstone/",
+        "ImageUrl": "/Images/Icon/GitHUB.png"
+    },
+    "LinkedIn": {
+        "Link": "https://linkedin.com/in/sylviopelagemaxime",
+        "ImageUrl": "/Images/Icon/linkedIn.png"
+    },
+    "GitLab": {
+        "Link": "https://gitlab-lepuy.iut.uca.fr/sypelagema",
+        "ImageUrl": "/Images/Icon/gitlab.svg"
+    },
+    "Gamejolt": {
+        "ImageUrl": "/Images/Icon/Gamejolt.svg",
+        "Link": "https://gamejolt.com/@scylverstone/games"
+    }
+}

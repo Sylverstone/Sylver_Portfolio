@@ -129,7 +129,7 @@ nav li::marker {
   height: 1.6rem;
 }
 #MobileNav #toggle-button:before {
-  filter: drop-shadow(0px 0px 50px black);
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.22)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.12));
   border-radius: 2rem;
   position: absolute;
   width: 160%;
@@ -141,7 +141,7 @@ nav li::marker {
   top: 0;
   position: absolute;
   z-index: 2;
-  filter: drop-shadow(0px 0px 50px black);
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.22)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.12));
   opacity: 1 !important;
   padding-top: 4rem;
   transform: translateX(-120%);
@@ -220,12 +220,13 @@ nav li::marker {
 #EnTete #Image {
   display: grid;
   place-items: center;
+  cursor: crosshair;
 }
 #EnTete #PP {
   width: clamp(2em, 50vw, 20em);
   height: auto;
   border-radius: 100%;
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.022)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.012));
 }
 #EnTete #intro {
   width: 100%;
@@ -244,7 +245,7 @@ nav li::marker {
 }
 
 #link {
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.022)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.012));
   margin-top: 5rem;
   background-color: #052A59;
   padding: 0.5rem 0;
@@ -270,7 +271,7 @@ nav li::marker {
 }
 #link img:hover {
   transform: translateY(-0.2rem);
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.044)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.024));
 }
 
 @media (min-width: 750px) {
@@ -421,7 +422,7 @@ nav li::marker {
   width: clamp(10vw, 40em, 80vw);
 }
 #Projets h2 {
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.176)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.096));
   color: #052A59;
   text-transform: uppercase;
   font-weight: 600;
@@ -465,13 +466,12 @@ nav li::marker {
   align-self: center;
   position: relative;
   transition: transform 500ms ease, filter 500ms ease;
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.066)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.036));
   border: 0.05rem solid #e6ecf8;
   border-radius: 1rem;
 }
 #Projets .Projet .ImgProjet:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
 }
 #Projets .Projet .ImgProjet p {
   font-size: clamp(0.9em, 1.6vw, 1.5em);
@@ -650,7 +650,6 @@ nav li::marker {
   color: #052A59;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  font-style: bold;
   align-self: center;
 }
 #Competences .Competence .subTitle {
@@ -754,7 +753,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0% 20%;
+  padding: 0 20%;
 }
 #ProjetAnnonce h2 {
   color: white;
@@ -804,7 +803,7 @@ footer #reseaux img {
 }
 footer #reseaux img:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 0px 50px black);
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.22)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.12));
 }
 footer #contact {
   cursor: pointer;
@@ -827,7 +826,7 @@ footer #contact:hover {
   background-color: rgba(255, 255, 255, 0.23);
 }
 footer form {
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 0.25rem 0.55rem rgba(0, 0, 0, 0.132)) drop-shadow(0 0.75rem 1.5rem rgba(5, 42, 89, 0.072));
   display: none;
   align-self: center;
   flex-direction: column;

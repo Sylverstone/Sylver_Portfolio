@@ -4,6 +4,12 @@
         $CopieArr = $arr;
         $newArray = [];
 
+        $toID = [
+            "PRO" => 1,
+            "PHARE" => 2,
+            "PERSO" => 0,
+        ];
+
         while(count($CopieArr) > 0)
         {
             $min = null;
@@ -15,7 +21,7 @@
                      $min = $val;
                      $minKey = $key;
                 }
-                else if($min["categorie"] < $val["categorie"])
+                else if($toID[$min["categorie"]] < $toID[$val["categorie"]])
                 {
                     $min = $val;
                     $minKey = $key;

@@ -220,7 +220,6 @@ $radiusImg : 1rem;
             &:hover
             {
                 transform: scale(1.05);
-                @include littleShadow(.5);
             }
 
             p 

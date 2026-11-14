@@ -6,6 +6,26 @@
 {% endblock %}
 {% block title %}Sylvio - Portfolio{% endblock %}
 
+
+{% block header %}
+    <section id="SectionPP">
+        <div id="EnTete">
+            <aside id="Info">
+                <p class="lightText" id="intro">Salut ! Je suis</p>
+                <p id="nom">Pelage Maxime<br/>Sylvio</p>
+                <p id="metier">Développeur de jeux vidéo</p>
+                <a href="/#contact" class="NiceButton" onclick="scrollTOElement('#contact'); showContactForm(); return false;">Contactez-moi </a>
+            </aside>
+            <aside id="Image">
+                <img id="PP" alt="Icon - header" src="/Images/Isagi.webp">
+            </aside>
+        </div>
+    </section>
+    <aside id="link">
+        {{ include("Templates/reseaux.html.twig") }}
+    </aside>
+{% endblock %}
+
 {% block body %}
 <main>
         <section id="APropos">
@@ -19,7 +39,6 @@
             </p>
         </section>
         <section id="Competences">
-{#            <?php foreach($competences as $competence) : ?>#}
             {% for competence in competences %}
                 <div class="Competence" fade>
                     <article class="SimpleContainer">
@@ -46,40 +65,6 @@
         {{ include("Templates/projects.html.twig") }}
 </main>
 {% endblock %}
-
-{% block header %}
-    <section id="SectionPP">
-        <div id="EnTete">
-            <aside id="Info">
-                <p class="lightText" id="intro">Salut ! Je suis</p>
-                <p id="nom">Pelage Maxime<br/>Sylvio</p>
-                <p id="metier">Développeur de jeux vidéo</p>
-                <a href="/#contact" class="NiceButton" onclick="scrollTOElement('#contact'); showContactForm(); return false;">Contactez-moi </a>
-            </aside>
-            <aside id="Image">
-                <img id="PP" alt="Icon - header" src="/Images/Isagi.webp">
-            </aside>
-        </div>
-    </section>
-    <aside id="link">
-        <a target="_blank" href="https://github.com/Sylverstone/" title="Github">
-            <img src="/Images/Icon/github.svg" alt="GitHub - Icon"/>
-        </a>
-        <a target="_blank" href="https://linkedin.com/in/sylviopelagemaxime" title="LinkedIn">
-            <img src="/Images/Icon/linkedin.svg" alt="LinkedIn - Icon" />
-        </a>
-        <a target="_blank" href="https://gitlab-lepuy.iut.uca.fr/sypelagema" title="GitLab">
-            <img src="/Images/Icon/gitlab.svg" alt="GitLab - Icon"/>
-        </a>
-        <a target="_blank" href="https://www.fiverr.com/s/WErB50x" title="Fiverr">
-            <img src="/Images/Icon/fiverr.svg" alt="Fiverr - Icon"/>
-        </a>
-        <a target="_blank" title="Gamejolt" href="https://gamejolt.com/@scylverstone/games">
-            <img src="/Images/Icon/Gamejolt.svg" alt="Gamejolt - Icon">
-        </a>
-    </aside>
-{% endblock %}
-
 
 {% block scripts %}
     <script type="text/JavaScript" src="/Scripts/visible.js" defer></script>

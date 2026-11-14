@@ -1,0 +1,27 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "patternProperties": {
+    "^[A-Za-z0-9_]+$": {
+      "$ref": "#/definitions/reseaux"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "reseaux" : {
+      "type": "object",
+      "required": [
+        "Link",
+        "ImageUrl"
+      ],
+      "properties": {
+        "Link": {
+          "type": "string"
+        },
+        "ImageUrl": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

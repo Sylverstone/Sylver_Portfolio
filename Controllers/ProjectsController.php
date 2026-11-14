@@ -2,24 +2,31 @@
 
 namespace Controllers;
 
+require_once "Class/BaseController.php";
+require_once "Class/Route.php";
+
+use Class\BaseController;
 use Class\Route;
 use FilesystemIterator;
-use Twig\Environment;
 
-class ProjectsController
+class ProjectsController extends BaseController
 {
-    private Environment $twig;
-    public function __construct(Environment $twig)
-    {
-        $this->twig = $twig;
-    }
-
     #[Route("/Projets/:name", alias: "app_projects" )]
     public function detail(string $name) : void
     {
         try {
-            $content = file_get_contents("./Config/projects.json",true);
-            $Projects = json_decode($content,true);
+            $Projects = DefaultController::getJson("./Config/projects.json");
+            $reseaux = DefaultController::getJson("./Config/reseaux.json");
+
+            if(!array_key_exists($name, $Projects)) {
+
+                http_response_code(404);
+                $this->render("pages/error/error.html.twig", [
+                    "message" => "Le projet " . $name . " n'existe pas.",
+                    "title" => "Projet inexistant"
+                ]);
+                return;
+            }
 
             $path = "/../Images/" . $name . "/";
             $fi = new FilesystemIterator(__DIR__ . $path);
@@ -28,15 +35,16 @@ class ProjectsController
             $projet = $Projects[$name];
             $projet["slug"] = $name;
 
-            echo $this->twig->render("pages/projects/project.html.twig", [
+            $this->render("pages/projects/project.html.twig", [
                 "projet" => $projet,
-                "nb_image" => $nbImage]);
+                "nb_image" => $nbImage,
+                "reseaux" => $reseaux
+            ]);
+            return;
         }
         catch (\Exception $e)
         {
-            echo $this->twig->render("pages/404/notFound.html.twig", [
-                "message" => "Le projet " . $name . " n'existe pas."
-            ]);
+            $this->renderError($e);
         }
     }
 }
