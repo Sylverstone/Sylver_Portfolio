@@ -27,6 +27,23 @@ class DefaultController extends BaseController
         unset($json["\$schema"]);
         return $json;
     }
+
+    #[Route(path: "/health")]
+    public function healthcheck() : void
+    {
+        $host = strtolower($_SERVER['HTTP_HOST'] ?? "localhost");
+        if(getenv("PHP_ENV"))
+        {
+            if($host !== "healthcheck.railway.app")
+            {
+                exit;
+            }
+        }
+        http_response_code(200);
+        header('Content-type: application/json; charset=utf-8');
+        echo json_encode(["health" => "check"], JSON_UNESCAPED_UNICODE);
+    }
+
     #[Route(path: "/", alias: "home")]
     public function index() : void
     {

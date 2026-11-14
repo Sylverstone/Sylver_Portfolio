@@ -1,3 +1,4 @@
 home: /
 send_mail: /mail
 app_projects: '/Projets/:name'
+/health: /health
