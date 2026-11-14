@@ -10,6 +10,7 @@ require_once "Services/MailService.php";
 
 use Class\BaseController;
 use Class\Route;
+use Class\Router;
 use JetBrains\PhpStorm\FileReference;
 use Services\MailService;
 use function sortProject;
@@ -32,15 +33,15 @@ class DefaultController extends BaseController
     public function healthcheck() : void
     {
         $host = strtolower($_SERVER['HTTP_HOST'] ?? "localhost");
-        if(getenv("PHP_ENV"))
+        if(getenv("PHP_ENV") && $host !== "healthcheck.railway.app")
         {
-            if($host !== "healthcheck.railway.app")
-            {
-                exit;
-            }
+            $url = $_SERVER['REQUEST_URI'] ?? '/';
+            Router::render404($url);
+            exit;
         }
         http_response_code(200);
         header('Content-type: application/json; charset=utf-8');
+        header('X-Robots-Tag: noindex, nofollow');
         echo json_encode(["health" => "check"], JSON_UNESCAPED_UNICODE);
     }
 

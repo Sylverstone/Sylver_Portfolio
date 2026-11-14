@@ -106,6 +106,14 @@ class Router
         }
         echo self::$twig->render($file . $ext, $params);
     }
+    public static function render404(string $url) : void
+    {
+        http_response_code(404);
+        Router::render("pages/error/error", [
+            "message" => "L'URL $url n'existe pas",
+            "title" => "On dirait que vous vous êtes perdu xD"
+        ]);
+    }
 
     public function work()
     {
@@ -157,11 +165,7 @@ class Router
             };
         }
 
-        http_response_code(404);
-        self::render("pages/error/error", [
-            "message" => "L'URL $url n'existe pas",
-            "title" => "On dirait que vous vous êtes perdu xD"
-        ]);
+        self::render404($url);
     }
 
 }
