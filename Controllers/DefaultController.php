@@ -49,9 +49,9 @@ class DefaultController extends BaseController
     public function index() : void
     {
         try {
-            $competences = $this->getJson("./Config/competences.json");
-            $projets = $this->getJson("./Config/projects.json");
-            $reseaux = $this->getJson("./Config/reseaux.json");
+            $competences = $this->getJson( __DIR__ . "/../Config/competences.json");
+            $projets = $this->getJson(__DIR__ . "/../Config/projects.json");
+            $reseaux = $this->getJson(__DIR__ . "/../Config/reseaux.json");
 
             sortProject($projets);
             $newArray = [];

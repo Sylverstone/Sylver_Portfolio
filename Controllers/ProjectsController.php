@@ -15,8 +15,8 @@ class ProjectsController extends BaseController
     public function detail(string $name) : void
     {
         try {
-            $Projects = DefaultController::getJson("./Config/projects.json");
-            $reseaux = DefaultController::getJson("./Config/reseaux.json");
+            $Projects = DefaultController::getJson(__DIR__ . "/../Config/projects.json");
+            $reseaux = DefaultController::getJson(__DIR__ . "/../Config/reseaux.json");
 
             if(!array_key_exists($name, $Projects)) {
 
